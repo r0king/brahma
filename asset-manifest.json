@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/brahma/static/css/main.8be6f3ca.css",
+    "main.js": "/brahma/static/js/main.801c8452.js",
+    "static/js/787.f837e90e.chunk.js": "/brahma/static/js/787.f837e90e.chunk.js",
+    "static/media/coign-37-bold-pro.woff": "/brahma/static/media/coign-37-bold-pro.0de5b4ecc3c7be57598a.woff",
+    "static/media/NHaasGroteskTXPro-55Rg.woff": "/brahma/static/media/NHaasGroteskTXPro-55Rg.6a8f0a063f7dfb9e70a0.woff",
+    "static/media/NHaasGroteskDSPro-65Md.woff": "/brahma/static/media/NHaasGroteskDSPro-65Md.bedb6abd308d24c48ade.woff",
+    "static/media/coign-37-bold-pro.woff2": "/brahma/static/media/coign-37-bold-pro.6d5b67bf68aacc883df4.woff2",
+    "static/media/NeueBit-Regular.woff": "/brahma/static/media/NeueBit-Regular.88b272fc5a16c83d4bc5.woff",
+    "static/media/NeueBit-Bold.woff": "/brahma/static/media/NeueBit-Bold.f18118b6e2470d3ba956.woff",
+    "static/media/NHaasGroteskTXPro-55Rg.woff2": "/brahma/static/media/NHaasGroteskTXPro-55Rg.4ef5efa75478795b970d.woff2",
+    "static/media/NHaasGroteskDSPro-65Md.woff2": "/brahma/static/media/NHaasGroteskDSPro-65Md.1dc2dd1306f0cebef1c6.woff2",
+    "static/media/NeueBit-Regular.woff2": "/brahma/static/media/NeueBit-Regular.87d71e5f6526f2bc92fe.woff2",
+    "static/media/NeueBit-Bold.woff2": "/brahma/static/media/NeueBit-Bold.319cc6aa5c5c7d818aec.woff2",
+    "index.html": "/brahma/index.html",
+    "main.8be6f3ca.css.map": "/brahma/static/css/main.8be6f3ca.css.map",
+    "main.801c8452.js.map": "/brahma/static/js/main.801c8452.js.map",
+    "787.f837e90e.chunk.js.map": "/brahma/static/js/787.f837e90e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8be6f3ca.css",
+    "static/js/main.801c8452.js"
+  ]
+}
