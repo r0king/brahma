@@ -1,21 +1,24 @@
 import React, { Component } from "react";
+import CountDown from "./CountDown";
 export class Card extends Component {
   constructor(props) {
     super();
   }
   componentDidMount() {
-    const components = this.myRef.querySelectorAll(".c-page-head_split-title_inner");
+    const components = this.myRef.querySelectorAll(
+      ".c-page-head_split-title_inner"
+    );
     // for each elemnt in the componets array remove tranform property after 1 second
     setTimeout(() => {
       components.forEach((component) => {
         component.style.transform = "none";
       });
-    }, 1000);
+    }, 100);
   }
 
   render() {
     return (
-      <div data-load-container="">
+      <div data-load-container="" className="bg-[#f0f0f0]">
         {/* <header className="c-header" data-module-header="">
           <nav className="c-header_nav">
             <ul className="c-header_nav_list">
@@ -228,24 +231,26 @@ export class Card extends Component {
             </button>
           </nav>
         </header> */}
-        <div className="o-scroll" data-module-scroll="main" ref={(ref) => this.myRef = ref}>
+        <div
+          className="o-scroll"
+          data-module-scroll="main"
+          ref={(ref) => (this.myRef = ref)}
+        >
           <main>
-            <div className="c-page-head" data-scroll-section="">
+            <div className="c-page-head " data-scroll-section="">
               <div className="c-page-head_inner">
                 <h1 className="c-page-head_split-title -left">
                   <span className="c-page-head_split-title_outer">
-                    <span className="c-page-head_split-title_inner">
+                    <span className="c-page-head_split-title_inner text-[#D35C39]">
                       Brahma
                     </span>
                   </span>
                   <span className="c-page-head_split-title_outer">
-                    <span className="c-page-head_split-title_inner">
-                      {" "}
-                    </span>
+                    <span className="c-page-head_split-title_inner"> </span>
                   </span>
                   <br />
                   <span className="c-page-head_split-title_outer">
-                    <span className="c-page-head_split-title_inner">
+                    <span className="c-page-head_split-title_inner text-[#D35C39]">
                       '23
                     </span>
                   </span>
@@ -270,60 +275,36 @@ export class Card extends Component {
                   </p>
                 </div>
                 <div className="c-page-head_cta">
-                  <a
-                    href="https://www.brahma.live"
-                    target="_blank"
-                    className="c-button -primary -stretch unii-listing-button"
-                    data-load="false"
-                    rel="noreferrer"
-                  >
-                    <span className="c-button_tag">Booking</span>
-                    <span className="c-button_label">
-                      Get
-                      <br />
-                      Tickets
+                  <div className="c-button -primary -stretch unii-listing-button group ">
+                    <span className="c-button_label group-hover:text-[#1F1F1F] transition-all h-[10vh]">
+                      <CountDown />
                     </span>
-                    <svg
-                      className="c-button_icon"
-                      role="presentation"
-                      alt="Get tickets"
-                      aria-hidden="true"
-                    >
-                      <use xlinkHref="assets/images/sprite.svg#arrow-top-right" />
-                    </svg>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
             {/* <div class="c-section" data-scroll-section>
       </div> */}
-            <div className="c-intro" data-scroll-section="">
-              <div
-                className="c-intro_rail || c-rail || u-anim-scroll"
-                data-scroll=""
-              >
-                <ul className="u-screen-reader-text">
-                  <li>Brahma 23</li>
-                </ul>
-                <span
-                  className="c-rail_text"
-                  aria-hidden="true"
-                  data-module-rail=""
-                  data-rail-speed={1}
-                  data-scroll=""
-                  data-scroll-repeat=""
-                  data-scroll-offset="0,0"
-                  data-scroll-call="trigger,Rail"
-                >
-                  <span className="c-intro_rail_text">Brahma 23</span>
-                </span>
-                <button
-                  className="c-intro_rail_button"
-                  title="Select a conference"
-                >
-                  Select a conference
-                </button>
-              </div>
+
+            <div class="marquee font-[neue-bit] text-[5vw] font-bold opacity-40">
+              <ul class="marquee__content ">
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+              </ul>
+              <ul class="marquee__content" aria-hidden="true">
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; Live Soon... &nbsp;</li>
+              </ul>
             </div>
           </main>
         </div>
