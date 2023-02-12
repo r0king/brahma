@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CountDown from "./CountDown";
+import diya from "../assets/images/diwali-lamp.gif";
 export class Card extends Component {
   constructor(props) {
     super();
@@ -239,10 +240,10 @@ export class Card extends Component {
           <main>
             <div className="c-page-head " data-scroll-section="">
               <div className="c-page-head_inner">
-                <h1 className="c-page-head_split-title -left">
-                  <span className="c-page-head_split-title_outer">
+                <h1 className="c-page-head_split-title -left pl-[2vw]">
+                  <span className="c-page-head_split-title_outer ">
                     <span className="c-page-head_split-title_inner text-[#D35C39]">
-                      Brahma
+                      Brahma '23
                     </span>
                   </span>
                   <span className="c-page-head_split-title_outer">
@@ -251,7 +252,7 @@ export class Card extends Component {
                   <br />
                   <span className="c-page-head_split-title_outer">
                     <span className="c-page-head_split-title_inner text-[#D35C39]">
-                      '23
+                      &nbsp;
                     </span>
                   </span>
                 </h1>
@@ -262,17 +263,24 @@ export class Card extends Component {
                     </span>
                   </span>
                   <br />
-                  <span className="c-page-head_split-title_outer">
-                    <span className="c-page-head_split-title_inner">
-                      Live Soon
+                  <span className="c-page-head_split-title_outer ">
+                    <span className="c-page-head_split-title_inner ">
+                      @ASIET
                     </span>
                   </span>
                 </div>
                 <div className="c-page-head_note">
                   <p className="u-note">
-                    We're thrilled to welcome you back for the 21th edition of
-                    Brahma the cultural Festival of ASIET.
+                    We're thrilled to welcome you back for the 21
+                    <span className="align-text-top text-[11px]">th </span>
+                    edition of Brahma the cultural Festival of ASIET.
                   </p>
+                </div>
+
+                <div
+                  class="c-page-head_visual -home"
+                >
+                  <img src={diya} alt="lamp"/>
                 </div>
                 <div className="c-page-head_cta">
                   <div className="c-button -primary -stretch unii-listing-button group ">
@@ -286,24 +294,24 @@ export class Card extends Component {
             {/* <div class="c-section" data-scroll-section>
       </div> */}
 
-            <div class="marquee font-[neue-bit] text-[5vw] font-bold opacity-40">
+            <div class="marquee font-[neue-bit] text-[4vw] fixed bottom-0 font-bold opacity-40">
               <ul class="marquee__content ">
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
               </ul>
               <ul class="marquee__content" aria-hidden="true">
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
-                <li>&nbsp; Live Soon... &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---Live Soon--- &nbsp;</li>
               </ul>
             </div>
           </main>

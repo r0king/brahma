@@ -56,8 +56,8 @@ export default class CountDown extends Component {
              grid grid-flow-col justify-center md:justify-start gap-5 auto-cols-max
             text-center text-xl bottom-[3%]"
       >
-        <div className="flex flex-col md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
-          <span className="countdown font-[coign] text-[10vh] font-semibold ">
+        <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
+          <span className="countdown  text-[5vh] font-semibold ">
             <span style={{ "--value": this.state.days }}></span>
           </span>
 
@@ -65,24 +65,24 @@ export default class CountDown extends Component {
             days
           </span>
         </div>
-        <div className="flex flex-col md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
-          <span className="countdown font-[coign] text-[10vh] font-semibold">
+        <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
+          <span className="countdown  text-[5vh] font-semibold">
             <span style={{ "--value": this.state.hours }}></span>
           </span>
           <span className="c-button_tag group-hover:text-[#1F1F1F] transition-all">
             hours
           </span>
         </div>
-        <div className="flex flex-col md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
-          <span className="countdown font-[coign] text-[10vh] font-semibold">
+        <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
+          <span className="countdown  text-[5vh] font-semibold">
             <span style={{ "--value": this.state.minutes }}></span>
           </span>
           <span className="c-button_tag group-hover:text-[#1F1F1F] transition-all">
             min
           </span>
         </div>
-        <div className="flex flex-col md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
-          <span className="countdown font-[coign] text-[10vh] font-semibold">
+        <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
+          <span className="countdown  text-[5vh] font-semibold">
             <span style={{ "--value": this.state.seconds }}></span>
           </span>
           <span className="c-button_tag group-hover:text-[#1F1F1F] transition-all">
