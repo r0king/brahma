@@ -19,7 +19,7 @@ export class Card extends Component {
 
   render() {
     return (
-      <div data-load-container="" className="bg-[#f0f0f0]">
+      <div data-load-container="" className=" pt-[0vw]">
         {/* <header className="c-header" data-module-header="">
           <nav className="c-header_nav">
             <ul className="c-header_nav_list">
@@ -240,7 +240,7 @@ export class Card extends Component {
           <main>
             <div className="c-page-head " data-scroll-section="">
               <div className="c-page-head_inner">
-                <h1 className="c-page-head_split-title -left pl-[2vw]">
+                <h1 className="c-page-head_split-title -left pl-[4vw] pt-[2vw]">
                   <span className="c-page-head_split-title_outer ">
                     <span className="c-page-head_split-title_inner text-[#D35C39]">
                       Brahma '23
@@ -251,20 +251,26 @@ export class Card extends Component {
                   </span>
                   <br />
                   <span className="c-page-head_split-title_outer">
-                    <span className="c-page-head_split-title_inner text-[#D35C39]">
-                      &nbsp;
+                    <span
+                      className="c-page-head_split-title_inner h-[20vh] font-sans text-[#1f1f1f] font-semibold"
+                      style={{
+                        fontSize: "2.5vw",
+                        
+                      }}
+                    >
+                      Awaken the creator within.
                     </span>
                   </span>
                 </h1>
-                <div className="c-page-head_split-title -right">
+                <div className="pt-[3vw] c-page-head_split-title -right">
                   <span className="c-page-head_split-title_outer">
                     <span className="c-page-head_split-title_inner">
-                      Mar.28—29
+                      Mar.29—Apr.01
                     </span>
                   </span>
                   <br />
                   <span className="c-page-head_split-title_outer ">
-                    <span className="c-page-head_split-title_inner ">
+                    <span className="c-page-head_split-title_inner pr-[3vw]">
                       @ASIET
                     </span>
                   </span>
@@ -277,13 +283,11 @@ export class Card extends Component {
                   </p>
                 </div>
 
-                <div
-                  class="c-page-head_visual -home"
-                >
-                  <img src={diya} alt="lamp"/>
+                <div class="c-page-head_visual -home animate__animated animate__fadeIn">
+                  <img src={diya} alt="lamp" className="" />
                 </div>
                 <div className="c-page-head_cta">
-                  <div className="c-button -primary -stretch unii-listing-button group ">
+                  <div className="pt-[1vw] c-button -primary -stretch unii-listing-button group pb-[1.5vw]">
                     <span className="c-button_label group-hover:text-[#1F1F1F] transition-all h-[10vh]">
                       <CountDown />
                     </span>
@@ -294,24 +298,32 @@ export class Card extends Component {
             {/* <div class="c-section" data-scroll-section>
       </div> */}
 
-            <div class="marquee font-[neue-bit] text-[4vw] fixed bottom-0 font-bold opacity-40">
-              <ul class="marquee__content ">
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+            <div class="marquee font-[neue-bit] text-[2vw] fixed bottom-0 font-bold opacity-40">
+              <ul class="marquee__content">
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                <li>
+                  &nbsp; a work in hilarious progess{" "}
+                  <span className="text-[1.3rem]">🫠</span>&nbsp;
+                </li>
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
               </ul>
               <ul class="marquee__content" aria-hidden="true">
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
-                <li>&nbsp; ---Live Soon--- &nbsp;</li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
+                <li>
+                  &nbsp; a work in hilarious progess{" "}
+                  <span className="text-[1.3rem]">🫠</span>&nbsp;
+                </li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
+                <li>&nbsp; ---live soon--- &nbsp;</li>
               </ul>
             </div>
           </main>

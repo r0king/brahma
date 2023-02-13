@@ -294,7 +294,6 @@ button,
   display: inline-block;
   overflow: visible;
   margin: 0;
-  padding: 0;
   outline: 0;
   border: 0;
   background: none transparent;
@@ -2213,7 +2212,7 @@ html .c-page-head_rail:not(.-medium),
   display: inline-flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0.625rem;
+  
   border-radius: 0.5rem;
   border: 1px solid;
   font-weight: 700;
@@ -2255,8 +2254,7 @@ html .c-page-head_rail:not(.-medium),
   min-width: calc((100vw - 8.375rem) * 3 / 14 + 1.25rem);
 }
 .c-button.-stretch {
-  width: 120%;
-  padding-bottom: 2vw;
+  width: 132%;
 }
 .c-button.-stretch-h {
   height: 100%;
@@ -2291,6 +2289,7 @@ html .c-page-head_rail:not(.-medium),
 }
 .c-button_tag {
   position: relative;
+  padding-top: 9px;
   z-index: 10;
   display: block;
 }
@@ -2299,7 +2298,7 @@ html .c-page-head_rail:not(.-medium),
   z-index: 10;
   font-size: 1.5rem;
   line-height: 0.92;
-  padding-right: 5rem;
+  padding-right: 3rem;
   margin-bottom: -0.12em;
 }
 .c-button.-big .c-button_label {
@@ -4027,9 +4026,9 @@ html.is-ready .c-page-head_cta {
 @media (min-width: 1000px) {
   .c-page-head_cta:not(.-inline) {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    width: calc((100vw) * 3 / 14 + 1.875rem);
+    bottom: 2.5vw;
+    right: -2vw;
+    width: calc((105vw) * 3 / 14 + 1.875rem);
     z-index: 10;
   }
   .c-page-head_cta.-inline {
@@ -4071,7 +4070,7 @@ html.is-ready .c-page-head_cta {
 }
 .c-page-head_visual.-home img {
   position: absolute;
-  top: 2vw;
+  top: 4vw;
   left: 0;
   width: 100%;
   height: 100%;
@@ -4091,11 +4090,11 @@ html.is-ready .c-page-head_cta {
 }
 @media (min-aspect-ratio: 1 / 1) {
   .c-page-head_visual.-home {
-    position: absolute;
-    bottom: 0.625rem;
+    position: fixed;
+    bottom: 9%;
     left: 0;
-    right: 50%;
-    top: 17.5%;
+    right: 33%;
+    top: 21.5%;
   }
 }
 @media (max-aspect-ratio: 1 / 1) {
