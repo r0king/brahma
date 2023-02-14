@@ -255,7 +255,6 @@ export class Card extends Component {
                       className="c-page-head_split-title_inner h-[20vh] font-sans text-[#1f1f1f] font-semibold"
                       style={{
                         fontSize: "2.5vw",
-                        
                       }}
                     >
                       Awaken the creator within.
@@ -277,9 +276,8 @@ export class Card extends Component {
                 </div>
                 <div className="c-page-head_note">
                   <p className="u-note">
-                    We're thrilled to welcome you back for the 21
-                    <span className="align-text-top text-[11px]">th </span>
-                    edition of Brahma the cultural Festival of ASIET.
+                    We're thrilled to welcome you back for the next edition of
+                    Brahma the cultural Festival of ASIET.
                   </p>
                 </div>
 
@@ -304,7 +302,7 @@ export class Card extends Component {
                 <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
                 <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
                 <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
-                <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li>
+                {/* <li>&nbsp; ---&nbsp;live soon&nbsp;--- &nbsp;</li> */}
                 <li>
                   &nbsp; a work in hilarious progess{" "}
                   <span className="text-[1.3rem]">🫠</span>&nbsp;
@@ -317,7 +315,7 @@ export class Card extends Component {
                 <li>&nbsp; ---live soon--- &nbsp;</li>
                 <li>&nbsp; ---live soon--- &nbsp;</li>
                 <li>&nbsp; ---live soon--- &nbsp;</li>
-                <li>&nbsp; ---live soon--- &nbsp;</li>
+                {/* <li>&nbsp; ---live soon--- &nbsp;</li> */}
                 <li>
                   &nbsp; a work in hilarious progess{" "}
                   <span className="text-[1.3rem]">🫠</span>&nbsp;
