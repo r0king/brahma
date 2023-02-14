@@ -3,9 +3,7 @@ import "animate.css/animate.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
-import HomePage from "./componets/HomePage";
-import Card from "./componets/Card";
-import EventsHome from "./componets/EventsHome";
+import HomePage from "./pages/HomePage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -83,8 +81,6 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/test" element={<Card />} />
-          <Route exact path="/events" element={<EventsHome />} />
         </Routes>
       </BrowserRouter>
     </>

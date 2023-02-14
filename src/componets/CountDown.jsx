@@ -52,9 +52,9 @@ export default class CountDown extends Component {
     return (
       <div
         className="            
-            absolute -mt-[10vh] mx-auto w-full
+            absolute mx-auto w-full pl-[1.5vw]
              grid grid-flow-col justify-center md:justify-start gap-5 auto-cols-max
-            text-center text-xl bottom-[3%]"
+            text-center text-xl"
       >
         <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-neutral-content">
           <span className="countdown  text-[5vh] font-semibold ">
