@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/brahma/static/css/main.31a0ab32.css",
-    "main.js": "/brahma/static/js/main.801c8452.js",
+    "main.css": "/brahma/static/css/main.c033c00f.css",
+    "main.js": "/brahma/static/js/main.e3e36cdc.js",
     "static/js/787.f837e90e.chunk.js": "/brahma/static/js/787.f837e90e.chunk.js",
+    "static/media/diwali-lamp.gif": "/brahma/static/media/diwali-lamp.84e4999c7210440caa7e.gif",
     "static/media/coign-37-bold-pro.woff": "/brahma/static/media/coign-37-bold-pro.0de5b4ecc3c7be57598a.woff",
     "static/media/NHaasGroteskTXPro-55Rg.woff": "/brahma/static/media/NHaasGroteskTXPro-55Rg.6a8f0a063f7dfb9e70a0.woff",
     "static/media/NHaasGroteskDSPro-65Md.woff": "/brahma/static/media/NHaasGroteskDSPro-65Md.bedb6abd308d24c48ade.woff",
@@ -14,12 +15,12 @@
     "static/media/NeueBit-Regular.woff2": "/brahma/static/media/NeueBit-Regular.87d71e5f6526f2bc92fe.woff2",
     "static/media/NeueBit-Bold.woff2": "/brahma/static/media/NeueBit-Bold.319cc6aa5c5c7d818aec.woff2",
     "index.html": "/brahma/index.html",
-    "main.31a0ab32.css.map": "/brahma/static/css/main.31a0ab32.css.map",
-    "main.801c8452.js.map": "/brahma/static/js/main.801c8452.js.map",
+    "main.c033c00f.css.map": "/brahma/static/css/main.c033c00f.css.map",
+    "main.e3e36cdc.js.map": "/brahma/static/js/main.e3e36cdc.js.map",
     "787.f837e90e.chunk.js.map": "/brahma/static/js/787.f837e90e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.31a0ab32.css",
-    "static/js/main.801c8452.js"
+    "static/css/main.c033c00f.css",
+    "static/js/main.e3e36cdc.js"
   ]
 }
