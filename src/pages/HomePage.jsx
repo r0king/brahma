@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CountDown from "../componets/CountDown";
+import Hero from "../componets/Hero";
 import NavBar from "../componets/NavBar";
 
 export default class HomePage extends Component {
@@ -7,6 +8,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <NavBar />
+        <Hero />
         <CountDown />
       </div>
     );
