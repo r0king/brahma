@@ -79,10 +79,10 @@ function App() {
         />
         <div className="flex justify-center text-center ">Loading…</div>
       </div>
-      <BrowserRouter >
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          {/* <Route exact path="/" element={<HomePage />} /> */}
-          <Route exact path="/" element={<Card />} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/test" element={<Card />} />
         </Routes>
       </BrowserRouter>
     </>
