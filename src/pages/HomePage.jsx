@@ -6,10 +6,9 @@ import NavBar from "../componets/NavBar";
 export default class HomePage extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
+      <div className="bg-acc-color">
+        {/* <NavBar /> */}
         <Hero />
-        <CountDown />
       </div>
     );
   }
