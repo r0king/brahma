@@ -5,6 +5,7 @@ import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./componets/HomePage";
 import Card from "./componets/Card";
+import EventsHome from "./componets/EventsHome";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -83,6 +84,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/test" element={<Card />} />
+          <Route exact path="/events" element={<EventsHome />} />
         </Routes>
       </BrowserRouter>
     </>
