@@ -15,5 +15,3 @@ export default class HomePage extends Component {
         );
     }
 }
-
-export default HomePage;

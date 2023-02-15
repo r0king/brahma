@@ -65,8 +65,6 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <HomePage />
       <div
         style={{
           position: "fixed",
@@ -82,7 +80,7 @@ function App() {
         />
         <div className="flex justify-center text-center ">Loading…</div>
       </div>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename='/'>
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />

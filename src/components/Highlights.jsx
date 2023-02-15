@@ -3,30 +3,30 @@ import Arrow from '..\\src\\assets\\svg\\arrow-top-right.svg'
 
 const Highlights = () => {
     return (
-        <div class='bg-gradient-to-b from-orange-500 to-orange-600 pb-2'>
+        <div class='bg-gradient-to-b from-gray-900 to-gray-800 pb-2'>
             <div class='p-2'>
                 <img
                     class='drop-shadow-md w-full h-full md:w-2/3 md:h-1/3'
                     src='https://33.media.tumblr.com/4d9aa44ac1be00dd18d030574828b427/tumblr_ngp8u5TiBf1u1m3cdo1_500.gif' />
             </div>
             <div class='mx-2 '>
-                <label class='text-orange-100 text-9xl font-sixcaps'>HIGHLIGHTS</label>
+                <label class='text-white text-9xl font-sixcap'>HIGHLIGHTS</label>
             </div>
             <div class='w-full'>
-                <p class='mx-auto my-8 font-medium text-orange-100 text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <p class='mx-auto my-8 font-medium text-white text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
                     voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p>
             </div>
 
             {/* NOTE(gokul): for the love of god dont touch this code, it works and thats all u need to know */}
             <div class='relative group overflow-hidden transition-all mx-2 h-1/3 bg-white rounded-lg'>
-                <span className="w-full h-full rounded-lg bg-black absolute top-0 bottom-0 ease-out 
+                <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                 duration-300 transition-all group-hover:h-0 -z-0" />
-                <span class='transition-colors duration-100 ease-in-out group-hover:text-black group-hover:stroke-black z-10 
-                relative rounded-lg p-2 flex stroke-white justify-between w-full text-white'>
+                <span class='transition-colors duration-100 ease-in-out text-black stroke-black z-10 
+                relative rounded-lg p-2 flex justify-between w-full '>
                     <div class='text-left'>
                         <label class='text-xs font-medium mb-2'>Venue</label>
-                        <div class='flex flex-col items-stretch text-2xl font-thin'>
+                        <div class='mt-4 flex flex-col items-stretch text-2xl font-semibold'>
                             <label class=''>Explore</label>
                             <label class=''>The Location</label>
                         </div>
