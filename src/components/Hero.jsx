@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="relative ">
         <div>
           <h1 className="text-sec-color font-sixcaps text-[28vw] md:text-[13vw] leading-none uppercase ">
-            Brhma '23
+            Brahma '23
           </h1>
           <h3 className="text-pri-color font-poppins font-semibold text-[6vw] py-[1vh] md:py-0 md:text-[2.5vw] uppercase">
             awaken the creator within.
@@ -26,7 +26,7 @@ export default function Hero() {
           font-poppins font-semibold text-pri-color text-xs leading-none          
           "
             >
-              We're thrilled to welcome you back for the next edition of brhma,
+              We're thrilled to welcome you back for the next edition of brahma,
               cultural festival of ASIET.
             </p>
           </div>
