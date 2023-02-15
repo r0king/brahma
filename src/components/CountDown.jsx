@@ -11,7 +11,7 @@ export default class CountDown extends Component {
     };
     this.state = this.time;
 
-    this.countDownDate = new Date("Mar 29, 2023 00:00:00").getTime();
+    this.countDownDate = new Date("Mar 28, 2023 00:00:00").getTime();
   }
   calculateNewTime = () => {
     // Get today's date and time

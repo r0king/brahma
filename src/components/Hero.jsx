@@ -3,10 +3,10 @@ import CountDown from "./CountDown";
 
 export default function Hero() {
   return (
-    <section className="p-[5vw] pr-0">
-      <div className="relative ">
+    <section className="p-[5vw] pl-0 pt-[2vw] pr-0 md:h-screen overflow-y-clip">
+      <div className="relative pl-[5vw]">
         <div>
-          <h1 className="text-sec-color font-morganite font-bold text-[28vw] md:text-[13vw] leading-none uppercase ">
+          <h1 className="text-sec-color font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
             Brahma '23
           </h1>
           <h3 className="text-pri-color font-poppins font-semibold text-[6vw] py-[1vh] md:py-0 md:text-[2.5vw] uppercase">
@@ -31,19 +31,19 @@ export default function Hero() {
             </p>
           </div>
           <div className="-mt-[3vw] mr-[2vw] md:mr-[10vw]">
-            <h1 className="text-right text-pri-color font-semibold font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
-              Mar.29-Apr.01
+            <h1 className="text-right text-pri-color font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
+              Mar.28-Apr.01
             </h1>
           </div>
-          <div className="flex justify-end flex-col md:flex-row">
-            <h1 className="text-pri-color text-right mr-[2vw] font-semibold md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
+          <div className="flex justify-end md:-mt-[2vw] flex-col md:flex-row">
+            <h1 className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
               @ASIET
             </h1>
             <CountDown />
           </div>
         </div>
       </div>
-      <div class="marquee py-10 md:text-[2vw] font-poppins opacity-40">
+      <div class="marquee fixed bottom-0 md:text-[2vw] font-poppins opacity-40">
         <ul class="marquee__content">
           <li>&nbsp;BRAHMA'23&nbsp;</li>
           <li>&nbsp;BRAHMA'23&nbsp;</li>
