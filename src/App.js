@@ -3,10 +3,10 @@ import "animate.css/animate.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
-import Card from "./components/Card";
 import HomePage from "./pages/HomePage";
 import Highlights from "./components/Highlights";
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -80,7 +80,7 @@ function App() {
         />
         <div className="flex justify-center text-center ">Loading…</div>
       </div>
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
