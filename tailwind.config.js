@@ -4,6 +4,12 @@ module.exports = {
   theme: {
     fontFamily: {
       sixcaps: ["Six Caps", "sans-serif"],
+      poppins: ["Poppins", "sans-serif"],
+    },
+    colors: {
+      'pri-color': "#1f1f1f",
+      'sec-color': "#d35c39",
+      'acc-color': "#fafafa",
     },
   },
   plugins: [require("daisyui")],

@@ -4,13 +4,12 @@ import Hero from "../components/Hero";
 import NavBar from "../components/NavBar";
 
 export default class HomePage extends Component {
-    render() {
-        return (
-            <div>
-                <NavBar />
-                <Hero />
-                <CountDown />
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="bg-acc-color">
+        {/* <NavBar /> */}
+        <Hero />
+      </div>
+    );
+  }
 }
