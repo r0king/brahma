@@ -1,6 +1,6 @@
 import React from "react";
 import CountDown from "./CountDown";
-
+import logoAnimation from "../assets/images/diwali-lamp.gif";
 export default function Hero() {
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 md:h-screen overflow-y-clip">
@@ -36,11 +36,17 @@ export default function Hero() {
             </h1>
           </div>
           <div className="flex justify-end md:-mt-[2vw] flex-col md:flex-row">
-            <h1 className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
+            <h1 className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase " 
+            style={{
+              marginInline:"0"
+            }}>
               @ASIET
             </h1>
             <CountDown />
           </div>
+        </div>
+        <div className="absolute top-[8vw] aspect-auto left-[10vw] w-[38vw]">
+          <img src={logoAnimation} alt="logo" className="w-full h-full" />
         </div>
       </div>
       <div class="marquee fixed bottom-0 md:text-[2vw] font-poppins opacity-40">
