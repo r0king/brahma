@@ -5,7 +5,8 @@ import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import Card from "./components/Card";
 import HomePage from "./pages/HomePage";
-import Navbar from "./components/Navbar"
+import Highlights from "./components/Highlights";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -37,7 +38,7 @@ function App() {
           },
         })
       );
-    } catch (e) {}
+    } catch (e) { }
 
     var wheelOpt = supportsPassive ? { passive: false } : false;
     var wheelEvent =
@@ -70,9 +71,8 @@ function App() {
         style={{
           position: "fixed",
         }}
-        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${
-          !loading && "hidden"
-        }`}
+        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${!loading && "hidden"
+          }`}
       >
         <LoadingIcons.ThreeDots
           fill="#f0f0f0"
@@ -82,11 +82,11 @@ function App() {
         />
         <div className="flex justify-center text-center ">Loading…</div>
       </div>
-      {/* NOTE(gokul): changed the basename from before to this '/' */}
-      <BrowserRouter basename='/'>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/test" element={<Card />} />
+          <Route path="/highlights" element={<Highlights />} />
         </Routes>
       </BrowserRouter>
     </>
