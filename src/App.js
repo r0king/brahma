@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/HomePage";
-import EventsHome from "./componets/EventsHome";
+import EventsHome from "./components/EventsHome";
 
 function App() {
   const [loading, setLoading] = useState(true);

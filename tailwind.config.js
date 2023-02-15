@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      sixcaps: ["Six Caps", "sans-serif"],
+      morganite: ["Morganite", "sans-serif"],
       poppins: ["Poppins", "sans-serif"],
     },
     colors: {
