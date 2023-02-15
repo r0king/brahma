@@ -2,7 +2,6 @@ import React from "react";
 import CountDown from "./CountDown";
 
 export default function Hero() {
-
   return (
     <section className="p-[5vw] pr-0">
       <div className="relative ">
@@ -19,7 +18,7 @@ export default function Hero() {
             className=" 
           hidden md:block  mr-[5vw] 
           absolute top-[3vw] right-[4vw] w-[calc((100vw-9.375rem)*2/14+0.625rem)] border-b 
-          after:bg-current after:rounded-full after:bottom-1.5 after:content-[''] after:h-[6px] after:overflow-hidden after:absolute after:right-0 after:aspect-square" 
+          after:bg-current after:rounded-full after:bottom-1.5 after:content-[''] after:h-[6px] after:overflow-hidden after:absolute after:right-0 after:aspect-square"
           >
             <p
               className="
@@ -43,6 +42,20 @@ export default function Hero() {
             <CountDown />
           </div>
         </div>
+      </div>
+      <div class="marquee py-10 md:text-[2vw] font-poppins opacity-40">
+        <ul class="marquee__content">
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+        </ul>
+        <ul class="marquee__content" aria-hidden="true">
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp;BRAHMA'23&nbsp;</li>
+        </ul>
       </div>
     </section>
   );
