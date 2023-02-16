@@ -1,0 +1,58 @@
+.schedule{
+    display: flex;
+}
+
+.sched-table{
+    width: 70%;
+    text-align: center;
+    font-family: var(--poppins);
+    font-size: x-large;
+    color: var(--primary);
+    height:50vh;
+}
+
+tr{
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+
+li{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.category{
+    font-weight:normal;
+    font-size: smaller;
+    display: none;
+}
+
+.timing{
+    color: var(--secondary-color);
+}
+
+.description{
+    height: 10%;
+}
+table img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    max-height: 50vh;
+}
+
+.images{
+    width: 30%;
+    height: 50vh;
+}
+
+
+
+
+
+
+
+
+

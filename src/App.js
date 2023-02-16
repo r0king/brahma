@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/HomePage";
+import Schedule from "./pages/Schedule/Schedule";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -81,6 +82,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
+          <Route exact path='/schedule' element={<Schedule/>}/>
         </Routes>
       </BrowserRouter>
     </>
