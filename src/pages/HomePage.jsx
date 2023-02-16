@@ -5,7 +5,7 @@ import NavBar from "../components/NavBar";
 // import Highlights from "../components/Highlights";
 // import Highlight from "../components/Highlight";
 import EventsHome from "../components/EventsHome";
-
+import "./HomePage.css"
 
 export default class HomePage extends Component {
   render() {

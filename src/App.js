@@ -2,13 +2,14 @@ import "./App.css";
 import "animate.css/animate.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import CardButton from "./components/CardButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   useEffect(() => {
     var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
@@ -37,7 +38,7 @@ function App() {
           },
         })
       );
-    } catch (e) { }
+    } catch (e) {}
 
     var wheelOpt = supportsPassive ? { passive: false } : false;
     var wheelEvent =
@@ -61,15 +62,16 @@ function App() {
       window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
     }, 30);
   }, []);
-
+  const rippleRef = useRef(null);
   return (
     <>
       <div
         style={{
           position: "fixed",
         }}
-        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${!loading && "hidden"
-          }`}
+        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${
+          !loading && "hidden"
+        }`}
       >
         <LoadingIcons.ThreeDots
           fill="#f0f0f0"
@@ -83,9 +85,39 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/test" element={<CardButton />} />
+          <Route
+            exact
+            path="/test"
+            element={
+              <div
+                className={`h-screen w-screen bg-acc-color justify-center items-center flex ${
+                  buttonClicked &&
+                  "transform transition-all duration-1000 opacity-0 "
+                }`}
+              >
+                <CardButton
+                  onClick={(e) => {
+                    const x = e.clientX;
+                    const y = e.clientY;
+
+                    if (rippleRef.current) {
+                      rippleRef.current.classList.add("circle-ripple");
+                      rippleRef.current.style.top = y + "px";
+                      rippleRef.current.style.left = x + "px";
+                    }
+                    setButtonClicked(true);
+
+                    setTimeout(() => {
+                      window.location.pathname = "/";
+                    }, 800);
+                  }}
+                />
+              </div>
+            }
+          />
         </Routes>
       </BrowserRouter>
+      <div ref={rippleRef} className="fixed"></div>
     </>
   );
 }
