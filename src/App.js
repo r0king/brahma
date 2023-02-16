@@ -4,9 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/HomePage";
-import Highlights from "./components/Highlights";
-// import NavBar from "./components/NavBar";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -84,7 +82,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route path="/highlights" element={<Highlights />} />
         </Routes>
       </BrowserRouter>
     </>
