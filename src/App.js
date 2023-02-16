@@ -5,7 +5,7 @@ import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
-import ContactUs from "./components/ContactUs";
+import CardButton from "./components/CardButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -82,8 +82,8 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<HomePage />} />sudo apt install gnome-keyring
-          <Route exact path="/test" element={<ContactUs />} />
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/test" element={<CardButton />} />
         </Routes>
       </BrowserRouter>
     </>
