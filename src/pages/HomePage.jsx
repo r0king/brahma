@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
 import Navbar from "../components/NavBar";
 // import Highlights from "../components/Highlights";
@@ -15,6 +16,7 @@ export default class HomePage extends Component {
         {/* <Highlights /> */}
         {/* <Highlight/> */}
         <EventsHome/>
+        <ContactUs/>
       </div>
     );
   }
