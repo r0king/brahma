@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react'
 
-export default function NavBar() {
-  return (
-    <nav class='text-black w-full h-10 border-b-2 drop-shadow-sm'>
-      <div class='md:mx-20 mx-5'>
+const Navbar = () => {
+    return (
+      <>
+      <nav class='text-black w-full h-10 border-b-1 drop-shadow-md'>
+        <div class='md:mx-20 mx-5'>
         <div class='flex justify-end items-center w-full '>
           <label class='p-2 font-semibold'>brahma</label>
           <div class='flex justify-end items-center w-full '>
@@ -15,7 +16,10 @@ export default function NavBar() {
           </div>
         </div>
 
-      </div>
-    </nav>
-  );
+        </div>
+      </nav>
+      </>
+    )
 }
+
+export default Navbar;
