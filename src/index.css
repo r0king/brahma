@@ -2,20 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  overflow: hidden;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif 'Poppins', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap');
+
+@font-face {
+  font-family: 'Morganite';
+  src: url('../src/assets/fonts/Morganite-ExtraBold.ttf') format('truetype');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+
 :root {
   --primary: #1f1f1f;
   --secondary-color: #d35c39;
@@ -36,7 +30,6 @@ code {
   min-width: 100%;
   gap: var(--gap);
   animation: scroll 20s linear infinite;
-
 }
 @keyframes scroll {
   from {
@@ -46,3 +39,4 @@ code {
     transform: translateX(0);
   }
 }
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
