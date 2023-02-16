@@ -1,7 +1,7 @@
 import React from "react";
 import asietLogo from "../assets/images/asiet-logo.png";
 // import arrowSVG from "../assets/images/arrow.svg";
-const Navbar = () => {
+const NavBar = () => {
   return (
     <>
       <nav className="text-black w-full h-10 font-poppins font-bold fixed mt-[1vh]">
@@ -37,4 +37,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
