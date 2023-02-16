@@ -52,7 +52,7 @@ export default class CountDown extends Component {
     return (
       <div
         className="           
-             h-min md:my-auto my-[5vh] bottom-0 p-4 rounded-md mr-[5vw] md:mr-0
+             h-min md:my-auto my-[5vh] bottom-0 p-4 rounded-md mr-[5vw] md:mr-0 md:ml-[5vw]
              bg-sec-color md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none
              grid grid-flow-col justify-center md:justify-start gap-5 auto-cols-max
              text-center text-xl"

@@ -4,18 +4,21 @@ import arrowSVG from "../assets/images/arrow.svg";
 const Navbar = () => {
   return (
     <>
-      <nav class="text-black w-full h-10 border-b-1 drop-shadow-md ">
-        <div class="md:mx-0 mx-5">
-          <div class="flex justify-end items-center w-full border-b-[0.5px] border-[#21212146]">
-            <label class=" font-semibold p-1">
-              <img src={asietLogo} alt="logo" className="w-[9vw] p-2" />
+      <nav class="text-black w-full h-10 font-poppins font-bold">
+        <div class="md:mx-0">
+          <div class="flex justify-end items-center w-full">
+            <label class=" font-semibold p-1 ">
+              <img
+                src={asietLogo}
+                alt="logo"
+                className=" md:w-[9vw] p-2 md:pt-4 md:ml-[4vw]"
+              />
             </label>
-            <div class="flex justify-end items-center w-full text-xs ">
-              <label class="p-2 font-light opacity-[0.6]">events</label>
-              <label class="p-2 font-light opacity-[0.6]">gallery</label>
-              <label class="p-2 font-light opacity-[0.6]">contact</label>
-              {/* <label class="p-2 font-light ">about</label> */}
-              <label class="p-2 font-semilight ">About Us</label>
+            <div class="flex justify-end items-center w-full text-[10px] mr-[1vw]">
+              {/* <label class="p-2 pt-1 font-semibold opacity-[0.6]">events</label> */}
+              {/* <label class="p-2 pt-1 font-semibold ">about</label> */}
+              <label class="p-2 hover:opacity-100 pt-1 font-semibold opacity-[0.6]">About</label>
+              <label class="p-2 hover:opacity-100 pt-1 font-semibold opacity-[0.6]">Contact Us</label>
               {/* <img
                 src={arrowSVG}
                 alt=" "

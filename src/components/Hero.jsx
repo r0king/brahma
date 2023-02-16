@@ -6,10 +6,10 @@ export default function Hero() {
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 md:h-screen overflow-y-clip">
       <div className="relative pl-[5vw]">
         <div>
-          <h1 className="text-sec-color font-morganite text-[28vw] pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
+          <h1 className="text-sec-color font-morganite text-[28vw] pt-[10vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
-          <h3 className="text-pri-color font-poppins font-semibold text-[6vw] py-[1vh] md:py-0 md:text-[2.5vw] uppercase">
+          <h3 className="text-pri-color font-poppins font-semibold text-[5vw] md:text-[6vw] py-[1vh] md:py-0 uppercase">
             awaken the creator within.
           </h3>
         </div>
@@ -30,14 +30,14 @@ export default function Hero() {
               cultural festival of ASIET.
             </p>
           </div>
-          <div className="mt-[0vw] mr-[2vw] md:mr-[10vw]">
+          <div className="mt-[0vw] mr-[2vw]">
             <h1 className="text-right text-pri-color font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
               Mar.28-Apr.01
             </h1>
           </div>
           <div className="flex justify-end md:-mt-[2vw] flex-col md:flex-row">
             <h1
-              className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase "
+              className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-[0.75] uppercase "
               style={{
                 marginInline: "0",
               }}
@@ -47,22 +47,31 @@ export default function Hero() {
             <CountDown />
           </div>
         </div>
-        <div className="absolute top-[8vw] aspect-auto left-[10vw] w-[38vw]">
+        <div className="hidden md:block absolute top-[8vw] aspect-auto left-[10vw] w-[38vw]">
           <img src={logoAnimation} alt="logo" className="w-full h-full" />
         </div>
       </div>
-      <div class="marquee fixed bottom-0 md:text-[2vw] font-poppins opacity-40">
-        <ul class="marquee__content">
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
+
+      <div class="marquee font-poppins md:text-[1.2vw] fixed bottom-0 opacity-40">
+        <ul class="marquee__content ">
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
         </ul>
         <ul class="marquee__content" aria-hidden="true">
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
-          <li>&nbsp;BRAHMA'23&nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
+          <li>&nbsp; ---live Soon--- &nbsp;</li>
         </ul>
       </div>
     </section>
