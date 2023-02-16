@@ -2,8 +2,7 @@ import React from 'react'
 
 export default function EventsHome() {
     return (
-        <div>
-            <div className=''>
+            <div className='pt-[10vh]'>
                 <div className='relative h-screen'>
                     <div className='font-morganite absolute left-0 bottom-0 md:top-0 text-pri-color text-[40vw] md:text-[21vw] pl-1'>
                         <div className='leading-[0.75]'>OUR</div>
@@ -29,6 +28,5 @@ export default function EventsHome() {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 // import Arrow from '../src/assets/svg/arrow-top-right.svg'
-import Arrow from '../assets/svg/arrow-top-right.svg'
+// import Arrow from '../assets/svg/arrow-top-right.svg'
 
 const Highlights = () => {
     return (
@@ -14,6 +14,7 @@ const Highlights = () => {
                     <div class='p-2'>
                         <img
                             class='drop-shadow-md w-full h-full '
+                            alt='previous highlights'
                             src='https://33.media.tumblr.com/4d9aa44ac1be00dd18d030574828b427/tumblr_ngp8u5TiBf1u1m3cdo1_500.gif' />
                     </div>
                 </div>
