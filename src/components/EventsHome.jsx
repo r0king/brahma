@@ -10,7 +10,7 @@ export default function EventsHome() {
                         <div className='leading-[0.75]'>SPEAKERS</div>
                     </div>
                     <div className='font-poppins absolute right-0 md:top-0 bottom-[15vh] font-bold text-sec-color text-[23px] md:text-[2.75rem] pl-1'>
-                        <div className='leading-[0.75] pt-10 ml-[23vw]'>Franco Arza & Clément Roche Amelie Maia Victor Costa Simon D’haenens Claudio Guglieri Adriano Esteves Rhodi Iliadou & Peter Ha Filippo Cipriani Isabel Moranta Pablo Stanley</div>
+                        <div className='leading-[0.85] pt-10 ml-[23vw]'>King of Trolls.Spark Plug</div>
                         <div className='leading-[0.75] ml-[41vw] pt-1'>Josh Kirk Diana Varma Vitaly Friedman Femke van Schoonhoven Nicolas Brassard-Ferron Hilary Hayes Romain Prache Travis Neilson Brent David Freaney Jonathan Morin</div>
                     </div>
                     <div className='font-poppins absolute text-sec-color text-[23px] md:text-[2.75rem] font-bold bottom-0  md:bottom-[17vw] right-0'>
