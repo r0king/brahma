@@ -4,12 +4,12 @@ import Arrow from '../assets/svg/arrow-top-right.svg'
 
 const Highlights = () => {
     return (
-        <div>
+        <div class=''>
             {/* NOTE(gokul): this runs on medium to large screens */}
             <div class='hidden md:block bg-gradient-to-b from-gray-900 to-gray-800 pb-2'>
                 <div class='flex border-2 px-auto'>
                     <div class='mx-2 '>
-                        <label class='text-white text-[230px] font-sixcap'>HIGHLIGHTS</label>
+                        <label class='text-pri-color text-[230px] font-morganite'>HIGHLIGHTS</label>
                     </div>
                     <div class='p-2'>
                         <img
@@ -19,7 +19,7 @@ const Highlights = () => {
                 </div>
                 <div>
                     <div class='w-full'>
-                        <p class='mx-auto my-8 font-medium text-white text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <p class='mx-auto my-8 font-medium text-pri-color text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
                             voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p>
                     </div>
@@ -28,7 +28,7 @@ const Highlights = () => {
                     <div class='relative group overflow-hidden transition-all mx-2 h-1/3 bg-white rounded-lg'>
                         <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                         duration-300 transition-all group-hover:h-0 -z-0" />
-                        <span class='transition-colors duration-100 ease-in-out text-black stroke-black z-10 
+                        <span class='transition-colors duration-100 ease-in-out text-white stroke-black z-10 
                         relative rounded-lg p-2 flex justify-between w-full '>
                             <div class='text-left'>
                                 <label class='text-xs font-medium mb-2'>Venue</label>
@@ -45,24 +45,24 @@ const Highlights = () => {
             </div>
 
             {/* NOTE(gokul): this runs on only small screens */}
-            <div class='md:hidden bg-gradient-to-b from-gray-900 to-gray-800 pb-2'>
+            <div class='md:hidden pb-2'>
                 <div class='p-2'>
                     <img
-                        class='drop-shadow-md w-full h-full '
+                        class='rounded-tr-[60px] rounded-md drop-shadow-md w-full h-full '
                         src='https://33.media.tumblr.com/4d9aa44ac1be00dd18d030574828b427/tumblr_ngp8u5TiBf1u1m3cdo1_500.gif' />
                 </div>
                 <div class='md:hidden mx-2 '>
-                    <label class='text-white text-9xl font-sixcap'>HIGHLIGHTS</label>
+                    <label class='text-pri-color text-9xl font-morganite'>HIGHLIGHTS</label>
                 </div>
                 <div>
                     <div class='w-full'>
-                        <p class='mx-auto my-8 font-medium text-white text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <p class='mx-auto my-8 font-poppins text-pri-color text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
                             voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p>
                     </div>
 
                     {/* NOTE(gokul): for the love of god dont touch this code, it works and thats all u need to know */}
-                    <div class='relative group overflow-hidden transition-all mx-2 h-1/3 bg-white rounded-lg'>
+                    <div class='relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                         <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                         duration-300 transition-all group-hover:h-0 -z-0" />
                         <span class='transition-colors duration-100 ease-in-out text-black stroke-black z-10 
