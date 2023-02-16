@@ -26,11 +26,11 @@ export default function Hero() {
           font-poppins font-semibold text-pri-color text-xs leading-none          
           "
             >
-              We're thrilled to welcome you back for the next edition of brahma,
+              We're thrilled to welcome you back for the next edition of Brahma,
               cultural festival of ASIET.
             </p>
           </div>
-          <div className="-mt-[3vw] mr-[2vw] md:mr-[10vw]">
+          <div className="mt-[0vw] mr-[2vw] md:mr-[10vw]">
             <h1 className="text-right text-pri-color font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
               Mar.28-Apr.01
             </h1>
