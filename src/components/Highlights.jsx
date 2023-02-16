@@ -6,31 +6,31 @@ import sunburnVideo from '../assets/videos/videoplayback.mp4'
 
 const Highlights = () => {
     return (
-        <div class=''>
+        <div class='my-32'>
             {/* NOTE(gokul): this runs on medium to large screens */}
-            <div class='hidden md:block '>
-                <div class='flex justify-between px-auto'>
-                    <div class='ml-auto'>
-                        <label class='text-right border-2 text-pri-color text-[330px] font-morganite'>HIGHLIGHTS</label>
+            <div class='hidden md:block h-full'>
+                <div class='flex justify-end '>
+                    <div class='relative '>
+                        <label class='leading-none absolute bottom-[-60px] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS</label>
                     </div>
-                    <div class='border-2 w-full h-full '>
-                        <video
-                            class='object-cover brightness-60 drop-shadow-md w-full h-full aspect-video'
-                            src={sunburnVideo} autoPlay muted />
-                    </div>
+                    <video
+                        width="900"
+                        class='hover:opacity-80 object-cover brightness-60 drop-shadow-md'
+                        src={sunburnVideo} autoPlay muted autoReplay />
+
                 </div>
 
                 {/* Descriptions */}
-                <div class='flex justify-between'>
-                    <div class='border-2 flex-0 mx-auto w-1/4 '>
-                        <p class='mx-auto my-2 font-medium text-pri-color text-sm text-left p-4 w-full'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <div class='flex justify-between  '>
+                    <div class=' flex-0 mt-20 ml-28 mx-auto w-1/5 '>
+                        <p class='my-2 font-poppins text-pri-color text-md text-left p-4 w-full'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
                             voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p>
                     </div>
 
                     {/* NOTE(gokul): for the love of god dont touch this code, it works and thats all u need to know */}
-                    <div class='border-2 mr-0 mt-0 w-1/3 h-1/2'>
-                        <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-white rounded-lg'>
+                    <div class=' mr-24 mt-0 w-1/4 h-1/2'>
+                        <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                             <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                             duration-300 transition-all group-hover:h-0 -z-0" />
                             <span class='transition-colors duration-100 ease-in-out text-white stroke-black z-10 
@@ -47,14 +47,14 @@ const Highlights = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
             {/* NOTE(gokul): this runs on only small screens */}
-            <div class='md:hidden pb-2'>
-                <div class='p-2'>
-                    <img
-                        class='rounded-tr-[60px] rounded-md drop-shadow-md w-full h-full '
-                        src='https://33.media.tumblr.com/4d9aa44ac1be00dd18d030574828b427/tumblr_ngp8u5TiBf1u1m3cdo1_500.gif' />
+            < div class='md:hidden pb-2' >
+                <div class='p-2 rounded-lg'>
+                    <video
+                        class='object-cover brightness-60 drop-shadow-md w-full h-full aspect-video'
+                        src={sunburnVideo} autoPlay muted />
                 </div>
                 <div class='md:hidden mx-2 '>
                     <label class='text-pri-color text-9xl font-morganite'>HIGHLIGHTS</label>
@@ -86,7 +86,7 @@ const Highlights = () => {
                 </div>
 
             </div >
-        </div>
+        </div >
     )
 }
 

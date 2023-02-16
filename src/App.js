@@ -82,7 +82,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<HomePage />} />sudo apt install gnome-keyring
+          <Route exact path="/" element={<HomePage />} />
           <Route exact path="/test" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
