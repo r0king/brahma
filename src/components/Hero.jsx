@@ -36,10 +36,12 @@ export default function Hero() {
             </h1>
           </div>
           <div className="flex justify-end md:-mt-[2vw] flex-col md:flex-row">
-            <h1 className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase " 
-            style={{
-              marginInline:"0"
-            }}>
+            <h1
+              className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[28vw] md:text-[13vw] leading-none uppercase "
+              style={{
+                marginInline: "0",
+              }}
+            >
               @ASIET
             </h1>
             <CountDown />
