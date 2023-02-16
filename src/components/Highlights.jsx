@@ -3,6 +3,7 @@ import React from 'react'
 import Arrow from '../assets/svg/arrow-top-right.svg'
 import sunburnVideo from '../assets/videos/videoplayback.mp4'
 
+
 const Highlights = () => {
     return (
         <div class=''>
