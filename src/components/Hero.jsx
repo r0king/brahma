@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 md:h-screen overflow-y-clip">
       <div className="relative pl-[5vw]">
         <div>
-          <h1 className="text-sec-color font-morganite text-[28vw] md:text-[13vw] leading-none uppercase ">
+          <h1 className="text-sec-color font-morganite text-[28vw] pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
           <h3 className="text-pri-color font-poppins font-semibold text-[6vw] py-[1vh] md:py-0 md:text-[2.5vw] uppercase">
