@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/HomePage";
-import EventsHome from "./components/EventsHome";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -81,8 +81,8 @@ function App() {
       </div>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route exact path="/" element={<HomePage />} />
-          <Route exact path="/events" element={<EventsHome />} />
+          <Route exact path="/" element={<HomePage />} />sudo apt install gnome-keyring
+          <Route exact path="/test" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
     </>
