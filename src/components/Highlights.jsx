@@ -14,7 +14,7 @@ const Highlights = () => {
                         <label class='leading-none absolute bottom-[-60px] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS</label>
                     </div>
                     <video
-                        width="900"
+                        width="800"
                         class='hover:opacity-80 object-cover brightness-60 drop-shadow-md'
                         src={sunburnVideo} autoPlay muted autoReplay />
 
