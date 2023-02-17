@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoadingIcons from "react-loading-icons";
 import { useEffect, useState } from "react";
 import HomePage from "./pages/HomePage";
+import NavBar from "./components/NavBar";
+import ContactUs from "./components/ContactUs";
 import Schedule from "./pages/Schedule/Schedule";
 
 function App() {
@@ -36,7 +38,7 @@ function App() {
           },
         })
       );
-    } catch (e) {}
+    } catch (e) { }
 
     var wheelOpt = supportsPassive ? { passive: false } : false;
     var wheelEvent =
@@ -67,9 +69,8 @@ function App() {
         style={{
           position: "fixed",
         }}
-        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${
-          !loading && "hidden"
-        }`}
+        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${!loading && "hidden"
+          }`}
       >
         <LoadingIcons.ThreeDots
           fill="#f0f0f0"
@@ -80,8 +81,10 @@ function App() {
         <div className="flex justify-center text-center ">Loading…</div>
       </div>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
+          <Route exact path="/test" element={<ContactUs />} />
           <Route exact path='/schedule' element={<Schedule/>}/>
         </Routes>
       </BrowserRouter>
