@@ -9,12 +9,12 @@ export default function CardButton({ onClick }) {
     >
       <Link
         rippleColor="#fff"
-        duration={1}
+        duration={0.5}
         block
         style={{
           padding: "2px",
         }}
-        className="hover:scale-[1.05] hover:shadow-2xl shadow-pri-color "
+        className="hover:scale-[1.1] transition-all ease-in-out duration-150 hover:shadow-2xl shadow-pri-color "
       >
         <div className="text-base ripple text-left leading-none p-1 flex items-end group-hover:text-pri-color h-20 font-poppins font-semibold text-acc-color ">
           Get <br /> tickets
