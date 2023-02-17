@@ -66,14 +66,7 @@ body{
   -webkit-animation: ripple-scale 2s ease;
   animation: ripple-scale 2s ease;
 }
-.circle-ripple-loading {
-  background-color: #d35c39;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  -webkit-animation: ripple-scale-down 1s ease;
-  animation: ripple-scale-down 1s ease;
-}
+
 
 @-webkit-keyframes ripple-scale {
   0% {
