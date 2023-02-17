@@ -3,13 +3,13 @@ import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/diwali-lamp.gif";
 export default function Hero() {
   return (
-    <section className="p-[5vw] pl-0 pt-[4vw] pr-0 md:h-screen overflow-x-clip md:overflow-y-clip">
+    <section className="p-[5vw] pl-0 pt-[7vw] md:pt-[4vw] pr-0 md:h-screen overflow-x-clip md:overflow-y-clip">
       <div className="relative pl-[5vw]">
         <div className="pt-4">
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[5vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
-          <h3 className="text-pri-color font-poppins font-semibold text-[5vw] md:text-[2.5vw] py-[1vh] md:py-0">
+          <h3 className="text-pri-color font-poppins font-semibold text-[5vw] md:text-[2.5vw] py-[1vh] md:py-3">
             Awaken the Creator Within.
           </h3>
         </div>
@@ -37,7 +37,7 @@ export default function Hero() {
               <img src={logoAnimation} alt="logo" className="w-full h-full" />
             </div>
           </div>
-          <div className="mt-[-9vh] mr-[2vw] md:mt-[4vw] pr-[4vw]">
+          <div className="mt-[-5vh] mr-[2vw] md:mt-[4vw] pr-[4vw]">
             <h1 className="text-right text-pri-color font-morganite text-[25vw] md:text-[13vw] leading-none uppercase ">
               Mar.28-Apr.01
             </h1>
@@ -51,7 +51,7 @@ export default function Hero() {
             >
               @ASIET
             </h1>
-            <div className="absolute bottom-[-5vh] right-0 left-0 md:relative">
+            <div className="absolute bottom-[-15vh] md:bottom-[-5vh] right-0 left-0 md:relative">
               <CountDown />
             </div>
           </div>
