@@ -1,5 +1,5 @@
 .wrapper {
-    padding-top: 5%;
+    padding-top: 7%;
     padding-left: 5%;
 }
 
@@ -60,7 +60,12 @@ li {
     width: 30%;
     right: 2%;
     position: fixed;
-    
+}
+
+.schedule img{
+    height: 70vh;
+    width: 100%;
+    border-top-right-radius: 10%;
 }
 
 
