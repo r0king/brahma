@@ -1,9 +1,20 @@
 import React from "react";
 import CountDown from "./CountDown";
+import { createRipples } from 'react-ripples'
+import Link from 'react-ripples-hover';
+
+// const MyRipples = createRipples({
+//   color: 'purple',
+//   during: 1000,
+// })
 
 export default function Hero() {
   return (
     <section className="p-[5vw] pr-0">
+      
+    <Link>
+      <button className="h-[5vh] w-[30vw] border-pri-color border-[1px]">Ripple Button</button>
+    </Link>
       <div className="relative ">
         <div>
           <h1 className="text-sec-color font-morganite font-bold text-[28vw] md:text-[13vw] leading-none uppercase ">
