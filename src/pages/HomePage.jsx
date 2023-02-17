@@ -13,8 +13,8 @@ export default class HomePage extends Component {
       <div className="text-pri-color ">
         <NavBar />
         <Hero />
-        {/* <Highlights /> */}
-        {/* <Highlight/> */}
+        {/* <Highlights />
+        <Highlight/> */}
         <EventsHome />
         <ContactUs />
       </div>

@@ -11,7 +11,7 @@ const Highlights = () => {
                     <div class='mx-2 '>
                         <label class='text-white text-[230px] font-sixcap'>HIGHLIGHTS</label>
                     </div>
-                    <div class='p-2'>
+                    <div class='p-2 '>
                         <img
                             class='drop-shadow-md w-full h-full '
                             alt='previous highlights'
@@ -47,8 +47,9 @@ const Highlights = () => {
 
             {/* NOTE(gokul): this runs on only small screens */}
             <div class='md:hidden bg-gradient-to-b from-gray-900 to-gray-800 pb-2'>
-                <div class='p-2'>
+                <div class='p-2 '>
                     <img
+                        alt='previous highlights'
                         class='drop-shadow-md w-full h-full '
                         src='https://33.media.tumblr.com/4d9aa44ac1be00dd18d030574828b427/tumblr_ngp8u5TiBf1u1m3cdo1_500.gif' />
                 </div>
