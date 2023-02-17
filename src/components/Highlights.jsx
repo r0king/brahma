@@ -11,7 +11,7 @@ const Highlights = () => {
             <div class='hidden md:block h-full'>
                 <div class='flex justify-end '>
                     <div class='relative '>
-                        <label class='leading-none absolute bottom-[-60px] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS</label>
+                        <label class='leading-none absolute bottom-[-50px] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS</label>
                     </div>
                     <video
                         width="800"
@@ -33,7 +33,7 @@ const Highlights = () => {
                         <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                             <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                             duration-300 transition-all group-hover:h-0 -z-0" />
-                            <span class='transition-colors duration-100 ease-in-out text-white stroke-black z-10 
+                            <span class='transition-colors duration-100 ease-in-out text-white stroke-white z-10 
                             relative rounded-lg p-2 flex justify-between w-full '>
                                 <div class='text-left'>
                                     <label class='text-xs font-medium mb-2'>Venue</label>
@@ -70,7 +70,7 @@ const Highlights = () => {
                     <div class='relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                         <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                         duration-300 transition-all group-hover:h-0 -z-0" />
-                        <span class='transition-colors duration-100 ease-in-out text-black stroke-black z-10 
+                        <span class='transition-colors duration-100 ease-in-out text-black stroke-white z-10 
                         relative rounded-lg p-2 flex justify-between w-full '>
                             <div class='text-left'>
                                 <label class='text-xs font-medium mb-2'>Venue</label>
