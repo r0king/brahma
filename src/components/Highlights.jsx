@@ -6,7 +6,7 @@ import sunburnVideo from '../assets/videos/videoplayback.mp4'
 
 const Highlights = () => {
     return (
-        <div class='my-32'>
+        <div class='my-32 '>
             {/* NOTE(gokul): this runs on medium to large screens */}
             <div class='hidden md:block h-full'>
                 <div class='flex justify-end '>
@@ -50,18 +50,18 @@ const Highlights = () => {
             </div >
 
             {/* NOTE(gokul): this runs on only small screens */}
-            < div class='md:hidden pb-2' >
+            < div class='md:hidden pb-2 ' >
                 <div class='p-2 rounded-lg'>
                     <video
                         class='object-cover brightness-60 drop-shadow-md w-full h-full aspect-video'
                         src={sunburnVideo} autoPlay muted />
                 </div>
-                <div class='md:hidden mx-2 '>
-                    <label class='text-pri-color text-9xl font-morganite'>HIGHLIGHTS</label>
+                <div class='md:hidden mx-2 leading-none text-left'>
+                    <label class='text-pri-color text-[35vw] font-morganite'>HIGHLIGHTS</label>
                 </div>
                 <div>
                     <div class='w-full'>
-                        <p class='mx-auto my-8 font-poppins text-pri-color text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <p class='mx-auto my-6 font-poppins text-pri-color text-sm text-left p-4 w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
                             voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p>
                     </div>
@@ -70,7 +70,7 @@ const Highlights = () => {
                     <div class='relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                         <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                         duration-300 transition-all group-hover:h-0 -z-0" />
-                        <span class='transition-colors duration-100 ease-in-out text-black stroke-white z-10 
+                        <span class='transition-colors duration-100 ease-in-out text-white stroke-white z-10 
                         relative rounded-lg p-2 flex justify-between w-full '>
                             <div class='text-left'>
                                 <label class='text-xs font-medium mb-2'>Venue</label>
