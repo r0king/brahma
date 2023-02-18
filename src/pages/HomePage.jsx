@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
-import SpotLight from "../components/SpotLight";
+// import SpotLight from "../components/SpotLight";
 import NavBar from "../components/NavBar";
 import Highlights from "../components/Highlights";
 import EventsHome from "../components/EventsHome";
