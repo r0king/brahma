@@ -1,91 +1,47 @@
-import "./App.css";
-import "animate.css/animate.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LoadingIcons from "react-loading-icons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import HomePage from "./pages/HomePage";
-import NavBar from "./components/NavBar";
-import ContactUs from "./components/ContactUs";
+import Faq from "./pages/FAQ/Faq";
+import Schedule from "./pages/Schedule/Schedule";
+
+import "./App.css";
+
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true); // add a loading state
+
+  const rippleRef = useRef(null);
+  const rootRef = useRef(null);
 
   useEffect(() => {
-    var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
-
-    function preventDefault(e) {
-      e.preventDefault();
-    }
-
-    function preventDefaultForScrollKeys(e) {
-      if (keys[e.keyCode]) {
-        preventDefault(e);
-        return false;
-      }
-    }
-
-    // modern Chrome requires { passive: false } when adding event
-    var supportsPassive = false;
-    try {
-      window.addEventListener(
-        "test",
-        null,
-        Object.defineProperty({}, "passive", {
-          get: function () {
-            supportsPassive = true;
-            return supportsPassive;
-          },
-        })
-      );
-    } catch (e) { }
-
-    var wheelOpt = supportsPassive ? { passive: false } : false;
-    var wheelEvent =
-      "onwheel" in document.createElement("div") ? "wheel" : "mousewheel";
-
-    // call this to Disable
-    function disableScroll() {
-      window.addEventListener("DOMMouseScroll", preventDefault, false); // older FF
-      window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-      window.addEventListener("touchmove", preventDefault, wheelOpt); // mobile
-      window.addEventListener("keydown", preventDefaultForScrollKeys, false);
-    }
-
-    disableScroll();
-
+    document.body.style.backgroundColor = "var(--bg-color)";
     setTimeout(() => {
-      setLoading(false);
-      window.removeEventListener("DOMMouseScroll", preventDefault, false);
-      window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
-      window.removeEventListener("touchmove", preventDefault, wheelOpt);
-      window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
-    }, 30);
-  }, []);
+      setLoading(false); // set the loading state to false
+    }, 1500);
+  }, [isLoading]);
 
   return (
     <>
       <div
-        style={{
-          position: "fixed",
-        }}
-        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${!loading && "hidden"
-          }`}
+        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${
+          !isLoading && "hidden "
+        }`}
       >
-        <LoadingIcons.ThreeDots
-          fill="#f0f0f0"
-          strokeOpacity={1}
-          height={"3.5rem"}
-          className="w-20 h-20"
-        />
-        <div className="flex justify-center text-center ">Loading…</div>
+        <div
+          ref={rippleRef}
+          className="circle-ripple-loading isLoading &&"
+        ></div>
       </div>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<HomePage />} />sudo apt install gnome-keyring
-          <Route exact path="/test" element={<ContactUs />} />
-        </Routes>
-      </BrowserRouter>
+      <div ref={rootRef} className="load-to-view">
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/faq" element={<Faq />} />
+          <Route exact path='/schedule' element={<Schedule/>}/>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }
