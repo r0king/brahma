@@ -33,7 +33,7 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-10vh] md:mt-0 ">
-            <div className="md:absolute top-[8vw] aspect-auto left-[10vw] w-full z-10 md:w-[38vw]">
+            <div className="md:absolute top-[8vw] aspect-auto left-[10vw] w-full z-10 md:w-[38vw] shadow-overlay">
               <img src={logoAnimation} alt="logo" className="w-full h-full" />
             </div>
           </div>

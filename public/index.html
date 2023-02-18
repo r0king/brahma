@@ -40,9 +40,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>React App</title>
+  <style>
+    .circle-ripple-loading {
+      background-color: #d35c39;
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      -webkit-animation: ripple-scale-down 1s ease;
+      animation: ripple-scale-down 1s ease;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-[var(--secondary-color)]">
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <!--

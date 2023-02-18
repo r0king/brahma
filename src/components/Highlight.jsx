@@ -20,11 +20,14 @@ const Highlight = () => {
               <span className="leading-[0.88] font-medium tracking-wider font-sixcaps text-pri-color uppercase text-[275px]">
                 TALKS
               </span>
-              <img
-                className="object-cover h-64 ml-4 rounded-lg w-96"
-                src="https://source.unsplash.com/1200x800/?3"
-                style={imgStyle}
-              />
+              <div className="relative h-64 ml-4 rounded-lg w-96 shadow-overlay">
+                <img  
+                  className="object-cover h-full w-full"
+                  src="https://source.unsplash.com/1200x800/?3"
+                  style={imgStyle}
+                  alt="talks"
+                />
+              </div>
             </div>
           </div>
           <div className="w-full border-none md:w-full xl:w-full">
@@ -39,6 +42,7 @@ const Highlight = () => {
                 className="object-cover h-64 ml-4 rounded-lg w-96"
                 src="https://source.unsplash.com/1200x800/?2"
                 style={imgStyle}
+                alt="workshop"
               />
             </div>
           </div>
@@ -54,6 +58,7 @@ const Highlight = () => {
                 className="object-cover h-64 ml-4 rounded-lg w-96"
                 src="https://source.unsplash.com/1200x800/?1"
                 style={imgStyle}
+                alt="speakers"
               />
             </div>
           </div>
@@ -64,9 +69,3 @@ const Highlight = () => {
 };
 
 export default Highlight;
-
-
-
-
-
-
