@@ -31,7 +31,7 @@
     background-color: #fafafa;
   }
 } */
-body{
+body {
   /* background-color: var(--secondary-color); */
 }
 .marquee {
@@ -67,6 +67,14 @@ body{
   animation: ripple-scale 2s ease;
 }
 
+.circle-ripple-loading {
+  background-color: #d35c39;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  -webkit-animation: ripple-scale-down 1.5s ease;
+  animation: ripple-scale-down 1.5s ease;
+}
 
 @-webkit-keyframes ripple-scale {
   0% {
@@ -96,6 +104,7 @@ body{
 @-webkit-keyframes ripple-scale-down {
   0% {
     transform: scale(90);
+    display: block;
     box-shadow: 0 0 0 1em rgba(211, 92, 57, 0.3),
       0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3),
       0 0 0 8em rgba(211, 92, 57, 0);
@@ -110,6 +119,7 @@ body{
 @keyframes ripple-scale-down {
   0% {
     transform: scale(90);
+    display: block;
     box-shadow: 0 0 0 1em rgba(211, 92, 57, 0.3),
       0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3),
       0 0 0 8em rgba(211, 92, 57, 0);

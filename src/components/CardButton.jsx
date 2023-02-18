@@ -1,22 +1,23 @@
 import React from "react";
 import Link from "react-ripples-hover";
 
-export default function CardButton({ onClick }) {
+export default function CardButton({ onClick, href }) {
   return (
-    <div
-      className="relative bg-sec-color group scale-[0.98] rounded-md md:w-[calc((100vw-9.375rem)*3/14+1.875rem)] flex justify-center items-center"
+    <button
+      className="relative bg-sec-color group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
       onClick={onClick}
     >
       <Link
         rippleColor="#fff"
         duration={0.5}
+        href={href}
         block
         style={{
           padding: "2px",
         }}
-        className="hover:scale-[1.1] transition-all ease-in-out duration-150 hover:shadow-2xl shadow-pri-color "
+        className="hover:scale-[1.1] transition-all ease-in-out duration-150 hover:shadow-2xl shadow-pri-color h-full w-full flex justify-center items-center"
       >
-        <div className="text-base ripple text-left leading-none p-1 flex items-end group-hover:text-pri-color h-20 font-poppins font-semibold text-acc-color ">
+        <div className="text-xl ripple text-left leading-none p-3 flex items-end group-hover:text-pri-color h-full font-poppins font-semibold text-acc-color ">
           Get <br /> tickets
         </div>
         <div className="flex justify-end w-full items-end mr-[2vw]">
@@ -41,6 +42,6 @@ export default function CardButton({ onClick }) {
           </div>
         </div>
       </Link>
-    </div>
+    </button>
   );
 }

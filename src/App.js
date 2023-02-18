@@ -9,9 +9,8 @@ import CardButton from "./components/CardButton";
 import "./App.css";
 
 function App() {
-
   const [buttonClicked, setButtonClicked] = useState(false);
-  const [isLoading, setLoading] = useState(false); // add a loading state
+  const [isLoading, setLoading] = useState(true); // add a loading state
 
   const rippleRef = useRef(null);
   const rootRef = useRef(null);
@@ -35,43 +34,38 @@ function App() {
 
     setTimeout(() => {
       rippleRef.current.classList.remove("circle-ripple");
-      rippleRef.current.classList.add("hidden");    
-      window.location.pathname = "/test";  
+      rippleRef.current.classList.add("hidden");
+      window.location.pathname = "/test";
     }, 500);
   };
+
   useEffect(() => {
     document.body.style.backgroundColor = "var(--bg-color)";
-  }, [isLoading])
-  
+    setTimeout(() => {
+      setLoading(false); // set the loading state to false
+    }, 1500);
+  }, [isLoading]);
+
   return (
     <>
-      <div className="fixed h-screen w-screen justify-center items-center flex">
-        <div ref={rippleRef} className="circle-ripple-loading"></div>
+      <div
+        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${
+          !isLoading && "hidden "
+        }`}
+      >
+        <div
+          ref={rippleRef}
+          className="circle-ripple-loading isLoading &&"
+        ></div>
       </div>
       <div ref={rootRef} className="load-to-view">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <NavBar />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route
-              exact
-              path="/test"
-              element={
-                <div
-                  className={`h-screen w-screen justify-center items-center flex ${
-                    buttonClicked &&
-                    "transform transition-all opacity-0"
-                  }`}
-                  onClick={handleButtonClick}
-                >
-                  <CardButton />
-                </div>
-              }
-            />
           </Routes>
         </BrowserRouter>
       </div>
-      {isLoading && <>sadfasdf</>}
     </>
   );
 }

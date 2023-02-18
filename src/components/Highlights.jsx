@@ -1,7 +1,8 @@
 import React from 'react'
 // import Arrow from '../src/assets/svg/arrow-top-right.svg'
-import Arrow from '../assets/svg/arrow-top-right.svg'
+// import Arrow from '../assets/svg/arrow-top-right.svg'
 import sunburnVideo from '../assets/videos/videoplayback.mp4'
+import CardButton from './CardButton'
 
 
 const Highlights = () => {
@@ -13,11 +14,12 @@ const Highlights = () => {
                     <div class='relative '>
                         <label class='leading-none absolute bottom-[-50px] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS</label>
                     </div>
-                    <video
-                        width="800"
-                        class='hover:opacity-80 object-cover brightness-60 drop-shadow-md'
-                        src={sunburnVideo} autoPlay muted autoReplay />
-
+                    <div className='relative shadow-overlay'>
+                        <video
+                            width="800"
+                            class='hover:opacity-80 object-cover brightness-60 '
+                            src={sunburnVideo} autoPlay muted autoReplay />
+                    </div>
                 </div>
 
                 {/* Descriptions */}
@@ -29,8 +31,9 @@ const Highlights = () => {
                     </div>
 
                     {/* NOTE(gokul): for the love of god dont touch this code, it works and thats all u need to know */}
-                    <div class=' mr-24 mt-0 w-1/4 h-1/2'>
-                        <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
+                    <div class=' mr-24 mt-3 w-1/4 h-[8vw]'>
+                        <CardButton href='/'/>
+                        {/* <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                             <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                             duration-300 transition-all group-hover:h-0 -z-0" />
                             <span class='transition-colors duration-100 ease-in-out text-white stroke-white z-10 
@@ -44,7 +47,7 @@ const Highlights = () => {
                                 </div>
                                 <svg class='absolute m-2 bottom-0 right-0' width="34px" height="34px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16.2928932,7 L11.5,7 C11.2238576,7 11,6.77614237 11,6.5 C11,6.22385763 11.2238576,6 11.5,6 L17.5,6 C17.7761424,6 18,6.22385763 18,6.5 L18,12.5 C18,12.7761424 17.7761424,13 17.5,13 C17.2238576,13 17,12.7761424 17,12.5 L17,7.70710678 L6.85355339,17.8535534 C6.65829124,18.0488155 6.34170876,18.0488155 6.14644661,17.8535534 C5.95118446,17.6582912 5.95118446,17.3417088 6.14644661,17.1464466 L16.2928932,7 Z"></path> </g></svg>
                             </span>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div >
