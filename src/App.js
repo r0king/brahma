@@ -1,10 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
-// import LoadingIndicator from "./components/LoadingIndicator"; // add a LoadingIndicator component
-
+import Faq from "./pages/FAQ/Faq";
 import "./App.css";
 
 function App() {
@@ -12,7 +10,6 @@ function App() {
 
   const rippleRef = useRef(null);
   const rootRef = useRef(null);
-
 
   useEffect(() => {
     document.body.style.backgroundColor = "var(--bg-color)";
@@ -35,9 +32,9 @@ function App() {
       </div>
       <div ref={rootRef} className="load-to-view">
         <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <NavBar />
           <Routes>
             <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/faq" element={<Faq />} />
           </Routes>
         </BrowserRouter>
       </div>
