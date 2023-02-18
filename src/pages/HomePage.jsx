@@ -8,13 +8,11 @@ import EventsHome from "../components/EventsHome";
 import "./HomePage.css"
 import Workshop from "../components/Workshop";
 import SpotLight from "../components/SpotLight";
-import Cursor from "../components/Cursor";
 
 export default class HomePage extends Component {
   render() {
     return (
       <div className="text-pri-color ">
-        <Cursor/>
         <NavBar />
         <Hero />
         <Highlights />
