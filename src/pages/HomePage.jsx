@@ -8,6 +8,7 @@ import EventsHome from "../components/EventsHome";
 import "./HomePage.css"
 import Workshop from "../components/Workshop";
 import SpotLight from "../components/SpotLight";
+import CarouselAni from "../components/CarouselAni";
 
 export default class HomePage extends Component {
   render() {
@@ -17,6 +18,7 @@ export default class HomePage extends Component {
         <Hero />
         <Highlights />
         <SpotLight/>
+        <CarouselAni />
         <EventsHome />
         <Workshop/>
         <ContactUs />

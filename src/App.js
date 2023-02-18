@@ -6,7 +6,7 @@ import Faq from "./pages/FAQ/Faq";
 import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
-
+import CarouselAni from "./components/CarouselAni";
 
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -38,7 +38,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/faq" element={<Faq />} />
-          <Route exact path='/schedule' element={<Schedule/>}/>
+            <Route exact path="/schedule" element={<Schedule />} />
+            <Route exact path="/test" element={<CarouselAni />} />
           </Routes>
         </BrowserRouter>
       </div>

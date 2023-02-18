@@ -22,7 +22,6 @@ const SpotLight = () => {
               src="https://source.unsplash.com/1200x800/?3"
               alt="talks"
             />
-
           </div>
         </div>
         <div className="">
@@ -33,12 +32,14 @@ const SpotLight = () => {
             <span className="leading-[0.88] text-[150px] font-medium font-morganite tracking-normal text-pri-color uppercase md:text-[31vw]">
               WORKSHOPS
             </span>
-            <img
-              className="hidden object-cover h-90 mr-4 rounded-lg w-96 md:inline mt-[1.7vw]"
-              src="https://source.unsplash.com/1200x800/?2"
-              style={imgStyle}
-              alt="workshop"
-            />
+            <div className=" relative shadow-overlay">
+              <img
+                className="hidden object-cover mr-4 rounded-lg w-96 h-90 md:inline mt-[1.7vw] "
+                src="https://source.unsplash.com/1200x800/?2"
+                style={imgStyle}
+                alt="workshop"
+              />
+            </div>
           </div>
         </div>
         <div className="">
@@ -59,14 +60,7 @@ const SpotLight = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
 export default SpotLight;
-
-
-
-
-
-
