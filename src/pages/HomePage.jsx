@@ -6,6 +6,7 @@ import NavBar from "../components/NavBar";
 import Highlights from "../components/Highlights";
 import EventsHome from "../components/EventsHome";
 import "./HomePage.css"
+import Workshop from "../components/Workshop";
 
 export default class HomePage extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class HomePage extends Component {
         <Highlights />
         {/* <SpotLight/> */}
         <EventsHome />
+        <Workshop/>
         <ContactUs />
       </div>
     );
