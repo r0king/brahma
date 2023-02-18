@@ -3,7 +3,7 @@ import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/diwali-lamp.gif";
 export default function Hero() {
   return (
-    <section className="p-[5vw] pl-0 pt-[4vw] pr-0">
+    <section className="p-[5vw] pl-0 pt-[4vw] pr-0 overflow-hidden">
       <div className="relative pl-[5vw]">
         <div className="pt-4">
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[5vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
@@ -51,7 +51,7 @@ export default function Hero() {
             >
               @ASIET
             </h1>
-            <div className="absolute bottom-[-5vh] right-0 left-0 md:relative">
+            <div className="relative right-0 left-0 mt-[5vh]">
               <CountDown />
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Highlight_J = () => {
+const SpotLight = () => {
   const imgStyle = {
     boxShadow: "inset 10px 10px 40px #d35c39",
   };
@@ -20,7 +20,7 @@ const Highlight_J = () => {
             <img
               className="hidden object-cover  ml-4 rounded-lg h-90 w-96 md:inline mt-[1.7vw]"
               src="https://source.unsplash.com/1200x800/?3"
-
+              alt="talks"
             />
 
           </div>
@@ -37,6 +37,7 @@ const Highlight_J = () => {
               className="hidden object-cover h-90 mr-4 rounded-lg w-96 md:inline mt-[1.7vw]"
               src="https://source.unsplash.com/1200x800/?2"
               style={imgStyle}
+              alt="workshop"
             />
           </div>
         </div>
@@ -52,6 +53,7 @@ const Highlight_J = () => {
               className="hidden object-cover h-90 ml-4 rounded-lg w-96 md:inline mt-[1.7vw]"
               src="https://source.unsplash.com/1200x800/?1"
               style={imgStyle}
+              alt="speakers"
             />
           </div>
         </div>
@@ -61,7 +63,7 @@ const Highlight_J = () => {
   );
 };
 
-export default Highlight_J;
+export default SpotLight;
 
 
 

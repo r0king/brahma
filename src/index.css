@@ -38,6 +38,7 @@ body {
   --gap: 1rem;
   display: flex;
   overflow: hidden;
+  width: 100%;
   user-select: none;
   gap: var(--gap);
 }

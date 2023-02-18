@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
-import Highlight_J from "../components/Highlight_J";
+import SpotLight from "../components/SpotLight";
 import NavBar from "../components/NavBar";
 import Highlights from "../components/Highlights";
-import Highlight from "../components/Highlight";
 import EventsHome from "../components/EventsHome";
 import "./HomePage.css"
 
@@ -15,7 +14,7 @@ export default class HomePage extends Component {
         <NavBar />
         <Hero />
         <Highlights />
-        <Highlight_J/>
+        {/* <SpotLight/> */}
         <EventsHome />
         <ContactUs />
       </div>
