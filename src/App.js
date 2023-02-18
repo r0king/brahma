@@ -7,6 +7,7 @@ import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
 
+
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
 
