@@ -45,7 +45,7 @@ export default function EventsHome() {
                         </ul>
                     </div>
                 </div>
-                <div className='font-poppins absolute text-sec-color text-[23px] md:text-[2.75rem] font-bold -bottom-[25%] md:-bottom-[75%] right-0'>
+                <div className='font-poppins absolute text-sec-color text-[23px] md:text-[2.75rem] font-bold -bottom-[25%] md:-bottom-[170%] right-0'>
                     (+30)
                 </div>
             </div>
