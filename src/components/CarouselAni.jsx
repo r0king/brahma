@@ -25,7 +25,7 @@ export default class CarouselAni extends Component {
         ? this.scrollCount + 0.6
         : this.scrollCount - 0.6;
     // udpate the speed of the animation based on scroll count in the range of 5-20
-    this.scrollCount = Math.min(Math.max(this.scrollCount, 5), 20);
+    this.scrollCount = Math.min(Math.max(this.scrollCount, 10), 20);
     const scrollSpeed = this.scrollCount;
     console.log(scrollSpeed);
 
