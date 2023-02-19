@@ -2,6 +2,7 @@ import React from 'react'
 import dotSVG from "../assets/images/dot.svg"
 // import Event1 from "../assets/images/event1.jpg"
 import Event1 from "../assets/images/event2.jpg"
+import CardButton from './CardButton'
 
 export default function EventsHome() {
     return (
@@ -130,30 +131,60 @@ export default function EventsHome() {
             <div className='py-5 px-1 md:p-5 md:mt-0 mt-[50%]'>
                 <div className='flex flex-col'>
                     <div className='flex flex-row mb-2 md:mb-5'>
-                        <div className='h-[50vh] md:h-[85vh] w-[50%] md:w-[29%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
+                        <div className='relative h-[50vh] md:h-[85vh] w-[50%] md:w-[29%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
                             <img src={Event1} alt="" className='filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]' />
+                            <div className='absolute bottom-0 pb-1 md:pb-3'>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl'>MERCADO JUEGO</div>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins text-sm md:text-xl'>Venue</div>
+                            </div>
+                            <div className='absolute text-acc-color p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0'>Date & Time</div>
                         </div>
-                        <div className='mt-7 md:mt-0 ml-2 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[43%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
+                        <div className='relative mt-7 md:mt-0 ml-2 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[43%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
                             <img src={Event1} alt="" className='filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]' />
+                            <div className='absolute bottom-0 pb-1 md:pb-3'>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl'>MERCADO JUEGO</div>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins text-sm md:text-xl'>Venue</div>
+                            </div>
+                            <div className='absolute text-acc-color p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0'>Date & Time</div>
                         </div>
                     </div>
                     <div className='flex flex-row md:flex-row-reverse mb-5'>
-                        <div className='-mt-8 md:mt-0 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[43%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
+                        <div className='relative -mt-8 md:mt-0 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[43%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
                             <img src={Event1} alt="" className='filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]' />
+                            <div className='absolute bottom-0 pb-1 md:pb-3'>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl'>MERCADO JUEGO</div>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins text-sm md:text-xl'>Venue</div>
+                            </div>
+                            <div className='absolute text-acc-color p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0'>Date & Time</div>
                         </div>
-                        <div className='ml-2 md:ml-0 md:mr-2 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[29%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
+                        <div className='relative ml-2 md:ml-0 md:mr-2 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[29%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
                             <img src={Event1} alt="" className='filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]' />
+                            <div className='absolute bottom-0 pb-1 md:pb-3'>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl'>MERCADO JUEGO</div>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins text-sm md:text-xl'>Venue</div>
+                            </div>
+                            <div className='absolute text-acc-color p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0'>Date & Time</div>
                         </div>
                     </div>
                     <div className='flex flex-wrap'>
-                        <div className='-mt-12 md:mt-0 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[48%] md:w-[29%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
+                        <div className='relative -mt-12 md:mt-0 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[48%] md:w-[29%] rounded-tr-[15%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color'>
                             <img src={Event1} alt="" className='filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]' />
+                            <div className='absolute bottom-0 pb-1 md:pb-3'>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl'>MERCADO JUEGO</div>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins text-sm md:text-xl'>Venue</div>
+                            </div>
+                            <div className='absolute text-acc-color p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0'>Date & Time</div>
                         </div>
                         <div className='relative -mt-3 md:mt-0 ml-2 h-[50vh] md:h-[85vh] w-[48%] md:w-[43%] bg-pri-color  hover:bg-gradient-to-t hover:from-sec-color hover:to-pri-color rounded-tr-[15%]'>
                             <img src={Event1} alt="" className='filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]' />
+                            <div className='absolute bottom-0 pb-1 md:pb-3'>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl'>MERCADO JUEGO</div>
+                                <div className='text-acc-color pl-1 md:pl-4 font-poppins text-sm md:text-xl'>Venue</div>
+                            </div>
+                            <div className='absolute text-acc-color p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0'>Date & Time</div>
                             {/* <h1 className='absolute bottom-2 left-2 shadow-md text-6xl font-extrabold text-acc-color rounded-tr-[15%]'>Hello</h1> */}
                         </div>
-                        <button className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%] rounded-2xl bg-sec-color'>
+                        {/* <button className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%] rounded-2xl bg-sec-color'>
                             <h1 className='absolute top-0 p-2 md:p-5 max-w-2 text-sm font-poppins'>
                                 Events
                             </h1>
@@ -167,7 +198,10 @@ export default function EventsHome() {
                                     arrow_outward
                                 </span>
                             </div>
-                        </button>
+                        </button> */}
+                        <div className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]'>
+                            <CardButton text={{ head: "View", tail: "All Events", caption: "Events" }} />
+                        </div>
                     </div>
                 </div>
             </div>

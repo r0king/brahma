@@ -17,12 +17,12 @@ export default class HomePage extends Component {
         <NavBar />
         <Hero />
         <Highlights />
-        <SpotLight />
-        <Workshop />
-        {/* <Highlights /> */}
-        {/* <SpotLight/> */}
         <EventsHome />
         <Workshop />
+        <SpotLight />
+        {/* <Workshop /> */}
+        {/* <Highlights /> */}
+        {/* <SpotLight/> */}
         <Sponsors />
         <ContactUs />
       </div>
