@@ -14,7 +14,7 @@ import Sponsors from "../components/Sponsors";
 export default class HomePage extends Component {
   render() {
     return (
-      <div className="text-pri-color ">
+      <div className="text-pri-color overflow-x-hidden">
         <NavBar />
         <Hero />
         <Highlights />

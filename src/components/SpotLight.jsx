@@ -6,7 +6,7 @@ const SpotLight = () => {
   };
 
   return (
-    <div className="grid w-screen mr-6 md:w-auto sm: place-items-center">
+    <div className="grid w-full mr-6 md:w-auto sm: place-items-center">
       <div className="flex flex-col ">
         <div className="">
           <div className="flex justify-end rounded-lg">
