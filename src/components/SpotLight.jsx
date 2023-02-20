@@ -19,7 +19,7 @@ const SpotLight = () => {
                 src="https://source.unsplash.com/1200x800/?3"
                 alt="talks"
               />
-              <div className='absolute inset-0 rounded-lg shadow-overlay h-[21.5vw] mt-[2.8vw] ml-4 opacity-40'></div>
+              <div className='absolute inset-0 rounded-lg shadow-overlay h-[21.5vw] mt-[2.8vw] ml-4 opacity-60'></div>
             </div>
           </div>
         </div>
@@ -37,7 +37,7 @@ const SpotLight = () => {
                 src="https://source.unsplash.com/1200x800/?2"
                 alt="talks"
               />
-              <div className='absolute inset-0 rounded-lg shadow-overlay h-[21.5vw] mt-[2.8vw] ml-4 mr-4 opacity-40'></div>
+              <div className='absolute inset-0 rounded-lg shadow-overlay h-[21.5vw] mt-[2.8vw] ml-4 mr-4 opacity-60'></div>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ const SpotLight = () => {
                 src="https://source.unsplash.com/1200x800/?1"
                 alt="talks"
               />
-              <div className='absolute inset-0 rounded-lg shadow-overlay h-[21.5vw] mt-[2.8vw] ml-4 opacity-40'></div>
+              <div className='absolute inset-0 rounded-lg shadow-overlay h-[21.5vw] mt-[2.8vw] ml-4 opacity-60'></div>
             </div>
           </div>
         </div>

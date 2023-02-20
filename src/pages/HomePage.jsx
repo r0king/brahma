@@ -9,11 +9,10 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import SpotLight from "../components/SpotLight";
 import Sponsors from "../components/Sponsors";
-
 export default class HomePage extends Component {
   render() {
     return (
-      <div className="text-pri-color ">
+      <div className=" text-pri-color">
         <NavBar />
         <Hero />
         <Highlights />
