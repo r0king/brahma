@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContactUs from "../components/ContactUs";
+
 import Hero from "../components/Hero";
 import NavBar from "../components/NavBar";
 import Highlights from "../components/Highlights";
@@ -9,6 +9,7 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import SpotLight from "../components/SpotLight";
 import Sponsors from "../components/Sponsors";
+import ContactUs from "./ContactUs/ContactUs";
 
 export default class HomePage extends Component {
   render() {

@@ -6,6 +6,8 @@ import Faq from "./pages/FAQ/Faq";
 import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
+import ContactUs from "./pages/ContactUs/ContactUs";
+
 
 
 function App() {
@@ -38,6 +40,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/faq" element={<Faq />} />
+            <Route exact path="/contact" element={<ContactUs />} />
           <Route exact path='/schedule' element={<Schedule/>}/>
           </Routes>
         </BrowserRouter>
