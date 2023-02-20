@@ -22,19 +22,17 @@ export default class CarouselAni extends Component {
     // update scrollcount if scroll direction changes
     this.scrollCount =
       scrollDirection === "forwards"
-        ? this.scrollCount + 0.6
-        : this.scrollCount - 0.6;
+        ? this.scrollCount - 0.2
+        : this.scrollCount + 0.2;
     // udpate the speed of the animation based on scroll count in the range of 5-20
-    this.scrollCount = Math.min(Math.max(this.scrollCount, 10), 20);
+    this.scrollCount = Math.min(Math.max(this.scrollCount, 20), 45);
     const scrollSpeed = this.scrollCount;
-    console.log(scrollSpeed);
 
     const animationStyle = `scroll ${scrollSpeed}s ${scrollDirection} linear infinite`;
     //   update animation of all marquee__content elements in the marquee component
     this.marqueeRef.current
       .querySelectorAll(".marquee__content")
       .forEach((el) => {
-        // console.log(el)
         el.style.animation = animationStyle;
       });
 
@@ -44,7 +42,7 @@ export default class CarouselAni extends Component {
   render() {
     return (
       <div
-        className="marquee font-morganite md:text-[35vh] opacity-90"
+        className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
         ref={this.marqueeRef}
       >
         <ul className="marquee__content uppercase">
