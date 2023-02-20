@@ -9,6 +9,7 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import SpotLight from "../components/SpotLight";
 import Sponsors from "../components/Sponsors";
+import Scroll from "../components/Scroll";
 
 export default class HomePage extends Component {
   render() {
@@ -16,6 +17,7 @@ export default class HomePage extends Component {
       <div className="text-pri-color ">
         <NavBar />
         <Hero />
+        <Scroll/>
         <Highlights />
         <SpotLight />
         {/* <Highlights /> */}
