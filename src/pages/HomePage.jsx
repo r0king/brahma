@@ -18,10 +18,11 @@ export default class HomePage extends Component {
         <NavBar />
         <Hero />
         <Highlights />
-        <SpotLight/>
-        <CarouselAni />
         <EventsHome />
+        <CarouselAni />
         <Workshop />
+        <SpotLight/>
+        <SpotLight />
         <Sponsors />
         <ContactUs />
       </div>
