@@ -58,7 +58,7 @@ function App() {
       window.removeEventListener(wheelEvent, preventDefault, wheelOpt);
       window.removeEventListener("touchmove", preventDefault, wheelOpt);
       window.removeEventListener("keydown", preventDefaultForScrollKeys, false);
-    }, 30);
+    }, 3000);
   }, []);
 
   return (
@@ -67,17 +67,17 @@ function App() {
         style={{
           position: "fixed",
         }}
-        className={`bg-black z-[999] h-screen w-screen flex flex-col justify-center items-center ${
+        className={`bg-acc-color z-[999] h-screen w-screen flex flex-col justify-center items-center ${
           !loading && "hidden"
         }`}
       >
-        <LoadingIcons.ThreeDots
-          fill="#f0f0f0"
+        <LoadingIcons.Puff
+          stroke="#d35c39"
           strokeOpacity={1}
           height={"3.5rem"}
           className="w-20 h-20"
         />
-        <div className="flex justify-center text-center ">Loading…</div>
+        <div className="flex font-poppins font-semibold pt-5 justify-center text-center text-pri-color">&nbsp;&nbsp;Loading..</div>
       </div>
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>

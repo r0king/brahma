@@ -1,6 +1,6 @@
 import React from "react";
 import CountDown from "./CountDown";
-import logoAnimation from "../assets/images/brahmaLogo.png";
+import logoAnimation from "../assets/images/brahmaLogo.webp";
 export default function Hero() {
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 ">
