@@ -1,6 +1,6 @@
 import React from "react";
 import CountDown from "./CountDown";
-import logoAnimation from "../assets/images/brahmaLogo.png";
+import logoAnimation from "../assets/images/brahmaLogo.webp";
 import { Parallax } from "react-scroll-parallax";
 
 export default function Hero() {
