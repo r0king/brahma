@@ -3,7 +3,7 @@ import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
 export default function Hero() {
   return (
-    <section className="pb-[5vw]">
+    <section className="pb-[5vw] h-screen overflow-hidden pt-0 md:pt-5">
       <div className="relative pl-[5vw]">
         <div className="pl-6 md:pl-0 pt-7 md:pt-4"> 
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
@@ -41,7 +41,7 @@ export default function Hero() {
                   Mar.28-Apr.01
                 </h1>
               </div>
-              <div className="absolute top-[-6vh] md:top-[27vh] right-0 md:right-[25vw]">
+              <div className="absolute top-[-6vh] md:top-[27vh] right-0 md:right-[23vw]">
                 <h1
                   className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.5] uppercase "
                   style={{
@@ -50,7 +50,7 @@ export default function Hero() {
                 >
                   @ASIET
                 </h1>
-                <div className="absolute -right-[0vw] md:-right-[26vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
+                <div className="absolute -right-[0vw] md:-right-[24vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
                   <CountDown />
                 </div>
               </div>
