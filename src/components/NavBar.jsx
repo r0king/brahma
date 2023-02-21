@@ -17,8 +17,8 @@ const Navbar = () => {
             <div className="flex justify-end items-center w-full text-[12px] mr-[2vw]">
               {/* <label className="p-2 pt-1 font-semibold opacity-[0.6]">events</label> */}
               {/* <label className="p-2 pt-1 font-semibold ">about</label> */}
-              <label className="p-2 hover:opacity-100 pt-1 font-semibold opacity-[0.6]">About</label>
-              <label className="p-2 hover:opacity-100 pt-1 font-semibold opacity-[0.6]">Contact Us</label>
+              {/* <label className="p-2 hover:opacity-100 pt-1 font-semibold opacity-[0.6]">About</label>
+              <label className="p-2 hover:opacity-100 pt-1 font-semibold opacity-[0.6]">Contact Us</label> */}
               {/* <img
                 src={arrowSVG}
                 alt=" "

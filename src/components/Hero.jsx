@@ -3,9 +3,9 @@ import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
 export default function Hero() {
   return (
-    <section className="p-[5vw] pl-0 pt-[2vw] pr-0 ">
+    <section className="pb-[5vw]">
       <div className="relative pl-[5vw]">
-        <div className="pl-6 md:pl-0 pt-7 md:pt-4">
+        <div className="pl-6 md:pl-0 pt-7 md:pt-4"> 
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
@@ -35,7 +35,7 @@ export default function Hero() {
             <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[50vw] md:w-[32vw]">
               <img src={logoAnimation} alt="logo" className="w-full h-full" />
             </div>
-            <div className="absolute top-[70vh] md:top-[40vh] right-10 md:right-0">
+            <div className="absolute top-[70vh] md:top-[40vh] right-10 md:right-4">
               <div className="">
                 <h1 className="text-right text-pri-color font-morganite text-[25vw] md:text-[13vw] leading-none uppercase ">
                   Mar.28-Apr.01
@@ -50,7 +50,7 @@ export default function Hero() {
                 >
                   @ASIET
                 </h1>
-                <div className="absolute -right-[0vw] md:-right-[25vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
+                <div className="absolute -right-[0vw] md:-right-[26vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
                   <CountDown />
                 </div>
               </div>
