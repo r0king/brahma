@@ -14,7 +14,7 @@
   --secondary-color: #d35c39;
   --bg-color: #fafafa;
 }
-/* .load-to-view {
+.load-to-view {
   transition: all 1s ease;
   animation: load-to-view 1s ease;
   background-color: transparent;
@@ -22,7 +22,7 @@
 @keyframes load-to-view {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
     background-color: #d35c39;
   }
   100% {
@@ -30,7 +30,7 @@
     transform: translateY(0);
     background-color: #fafafa;
   }
-} */
+}
 body {
   scroll-behavior: smooth;
 }

@@ -16,7 +16,7 @@ export default function Hero() {
           <img src={logoAnimation} alt="logo" className="w-full h-full" />
         </div>
       </Parallax>
-      <div className="relative pl-[5vw]">
+      <div className="relative pl-[5vw] h-screen md:h-auto">
         <div className="pl-6 md:pl-0 pt-7 md:pt-4">
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
@@ -50,12 +50,12 @@ export default function Hero() {
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
             <div
-              className="absolute top-[70%] md:top-[50%] right-10 md:right-0"
+              className="absolute top-[60%] sm:top-[70%] md:top-[50%] right-10 md:right-0"
             >
               <h1 className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
                 Mar.28-Apr.01
               </h1>
-              <div className="absolute md:top-[90%] right-0 md:flex">
+              <div className="absolute  md:top-[90%] right-0 md:flex">
                 <h1
                   className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.7] uppercase "
                   style={{
