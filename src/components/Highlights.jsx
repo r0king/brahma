@@ -32,7 +32,7 @@ const Highlights = () => {
 
                     {/* NOTE(gokul): for the love of god dont touch this code, it works and thats all u need to know */}
                     <div class=' mr-24 mt-3 w-1/4 h-[8vw]'>
-                        <CardButton href='/'/>
+                        <CardButton href='/' text={{head:"Explore",tail:"The Location",caption:"Venue"}}/>
                         {/* <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                             <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                             duration-300 transition-all group-hover:h-0 -z-0" />

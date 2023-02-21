@@ -1,7 +1,8 @@
 import React from "react";
 import Link from "react-ripples-hover";
 
-export default function CardButton({ onClick, href }) {
+export default function CardButton({ onClick, href, text }) {
+  console.log("Hello",text); 
   return (
     <button
       className="relative bg-sec-color group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
@@ -17,12 +18,20 @@ export default function CardButton({ onClick, href }) {
         }}
         className="hover:scale-[1.1] transition-all ease-in-out duration-150 hover:shadow-2xl shadow-pri-color h-full w-full flex justify-center items-center"
       >
-        <div className="text-xl ripple text-left leading-none p-3 flex items-end group-hover:text-pri-color h-full font-poppins font-semibold text-acc-color ">
-          Get <br /> tickets
+        <div className="absolute left-0 p-3 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
+          {text.caption}
         </div>
-        <div className="flex justify-end w-full items-end mr-[2vw]">
+        <div className="absolute bottom-0 left-0 text-left text-xl p-3 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
+          {text.head}<br/>{text.tail}
+        </div>
+        {/* <div className="text-left p-3 group-hover:text-pri-color font-poppins font-semibold text-acc-color">{text.caption}</div>
+        <div className="text-xl ripple text-left leading-none p-3 flex items-end group-hover:text-pri-color h-[85%] font-poppins font-semibold text-acc-color">
+          {text.head}<br/>{text.tail}
+          
+        </div> */}
+        <div className="absolute right-0 bottom-0 p-3">
           <div
-            className="-mt-5 group-hover:fill-pri-color fill-acc-color mr-1 "
+            className="group-hover:fill-pri-color fill-acc-color"
             // style={{
 
             // }}

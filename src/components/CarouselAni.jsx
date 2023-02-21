@@ -1,31 +1,3 @@
-// import { useState, useEffect } from 'react';
-// import './Scroll.css'
-
-// const Scroll=()=> {
-//   const [scrollDirection, setScrollDirection] = useState('up');
-
-//   useEffect(() => {
-//     function handleScroll() {
-//       if (window.pageYOffset > 0) {
-//         setScrollDirection('down');
-//       } else {
-//         setScrollDirection('up');
-//       }
-//     }
-
-//     window.addEventListener('scroll', handleScroll);
-//     return () => window.removeEventListener('scroll', handleScroll);
-//   }, []);
-
-//   return (
-//     <div className={`marquee ${scrollDirection === 'down' ? 'reverse' : ''}`}>
-//       <p>This text will scroll in one direction or the other based on the user's scroll direction.</p>
-//     </div>
-//   );
-// }
-
-// export default Scroll
-
 import React, { Component } from "react";
 
 export default class CarouselAni extends Component {
@@ -56,7 +28,7 @@ export default class CarouselAni extends Component {
     this.scrollCount = Math.min(Math.max(this.scrollCount, 20), 45);
     const scrollSpeed = this.scrollCount;
 
-    const animationStyle = `scroll ${scrollSpeed} ${scrollDirection} linear infinite`;
+    const animationStyle = `scroll ${scrollSpeed}s ${scrollDirection} linear infinite`;
     //   update animation of all marquee__content elements in the marquee component
     this.marqueeRef.current
       .querySelectorAll(".marquee__content")
@@ -70,10 +42,25 @@ export default class CarouselAni extends Component {
   render() {
     return (
       <div
-        className="marquee scroll-smooth font-morganite text-[20vh] md:text-[35vh] opacity-90"
+        className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
         ref={this.marqueeRef}
       >
-              <p>This text will scroll in one direction or the other based on the user's scroll direction.</p>
+        <ul className="marquee__content uppercase">
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+        </ul>
+        <ul className="marquee__content uppercase" aria-hidden="true">
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+          <li>&nbsp;live Soon&nbsp;</li>
+        </ul>
       </div>
     );
   }
