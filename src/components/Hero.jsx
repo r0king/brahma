@@ -9,17 +9,19 @@ export default function Hero() {
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
-          <h3 className="text-pri-color font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
+          <h3 className="text-pri-color font-morganite font-semibold text-[25vw] md:text-[13vw] pt-[3vw] md:pt-[1.5%] uppercase leading-[0.75]">
             Awaken the
-            <br />Creator
-            <br />Within.
+            <br />
+            Creator
+            <br />
+            Within.
           </h3>
         </div>
         <div>
           <div
             className=" 
-          hidden md:block  mr-[5vw] 
-          absolute top-[6vw] right-[4vw] w-[calc((135vw-9.375rem)*2/14+0.625rem)] border-b 
+          hidden md:block  mr-[5vw] overflow-y-scroll max-h-[10vw]
+          absolute top-[6vw] right-[4vw] md:w-[calc((135vw-9.375rem)*2/14+0.625rem)] border-b 
           after:bg-current after:rounded-full after:bottom-1.5 after:content-[''] after:h-[6px] after:overflow-hidden after:absolute after:right-0 after:aspect-square"
           >
             <p
@@ -28,29 +30,30 @@ export default function Hero() {
           font-poppins font-semibold text-pri-color text-xs leading-4          
           "
             >
-              Get ready to unleash your inner genius and ignite your passion for learning, as our Brahma'23 event promises to be a one-of-a-kind experience that will inspire, educate, and entertain you like never before!
+              Get ready to unleash your inner genius and ignite your passion for
+              learning, as our Brahma'23 event promises to be a one-of-a-kind
+              experience that will inspire, educate, and entertain you like
+              never before!
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
             <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[50vw] md:w-[32vw]">
               <img src={logoAnimation} alt="logo" className="w-full h-full" />
             </div>
-            <div className="absolute top-[70vh] md:top-[40vh] right-10 md:right-0">
-              <div className="">
-                <h1 className="text-right text-pri-color font-morganite text-[25vw] md:text-[13vw] leading-none uppercase ">
-                  Mar.28-Apr.01
-                </h1>
-              </div>
-              <div className="absolute top-[-6vh] md:top-[27vh] right-0 md:right-[25vw]">
+            <div className="absolute top-[70%] md:top-[40%] right-10 md:right-0">
+              <h1  className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
+                Mar.28-Apr.01
+              </h1>
+              <div className="absolute md:top-[90%] right-0 md:flex">
                 <h1
-                  className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.5] uppercase "
+                  className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.7] uppercase "
                   style={{
                     marginInline: "0",
                   }}
                 >
                   @ASIET
                 </h1>
-                <div className="absolute -right-[0vw] md:-right-[25vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
+                <div className="">
                   <CountDown />
                 </div>
               </div>
