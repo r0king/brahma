@@ -9,6 +9,7 @@ import "./App.css";
 import ContactUs from "./pages/ContactUs/ContactUs";
 
 
+import CarouselAni from "./components/CarouselAni";
 
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -26,9 +27,8 @@ function App() {
   return (
     <>
       <div
-        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${
-          !isLoading && "hidden "
-        }`}
+        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${!isLoading && "hidden "
+          }`}
       >
         <div
           ref={rippleRef}
@@ -41,7 +41,8 @@ function App() {
             <Route exact path="/" element={<HomePage />} />
             <Route exact path="/faq" element={<Faq />} />
             <Route exact path="/contact" element={<ContactUs />} />
-          <Route exact path='/schedule' element={<Schedule/>}/>
+            <Route exact path='/schedule' element={<Schedule />} />
+            <Route exact path="/test" element={<CarouselAni />} />
           </Routes>
         </BrowserRouter>
       </div>
