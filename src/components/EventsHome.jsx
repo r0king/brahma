@@ -13,7 +13,8 @@ export default function EventsHome() {
     return (
         <div>
             <div className='relative h-screen md:h-[768px] md:static'>
-                <Parallax translateY={isMobile ? [20,150]:[-10,40]}>
+                <Parallax translateY={isMobile ? [20,150]:[-20,20]} easing="ease"
+>
                     <div className='font-morganite md:static text-pri-color text-[40vw] md:text-[21vw] pl-1 md:pt-[5%]'>
                         <div className='leading-[0.75]'>OUR</div>
                         <div className='leading-[0.75]'>EVENTS</div>

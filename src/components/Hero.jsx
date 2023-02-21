@@ -1,9 +1,21 @@
 import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.png";
+import { Parallax } from "react-scroll-parallax";
+
 export default function Hero() {
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 ">
+      <Parallax
+        translateY={[-15, 20]}
+        translateX={[80, 50]}
+        easing="ease"
+        className="z-10 absolute"
+      >
+        <div className="aspect-auto w-[50vw] md:w-[32vw]">
+          <img src={logoAnimation} alt="logo" className="w-full h-full" />
+        </div>
+      </Parallax>
       <div className="relative pl-[5vw]">
         <div className="pl-6 md:pl-0 pt-7 md:pt-4">
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
@@ -37,11 +49,10 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
-            <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[50vw] md:w-[32vw]">
-              <img src={logoAnimation} alt="logo" className="w-full h-full" />
-            </div>
-            <div className="absolute top-[70%] md:top-[40%] right-10 md:right-0">
-              <h1  className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
+            <div
+              className="absolute top-[70%] md:top-[50%] right-10 md:right-0"
+            >
+              <h1 className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
                 Mar.28-Apr.01
               </h1>
               <div className="absolute md:top-[90%] right-0 md:flex">
@@ -53,7 +64,7 @@ export default function Hero() {
                 >
                   @ASIET
                 </h1>
-                <div className="">
+                <div className="flex w-full justify-center">
                   <CountDown />
                 </div>
               </div>
@@ -61,7 +72,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
       <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
         <ul className="marquee__content ">
           <li>&nbsp; ---live Soon--- &nbsp;</li>
