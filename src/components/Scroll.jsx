@@ -18,25 +18,33 @@ export default class CarouselAni extends Component {
   handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     const { prevScrollPos, scrollDirection, scrollSpeed } = this.state;
+  
     let newScrollSpeed = scrollSpeed;
     let newScrollDirection = scrollDirection;
+  
     if (currentScrollPos > prevScrollPos) {
       newScrollDirection = "forwards";
-      newScrollSpeed = scrollSpeed - 0.1;
+      if (scrollSpeed > 7) {
+        newScrollSpeed = scrollSpeed - 0.1;
+      }
     } else if (currentScrollPos < prevScrollPos) {
       newScrollDirection = "reverse";
-      newScrollSpeed = scrollSpeed - 0.1;
+      if (scrollSpeed > 7) {
+        newScrollSpeed = scrollSpeed - 0.1;
+      }
+      
+    } else {
+      newScrollSpeed =20; // default speed
     }
-
-    newScrollSpeed = Math.min(Math.max(newScrollSpeed, 5), 20);
+  
     const animationStyle = `scroll ${newScrollSpeed}s ${newScrollDirection} linear infinite`;
-
+  
     this.marqueeRef.current
       .querySelectorAll(".marquee__content")
       .forEach((el) => {
         el.style.animation = animationStyle;
       });
-
+  
     this.setState({
       prevScrollPos: currentScrollPos,
       scrollDirection: newScrollDirection,
