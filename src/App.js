@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import HomePage from "./pages/HomePage";
 import Faq from "./pages/FAQ/Faq";
@@ -7,9 +8,6 @@ import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
 import ContactUs from "./pages/ContactUs/ContactUs";
-
-
-import CarouselAni from "./components/CarouselAni";
 
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -36,15 +34,16 @@ function App() {
         ></div>
       </div>
       <div ref={rootRef} className="load-to-view">
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-          <Routes>
-            <Route exact path="/" element={<HomePage />} />
-            <Route exact path="/faq" element={<Faq />} />
-            <Route exact path="/contact" element={<ContactUs />} />
-            <Route exact path='/schedule' element={<Schedule />} />
-            <Route exact path="/test" element={<CarouselAni />} />
-          </Routes>
-        </BrowserRouter>
+        <ParallaxProvider>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Routes>
+              <Route exact path="/" element={<HomePage />} />
+              <Route exact path="/faq" element={<Faq />} />
+              <Route exact path="/schedule" element={<Schedule />} />
+              <Route exact path="/contact" element={<ContactUs />} />
+            </Routes>
+          </BrowserRouter>
+        </ParallaxProvider>
       </div>
     </>
   );

@@ -10,7 +10,6 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import CarouselAni from "../components/CarouselAni";
 import Sponsors from "../components/Sponsors";
-import ContactUs from "./ContactUs/ContactUs";
 
 export default class HomePage extends Component {
   render() {
@@ -24,7 +23,7 @@ export default class HomePage extends Component {
         <CarouselAni />
         <Workshop />
         <Sponsors />
-        <ContactUs />
+        {/* <ContactUs /> */}
       </div>
     );
   }

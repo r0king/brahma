@@ -1,14 +1,18 @@
 import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/diwali-lamp.gif";
+import { Parallax } from 'react-scroll-parallax';
+
 export default function Hero() {
   return (
     <section className="p-[5vw] pl-0 pt-[4vw] pr-0 overflow-hidden">
       <div className="relative pl-[5vw]">
         <div className="pt-4">
+          <Parallax speed={5}>
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[5vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
+          </Parallax>
           <h3 className="text-pri-color font-poppins font-semibold text-[5vw] md:text-[2.5vw] py-[1vh] md:py-0">
             Awaken the Creator Within.
           </h3>
