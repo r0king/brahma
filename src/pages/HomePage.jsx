@@ -18,9 +18,9 @@ export default class HomePage extends Component {
         <Hero />
         <Highlights />
         <EventsHome />
+        <Workshop />
         <SpotLight/>
         <CarouselAni />
-        <Workshop />
         <Sponsors />
         <ContactUs />
       </div>
