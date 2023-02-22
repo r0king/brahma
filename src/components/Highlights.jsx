@@ -17,7 +17,7 @@ const Highlights = () => {
                     <div className='relative shadow-overlay'>
                         <video
                             width="800"
-                            className='hover:opacity-80 object-cover brightness-60 '
+                            className='hover:opacity-80 object-cover brightness-60 max-w-[50vw]'
                             src={sunburnVideo} autoPlay muted />
                     </div>
                 </div>
