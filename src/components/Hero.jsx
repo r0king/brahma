@@ -2,14 +2,18 @@ import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
 import { Parallax } from "react-scroll-parallax";
+import { useMediaQuery } from "react-responsive";
 
 export default function Hero() {
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+
   return (
-    <section className="p-[5vw] pl-0 pt-[2vw] pr-0 ">
+    <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
       <Parallax
-        translateY={[-15, 20]}
-        translateX={[80, 50]}
-        easing="ease"
+        translateY={isMobile ? [30, 35] : [-15, 20]}
+        translateX={isMobile ? [80, 70] : [80, 50]}
+        rotateY={isMobile ? [40, -40] : [0, 0]}
+        easing="easeInOut"
         className="z-10 absolute"
       >
         <div className="aspect-auto w-[50vw] md:w-[32vw]">
@@ -49,11 +53,10 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
-            <div
-              className="absolute top-[60%] sm:top-[70%] md:top-[50%] right-10 md:right-0"
-            >
+            <div className="absolute top-[60%] sm:top-[70%] md:top-[50%] right-10 md:right-0">
               <h1 className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
-                Mar.28-Apr.01
+                <span className="hidden md:block">Mar.28-Apr.01</span>
+                <span className="md:hidden">@ASIET</span>
               </h1>
               <div className="absolute  md:top-[90%] right-0 md:flex">
                 <h1
@@ -62,7 +65,8 @@ export default function Hero() {
                     marginInline: "0",
                   }}
                 >
-                  @ASIET
+                  <span className="hidden md:block">@ASIET</span>
+                  <span className="md:hidden">Mar.28-Apr.01</span>
                 </h1>
                 <div className="flex w-full justify-center">
                   <CountDown />
