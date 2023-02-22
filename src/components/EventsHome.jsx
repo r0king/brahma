@@ -4,11 +4,11 @@ import dotSVG from "../assets/images/dot.svg"
 import Event1 from "../assets/images/event2.jpg"
 import CardButton from './CardButton'
 // import { Parallax } from 'react-scroll-parallax';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 
 export default function EventsHome() {  
     
-    const isMobile = useMediaQuery({ maxWidth: 640 });
+    // const isMobile = useMediaQuery({ maxWidth: 640 });
 
     return (
         <div>
