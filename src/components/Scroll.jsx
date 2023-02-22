@@ -4,7 +4,7 @@ export default class CarouselAni extends Component {
   state = {
     prevScrollPos: window.pageYOffset,
     scrollDirection: "forwards",
-    scrollSpeed: 20,
+    scrollSpeed: 60,
   };
   marqueeRef = React.createRef();
   componentDidMount() {
@@ -18,33 +18,44 @@ export default class CarouselAni extends Component {
   handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     const { prevScrollPos, scrollDirection, scrollSpeed } = this.state;
-  
+
     let newScrollSpeed = scrollSpeed;
     let newScrollDirection = scrollDirection;
-  
+    const scrollDiff = Math.abs(currentScrollPos - prevScrollPos);
+
     if (currentScrollPos > prevScrollPos) {
       newScrollDirection = "forwards";
-      if (scrollSpeed > 7) {
-        newScrollSpeed = scrollSpeed - 0.1;
+      if (scrollSpeed > 20) {
+        // newScrollSpeed = scrollSpeed - 0.2;
+        newScrollSpeed = Math.max(30, scrollSpeed - scrollDiff / 50);
+      }
+      else {
+        newScrollSpeed = 20;
       }
     } else if (currentScrollPos < prevScrollPos) {
       newScrollDirection = "reverse";
-      if (scrollSpeed > 7) {
-        newScrollSpeed = scrollSpeed - 0.1;
+      if (scrollSpeed > 20) {
+        // newScrollSpeed = scrollSpeed - 0.2;
+        newScrollSpeed = Math.max(30, scrollSpeed - scrollDiff / 50);
       }
-      
-    } else {
-      newScrollSpeed =20; // default speed
+      else {
+        newScrollSpeed = 20;
+      }
     }
-  
+
+    // Check if user has stopped scrolling
+    if (newScrollSpeed === scrollSpeed) {
+      newScrollSpeed = 60;
+    }
+
     const animationStyle = `scroll ${newScrollSpeed}s ${newScrollDirection} linear infinite`;
-  
+
     this.marqueeRef.current
       .querySelectorAll(".marquee__content")
       .forEach((el) => {
         el.style.animation = animationStyle;
       });
-  
+
     this.setState({
       prevScrollPos: currentScrollPos,
       scrollDirection: newScrollDirection,
