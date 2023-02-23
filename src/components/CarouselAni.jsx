@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import CardButton from "./CardButton";
 
 export default class CarouselAni extends Component {
   state = {
