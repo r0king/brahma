@@ -7,7 +7,7 @@ import CardButton from './CardButton'
 
 const Highlights = () => {
     return (
-        <div class='mt-48 mb-32 '>
+        <div class='mt-64 mb-32 '>
             {/* NOTE(gokul): this runs on medium to large screens */}
             <div class='hidden md:block h-full'>
                 <div class='flex justify-end '>
