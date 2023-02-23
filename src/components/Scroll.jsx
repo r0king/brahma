@@ -23,7 +23,7 @@ export default class CarouselAni extends Component {
     if (currentScrollPos > prevScrollPos) {
       newScrollDirection = "forwards";
       newScrollSpeed = scrollSpeed - 0.1;
-    } else if (currentScrollPos < prevScrollPos) {
+    } else {
       newScrollDirection = "reverse";
       newScrollSpeed = scrollSpeed - 0.1;
     }

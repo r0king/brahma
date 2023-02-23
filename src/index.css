@@ -7,6 +7,7 @@
 @font-face {
   font-family: "Morganite";
   src: url("../src/assets/fonts/Morganite-ExtraBold.ttf") format("truetype");
+  display: block;
 }
 
 :root {
