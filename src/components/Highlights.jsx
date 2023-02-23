@@ -7,32 +7,35 @@ import CardButton from './CardButton'
 
 const Highlights = () => {
     return (
-        <div class='mt-48 mb-32 '>
+        <div class='mb-32 '>
             {/* NOTE(gokul): this runs on medium to large screens */}
             <div class='hidden md:block h-full'>
                 <div class='flex justify-end '>
-                    <div class='relative '>
-                        <label class='leading-none absolute bottom-[-50px] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS</label>
+                    <div class='relative'>
+                        <label class='leading-none absolute md:mt-[-5vh] right-0 text-pri-color text-[20vw] font-morganite'>HIGHLIGHTS
+                            <p class='font-poppins text-sm'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
+                                voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p></label>
                     </div>
-                    <div className='relative shadow-overlay'>
+                    <div className='relative shadow-overlay rounded-md ml-5'>
                         <video
                             width="800"
-                            class='hover:opacity-80 object-cover brightness-60 '
+                            class='hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw]'
                             src={sunburnVideo} autoPlay muted autoReplay />
                     </div>
                 </div>
 
                 {/* Descriptions */}
-                <div class='flex justify-between  '>
-                    <div class=' flex-0 mt-20 ml-28 mx-auto w-1/5 '>
+                {/* <div class='flex '> */}
+                    {/* <div class=' flex-0 mt-20 ml-28 mx-auto w-1/5 '>
                         <p class='my-2 font-poppins text-pri-color text-md text-left p-4 w-full'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             Iste nesciunt incidunt explicabo hic natus odio velit nemo ad voluptas doloribus
                             voluptatem, expedita fugiat consequuntur! In repellendus ullam cupiditate veniam nemo.</p>
-                    </div>
+                    </div> */}
 
                     {/* NOTE(gokul): for the love of god dont touch this code, it works and thats all u need to know */}
-                    <div class=' mr-24 mt-3 w-1/4 h-[8vw]'>
-                        <CardButton href='/' text={{head:"Explore",tail:"The Location",caption:"Venue"}}/>
+                    <div class='absolute right-0 mr-24 mt-3 w-1/4 h-[8vw]'>
+                        <CardButton href='/' text={{ head: "Explore", tail: "The Location", caption: "Venue" }} />
                         {/* <div class='flex-1 relative group overflow-hidden transition-all mx-2 h-1/3 bg-red-600 rounded-lg'>
                             <span className="w-full h-full rounded-lg bg-orange-500 absolute top-0 bottom-0 ease-out 
                             duration-300 transition-all group-hover:h-0 -z-0" />
@@ -49,7 +52,7 @@ const Highlights = () => {
                             </span>
                         </div> */}
                     </div>
-                </div>
+                {/* </div> */}
             </div >
 
             {/* NOTE(gokul): this runs on only small screens */}
