@@ -1,7 +1,12 @@
 import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
+import logoAnimation1 from "../assets/images/brahmaLogo.png";
+import { useMediaQuery } from "react-responsive";
+
 export default function Hero() {
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 ">
       <div className="relative pl-[5vw]">
@@ -33,7 +38,7 @@ export default function Hero() {
           </div>
           <div className="flex justify-center w-full mt-[-38vh] md:mt-0 pl-[39vw] md:pl-0">
             <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[70vw] md:w-[32vw]">
-              <img src={logoAnimation} alt="logo" className="w-full h-full" />
+              <img src={isMobile?logoAnimation:logoAnimation1} alt="logo" className="w-full h-full" />
             </div>
             <div className="absolute top-[70vh] md:top-[40vh] right-10 md:right-0">
               <div className="">
