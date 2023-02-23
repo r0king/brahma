@@ -59,8 +59,8 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
-        <ul className="marquee__content ">
+      <div className="marquee font-poppins md:text-[1.2vw] fixed bottom-0 opacity-40">
+        <ul className="marquee__content" aria-hidden="true">
           <li>&nbsp; ---live Soon--- &nbsp;</li>
           <li>&nbsp; ---live Soon--- &nbsp;</li>
           <li>
