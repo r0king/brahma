@@ -3,9 +3,9 @@ import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
 export default function Hero() {
   return (
-    <section className="pb-[5vw] h-screen overflow-hidden pt-0 md:pt-5">
+    <section className="p-[5vw] pl-0 pt-[2vw] pr-0 ">
       <div className="relative pl-[5vw]">
-        <div className="pl-6 md:pl-0 pt-7 md:pt-4"> 
+        <div className="pl-6 md:pl-0 pt-7 md:pt-4">
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
@@ -31,17 +31,17 @@ export default function Hero() {
               Get ready to unleash your inner genius and ignite your passion for learning, as our Brahma'23 event promises to be a one-of-a-kind experience that will inspire, educate, and entertain you like never before!
             </p>
           </div>
-          <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
-            <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[50vw] md:w-[32vw]">
+          <div className="flex justify-center w-full mt-[-38vh] md:mt-0 pl-[39vw] md:pl-0">
+            <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[70vw] md:w-[32vw]">
               <img src={logoAnimation} alt="logo" className="w-full h-full" />
             </div>
-            <div className="absolute top-[70vh] md:top-[40vh] right-10 md:right-4">
+            <div className="absolute top-[70vh] md:top-[40vh] right-10 md:right-0">
               <div className="">
-                <h1 className="text-right text-pri-color font-morganite text-[25vw] md:text-[13vw] leading-none uppercase ">
+                <h1 className="relative z-30 text-right text-pri-color font-morganite text-[25vw] md:text-[13vw] leading-none uppercase ">
                   Mar.28-Apr.01
                 </h1>
               </div>
-              <div className="absolute top-[-6vh] md:top-[27vh] right-0 md:right-[23vw]">
+              <div className="absolute top-[-6vh] md:top-[27vh] right-[38vw] md:right-[25vw]">
                 <h1
                   className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.5] uppercase "
                   style={{
@@ -50,7 +50,7 @@ export default function Hero() {
                 >
                   @ASIET
                 </h1>
-                <div className="absolute -right-[0vw] md:-right-[24vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
+                <div className="absolute -right-[39vw] md:-right-[25vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
                   <CountDown />
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="marquee font-poppins md:text-[1.2vw] fixed md:absolute bottom-0 opacity-40">
+      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
         <ul className="marquee__content ">
           <li>&nbsp; ---live Soon--- &nbsp;</li>
           <li>&nbsp; ---live Soon--- &nbsp;</li>
