@@ -27,7 +27,7 @@ const SpotLight = () => {
         </div>
         <div className="">
           <div className="flex flex-row-reverse justify-start rounded-lg">
-            <span className="font-bold text-7xl font-morganite text-sec-color md:text-[12vw] mt-[1vw] ">
+            <span className="font-bold text-7xl font-morganite text-sec-color md:text-[12vw] ">
               6
             </span>
             <span className="leading-[0.88] text-[150px] font-medium font-morganite tracking-normal text-pri-color uppercase md:text-[31vw]">
@@ -43,7 +43,7 @@ const SpotLight = () => {
         </div>
         <div className="">
           <div className="flex justify-end rounded-lg ">
-            <span className="font-bold text-7xl font-morganite text-sec-color md:text-[12vw] mt-[1vw] ">
+            <span className="font-bold text-7xl font-morganite text-sec-color md:text-[12vw] ">
               36
             </span>
             <span className="leading-[0.88] text-[150px] font-morganite font-medium tracking-normal text-pri-color uppercase md:text-[31vw]">
@@ -64,3 +64,9 @@ const SpotLight = () => {
 };
 
 export default SpotLight;
+
+
+
+
+
+

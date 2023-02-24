@@ -3,15 +3,22 @@ import dotSVG from "../assets/images/dot.svg"
 // import Event1 from "../assets/images/event1.jpg"
 import Event1 from "../assets/images/event2.jpg"
 import CardButton from './CardButton'
+// import { Parallax } from 'react-scroll-parallax';
+// import { useMediaQuery } from 'react-responsive';
 
-export default function EventsHome() {
+export default function EventsHome() {  
+    
+    // const isMobile = useMediaQuery({ maxWidth: 640 });
+
     return (
         <div>
             <div className='relative h-screen md:h-[768px] md:static'>
-                <div className='font-morganite md:static absolute -bottom-[26%] text-pri-color text-[40vw] md:text-[21vw] pl-1 md:pt-[5%]'>
-                    <div className='leading-[0.75]'>OUR</div>
-                    <div className='leading-[0.75]'>EVENTS</div>
-                </div>
+                {/* <Parallax translateY={isMobile ? [20,150]:[-10,40]}> */}
+                    <div className='font-morganite md:static text-pri-color text-[40vw] md:text-[21vw] pl-1 md:pt-[5%]'>
+                        <div className='leading-[0.75]'>OUR</div>
+                        <div className='leading-[0.75]'>EVENTS</div>
+                    </div>
+                {/* </Parallax> */}
                 <div className='font-poppins md:relative absolute right-3 md:-top-[65%] top-[20%] font-bold text-sec-color text-[23px] md:text-[2.75rem] pl-1'>
                     <div className='leading-[0.90] ml-[20vw]'>
                         <ul className='list-none relative'>

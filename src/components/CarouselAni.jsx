@@ -41,27 +41,29 @@ export default class CarouselAni extends Component {
 
   render() {
     return (
-      <div
-        className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
-        ref={this.marqueeRef}
-      >
-        <ul className="marquee__content uppercase">
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-        </ul>
-        <ul className="marquee__content uppercase" aria-hidden="true">
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-        </ul>
-      </div>
+      <>
+        <div
+          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
+          ref={this.marqueeRef}
+        >
+          <ul className="marquee__content uppercase">
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+          </ul>
+          <ul className="marquee__content uppercase" aria-hidden="true">
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+            <li>&nbsp;live Soon&nbsp;</li>
+          </ul>
+        </div>
+      </>
     );
   }
 }
