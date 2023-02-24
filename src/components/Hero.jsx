@@ -1,7 +1,14 @@
 import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
+import { Parallax } from "react-scroll-parallax";
+import { useMediaQuery } from "react-responsive";
+
+
 export default function Hero() {
+
+  const isMobile = useMediaQuery({maxWidth: 640});
+
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
       <Parallax
