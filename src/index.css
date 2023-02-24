@@ -18,17 +18,19 @@
 .load-to-view {
   transition: all 2s ease;
   animation: load-to-view 2s cubic-bezier(0.22, 0.61, 0.36, 1) ;
+  opacity: 0;
   background-color: transparent;
+  animation-delay: 1.5s;
 }
 @keyframes load-to-view {
   0% {
-    opacity: 0;
-    transform: translateY(50px);
+    opacity: 0.5;
+    transform: translateY(150px);
     background-color: #d35c39;
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(75px);
     background-color: #fafafa;
   }
 }
@@ -66,9 +68,9 @@ body {
   background-color: #fafafa;
   width: 1em;
   height: 1em;
-  /* border-radius: 100%;
-  -webkit-animation: ripple-scale 1.5s  ease;
-  animation: ripple-scale 1.5s  ease; */
+  /* border-radius: 100%; */
+  -webkit-animation: fullscreen-fade-out 1.5s  ease;
+  animation: fullscreen-fade-out 1.5s  ease;
   /* animation-duration: 2s; */
   /* animation-delay: 0s; */
     
@@ -83,14 +85,15 @@ body {
 
 
 .circle-ripple {
-  background-color: #d35c39;
+  background-color: #f1f1f1;
   width: 1em;
   height: 1em;
-  border-radius: 50%;
-  -webkit-animation: ripple-scale 0.5s  ease;
-  animation: ripple-scale 0.5s  ease;
-  animation-delay: 0.5s;
+  border-radius: 100%;
+  -webkit-animation: ripple-scale 1s  ease;
+  animation: ripple-scale 1s  ease;
+  /* animation-delay: 0.5s; */
   /* animation-duration: 3s; */
+  animation-delay: 1s;
 
    
 
@@ -100,10 +103,10 @@ body {
 
 
 .circle-ripple-loading {
-  background-color: #d35c39 ;
+  background-color: #f1f1f1 ;
   width: 1em;
   height: 1em;
-  border-radius: 50%;
+  border-radius: 100%;
   -webkit-animation: ripple-scale-down 1s ease;
   animation: ripple-scale-down 1s ease;
   animation-delay: 1s;
@@ -117,7 +120,7 @@ body {
       0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
   }
   100% {
-    transform: scale(400);
+    transform: scale(200);
     box-shadow: 0 0 0 1em rgba(211, 92, 57, 0.3),
       0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3),
       0 0 0 8em rgba(211, 92, 57, 0);
@@ -127,28 +130,28 @@ body {
 @keyframes ripple-scale {
   0% {
     transform: scale(0);
-    box-shadow: 0 0 0 0 rgba(211, 92, 57, 0.3), 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
+    box-shadow: 0 0 0 0 rgba(117, 115, 114, 0.3), 0 0 0 1em rgba(104, 101, 98, 0.3),
+      0 0 0 3em rgba(179, 161, 161, 0.3), 0 0 0 5em rgba(0, 0, 0, 0.3);
   }
   100% {
-    transform: scale(400);
-    box-shadow: 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3),
-      0 0 0 8em rgba(211, 92, 57, 0);
+    transform: scale(200);
+    box-shadow: 0 0 0 1em rgba(117, 115, 114, 0.3),
+      0 0 0 3em rgba(0, 0, 0, 0.3), 0 0 0 5em rgba(14, 13, 12, 0.3),
+      0 0 0 8em rgba(0, 0, 0, 0);
   }
 }
 @-webkit-keyframes ripple-scale-down {
   0% {
     transform: scale(400);
     display: block;
-    box-shadow: 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3),
-      0 0 0 9em rgba(211, 92, 57, 0);
+    box-shadow: 0 0 0 1em rgba(0, 0, 0, 0.3),
+      0 0 0 3em rgba(0, 0, 0, 0.3), 0 0 0 5em rgba(0, 0, 0, 0.3),
+      0 0 0 9em rgb(0, 0, 0);
   }
   100% {
     transform: scale(0);
-    box-shadow: 0 0 0 0 rgba(211, 92, 57, 0.3), 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3), 0 0 0 1em rgba(0, 0, 0, 0.3),
+      0 0 0 3em rgba(0, 0, 0, 0.3), 0 0 0 5em rgb(10, 7, 6);
   }
 }
 
@@ -163,11 +166,11 @@ body {
   100% {
     transform: scale(0);
     box-shadow: 0 0 0 0 rgba(211, 92, 57, 0.3), 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
+      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgb(0, 0, 0);
   }
 }
 /* ---------------------------------------------------------------------- */
-@-webkit-keyframes fullscreen-fade {
+@-webkit-keyframes fullscreen-fade-out {
   0% {
     opacity: 1;
     display: block;
@@ -177,9 +180,9 @@ body {
   }
 }
 
-@keyframes fullscreen-fade {
+@keyframes fullscreen-fade-out {
   0% {
-    opacity:1;
+    opacity: 1;
     display: block;
   }
   100% {

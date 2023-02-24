@@ -18,67 +18,53 @@ function App() {
 
   useEffect(() => {
     document.body.style.backgroundColor = "var(--bg-color)";
+    setTimeout(()=>{
+      rootRef.current.style.opacity=1
+    }, 3000);
+
     setTimeout(() => {
       setLoading(false); // set the loading state to false
-    }, 2500);
+    }, 3500);
+
+    
   }, [isLoading]);
+
+
   // ---------------------------------------
   const [showAnimation, setShowAnimation] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowAnimation(false);
     }, 6000);
-
     return () => clearTimeout(timer);
   }, []);
-
-
-
   return (
     <>
-      <div className={`fixed z-50 bg-white   h-screen w-screen top-0 left-0 justify-center items-center flex ${!isLoading && "hidden"}   `}>
+      {/* <div className={`fixed z-50   h-screen w-screen top-0 left-0 justify-center items-center flex ${!isLoading && "hidden"}   `}>
         <div
           ref={rippleRef}
           className=" fullscreen-fade isLoading &&  "
         >
         </div>
 
-      </div>
-      <div
-        className={`fixed z-50 h-screen w-screen top-0 left-0  justify-end items-start flex  ${!isLoading && "hidden  "
-          }`}
-      > 
-
-        <div    
-          ref={rippleRef}
-          className=" circle-ripple-loading  isLoading && "
-        > 
-        
-        
-        </div>
-      </div>
-
-
-
-
+      </div> */}
 
       <div
         className={`fixed z-50 h-screen w-screen top-0 left-0 justify-start items-end flex ${!isLoading && "hidden "
-          }`}
-      >
-
+          }`}>
         <div
           ref={rippleRef}
           className=" circle-ripple isLoading &&"
-        >
-
-
-        </div>
+        />
       </div>
-
-      
-
-
+      {/* <div
+        className={`fixed z-50 h-screen w-screen top-0 left-0  justify-end items-start flex  ${!isLoading && "hidden  "
+          }`}
+      >       <div
+        ref={rippleRef}
+        className=" circle-ripple-loading  isLoading && "
+      ></div>
+      </div> */}
       <div ref={rootRef} className="load-to-view">
         <ParallaxProvider>
           <BrowserRouter basename={process.env.PUBLIC_URL}>
