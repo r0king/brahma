@@ -7,6 +7,7 @@
 @font-face {
   font-family: "Morganite";
   src: url("../src/assets/fonts/Morganite-ExtraBold.ttf") format("truetype");
+  font-display: block;
 }
 
 :root {
@@ -14,15 +15,15 @@
   --secondary-color: #d35c39;
   --bg-color: #fafafa;
 }
-/* .load-to-view {
-  transition: all 1s ease;
-  animation: load-to-view 1s ease;
+.load-to-view {
+  transition: all 2s ease;
+  animation: load-to-view 2s cubic-bezier(0.22, 0.61, 0.36, 1) ;
   background-color: transparent;
 }
 @keyframes load-to-view {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
     background-color: #d35c39;
   }
   100% {
@@ -30,7 +31,7 @@
     transform: translateY(0);
     background-color: #fafafa;
   }
-} */
+}
 body {
   scroll-behavior: smooth;
 }

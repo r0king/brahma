@@ -5,6 +5,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 import HomePage from "./pages/HomePage";
 import Faq from "./pages/FAQ/Faq";
 import Schedule from "./pages/Schedule/Schedule";
+import Event from "./pages/Event/Event";
 
 import "./App.css";
 import ContactUs from "./pages/ContactUs/ContactUs";
@@ -85,7 +86,7 @@ function App() {
               <Route exact path="/" element={<HomePage />} />
               <Route exact path="/faq" element={<Faq />} />
               <Route exact path="/schedule" element={<Schedule />} />
-              <Route exact path="/contact" element={<ContactUs />} />
+              <Route exact path="/event/:eventId" element={<Event />} />
             </Routes>
           </BrowserRouter>
         </ParallaxProvider>

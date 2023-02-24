@@ -50,7 +50,6 @@ const Schedule = () => {
                     <tbody>
                         {
                             sched.map((item) => {
-                                console.log("helo")
                                 return (
 
                                     <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id) }} onMouseLeave={() => { setImage(-1) }}>
