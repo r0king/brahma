@@ -4,11 +4,21 @@ import CardButton from './CardButton'
 const AllEvents = () => {
     return (
         <div>
+           
             <div className='justify-between md:flex'>
+                
                 <div className='font-morganite md:static text-pri-color text-[40vw] md:text-[21vw] pl-1 md:pt-[5%]'>
                     <div className='leading-[0.75]'>ALL</div>
                     <div className='leading-[0.75]'>EVENTS</div>
                 </div>
+                <div className=" hidden mb-[18vw] ml-[16vw] md:inline mt-[5vw]">
+          <h4
+            className=" text-sec-color self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
+           w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
+          >
+            Roll Up Your Sleeves For Practical Learning, Based On Real Projects From Industry Pros. Meet Like-Minded Classmates & Upskill Your Creative Toolkit.
+          </h4>
+        </div>
                 <div className='hidden mr-24 w-1/4 h-[8vw] md:inline mt-[28vw]'>
                     <CardButton href='/' text={{ head: "Get", tail: "Slots", caption: "Registration" }} />
                 </div>
