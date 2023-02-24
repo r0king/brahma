@@ -22,7 +22,7 @@ export default function CardButton({ onClick, href, text = {} }) {
           {text.caption}
         </div>
         <div className="flex justify-between mt-auto">
-          <div className=" bottom-0 left-0 text-left text-xl p-3 pt-0 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
+          <div className=" bottom-0 left-0 text-left text-xl pl-3 pb-1 pt-0 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
             {text.head}
             <br />
             {text.tail}

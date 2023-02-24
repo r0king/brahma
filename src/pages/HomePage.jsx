@@ -43,11 +43,11 @@ export default class HomePage extends Component {
       <div className="bg-acc-color text-pri-color overflow-x-clip">
         <NavBar />
         <Hero />
-        <Scroll/>
         <Highlights />
         <EventsHome />
         <Workshop />
         <SpotLight/>
+        <Scroll/>
         <Sponsors />
         <ContactUs />
       </div>

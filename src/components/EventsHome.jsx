@@ -11,7 +11,7 @@ export default function EventsHome() {
     // const isMobile = useMediaQuery({ maxWidth: 640 });
 
     return (
-        <div>
+        <div className='md:mt-[10vh]'>
             <div className='relative h-screen md:h-[768px] md:static'>
                 {/* <Parallax translateY={isMobile ? [20,150]:[-10,40]}> */}
                     <div className='font-morganite md:static text-pri-color text-[40vw] md:text-[21vw] pl-1 md:pt-[5%]'>
@@ -19,7 +19,7 @@ export default function EventsHome() {
                         <div className='leading-[0.75]'>EVENTS</div>
                     </div>
                 {/* </Parallax> */}
-                <div className='font-poppins md:relative absolute right-3 md:-top-[65%] top-[20%] font-bold text-sec-color text-[23px] md:text-[2.75rem] pl-1'>
+                <div className='font-poppins md:relative absolute right-3 md:-top-[55%] top-[30%] font-bold text-sec-color text-[23px] md:text-[2.75rem] pl-1'>
                     <div className='leading-[0.90] ml-[20vw]'>
                         <ul className='list-none relative'>
                             <li className='inline'>King of Trolls</li><img className='inline stroke-sec-color' src={dotSVG} alt=" " />
