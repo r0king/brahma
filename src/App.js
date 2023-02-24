@@ -42,7 +42,7 @@ function App() {
               <Route exact path="/" element={<HomePage />} />
               <Route exact path="/faq" element={<Faq />} />
               <Route exact path="/schedule" element={<Schedule />} />
-              <Route exact path="/allevents" element={<AllEvents />} />
+              <Route exact path="/events" element={<AllEvents />} />
               <Route exact path="/event/:eventId" element={<Event />} />
             </Routes>
           </BrowserRouter>

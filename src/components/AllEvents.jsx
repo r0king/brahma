@@ -102,7 +102,7 @@ const AllEvents = () => {
                     <CardButton href='/' text={{ head: "Get", tail: "Slots", caption: "Registration" }} />
                 </div>
             </div>
-            <div className='mt-[2vw] relative mx-2 overflow-hidden transition-all bg-sec-color rounded-lg group h-1/3 md:hidden'>
+            <div className='mt-[2vw] relative mx-2 overflow-hidden transition-all bg-pri-color rounded-lg group h-1/3 md:hidden'>
                 <span className="absolute top-0 bottom-0 w-full h-full transition-all duration-300 ease-out rounded-lg bg-sec-color group-hover:h-0 -z-0" />
                 <span className='relative z-10 flex justify-between w-full p-2 text-white transition-colors duration-100 ease-in-out rounded-lg stroke-white '>
                     <div className='text-left'>
