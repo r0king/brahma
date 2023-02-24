@@ -19,20 +19,65 @@ function App() {
     document.body.style.backgroundColor = "var(--bg-color)";
     setTimeout(() => {
       setLoading(false); // set the loading state to false
-    }, 1500);
+    }, 2500);
   }, [isLoading]);
+  // ---------------------------------------
+  const [showAnimation, setShowAnimation] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowAnimation(false);
+    }, 6000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
 
   return (
     <>
-      <div
-        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${!isLoading && "hidden "
-          }`}
-      >
+      <div className={`fixed z-50 bg-white   h-screen w-screen top-0 left-0 justify-center items-center flex ${!isLoading && "hidden"}   `}>
         <div
           ref={rippleRef}
-          className="circle-ripple-loading isLoading &&"
-        ></div>
+          className=" fullscreen-fade isLoading &&  "
+        >
+        </div>
+
       </div>
+      <div
+        className={`fixed z-50 h-screen w-screen top-0 left-0  justify-end items-start flex  ${!isLoading && "hidden  "
+          }`}
+      > 
+
+        <div    
+          ref={rippleRef}
+          className=" circle-ripple-loading  isLoading && "
+        > 
+        
+        
+        </div>
+      </div>
+
+
+
+
+
+      <div
+        className={`fixed z-50 h-screen w-screen top-0 left-0 justify-start items-end flex ${!isLoading && "hidden "
+          }`}
+      >
+
+        <div
+          ref={rippleRef}
+          className=" circle-ripple isLoading &&"
+        >
+
+
+        </div>
+      </div>
+
+      
+
+
       <div ref={rootRef} className="load-to-view">
         <ParallaxProvider>
           <BrowserRouter basename={process.env.PUBLIC_URL}>
