@@ -10,9 +10,9 @@ export default function Hero() {
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
       <Parallax
-        translateY={isMobile ? [30, 35] : [-15, 20]}
-        translateX={isMobile ? [80, 70] : [80, 50]}
-        rotateY={isMobile ? [40, -40] : [0, 0]}
+        translateY={isMobile ? [30, 35] : [0, 10]}
+        translateX={isMobile ? [80, 70] : [70, 70]}
+        // rotateY={isMobile ? [40, -40] : [0, 0]}
         easing="easeInOut"
         className="z-10 absolute"
       >
@@ -21,6 +21,13 @@ export default function Hero() {
         </div>
       </Parallax>
       <div className="relative pl-[5vw] h-screen md:h-auto">
+      <Parallax
+        translateY={isMobile ? [0, 0] : [130, -30]}
+        // translateX={isMobile ? [80, 70] : [70, 70]}
+        // rotateY={isMobile ? [40, -40] : [0, 0]}
+        easing="ease"
+        className=""
+      >
         <div className="pl-6 md:pl-0 pt-7 md:pt-4">
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
@@ -33,6 +40,7 @@ export default function Hero() {
             Within.
           </h3>
         </div>
+        </Parallax>
         <div>
           <div
             className=" 
@@ -54,20 +62,25 @@ export default function Hero() {
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
             <div className="absolute top-[60%] sm:top-[70%] md:top-[50%] right-10 md:right-0">
-              <h1 className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
-                <span className="hidden md:block">Mar.28-Apr.01</span>
-                <span className="md:hidden">@ASIET</span>
-              </h1>
-              <div className="absolute  md:top-[90%] right-0 md:flex">
-                <h1
-                  className="text-pri-color text-right mr-[2vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.7] uppercase "
-                  style={{
-                    marginInline: "0",
-                  }}
-                >
-                  <span className="hidden md:block">@ASIET</span>
-                  <span className="md:hidden">Mar.28-Apr.01</span>
+              <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease">
+                <h1 className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
+                  <span className="hidden md:block">Mar.28-Apr.01</span>
+                  <span className="md:hidden">@ASIET</span>
                 </h1>
+              </Parallax>
+              <div className="absolute w-max md:top-[90%] right-4 md:right-0  md:flex">
+                <Parallax translateY={isMobile ? [20, -40] : [20, -40]}
+                  easing="ease">
+                  <h1
+                    className="text-pri-color text-right mr-[10vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.7] uppercase "
+                    style={{
+                      marginInline: "0",
+                    }}
+                  >
+                    <span className="hidden md:block">@ASIET</span>
+                    <span className="md:hidden">Mar.28-Apr.01</span>
+                  </h1>
+                </Parallax>
                 <div className="flex w-full justify-center">
                   <CountDown />
                 </div>
@@ -76,7 +89,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
+      <div className="marquee font-poppins md:text-[1.2vw] fixed bottom-0 opacity-40">
         <ul className="marquee__content ">
           <li>&nbsp; ---live Soon--- &nbsp;</li>
           <li>&nbsp; ---live Soon--- &nbsp;</li>
