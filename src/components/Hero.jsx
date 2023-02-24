@@ -1,6 +1,7 @@
 import React from "react";
 import CountDown from "./CountDown";
-import logoAnimation from "../assets/images/brahmaLogo.webp";
+import logoAnimationM from "../assets/images/brahmaLogo.webp";
+import logoAnimationD from "../assets/images/brahmaLogo.png";
 import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
 
@@ -12,15 +13,15 @@ export default function Hero() {
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
       <Parallax
-        translateY={isMobile ? [30, 35] : [0, 10]}
-        translateX={isMobile ? [80, 70] : [70, 70]}
+        translateY={isMobile ? [0, 0] : [0, 10]}
+        translateX={isMobile ? [70, 70] : [70, 70]}
         // rotateY={isMobile ? [40, -40] : [0, 0]}
         easing="easeInOut"
         className="z-10 absolute"
       >
-        <div className="aspect-auto w-[50vw] md:w-[32vw]">
-          <img src={logoAnimation} alt="logo" className="w-full h-full" />
-        </div>
+        <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[70vw] md:w-[32vw]">
+              <img src={isMobile?logoAnimationM:logoAnimationD} alt="logo" className="w-full h-full" />
+            </div>
       </Parallax>
       <div className="relative pl-[5vw] h-screen md:h-auto">
       <Parallax
