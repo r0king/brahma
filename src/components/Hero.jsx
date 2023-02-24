@@ -2,6 +2,7 @@ import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
 import { Parallax } from "react-scroll-parallax";
+import logoAnimation1 from "../assets/images/brahmaLogo.png";
 import { useMediaQuery } from "react-responsive";
 
 export default function Hero() {
@@ -17,7 +18,7 @@ export default function Hero() {
         className="z-10 absolute"
       >
         <div className="aspect-auto w-[50vw] md:w-[32vw]">
-          <img src={logoAnimation} alt="logo" className="w-full h-full" />
+        <img src={isMobile?logoAnimation:logoAnimation1} alt="logo" className="w-full h-full" />
         </div>
       </Parallax>
       <div className="relative pl-[5vw] h-screen md:h-auto">
@@ -68,7 +69,7 @@ export default function Hero() {
                   <span className="hidden md:block">@ASIET</span>
                   <span className="md:hidden">Mar.28-Apr.01</span>
                 </h1>
-                <div className="flex w-full justify-center">
+                <div className="absolute -right-[39vw] md:-right-[25vw] md:-top-1 pt-[12vh] md:pt-[2vh]">
                   <CountDown />
                 </div>
               </div>

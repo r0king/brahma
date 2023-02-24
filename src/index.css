@@ -5,9 +5,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap");
 
 @font-face {
-  font-family: "Morganite";
-  src: url("../src/assets/fonts/Morganite-ExtraBold.ttf") format("truetype");
-  font-display: block;
+  font-family: 'Morganite';
+  src: url('../src/assets/fonts/Morganite-ExtraBold.ttf') format('truetype');
+  font-display: swap;
 }
 
 :root {
