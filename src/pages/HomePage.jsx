@@ -9,10 +9,7 @@ import EventsHome from "../components/EventsHome";
 import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import Sponsors from "../components/Sponsors";
-<<<<<<< HEAD
-=======
 import Scroll from "../components/Scroll";
->>>>>>> 9970990075c0d7822fdff141a5be111f9e28a420
 
 export default class HomePage extends Component {
   compponentDidMount() {
