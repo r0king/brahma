@@ -61,9 +61,9 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
-            <div className="absolute top-[60%] sm:top-[70%] md:top-[50%] right-10 md:right-0">
+            <div className="absolute top-[60%] w-full sm:top-[70%] md:top-[50%] md:right-0">
               <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease">
-                <h1 className="text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
+                <h1 className="md:text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
                   <span className="hidden md:block">Mar.28-Apr.01</span>
                   <span className="md:hidden">@ASIET</span>
                 </h1>
