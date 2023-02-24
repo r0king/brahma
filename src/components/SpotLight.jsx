@@ -10,7 +10,7 @@ const SpotLight = () => {
       <div className="flex flex-col ">
         <div className="">
           <div className="flex justify-end rounded-lg">
-            <span className="text-7xl font-bold font-morganite text-sec-color md:text-[12vw]   ">
+            <span className="text-7xl font-bold font-morganite text-sec-color md:text-[12vw] mt-[0.5vw]">
               36
             </span>
             <span className="leading-[0.88] text-[150px] font-medium tracking-normal font-morganite text-pri-color uppercase md:text-[31vw]">
@@ -18,7 +18,7 @@ const SpotLight = () => {
             </span>
 
             <img
-              className="hidden object-cover  ml-4 rounded-lg h-90 w-96 md:inline mt-[1.7vw]"
+              className="hidden object-cover  ml-4 rounded-lg h-[21.5vw] w-96 md:inline mt-[2.8vw]"
               src="https://source.unsplash.com/1200x800/?3"
               alt="talks"
             />
@@ -34,7 +34,7 @@ const SpotLight = () => {
               WORKSHOPS
             </span>
             <img
-              className="hidden object-cover h-90 mr-4 rounded-lg w-96 md:inline mt-[1.7vw]"
+              className="hidden object-cover h-[21.5vw] mr-4 rounded-lg w-80 md:inline mt-[2.8vw]"
               src="https://source.unsplash.com/1200x800/?2"
               style={imgStyle}
               alt="workshop"
@@ -50,7 +50,7 @@ const SpotLight = () => {
               SPEAKERS
             </span>
             <img
-              className="hidden object-cover h-90 ml-4 rounded-lg w-96 md:inline mt-[1.7vw]"
+              className="hidden object-cover h-[21.5vw] ml-4 rounded-lg w-96 md:inline mt-[2.8vw]"
               src="https://source.unsplash.com/1200x800/?1"
               style={imgStyle}
               alt="speakers"

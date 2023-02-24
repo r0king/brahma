@@ -40,7 +40,7 @@ export default class HomePage extends Component {
   }
   render() {
     return (
-      <div className="bg-acc-color text-pri-color">
+      <div className="bg-acc-color text-pri-color overflow-x-clip">
         <NavBar />
         <Hero />
         <Scroll/>
