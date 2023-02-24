@@ -1,12 +1,7 @@
 import React from "react";
 import CountDown from "./CountDown";
 import logoAnimation from "../assets/images/brahmaLogo.webp";
-import { Parallax } from "react-scroll-parallax";
-import { useMediaQuery } from "react-responsive";
-
 export default function Hero() {
-  const isMobile = useMediaQuery({ maxWidth: 640 });
-
   return (
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
       <Parallax
@@ -32,20 +27,18 @@ export default function Hero() {
           <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
-          <h3 className="text-pri-color font-morganite font-semibold text-[25vw] md:text-[13vw] pt-[3vw] md:pt-[1.5%] uppercase leading-[0.75]">
+          <h3 className="text-pri-color font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
             Awaken the
-            <br />
-            Creator
-            <br />
-            Within.
+            <br />Creator
+            <br />Within.
           </h3>
         </div>
         </Parallax>
         <div>
           <div
             className=" 
-          hidden md:block  mr-[5vw] overflow-y-scroll max-h-[10vw]
-          absolute top-[6vw] right-[4vw] md:w-[calc((135vw-9.375rem)*2/14+0.625rem)] border-b 
+          hidden md:block  mr-[5vw] 
+          absolute top-[6vw] right-[4vw] w-[calc((135vw-9.375rem)*2/14+0.625rem)] border-b 
           after:bg-current after:rounded-full after:bottom-1.5 after:content-[''] after:h-[6px] after:overflow-hidden after:absolute after:right-0 after:aspect-square"
           >
             <p
@@ -54,10 +47,7 @@ export default function Hero() {
           font-poppins font-semibold text-pri-color text-xs leading-4          
           "
             >
-              Get ready to unleash your inner genius and ignite your passion for
-              learning, as our Brahma'23 event promises to be a one-of-a-kind
-              experience that will inspire, educate, and entertain you like
-              never before!
+              Get ready to unleash your inner genius and ignite your passion for learning, as our Brahma'23 event promises to be a one-of-a-kind experience that will inspire, educate, and entertain you like never before!
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
@@ -89,7 +79,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="marquee font-poppins md:text-[1.2vw] fixed bottom-0 opacity-40">
+
+      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
         <ul className="marquee__content ">
           <li>&nbsp; ---live Soon--- &nbsp;</li>
           <li>&nbsp; ---live Soon--- &nbsp;</li>
