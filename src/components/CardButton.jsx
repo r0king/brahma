@@ -22,27 +22,29 @@ export default function CardButton({ onClick, href, text = {} }) {
           {text.caption}
         </div>
         <div className="flex justify-between mt-auto">
-          <div className=" bottom-0 left-0 text-left text-xl md:text-sm pl-3 pb-1 pt-0 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
+          <div className=" bottom-0 left-0 text-left text-base md:text-sm pl-3 pb-1 pt-0 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
             {text.head}
             <br />
             {text.tail}
           </div>
-          <div className=" right-0 bottom-0 p-3 self-end">
-            <div className="group-hover:fill-pri-color fill-acc-color">
-              <svg
-                width="88"
-                className="aspect-square h-5 w-5"
-                height="80"
-                viewBox="0 0 88 80"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeWidth="1"
-                  d="M10.1625 79.875L7.24792e-05 70.0417L64.6189 13.1875H10.1625V0H87.0376V70.0417H73.8501V22.4188L10.1625 79.875Z"
-                />
-              </svg>
+          {text.tail == "" ? "" :
+            <div className=" right-0 bottom-0 p-3 self-end">
+              <div className="group-hover:fill-pri-color fill-acc-color">
+                <svg
+                  width="88"
+                  className="aspect-square h-5 w-5"
+                  height="80"
+                  viewBox="0 0 88 80"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeWidth="1"
+                    d="M10.1625 79.875L7.24792e-05 70.0417L64.6189 13.1875H10.1625V0H87.0376V70.0417H73.8501V22.4188L10.1625 79.875Z"
+                  />
+                </svg>
+              </div>
             </div>
-          </div>
+          }
         </div>
       </Link>
     </button>

@@ -3,7 +3,7 @@ import CardButton from './CardButton'
 
 export default function Sponsors() {
     return (
-        <div className='text-pri-color p-10 font-poppins font-bold text-[4vw] md:text-[24px]'>
+        <div className='mt-10 text-pri-color p-10 font-poppins font-bold text-[4vw] md:text-[24px]'>
             Special Thanks To All Our Partners
             <div className=' flex flex-wrap gap-3 mt-5'>
                 <div className=' ml-0 border-[1px] border-pri-color p-14 md:p-40 w-10 aspect-square rounded-tr-[8vw] md:rounded-tr-[60px] mr-5 rounded-sm' ></div>
