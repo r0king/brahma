@@ -42,7 +42,6 @@ const NavBar = () => {
                 src={arrowSVG}
                 alt=" "
                 className="aspect-square h-[2.5vh] -mt-1 pr-2 mr-2"
-                srcset=""
               />
             </div>
           </div>

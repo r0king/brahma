@@ -47,7 +47,7 @@ export default function Event() {
               <p className="text-sec-color leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Wed.3rd
                 <br />
-                09:00 -> 16:00
+                09:00 - 16:00
               </p>
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
@@ -68,7 +68,6 @@ export default function Event() {
           <img
             src={posterImg}
             alt=""
-            srcset=""
             className="max-w-full md:absolute w-[460px] aspect-square object-cover rounded-tr-[20%] my-5
              relative right-[50%] md:left-[33%] md:top-0 "
           />
@@ -116,7 +115,6 @@ export default function Event() {
           <img
             src={posterImg}
             alt=""
-            srcset=""
             className="max-w-full w-[460px] aspect-square object-cover rounded-tr-[20%] my-5"
           />
         </div>

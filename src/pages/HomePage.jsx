@@ -50,7 +50,7 @@ export default class HomePage extends Component {
         <Scroll />
         <FollowUs />
         <Sponsors />
-        <h1 className="bg-sec-color text-center font-semibold font-poppins py-3">Copyright © 2023 - All right reserved by Brahma'23</h1>
+        <h1 className="bg-acc-color text-center font-semibold font-poppins py-1">Copyright © 2023 - All right reserved by Brahma'23</h1>
         {/* <ContactUs /> */}
       </div>
     );

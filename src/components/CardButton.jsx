@@ -27,7 +27,7 @@ export default function CardButton({ onClick, href, text = {} }) {
             <br />
             {text.tail}
           </div>
-          {text.tail == "" ? "" :
+          {text.tail === "" ? "" :
             <div className=" right-0 bottom-0 p-3 self-end">
               <div className="group-hover:fill-pri-color fill-acc-color">
                 <svg
