@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import asietLogo from "../assets/images/asiet-logo.png";
+import asietLogo from "../assets/images/asiet-logo.webp";
 // import arrowSVG from "../assets/images/arrow.svg";
 
 const NavBar = () => {
