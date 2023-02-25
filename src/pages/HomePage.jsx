@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ContactUs from "../components/ContactUs";
+// import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
 import SpotLight from "../components/SpotLight";
 import NavBar from "../components/NavBar";
@@ -10,6 +10,7 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import Sponsors from "../components/Sponsors";
 import Scroll from "../components/Scroll";
+import FollowUs from "../components/FollowUs";
 
 export default class HomePage extends Component {
   compponentDidMount() {
@@ -43,13 +44,14 @@ export default class HomePage extends Component {
       <div className="bg-acc-color text-pri-color overflow-x-clip">
         <NavBar />
         <Hero />
-        <Scroll/>
         <Highlights />
         <EventsHome />
         <Workshop />
         <SpotLight/>
+        <Scroll/>
+        <FollowUs />
         <Sponsors />
-        <ContactUs />
+        {/* <ContactUs /> */}
       </div>
     );
   }

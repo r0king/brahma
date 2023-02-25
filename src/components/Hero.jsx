@@ -14,12 +14,12 @@ export default function Hero() {
     <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
       <Parallax
         translateY={isMobile ? [0, 0] : [0, 10]}
-        translateX={isMobile ? [70, 70] : [70, 70]}
+        translateX={isMobile ? [100, 70] : [70, 70]}
         // rotateY={isMobile ? [40, -40] : [0, 0]}
         easing="easeInOut"
         className="z-10 absolute"
       >
-        <div className="md:absolute top-[4vw] aspect-auto md:left-[22.5vw] z-10 w-[70vw] md:w-[32vw]">
+        <div className="md:absolute top-[4vw] aspect-auto pt-[16vw] md:pt-0 md:left-[22.5vw] z-10 w-[55vw] md:w-[32vw]">
               <img src={isMobile?logoAnimationM:logoAnimationD} alt="logo" className="w-full h-full" />
             </div>
       </Parallax>
@@ -63,7 +63,7 @@ export default function Hero() {
               <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease">
                 <h1 className="md:text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
                   <span className="hidden md:block">Mar.28-Apr.01</span>
-                  <span className="md:hidden">@ASIET</span>
+                  <span className="md:hidden ml-10">@ASIET</span>
                 </h1>
               </Parallax>
               <div className="absolute w-max md:top-[90%] right-4 md:right-0  md:flex">
@@ -76,10 +76,10 @@ export default function Hero() {
                     }}
                   >
                     <span className="hidden md:block">@ASIET</span>
-                    <span className="md:hidden">Mar.28-Apr.01</span>
+                    <span className="md:hidden mr-8">Mar.28-Apr.01</span>
                   </h1>
                 </Parallax>
-                <div className="flex w-full justify-center">
+                <div className="flex w-full justify-center mr-14">
                   <CountDown />
                 </div>
               </div>
