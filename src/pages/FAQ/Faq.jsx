@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import megaphone from "../../assets/images/megaphone.png"
+// import megaphone from "../../assets/images/megaphone.png"
+import CardButton from '../../components/CardButton'
 import "./Faq.css"
 function Faq() {
        const faqs=[
@@ -50,13 +51,14 @@ function Faq() {
     }
   return (
     <>
-      <div className="faq_main_container">
+      <div className="faq_main_container bg-acc-color">
         <div className="top_part">
-          <div className="textpart">
+          <div className="textpart text-pri-color font-morganite">
             <h1>HOW CAN WE HELP YOU ?</h1>
             <div className="reach_team">
-            <div className="reach_container">
-              <p>Contact us</p>
+            <div className="reach_container w-[20vw] h-[8vw]">
+            <CardButton text={{head:"Reach",tail:"Our Team",caption:"Contact Us"}}/>
+              {/* <p>Contact us</p>
               <div className="reach_bottom_part">
                   <span>Reach Our Team</span>
                   <svg
@@ -73,14 +75,14 @@ function Faq() {
                         d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
                     />
                     </svg>
-              </div>
+              </div> */}
             </div>
           </div>
           </div>
           
         </div>
-        <div className="faq_part">
-            <img src={megaphone} alt="" />
+        <div className="faq_part font-poppins">
+            {/* <img src={megaphone} alt="" /> */}
             <div className="part1">
             {
                 faqs.map((ele,index)=>{
@@ -102,9 +104,9 @@ function Faq() {
                 
             </div>
         </div>
-        <div className="part2">
+        <div className="part2 font-poppins">
             <div className="additional_contact">
-                <h1>Additional Contact</h1>
+                <h1 className='text-sec-color font-morganite'>Additional Contact</h1>
                 <p className='name'>Ajay Antu</p>
                 <p className='role'>Sample Role here</p>
                 <p className='email'>name@gmail.com</p>

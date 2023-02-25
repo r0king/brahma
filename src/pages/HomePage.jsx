@@ -10,6 +10,7 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 import Sponsors from "../components/Sponsors";
 import Scroll from "../components/Scroll";
+// import FollowUs from "../components/FollowUs";
 
 export default class HomePage extends Component {
   compponentDidMount() {
@@ -48,6 +49,7 @@ export default class HomePage extends Component {
         <Workshop />
         <SpotLight/>
         <Scroll/>
+        {/* <FollowUs /> */}
         <Sponsors />
         <ContactUs />
       </div>
