@@ -34,9 +34,8 @@ export default class HomePage extends Component {
 
       // Modify the scrolling speed by adjusting the scroll-behavior CSS property
       const speed = 0; // adjust this value to change the speed
-      document.documentElement.style.scrollBehavior = `smooth ${
-        speed * (1 - scrollPercent)
-      }`;
+      document.documentElement.style.scrollBehavior = `smooth ${speed * (1 - scrollPercent)
+        }`;
     });
   }
   render() {
@@ -47,10 +46,11 @@ export default class HomePage extends Component {
         <Highlights />
         <EventsHome />
         <Workshop />
-        <SpotLight/>
-        <Scroll/>
+        <SpotLight />
+        <Scroll />
         <FollowUs />
         <Sponsors />
+        <h1 className="bg-sec-color text-center font-semibold font-poppins py-3">Copyright © 2023 - All right reserved by Brahma'23</h1>
         {/* <ContactUs /> */}
       </div>
     );
