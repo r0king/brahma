@@ -23,7 +23,7 @@ export default function FollowUs() {
         </h1>
         <div class="relative mt-4 md:mt-8 mr-12 md:mr-24">
           <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-md font-poppins font-semibold text-pri-color bg-transparent border-0 border-b-2 border-pri-color appearance-none focus:outline-none focus:ring-0 focus:border-sec-color peer" placeholder="Your Email" />
-          <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+          <label htmlFor="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
           <div className='absolute top-0 right-2 bottom-1 w-[40vw] md:w-[12vw]'>
             <CardButton text={{ head: "Subscribe", tail: "", caption: "" }} />
           </div>
