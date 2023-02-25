@@ -83,7 +83,7 @@ const ContactUs = () => {
                                 <a
                                     href="#facebook"
                                     aria-label="facebook"
-                                    className="p-1 inline-flex justify-center items-center text-acc-color hover:text-[#4e4e4e]"
+                                    className="p-1 inline-flex justify-center items-center text-accent hover:text-[#4e4e4e]"
                                 >
                                     <svg
                                         className="w-5 h-5 fill-current"
@@ -97,7 +97,7 @@ const ContactUs = () => {
                                 <a
                                     href="#twitter"
                                     aria-label="twitter"
-                                    className="m-2 p-1 inline-flex justify-center items-center text-acc-color hover:text-[#4e4e4e]"
+                                    className="m-2 p-1 inline-flex justify-center items-center text-accent hover:text-[#4e4e4e]"
                                 >
                                     <svg
                                         className="w-4 h-4 fill-current"
@@ -111,7 +111,7 @@ const ContactUs = () => {
                                 <a
                                     href="#instagrap"
                                     aria-label="instagrap"
-                                    className="m-2 p-1 inline-flex justify-center items-center text-acc-color hover:text-[#4e4e4e]"
+                                    className="m-2 p-1 inline-flex justify-center items-center text-accent hover:text-[#4e4e4e]"
                                 >
                                     <svg
                                         className="w-4 h-4 fill-current"
@@ -125,7 +125,7 @@ const ContactUs = () => {
                                 <a
                                     href="#linkedin"
                                     aria-label="linkedin"
-                                    className="m-2 p-1 inline-flex justify-center items-center text-acc-color hover:text-[#4e4e4e]"
+                                    className="m-2 p-1 inline-flex justify-center items-center text-accent hover:text-[#4e4e4e]"
                                 >
                                     <svg
                                         className="w-4 h-4 fill-current"

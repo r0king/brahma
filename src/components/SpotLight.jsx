@@ -10,10 +10,10 @@ const SpotLight = () => {
       <div className="flex flex-col ">
         <div className="">
           <div className="flex justify-end rounded-lg">
-            <span className="text-7xl font-bold font-morganite text-sec-color md:text-[12vw] mt-[0.5vw]">
+            <span className="text-7xl font-bold font-morganite text-secondary md:text-[12vw] mt-[0.5vw]">
               36
             </span>
-            <span className="leading-[0.88] text-[30vw] font-medium tracking-normal font-morganite text-pri-color uppercase md:text-[22vw]">
+            <span className="leading-[0.88] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
               TALKS
             </span>
 
@@ -27,10 +27,10 @@ const SpotLight = () => {
         </div>
         <div className="">
           <div className="flex flex-row-reverse justify-start rounded-lg">
-            <span className="font-bold text-7xl font-morganite text-sec-color md:text-[12vw] ">
+            <span className="font-bold text-7xl font-morganite text-secondary md:text-[12vw] ">
               6
             </span>
-            <span className="leading-[0.88] text-[30vw] font-medium font-morganite tracking-normal text-pri-color uppercase md:text-[22vw]">
+            <span className="leading-[0.88] text-[30vw] font-medium font-morganite tracking-normal text-primary uppercase md:text-[22vw]">
               WORKSHOPS
             </span>
             <img
@@ -43,10 +43,10 @@ const SpotLight = () => {
         </div>
         <div className="">
           <div className="flex justify-end rounded-lg ">
-            <span className="font-bold text-7xl font-morganite text-sec-color md:text-[12vw] ">
+            <span className="font-bold text-7xl font-morganite text-secondary md:text-[12vw] ">
               36
             </span>
-            <span className="leading-[0.88] text-[30vw] font-morganite font-medium tracking-normal text-pri-color uppercase md:text-[22vw]">
+            <span className="leading-[0.88] text-[30vw] font-morganite font-medium tracking-normal text-primary uppercase md:text-[22vw]">
               SPEAKERS
             </span>
             <img

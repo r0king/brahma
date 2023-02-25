@@ -25,10 +25,10 @@ export default function Event() {
   // );
   return (
     <div className="font-poppins">
-      <div className="relative text-pri-color">
+      <div className="relative text-primary">
         <div className="md:h-[500px] md:flex ">
           <h3
-            className="text-sec-color self-end font-semibold font-poppins text-4xl md:text-[3.14rem] mt-auto
+            className="text-secondary self-end font-semibold font-poppins text-4xl md:text-[3.14rem] mt-auto
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
           >
             How To Create & Sell Digital Collectibles With No Code
@@ -38,13 +38,13 @@ export default function Event() {
           <div className="flex flex-row w-full justify-between absolute md:static gap-2 p-2 md:gap-10 md:pl-5 z-10">
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Type</h4>
-              <p className="text-sec-color  leading-none font-semibold font-poppins text-base md:text-xl ">
+              <p className="text-secondary  leading-none font-semibold font-poppins text-base md:text-xl ">
                 Design
               </p>
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Date</h4>
-              <p className="text-sec-color leading-none  font-semibold font-poppins text-base md:text-xl ">
+              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Wed.3rd
                 <br />
                 09:00 -> 16:00
@@ -52,7 +52,7 @@ export default function Event() {
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Location</h4>
-              <p className="text-sec-color leading-none  font-semibold font-poppins text-base md:text-xl ">
+              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Level 100-North
                 <br />
                 Building (MTCC)
@@ -60,7 +60,7 @@ export default function Event() {
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Price</h4>
-              <p className="text-sec-color leading-none  font-semibold font-poppins text-base md:text-xl ">
+              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Starting at $323
               </p>
             </div>
@@ -82,10 +82,10 @@ export default function Event() {
         </div>
       </div>
       <div className="flex w-full px-2 flex-col md:flex-row ">
-        <h1 className="py-[10vw] text-5xl md:text-9xl text-sec-color font-poppins font-semibold -tracking-widest">
+        <h1 className="py-[10vw] text-5xl md:text-9xl text-secondary font-poppins font-semibold -tracking-widest">
           Speaker
         </h1>
-        <h2 className="ml-auto text-right my-auto leading-[0.8] pt-11 text-pri-color text-[10rem] md:text-[20rem] font-morganite">
+        <h2 className="ml-auto text-right my-auto leading-[0.8] pt-11 text-primary text-[10rem] md:text-[20rem] font-morganite">
           01
         </h2>
       </div>
@@ -123,10 +123,10 @@ export default function Event() {
       </div>
 
       <div className="flex w-full px-2 flex-col md:flex-row ">
-        <h1 className="py-[10vw] text-5xl md:text-9xl text-sec-color font-poppins font-semibold -tracking-widest">
+        <h1 className="py-[10vw] text-5xl md:text-9xl text-secondary font-poppins font-semibold -tracking-widest">
           About <br /> The Event
         </h1>
-        <h2 className="ml-auto text-right my-auto leading-[0.8] pt-11 text-pri-color text-[10rem] md:text-[20rem] font-morganite">
+        <h2 className="ml-auto text-right my-auto leading-[0.8] pt-11 text-primary text-[10rem] md:text-[20rem] font-morganite">
           02
         </h2>
       </div>

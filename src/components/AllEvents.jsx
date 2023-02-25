@@ -69,11 +69,11 @@ const AllEvents = () => {
   return (
     <div>
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
-        <div className='absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-sec-color'>
+        <div className='absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-secondary'>
           (+30)
         </div>
         <h4
-          className=" text-sec-color self-end font-semibold font-poppins text-lg 
+          className=" text-secondary self-end font-semibold font-poppins text-lg 
            w-full leading-[0.9] tracking-tighter p-2  pb-[5vw]  mr-auto"
         >
           Roll Up Your Sleeves For Practical Learning, Based On Real Projects From Industry Pros.
@@ -83,18 +83,18 @@ const AllEvents = () => {
 
       <div className='justify-between md:flex'>
 
-        <div className=' font-morganite md:static text-pri-color text-[40vw] md:text-[26vw] pl-1 md:pt-[8%]'>
+        <div className=' font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[8%]'>
           <div className='leading-[0.75]'>ALL</div>
           <div className='leading-[0.75]'>EVENTS</div>
         </div>
         <div className=" hidden mb-[18vw] ml-[12vw]  mt-[5vw] md:flex">
           <h4
-            className="mb-[12.8vw]  text-sec-color self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
+            className="mb-[12.8vw]  text-secondary self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
           >
             Roll Up Your Sleeves For Practical Learning, Based On Real Projects From Industry Pros. Meet Like-Minded Classmates & Upskill Your Creative Toolkit.
           </h4>
-          <div className='font-poppins absolute text-sec-color  text-[3rem] font-bold  right-0'>
+          <div className='font-poppins absolute text-secondary  text-[3rem] font-bold  right-0'>
             (+30)
           </div>
         </div>

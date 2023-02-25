@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import asietLogo from "../assets/images/asiet-logo.png";
-import arrowSVG from "../assets/images/arrow.svg";
+// import arrowSVG from "../assets/images/arrow.svg";
 
 const NavBar = () => {
   const [fade, setFade] = useState(false);
@@ -11,16 +11,16 @@ const NavBar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  useEffect(() => {
-    console.log(theme);
-    if (theme === "dark") {
-      document.documentElement.style.setProperty("--pri-color", "#fff");
-      document.documentElement.style.setProperty("--acc-color", "#000");
-    } else {
-      document.documentElement.style.setProperty("--pri-color", "#000");
-      document.documentElement.style.setProperty("--acc-color", "#fff");
-    }
-  }, [theme]);
+  // useEffect(() => {
+  //   console.log(theme);
+  //   if (theme === "dark") {
+  //     document.documentElement.style.setProperty("--primary", "#fff");
+  //     document.documentElement.style.setProperty("--accent", "#000");
+  //   } else {
+  //     document.documentElement.style.setProperty("--primary", "#000");
+  //     document.documentElement.style.setProperty("--accent", "#fff");
+  //   }
+  // }, [theme]);
   const handleScroll = () => {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
@@ -28,7 +28,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="text-black w-full font-poppins font-bold sticky -top-1 bg-acc-color z-30">
+    <nav className="text-black w-full font-poppins font-bold sticky -top-1 bg-accent z-30">
       <div className="flex justify-end items-center w-full">
         <label
           id="logo"
@@ -82,7 +82,7 @@ const NavBar = () => {
               />
 
               <svg
-                className="swap-on fill-pri-color/70 focus:fill-white aspect-square w-5"
+                className="swap-on fill-primary/70 focus:fill-white aspect-square w-5"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >
@@ -90,7 +90,7 @@ const NavBar = () => {
               </svg>
 
               <svg
-                className="swap-off fill-pri-color/70 aspect-square w-5"
+                className="swap-off fill-primary/70 aspect-square w-5"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
               >

@@ -17,7 +17,7 @@ function App() {
   const rootRef = useRef(null);
 
   useEffect(() => {
-    document.body.style.backgroundColor = "var(--bg-color)";
+    document.body.style.backgroundColor = "var(--color-accent)";
     setTimeout(() => {
       setLoading(false); // set the loading state to false
     }, 1500);

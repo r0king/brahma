@@ -9,15 +9,17 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
-        "pri-color": "#1f1f1f",
-        "sec-color": "#d35c39",
-        "acc-color": "#fafafa",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        accent: "var(--color-accent)",
+        // "primary": "#1f1f1f",
+        // "secondary": "#d35c39",
+        // "accent": "#fafafa",
       },
     },
   },
-  plugins: [require("daisyui"),
-],
-  
+  plugins: [require("daisyui")],
+
   daisyui: {
     themes: [],
   },

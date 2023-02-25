@@ -32,10 +32,10 @@ export default function Hero() {
         className=""
       >
         <div className="pl-6 md:pl-0 pt-7 md:pt-4">
-          <h1 className="text-sec-color font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
+          <h1 className="text-secondary font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
             Brahma '23
           </h1>
-          <h3 className="text-pri-color font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
+          <h3 className="text-primary font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
             Awaken the
             <br />Creator
             <br />Within.
@@ -52,7 +52,7 @@ export default function Hero() {
             <p
               className="
           relative pb-2.5 pr-9
-          font-poppins font-semibold text-pri-color text-xs leading-4          
+          font-poppins font-semibold text-primary text-xs leading-4          
           "
             >
               Get ready to unleash your inner genius and ignite your passion for learning, as our Brahma'23 event promises to be a one-of-a-kind experience that will inspire, educate, and entertain you like never before!
@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
             <div className="absolute top-[60%] w-full sm:top-[70%] md:top-[50%] md:right-0">
               <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease">
-                <h1 className="md:text-right text-pri-color font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
+                <h1 className="md:text-right text-primary font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
                   <span className="hidden md:block">Mar.28-Apr.01</span>
                   <span className="md:hidden ml-10">@ASIET</span>
                 </h1>
@@ -70,7 +70,7 @@ export default function Hero() {
                 <Parallax translateY={isMobile ? [20, -40] : [20, -40]}
                   easing="ease">
                   <h1
-                    className="text-pri-color text-right mr-[10vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.7] uppercase "
+                    className="text-primary text-right mr-[10vw] md:mr-[10vw] font-morganite text-[25vw] md:text-[13vw] leading-[0.7] uppercase "
                     style={{
                       marginInline: "0",
                     }}
