@@ -86,7 +86,7 @@ const Workshop = () => {
   return (
     <div className="mt-10">
       <div className="flex flex-col md:flex-row">
-        <h2 className="leading-[0.75] text-[30vw] font-medium tracking-normal font-morganite text-pri-color uppercase md:text-[22vw]">
+        <h2 className="leading-[0.75] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
           WORKSHOPS
         </h2>
         <div className=" ml-24 mb-2 w-full h-[9em] md:w-1/4 md:h-[8vw] self-end">

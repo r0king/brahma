@@ -53,11 +53,11 @@ export default class CountDown extends Component {
       <div
         className="           
              h-min py-4 px-[9vw] md:pl-4 md:pr-4 md:pt-3 md:pb-5 rounded-md md:mr-0 md:ml-[5vw] mx-auto md:mx-0 w-fit
-             bg-sec-color md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none
+             bg-secondary md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none
              grid grid-flow-col justify-center md:justify-start gap-5 auto-cols-max
              text-center text-xl"
       >
-        <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-acc-color">
+        <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base text-accent">
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold ">
             <span style={{ "--value": this.state.days }}></span>
           </span >
@@ -66,7 +66,7 @@ export default class CountDown extends Component {
             days
           </span>
         </div>
-        <div className="flex flex-col font-['Montserrat',sans-serif] pl-2 md:pl-0 md:p-2 md:pb-0 rounded-box text-base text-acc-color">
+        <div className="flex flex-col font-['Montserrat',sans-serif] pl-2 md:pl-0 md:p-2 md:pb-0 rounded-box text-base text-accent">
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold">
             <span style={{ "--value": this.state.hours }}></span>
           </span>
@@ -74,7 +74,7 @@ export default class CountDown extends Component {
             hours
           </span>
         </div>
-        <div className="flex flex-col font-['Montserrat',sans-serif] pl-2 md:pl-0 md:p-2 md:pb-0 rounded-box text-base text-acc-color">
+        <div className="flex flex-col font-['Montserrat',sans-serif] pl-2 md:pl-0 md:p-2 md:pb-0 rounded-box text-base text-accent">
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold">
             <span style={{ "--value": this.state.minutes }}></span>
           </span>
@@ -82,7 +82,7 @@ export default class CountDown extends Component {
             min
           </span>
         </div>
-        <div className="flex flex-col font-['Montserrat',sans-serif] pl-2 md:pl-0 md:p-2 md:pb-0 rounded-box text-base text-acc-color">
+        <div className="flex flex-col font-['Montserrat',sans-serif] pl-2 md:pl-0 md:p-2 md:pb-0 rounded-box text-base text-accent">
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold">
             <span style={{ "--value": this.state.seconds }}></span>
           </span>

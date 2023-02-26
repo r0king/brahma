@@ -41,7 +41,7 @@ export default class HomePage extends Component {
   }
   render() {
     return (
-      <div className="bg-acc-color text-pri-color overflow-x-clip">
+      <div className="bg-accent text-primary overflow-x-clip transition-all duration-500">
         <NavBar />
         <Hero />
         <Highlights />

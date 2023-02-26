@@ -4,11 +4,11 @@ import Link from "react-ripples-hover";
 export default function CardButton({ onClick, href, text = {} }) {
   return (
     <button
-      className="relative bg-sec-color group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
+      className="relative bg-secondary group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
       onClick={onClick}
     >
       <Link
-        rippleColor="#fff"
+        rippleColor="var(--color-accent)"
         duration={0.5}
         href={href}
         block
@@ -16,20 +16,20 @@ export default function CardButton({ onClick, href, text = {} }) {
           padding: "2px",
           display: "flex",
         }}
-        className="hover:scale-[1.1] transition-all ease-in-out duration-150 hover:shadow-2xl shadow-pri-color h-full w-full flex flex-col justify-center"
+        className="hover:scale-[1.1] transition-all ease-in-out duration-150 hover:shadow-2xl shadow-primary h-full w-full flex flex-col justify-center"
       >
-        <div className="text-left p-2 pb-0 mb-auto group-hover:text-pri-color font-poppins font-semibold text-acc-color">
+        <div className="text-left p-2 pb-0 mb-auto group-hover:text-primary font-poppins font-semibold text-white">
           {text.caption}
         </div>
         <div className="flex justify-between mt-auto">
-          <div className=" bottom-0 left-0 text-left text-base md:text-sm pl-3 pb-1 pt-0 group-hover:text-pri-color font-poppins font-semibold text-acc-color">
+          <div className=" bottom-0 left-0 text-left text-base md:text-sm pl-3 pb-1 pt-0 group-hover:text-primary font-poppins font-semibold text-white">
             {text.head}
             <br />
             {text.tail}
           </div>
-          {text.tail == "" ? "" :
+          {text.tail === "" ? "" :
             <div className=" right-0 bottom-0 p-3 self-end">
-              <div className="group-hover:fill-pri-color fill-acc-color">
+              <div className="group-hover:fill-primary fill-accent">
                 <svg
                   width="88"
                   className="aspect-square h-5 w-5"

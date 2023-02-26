@@ -33,7 +33,7 @@
 .sched-table {
     font-family: var(--poppins);
     font-size: x-large;
-    color: var(--primary);
+    color: var(--color-primary);
 }
 
 li {
@@ -51,7 +51,7 @@ li {
 
 
 .timing {
-    color: var(--secondary-color);
+    color: var(--color-secondary);
     font-weight: 500;
     width: 20%;
 }

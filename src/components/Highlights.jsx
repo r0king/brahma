@@ -18,8 +18,8 @@ const Highlights = () => {
                 <div className='order-1 mx-2 mb-[4vw] relative shadow-overlay rounded-md rounded-tr-[3vw] md:max-w-[50vw]'>
                     <video
                         width={"800"}
-                        class='hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]'
-                        src={sunburnVideo} autoPlay muted autoReplay />
+                        className='hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]'
+                        src={sunburnVideo} autoPlay loop muted />
                 </div>
             </div>
             <p className='mx-[9vw] font-poppins font-semibold mt-8 md:mt-0 text-justify'>
