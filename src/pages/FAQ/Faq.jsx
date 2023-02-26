@@ -90,7 +90,7 @@ function Faq() {
                     <article className={`accordian_item${index} accordian_item`} onClick={()=>{toggle(index)}}>
                         <div className={`accordian_content${index} accordian_content`} >
                             <h1>{ele.qstn}</h1>
-                            <span class={`accordion_icon${index}`}></span>
+                            <span className={`accordion_icon${index}`}></span>
                         </div>
                         <div className="faq_answer">
                             <p className={selected===index?'content-show':'content-hide'}>

@@ -132,3 +132,14 @@ body {
       0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
   }
 }
+
+.card{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 2300ms;
+}
+
+.card.show{
+  transform: translateY(0);
+  opacity: 1;
+}
