@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "react-ripples-hover";
 
-export default function CardButton({ onClick, href, text = {} }) {
+export default function CardButton({ onClick, href, text = {}, huge = false }) {
   return (
     <button
       className="relative bg-secondary group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
@@ -22,17 +22,23 @@ export default function CardButton({ onClick, href, text = {} }) {
           {text.caption}
         </div>
         <div className="flex justify-between mt-auto">
-          <div className=" bottom-0 left-0 text-left text-base md:text-sm pl-3 pb-1 pt-0 group-hover:text-primary font-poppins font-semibold text-white">
+          <div
+            className={`bottom-0 left-0 text-left  pl-3 pb-1 pt-0 group-hover:text-primary font-poppins font-semibold text-white ${
+              huge ? "text-5xl md:text-7xl" : "text-base md:text-sm"
+            }`}
+          >
             {text.head}
             <br />
             {text.tail}
           </div>
-          {text.tail === "" ? "" :
-            <div className=" right-0 bottom-0 p-3 self-end">
+          {text.tail === "" ? (
+            ""
+          ) : (
+            <div className=" right-0 bottom-0 p-3 pl-0 self-end">
               <div className="group-hover:fill-primary fill-accent">
                 <svg
+                  className={`aspect-square ${huge ? "" : "h-5 w-5"}`}
                   width="88"
-                  className="aspect-square h-5 w-5"
                   height="80"
                   viewBox="0 0 88 80"
                   xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +50,7 @@ export default function CardButton({ onClick, href, text = {} }) {
                 </svg>
               </div>
             </div>
-          }
+          )}
         </div>
       </Link>
     </button>

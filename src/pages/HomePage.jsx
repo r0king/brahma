@@ -10,6 +10,7 @@ import Workshop from "../components/Workshop";
 import Sponsors from "../components/Sponsors";
 import Scroll from "../components/Scroll";
 import FollowUs from "../components/FollowUs";
+import CardButton from "../components/CardButton";
 
 export default class HomePage extends Component {
   render() {
@@ -19,8 +20,14 @@ export default class HomePage extends Component {
         <Highlights />
         <EventsHome />
         <Workshop />
-        <SpotLight/>
-        <Scroll/>
+        <SpotLight />
+        <div className="h-[35vh]">
+          <CardButton
+            text={{ head: "View", tail: "Schedule", caption: "Speakers" }}
+            huge={true}
+          />
+        </div>
+        <Scroll />
         <FollowUs />
         <Sponsors />
         {/* <ContactUs /> */}
