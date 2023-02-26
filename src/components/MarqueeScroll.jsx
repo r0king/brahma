@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import CardButton from "./CardButton";
 
-export default class CarouselAni extends Component {
+export default class MarqueeScroll extends Component {
   state = {
     prevScrollPos: window.pageYOffset,
     scrollDirection: "forwards",
