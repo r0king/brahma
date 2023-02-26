@@ -9,6 +9,7 @@ import Event from "./pages/Event/Event";
 
 import "./App.css";
 import AllEvents from "./components/AllEvents";
+import NavBar from "./components/NavBar";
 
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -37,6 +38,7 @@ function App() {
       </div>
       <div ref={rootRef} className="load-to-view">
         <ParallaxProvider>
+          <NavBar />
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
               <Route exact path="/" element={<HomePage />} />
