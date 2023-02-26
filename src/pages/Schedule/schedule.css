@@ -1,26 +1,26 @@
-.schedule-menu{
+.schedule-menu {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 5% 0;
 }
 
-.filter{
+.filter {
     width: 50%;
     padding: 1% 2%;
     border-radius: 50px;
 }
 
-.filter select{
+.filter select {
     width: 100%;
     font-size: xx-large;
-    border-radius:50px;
+    border-radius: 50px;
     padding: 2%;
     background-color: var(--color-secondary);
     color: white;
 }
 
-.filter option{
+.filter option {
     width: 50%;
     background-color: white;
     color: var(--color-secondary);
@@ -38,20 +38,40 @@
     margin: 2%;
 }
 
-.tabs .button{
-    width: 33%;
+.tabs .button {
+    width: 33.333%;
     border-radius: 50px;
-    border: none;
     padding: 2%;
 }
 
-.tabs .button:hover,.selectedbtn{
-    color: var(--color-primary);
+.tabs .button:hover{
+    color: var(--color-secondary);
     cursor: pointer;
-    background-color: white;
-    transition: all 0.3s ;
+    color: black;
+    transition: all 0.5s;
 }
 
+.tabs .btn1 {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: white;
+    color: var(--color-secondary);
+}
+.tabs .btn2{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: white;
+    color: var(--color-secondary);
+}
+
+.tabs .btn3{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: white;
+    color: var(--color-secondary);
+}
 
 
 
@@ -119,8 +139,8 @@ li {
     height: 0vh;
 }
 
-.row:hover{
-    background-color:rgba(211,92,57,0.3);
+.row:hover {
+    background-color: rgba(211, 92, 57, 0.3);
     transition: all 0.3s ease-in;
 }
 
@@ -142,7 +162,7 @@ li {
     animation-name: slideout;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
-    transition:all  1s  ease-out;
+    transition: all 1s ease-out;
     transform: scale(0);
 }
 
@@ -173,10 +193,11 @@ li {
         flex-direction: column;
     }
 
-    .filter,.tabs{
+    .filter,
+    .tabs {
         width: 100%;
     }
-    
+
     .images {
         display: none;
     }
