@@ -81,23 +81,6 @@ const NavBar = () => {
             <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
               Contact Us
             </label>
-<<<<<<< HEAD
-            <div className="flex justify-end items-center w-full text-[12px] mr-[2vw]">
-              <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">Speakers</label>
-              <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">Workshops</label>
-              <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">Schedule</label>
-              <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">Venue</label>
-              {/* <label className="p-2 pt-1 font-semibold ">about</label> */}
-              <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">About</label>
-              <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">Contact Us</label>
-              <img
-                src={arrowSVG}
-                alt=" "
-                className="aspect-square h-[2.5vh] -mt-1 pr-2 mr-2"
-              />
-            </div>
-=======
->>>>>>> 580a221564cff43e19a3b76c7da707eea4f14834
           </div>
           <label className="p-2 md:hidden hover:opacity-100 md:pt-1 font-bold opacity-[0.6]">
             <button
