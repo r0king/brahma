@@ -5,13 +5,46 @@ const Schedule = () => {
 
     const [image, setImage] = useState(-1)
 
-
-
-    const sched = [
+    const sched1 = [
         {
             id: 0,
             timing: "09:00 - 16:00",
             category: "buisness",
+            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "How to create and sell digital collectibles with no code",
+            personnel: "Pablo Stanley"
+        },
+        {
+            id: 1,
+            timing: "10:00 - 15:00",
+            category: "Fashion",
+            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "How to create and sell digital collectibles with no code",
+            personnel: "larry"
+        },
+        {
+            id: 2,
+            timing: "09:00 - 16:00",
+            category: "Entertainment",
+            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "Bike Workshop",
+            personnel: "Leonardo Dicaprio"
+        },
+        {
+            id: 3,
+            timing: "09:00 - 16:00",
+            category: "Technology",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Full stack development",
+            personnel: "michael"
+        }
+    ]
+
+    const sched2=[
+        {
+            id: 0,
+            timing: "09:00 - 16:00",
+            category: "aoshdoasd",
             img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             description: "How to create and sell digital collectibles with no code",
             personnel: "Pablo Stanley"
@@ -41,6 +74,10 @@ const Schedule = () => {
             personnel: "Pablo Stanley"
         }
     ]
+
+    
+    const [schedule, setSchedule] = useState(sched1)
+
 
     return (
         <>
@@ -74,16 +111,16 @@ const Schedule = () => {
 
 
             <div className="tabs">
-                <li>Day 1</li>
-                <li>Day 2</li>
-                <li>Day 3</li>
+                <li onClick={()=>{setSchedule(sched1)}}>Day 1</li>
+                <li onClick={()=>{setSchedule(sched2)}}>Day 2</li>
+                <li onClick={()=>{setSchedule([])}}>Day 3</li>
             </div>
 
 
             <div className='schedule'>
                 <div className='sched-table'>
                     {
-                        sched.map((item) => {
+                        schedule.map((item) => {
                             return (
 
                                 <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id) }} onMouseLeave={() => { setImage(-1) }}>
@@ -99,12 +136,12 @@ const Schedule = () => {
                         )
                     }
 
-
+                    {schedule.length==0&&<h2 style={{padding:"10%",width:"max-content"}}>No Schedule Available</h2>}
 
                 </div>
 
                 <div className="images">
-                    {image !== -1 && <img className='person-image' src={sched[image].img} alt="" />}
+                    {image !== -1 && <img className='person-image' src={schedule[image].img} alt="" />}
                 </div>
 
             </div>
