@@ -13,7 +13,6 @@ const NavBar = () => {
     };
   }, []);
   useEffect(() => {
-    console.log(theme);
     if (theme === "dark") {
       document.documentElement.style.setProperty("--color-primary", "#fafafa");
       document.documentElement.style.setProperty(
@@ -34,6 +33,7 @@ const NavBar = () => {
     if (showMenu) {
       document.documentElement.style.setProperty("overflow", "hidden");
     } else {
+      
       document.documentElement.style.setProperty("overflow", "auto");
     }
   }, [showMenu]);
@@ -123,8 +123,7 @@ const NavBar = () => {
             showMenu
               ? " translate-y-[0%] animate-moveDown"
               : "animate-moveUp translate-y-[-100%]"
-          } 
-          gap-2 p-2 pb-6 z-50 fixed w-screen h-screen top-0 left-0 flex justify-end flex-col font-normal 
+          } md:hidden gap-2 p-2 pb-6 z-50 fixed w-screen h-screen top-0 left-0 flex justify-end flex-col font-normal 
           text-5xl bg-primary text-accent`}
         >
           <button

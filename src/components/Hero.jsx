@@ -62,7 +62,7 @@ export default function Hero() {
           >
             <p
               className="
-          relative pb-2.5 pr-9
+          relative pb-2.5 pr-9 overflow-y-scroll max-h-[15vh]
           font-poppins font-semibold text-primary text-xs leading-4          
           "
             >
@@ -98,7 +98,7 @@ export default function Hero() {
                     <span className="md:hidden mr-8">Mar.28-Apr.01</span>
                   </h1>
                 </Parallax>
-                <div className="flex w-full justify-center mr-14">
+                <div className="flex w-full justify-center mr-14 md:mr-0">
                   <CountDown />
                 </div>
               </div>
@@ -109,31 +109,22 @@ export default function Hero() {
 
       <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
         <ul className="marquee__content" aria-hidden="true">
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>
-            &nbsp; a work in hilarious progess
-            <span className="text-[0.85rem]">🫠</span>
-            &nbsp;
-          </li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
         </ul>
         <ul className="marquee__content" aria-hidden="true">
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>
-            &nbsp; a work in hilarious progess
-            <span className="text-[0.85rem]">🫠</span>&nbsp;
-          </li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
-          <li>&nbsp; ---Live Soon--- &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
+          <li>&nbsp; Brahma'23 &nbsp;</li>
         </ul>
       </div>
     </section>

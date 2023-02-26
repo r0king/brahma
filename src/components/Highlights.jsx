@@ -19,7 +19,7 @@ const Highlights = () => {
                     <video
                         width={"800"}
                         className='hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]'
-                        src={sunburnVideo} autoPlay muted />
+                        src={sunburnVideo} autoPlay loop muted />
                 </div>
             </div>
             <p className='mx-[9vw] font-poppins font-semibold mt-8 md:mt-0 text-justify'>
