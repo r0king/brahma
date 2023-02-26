@@ -155,9 +155,9 @@ export default function EventsHome() {
                                 </span>
                             </div>
                         </button> */}
-                        <div className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]'>
+                        <button className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]'>
                             <CardButton text={{ head: "View", tail: "All Events", caption: "Events" }} />
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

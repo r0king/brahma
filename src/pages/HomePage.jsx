@@ -34,7 +34,7 @@ export default class HomePage extends Component {
         <NavBar />
         {/* <div class="card"><Hero /></div> */}
         <Hero/>
-        <div class="card"><Highlights /></div>
+        <Highlights />
         <div class="card"><EventsHome /></div>
         <div class="card"><Workshop /></div>
         <div class="card"><SpotLight /></div>

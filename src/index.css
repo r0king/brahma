@@ -141,13 +141,13 @@ body {
   }
 }
 
-.card{
+h1,p,ul,button,.card{
   transform: translateY(100px);
   opacity: 0;
-  transition: 2300ms;
+  transition: 1000ms;
 }
 
-.card.show{
+h1.show,p.show,ul.show,button.show,.card.show{
   transform: translateY(0);
   opacity: 1;
 }

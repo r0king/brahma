@@ -9,7 +9,7 @@ const SpotLight = () => {
     <div className="grid w-screen md:w-auto sm: place-items-center">
       <div className="flex flex-col ">
         <div className="">
-          <div className="flex justify-end rounded-lg">
+          <h1 className="flex justify-end rounded-lg">
             <span className="text-7xl font-bold font-morganite text-secondary md:text-[12vw] mt-[0.5vw]">
               36
             </span>
@@ -23,10 +23,10 @@ const SpotLight = () => {
               alt="talks"
             />
 
-          </div>
+          </h1>
         </div>
         <div className="">
-          <div className="flex flex-row-reverse justify-start rounded-lg">
+          <h1 className="flex flex-row-reverse justify-start rounded-lg">
             <span className="font-bold text-7xl font-morganite text-secondary md:text-[12vw] ">
               6
             </span>
@@ -39,10 +39,10 @@ const SpotLight = () => {
               style={imgStyle}
               alt="workshop"
             />
-          </div>
+          </h1>
         </div>
         <div className="">
-          <div className="flex justify-end rounded-lg ">
+          <h1 className="flex justify-end rounded-lg ">
             <span className="font-bold text-7xl font-morganite text-secondary md:text-[12vw] ">
               36
             </span>
@@ -55,7 +55,7 @@ const SpotLight = () => {
               style={imgStyle}
               alt="speakers"
             />
-          </div>
+          </h1>
         </div>
       </div>
     </div>

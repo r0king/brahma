@@ -7,13 +7,13 @@ import CardButton from './CardButton'
 
 const Highlights = () => {
     return (
-        <div className='mt-28 mb-10'>
+        <div className='mt-28 mb-10 overflow-hidden'>
             <div className='flex flex-col md:flex-row-reverse relative'>
                 <div className='flex flex-col order-2'>
-                    <div className='uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-5 md:ml-0'>About Us</div>
-                    <div className='h-[30vw] md:h-[8vw] md:w-[25vw] md:ml-[14vw] mt-8 md:mt-0 mx-3 md:mx-0'>
+                    <h1 className='uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-5 md:ml-0'>About Us</h1>
+                    <button className='h-[30vw] md:h-[8vw] md:w-[25vw] md:ml-[14vw] mt-8 md:mt-0 mx-3 md:mx-0'>
                         <CardButton text={{ head: "Get", tail: "Tickets", caption: "Tickets" }} />
-                    </div>
+                    </button>
                 </div>
                 <div className='order-1 mx-2 mb-[4vw] relative shadow-overlay rounded-md rounded-tr-[3vw] md:max-w-[50vw]'>
                     <video

@@ -72,11 +72,11 @@ export default function Event() {
              relative right-[50%] md:left-[33%] md:top-0 "
           />
           <div className="flex md:flex-col w-full justify-between ">
-            <div className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
+            <button className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
                 text={{ head: "Get", tail: "Tickets", caption: "Booking" }}
               />
-            </div>
+            </button>
           </div>
         </div>
       </div>
