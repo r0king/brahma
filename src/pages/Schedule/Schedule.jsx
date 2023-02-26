@@ -136,7 +136,7 @@ const Schedule = () => {
                         )
                     }
 
-                    {schedule.length==0&&<h2 style={{padding:"10%",width:"max-content"}}>No Schedule Available</h2>}
+                    {schedule.length===0&&<h2 style={{padding:"10%",width:"max-content"}}>No Schedule Available</h2>}
 
                 </div>
 
