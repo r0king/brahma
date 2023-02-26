@@ -7,6 +7,7 @@ const Schedule = () => {
     const [image, setImage] = useState(-1)
     const [hovering, sethovering] = useState(false)
     const [category, setcategory] = useState("")
+    const [dayselect, setdayselect] = useState(1)
 
     const categorySelect = (e) => {
         setcategory(e.target.value)
@@ -130,9 +131,9 @@ const Schedule = () => {
                 </div>
 
                 <div className="tabs">
-                    <li onClick={() => { setSchedule(sched1) }}>Day 1</li>
-                    <li onClick={() => { setSchedule(sched2) }}>Day 2</li>
-                    <li onClick={() => { setSchedule([]) }}>Day 3</li>
+                    <button className={`button ${dayselect===1?"selectedbtn":""}`} onClick={() => { setSchedule(sched1);setdayselect(1) }}>Day 1</button>
+                    <button className={`button ${dayselect===2?"selectedbtn":""}`} onClick={() => { setSchedule(sched2);setdayselect(2) }}>Day 2</button>
+                    <button className={`button ${dayselect===3?"selectedbtn":""}`} onClick={() => { setSchedule([]) ;setdayselect(3) }}>Day 3</button>
                 </div>
             </div>
 

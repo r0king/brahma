@@ -1,12 +1,12 @@
 .schedule-menu{
     display: flex;
     align-items: center;
- 
+    justify-content: space-around;
     margin: 5% 0;
 }
 
 .filter{
-    width: 30%;
+    width: 50%;
     padding: 1% 2%;
     border-radius: 50px;
 }
@@ -15,33 +15,50 @@
     width: 100%;
     font-size: xx-large;
     border-radius:50px;
-    padding: 4%;
+    padding: 2%;
     background-color: var(--color-secondary);
     color: white;
+}
+
+.filter option{
+    width: 50%;
+    background-color: white;
+    color: var(--color-secondary);
 }
 
 .tabs {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     background-color: var(--color-secondary);
     color: white;
-    padding: 1% 2%;
-    border-radius: 50px;
     font-size: 2em;
     width: 50%;
+    border-radius: 50px;
+    margin: 2%;
 }
 
-.tabs li:hover {
-    color: var(--primary);
-    cursor: pointer;
+.tabs .button{
+    width: 33%;
+    border-radius: 50px;
+    border: none;
+    padding: 2%;
 }
+
+.tabs .button:hover,.selectedbtn{
+    color: var(--color-primary);
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ;
+}
+
+
 
 
 
 .schedule {
     display: flex;
-    padding-left: 5%;
+    padding: 2%;
 }
 
 .wrapper h2 {
@@ -152,6 +169,14 @@ li {
 
 
 @media (max-width:720px) {
+    .schedule-menu {
+        flex-direction: column;
+    }
+
+    .filter,.tabs{
+        width: 100%;
+    }
+    
     .images {
         display: none;
     }
