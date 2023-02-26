@@ -1,8 +1,26 @@
+.schedule-menu{
+    display: flex;
+    align-items: center;
+ 
+    margin: 5% 0;
+}
+
+.filter{
+    width: 30%;
+    padding: 1% 2%;
+    border-radius: 50px;
+}
+
+.filter select{
+    width: 100%;
+    font-size: xx-large;
+    border-radius:50px;
+    padding: 4%;
+    background-color: var(--color-secondary);
+    color: white;
+}
+
 .tabs {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 5%;
-    margin-top: 5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -11,11 +29,12 @@
     padding: 1% 2%;
     border-radius: 50px;
     font-size: 2em;
-    width: 80%;
+    width: 50%;
 }
 
-.tabs li:hover{
+.tabs li:hover {
     color: var(--primary);
+    cursor: pointer;
 }
 
 
@@ -34,6 +53,8 @@
     font-family: var(--poppins);
     font-size: x-large;
     color: var(--color-primary);
+    width: 70%;
+    height: 75vh;
 }
 
 li {
@@ -47,6 +68,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 2% 0;
+    cursor: pointer;
 }
 
 
@@ -77,12 +99,55 @@ li {
 .images {
     width: 30%;
     right: 2%;
+    height: 0vh;
+}
+
+.row:hover{
+    background-color:rgba(211,92,57,0.3);
+    transition: all 0.3s ease-in;
 }
 
 .schedule img {
-    height: 70vh;
+    height: 75vh;
     width: 100%;
     border-top-right-radius: 10%;
+}
+
+
+
+.slidein {
+    animation-name: slidein;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+.slideout {
+    animation-name: slideout;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transition:all  1s  ease-out;
+    transform: scale(0);
+}
+
+@keyframes slidein {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes slideout {
+    from {
+        transform: translateY(0vh);
+    }
+
+    to {
+        transform: translateY(100vh);
+    }
 }
 
 

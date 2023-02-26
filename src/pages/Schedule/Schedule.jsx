@@ -1,15 +1,22 @@
 import React, { useState } from 'react'
 import './schedule.css'
+import blank from '../../assets/images/blankimg.png'
 
 const Schedule = () => {
 
     const [image, setImage] = useState(-1)
+    const [hovering, sethovering] = useState(false)
+    const [category, setcategory] = useState("")
+
+    const categorySelect = (e) => {
+        setcategory(e.target.value)
+    }
 
     const sched1 = [
         {
             id: 0,
             timing: "09:00 - 16:00",
-            category: "buisness",
+            category: "Business",
             img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             description: "How to create and sell digital collectibles with no code",
             personnel: "Pablo Stanley"
@@ -40,7 +47,7 @@ const Schedule = () => {
         }
     ]
 
-    const sched2=[
+    const sched2 = [
         {
             id: 0,
             timing: "09:00 - 16:00",
@@ -52,7 +59,7 @@ const Schedule = () => {
         {
             id: 1,
             timing: "10:00 - 15:00",
-            category: "Fasion",
+            category: "Fashion",
             img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             description: "How to create and sell digital collectibles with no code",
             personnel: "larry"
@@ -60,7 +67,7 @@ const Schedule = () => {
         {
             id: 2,
             timing: "09:00 - 16:00",
-            category: "buisness",
+            category: "Business",
             img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             description: "How to create and sell digital collectibles with no code",
             personnel: "Pablo Stanley"
@@ -68,15 +75,17 @@ const Schedule = () => {
         {
             id: 3,
             timing: "09:00 - 16:00",
-            category: "buisness",
+            category: "Business",
             img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
             description: "How to create and sell digital collectibles with no code",
             personnel: "Pablo Stanley"
         }
     ]
 
-    
+
     const [schedule, setSchedule] = useState(sched1)
+
+
 
 
     return (
@@ -108,12 +117,23 @@ const Schedule = () => {
                 </div>
             </div>
 
+            <div className='schedule-menu'>
 
+                <div className="filter">
+                    <select value={category} onChange={categorySelect}>
+                        <option value="" selected>All</option>
+                        <option value="Business">Business</option>
+                        <option value="Entertainment">Entertainment</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Technology">Technology</option>
+                    </select>
+                </div>
 
-            <div className="tabs">
-                <li onClick={()=>{setSchedule(sched1)}}>Day 1</li>
-                <li onClick={()=>{setSchedule(sched2)}}>Day 2</li>
-                <li onClick={()=>{setSchedule([])}}>Day 3</li>
+                <div className="tabs">
+                    <li onClick={() => { setSchedule(sched1) }}>Day 1</li>
+                    <li onClick={() => { setSchedule(sched2) }}>Day 2</li>
+                    <li onClick={() => { setSchedule([]) }}>Day 3</li>
+                </div>
             </div>
 
 
@@ -121,27 +141,40 @@ const Schedule = () => {
                 <div className='sched-table'>
                     {
                         schedule.map((item) => {
-                            return (
+                            if (category === "")
+                                return (
 
-                                <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id) }} onMouseLeave={() => { setImage(-1) }}>
-                                    <li className='timing'>{item.timing}</li>
-                                    <li className='description'>
-                                        <li className='category'>{item.category}</li>
-                                        <li>{item.description}</li>
-                                    </li>
-                                    <li className='personnel'>{item.personnel}</li>
-                                </li>)
+                                    <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id); sethovering(true) }} onMouseLeave={() => { setImage(-1); sethovering(false) }}>
+                                        <li className='timing'>{item.timing}</li>
+                                        <li className='description'>
+                                            <li className='category'>{item.category}</li>
+                                            <li>{item.description}</li>
+                                        </li>
+                                        <li className='personnel'>{item.personnel}</li>
+                                    </li>)
+                            else {
+                                return (
+                                    category === item.category &&
+                                    <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id); sethovering(true) }} onMouseLeave={() => { setImage(-1); sethovering(false) }}>
+                                        <li className='timing'>{item.timing}</li>
+                                        <li className='description'>
+                                            <li className='category'>{item.category}</li>
+                                            <li>{item.description}</li>
+                                        </li>
+                                        <li className='personnel'>{item.personnel}</li>
+                                    </li>)
+                            }
                         }
 
                         )
                     }
 
-                    {schedule.length===0&&<h2 style={{padding:"10%",width:"max-content"}}>No Schedule Available</h2>}
+                    {schedule.length === 0 && <h2 style={{ padding: "10%", width: "max-content" }}>No Schedule Available</h2>}
 
                 </div>
 
-                <div className="images">
-                    {image !== -1 && <img className='person-image' src={schedule[image].img} alt="" />}
+                <div className={`images ${hovering ? "slidein" : "slideout"}`}>
+                    <img className='person-image ' src={image === -1 ? setTimeout(() => { return blank }, 1000) : schedule[image].img} alt="" />
                 </div>
 
             </div>
