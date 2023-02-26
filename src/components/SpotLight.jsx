@@ -6,66 +6,51 @@ const SpotLight = () => {
   };
 
   return (
-    <div className="grid w-screen md:w-auto sm: place-items-center">
-      <div className="flex flex-col ">
-        <div className="">
-          <div className="flex justify-end rounded-lg">
-            <span className="text-7xl font-bold font-morganite text-secondary md:text-[12vw] mt-[0.5vw]">
-              36
-            </span>
-            <span className="leading-[0.88] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
-              TALKS
-            </span>
+      <div className="flex flex-col px-2 py-[5vh]">
+        <div className="flex justify-end rounded-lg items-start">
+          <span className="text-8xl md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
+            36
+          </span>
+          <span className="leading-none md:leading-[20vw] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
+            TALKS
+          </span>
 
-            <img
-              className="hidden object-cover  ml-4 rounded-lg h-[21.5vw] w-96 md:inline mt-[2.8vw]"
-              src="https://source.unsplash.com/1200x800/?3"
-              alt="talks"
-            />
-
-          </div>
+          <img
+            className="hidden object-cover ml-4 rounded-lg h-[15.5vw] aspect-video md:inline"
+            src="https://source.unsplash.com/1200x800/?3"
+            alt="talks"
+          />
         </div>
-        <div className="">
-          <div className="flex flex-row-reverse justify-start rounded-lg">
-            <span className="font-bold text-7xl font-morganite text-secondary md:text-[12vw] ">
-              6
-            </span>
-            <span className="leading-[0.88] text-[30vw] font-medium font-morganite tracking-normal text-primary uppercase md:text-[22vw]">
-              WORKSHOPS
-            </span>
-            <img
-              className="hidden object-cover h-[21.5vw] mr-4 rounded-lg w-80 md:inline mt-[2.8vw]"
-              src="https://source.unsplash.com/1200x800/?2"
-              style={imgStyle}
-              alt="workshop"
-            />
-          </div>
+        <div className="flex flex-row-reverse justify-end rounded-lg align-bottom">
+          <span className="text-8xl md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
+            6
+          </span>
+          <span className="leading-none md:leading-[20vw] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
+            WORKSHOPS
+          </span>
+          <img
+            className="hidden object-cover rounded-lg h-[15.5vw] aspect-video md:inline"
+            src="https://source.unsplash.com/1200x800/?2"
+            style={imgStyle}
+            alt="workshop"
+          />
         </div>
-        <div className="">
-          <div className="flex justify-end rounded-lg ">
-            <span className="font-bold text-7xl font-morganite text-secondary md:text-[12vw] ">
-              36
-            </span>
-            <span className="leading-[0.88] text-[30vw] font-morganite font-medium tracking-normal text-primary uppercase md:text-[22vw]">
-              SPEAKERS
-            </span>
-            <img
-              className="hidden object-cover h-[21.5vw] ml-4 rounded-lg w-96 md:inline mt-[2.8vw]"
-              src="https://source.unsplash.com/1200x800/?1"
-              style={imgStyle}
-              alt="speakers"
-            />
-          </div>
+        <div className="flex justify-end rounded-lg items-start">
+          <span className="text-8xl md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
+            3
+          </span>
+          <span className="leading-none md:leading-[20vw] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
+            EVENTS
+          </span>
+          <img
+            className="hidden object-cover ml-4 rounded-lg h-[15.5vw] aspect-video md:inline"
+            src="https://source.unsplash.com/1200x800/?1"
+            style={imgStyle}
+            alt="events"
+          />
         </div>
       </div>
-    </div>
-
   );
 };
 
 export default SpotLight;
-
-
-
-
-

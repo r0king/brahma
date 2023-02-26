@@ -97,7 +97,7 @@ const Workshop = () => {
         </div>
       </div>
 
-      <div className="w-full h-[45vh] sm:h-[40vh] md:h-[70vh]">
+      <div className="w-full">
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index}>

@@ -120,7 +120,7 @@ const Schedule = () => {
 
             <div className='schedule-menu'>
 
-                <div className="filter">
+                <div className="filter-schedule">
                     <select value={category} onChange={categorySelect}>
                         <option value="" selected>All</option>
                         <option value="Business">Business</option>
@@ -145,8 +145,8 @@ const Schedule = () => {
                             if (category === "")
                                 return (
 
-                                    <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id); sethovering(true) }} onMouseLeave={() => { setImage(-1); sethovering(false) }}>
-                                        <li className='timing'>{item.timing}</li>
+                                    <li className='row group' key={item.id} onMouseEnter={() => { setImage(item.id); sethovering(true) }} onMouseLeave={() => { setImage(-1); sethovering(false) }}>
+                                        <li className='timing group-hover:text-accent'>{item.timing}</li>
                                         <li className='description'>
                                             <li className='category'>{item.category}</li>
                                             <li>{item.description}</li>
@@ -156,8 +156,8 @@ const Schedule = () => {
                             else {
                                 return (
                                     category === item.category &&
-                                    <li className='row' key={item.id} onMouseEnter={() => { setImage(item.id); sethovering(true) }} onMouseLeave={() => { setImage(-1); sethovering(false) }}>
-                                        <li className='timing'>{item.timing}</li>
+                                    <li className='row group' key={item.id} onMouseEnter={() => { setImage(item.id); sethovering(true) }} onMouseLeave={() => { setImage(-1); sethovering(false) }}>
+                                        <li className='timing group-hover:text-accent'>{item.timing}</li>
                                         <li className='description'>
                                             <li className='category'>{item.category}</li>
                                             <li>{item.description}</li>
