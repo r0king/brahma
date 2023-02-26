@@ -9,6 +9,7 @@ import Event from "./pages/Event/Event";
 
 import "./App.css";
 import AllEvents from "./components/AllEvents";
+import SmoothScroll from "./components/SmoothScroll";
 
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+    <SmoothScroll />
       <div
         className={`fixed z-50 h-screen w-screen justify-center items-center flex ${
           !isLoading && "hidden "
