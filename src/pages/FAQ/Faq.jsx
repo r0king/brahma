@@ -51,9 +51,9 @@ function Faq() {
     }
   return (
     <>
-      <div className="faq_main_container bg-acc-color">
+      <div className="faq_main_container bg-accent">
         <div className="top_part">
-          <div className="textpart text-pri-color font-morganite">
+          <div className="textpart text-primary font-morganite">
             <h1>HOW CAN WE HELP YOU ?</h1>
             <div className="reach_team">
             <div className="reach_container w-[20vw] h-[8vw]">
@@ -106,7 +106,7 @@ function Faq() {
         </div>
         <div className="part2 font-poppins">
             <div className="additional_contact">
-                <h1 className='text-sec-color font-morganite'>Additional Contact</h1>
+                <h1 className='text-secondary font-morganite'>Additional Contact</h1>
                 <p className='name'>Ajay Antu</p>
                 <p className='role'>Sample Role here</p>
                 <p className='email'>name@gmail.com</p>

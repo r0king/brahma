@@ -55,7 +55,7 @@ export default class HomePage extends Component {
     })
 
     return (
-      <div className="bg-acc-color text-pri-color overflow-x-clip">
+      <div className="bg-accent text-primary overflow-x-clip transition-all duration-500">
         <NavBar />
         {/* <div class="card"><Hero /></div> */}
         <Hero/>
@@ -66,7 +66,7 @@ export default class HomePage extends Component {
         <div class="card"><Scroll /></div>
         <div class="card"><FollowUs /></div>
         <div class="card"><Sponsors /></div>
-        <h1 className="bg-acc-color text-center font-semibold font-poppins py-1">Copyright © 2023 - All right reserved by Brahma'23</h1>
+        <h1 className="bg-accent text-center font-semibold font-poppins py-1">Copyright © 2023 - All right reserved by Brahma'23</h1>
         {/* <ContactUs /> */}
       </div>
     );
