@@ -4,12 +4,13 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import HomePage from "./pages/HomePage";
 import Faq from "./pages/FAQ/Faq";
-import Schedule from "./pages/Schedule/Schedule";
 import Event from "./pages/Event/Event";
+import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
 import AllEvents from "./components/AllEvents";
 import NavBar from "./components/NavBar";
+import Sponsors from "./components/Sponsors";
 
 function App() {
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -48,6 +49,7 @@ function App() {
               <Route exact path="/event/:eventId" element={<Event />} />
             </Routes>
           </BrowserRouter>
+          <Sponsors />
         </ParallaxProvider>
       </div>
     </>

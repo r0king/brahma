@@ -11,9 +11,9 @@ const SpotLight = () => {
           TALKS
         </span>
 
-        <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video ml-4">
+        <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video ml-4 md:inline">
           <img
-            className=" object-cover  rounded-lg  md:inline"
+            className=" object-cover  rounded-lg  "
             src="https://source.unsplash.com/1200x800/?3"
             alt="talks"
           />
@@ -26,9 +26,9 @@ const SpotLight = () => {
         <span className="leading-none md:leading-[20vw] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
           WORKSHOPS
         </span>
-        <div className="hidden relative shadow-overlay-reverse  h-[15.5vw] aspect-video ">
+        <div className="hidden relative shadow-overlay-reverse  h-[15.5vw] aspect-video  md:inline">
           <img
-            className=" object-cover rounded-lg   md:inline"
+            className=" object-cover rounded-lg   "
             src="https://source.unsplash.com/1200x800/?2"
             alt="workshop"
           />
@@ -41,9 +41,9 @@ const SpotLight = () => {
         <span className="leading-none md:leading-[20vw] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
           EVENTS
         </span>
-        <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video  ml-4 ">
+        <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video  ml-4  md:inline">
           <img
-            className=" object-cover rounded-lg  md:inline"
+            className=" object-cover rounded-lg  "
             src="https://source.unsplash.com/1200x800/?1"
             alt="events"
           />
