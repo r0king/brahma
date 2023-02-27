@@ -131,9 +131,9 @@ const Schedule = () => {
                 </div>
 
                 <div className="tabs">
-                    <button className={`button  ${dayselect===1?"btn1":""}`} onClick={() => { setSchedule(sched1);setdayselect(1) }}>Day 1</button>
-                    <button className={`button ${dayselect===2?"btn2":""}`} onClick={() => { setSchedule(sched2);setdayselect(2) }}>Day 2</button>
-                    <button className={`button ${dayselect===3?"btn3":""}`} onClick={() => { setSchedule([]) ;setdayselect(3) }}>Day 3</button>
+                    <h3 className={`button  ${dayselect === 1 ? "btn1" : ""}`} onClick={() => { setSchedule(sched1); setdayselect(1) }}>Day 1</h3>
+                    <h3 className={`button ${dayselect === 2 ? "btn2" : ""}`} onClick={() => { setSchedule(sched2); setdayselect(2) }}>Day 2</h3>
+                    <h3 className={`button ${dayselect === 3 ? "btn3" : ""}`} onClick={() => { setSchedule([]); setdayselect(3) }}>Day 3</h3>
                 </div>
             </div>
 
