@@ -47,7 +47,7 @@ export default function Event() {
               <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Wed.3rd
                 <br />
-                09:00 -> 16:00
+                09:00 - 16:00
               </p>
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
