@@ -11,12 +11,23 @@
 }
 @layer base {
   :root {
-    --color-primary: #1f1f1f;
+    --color-primary: #fafafa;
     --color-secondary: #d35c39;
-    --color-accent: #fafafa;
+    --color-accent: #1f1f1f;
   }
 }
 
+html[data-theme="dark"] {
+  --color-primary: #fafafa;
+  --color-secondary: #d35c39;
+  --color-accent: #1f1f1f;
+}
+
+html[data-theme="light"] {
+  --color-primary: #1f1f1f;
+  --color-secondary: #d35c39;
+  --color-accent: #fafafa;
+}
 /* 
 :root {
   --color-primary: #1f1f1f;
@@ -141,13 +152,21 @@ body {
   }
 }
 
-h1,p,ul,button,.card{
+h1,
+p,
+ul,
+button,
+.card {
   transform: translateY(100px);
   opacity: 0;
   transition: 1000ms;
 }
 
-h1.show,p.show,ul.show,button.show,.card.show{
+h1.show,
+p.show,
+ul.show,
+button.show,
+.card.show {
   transform: translateY(0);
   opacity: 1;
 }

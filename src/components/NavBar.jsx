@@ -17,27 +17,18 @@ const NavBar = () => {
   useEffect(() => {
     if (theme === "dark") {
       logoRef.current.src = asietLogoDark;
-      document.documentElement.style.setProperty("--color-primary", "#fafafa");
-      document.documentElement.style.setProperty(
-        "--color-secondary",
-        "#d35c39"
-      );
-      document.documentElement.style.setProperty("--color-accent", "#1f1f1f");
+      // set data theme as dark
+      document.documentElement.setAttribute("data-theme", "dark");
     } else {
       logoRef.current.src = asietLogo;
-      document.documentElement.style.setProperty("--color-primary", "#1f1f1f");
-      document.documentElement.style.setProperty(
-        "--color-secondary",
-        "#d35c39"
-      );
-      document.documentElement.style.setProperty("--color-accent", "#fafafa");
+      // set data theme as light
+      document.documentElement.setAttribute("data-theme", "light");
     }
-  }, [theme]);
+  }, [theme, logoRef]);
   useEffect(() => {
     if (showMenu) {
       document.documentElement.style.setProperty("overflow", "hidden");
     } else {
-      
       document.documentElement.style.setProperty("overflow", "auto");
     }
   }, [showMenu]);
@@ -100,7 +91,7 @@ const NavBar = () => {
             <input
               type="checkbox"
               onChange={(e) => {
-                setTheme(e.target.checked ? "dark" : "light");
+                setTheme(e.target.checked ? "light" : "dark");
               }}
             />
             <svg
@@ -168,11 +159,15 @@ const NavBar = () => {
           </label>
           <label className="hover:opacity-50 transition-opacity">Venue</label>
           <label className="hover:opacity-50 transition-opacity">About</label>
-          <label className="hover:opacity-50 transition-opacity">Get Tickets</label>
+          <label className="hover:opacity-50 transition-opacity">
+            Get Tickets
+          </label>
           <label className="hover:opacity-50 transition-opacity border-b-2 border-accent pb-10">
             Contact Us
           </label>
-          <label className="hover:opacity-50 transition-opacity text-[0.625em]">Kalady</label>
+          <label className="hover:opacity-50 transition-opacity text-[0.625em]">
+            Kalady
+          </label>
         </div>
       </div>
     </nav>
