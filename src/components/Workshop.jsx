@@ -4,8 +4,6 @@ import P2 from "../assets/images/pic2.jpeg";
 import P3 from "../assets/images/pic3.jpeg";
 import P4 from "../assets/images/pic4.jpg";
 import P5 from "../assets/images/pic5.jpeg";
-import P6 from "../assets/images/pic6.jpeg";
-import P7 from "../assets/images/pic7.jpeg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,60 +12,44 @@ import CardButton from "./CardButton";
 const Workshop = () => {
   const images = [
     {
-      name: "Bike Engine Assembly",
+      name: "CNC Workshop",
       src: P1,
-      prize: "200",
+      regFees: "400",
       organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      place: "CNC Lab",
+      Date: "31-03-2023",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "3D Printing Workshop",
       src: P2,
-      prize: "200",
+      regFees: "400",
       organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      place: "CCF Lab",
+      Date: "31-03-2023",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "IEI Workshop ",
       src: P3,
-      prize: "200",
+      regFees: "250",
       organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      place: "Simulation Lab (Lab 7)",
+      Date: "31-03-2023",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "IEEE Workshop",
       src: P4,
-      prize: "200",
+      regFees: "100",
       organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      place: "Simulation Lab (Lab 7)",
+      Date: "31-03-2023",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "IoT Workshop",
       src: P5,
-      prize: "200",
+      regFees: "300",
       organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
-    },
-    {
-      name: "Bike Engine Assembly",
-      src: P6,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
-    },
-    {
-      name: "Bike Engine Assembly",
-      src: P7,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      place: "CCF Lab",
+      Date: "31-03-2023",
     },
   ];
 
@@ -112,11 +94,11 @@ const Workshop = () => {
                 </div>
                 <div className="flex flex-row mt-4 font-semibold pl-2">
                   <div className="border-2 text-sm font-poppins w-12 md:h-6 pl-1 border-orange-500">
-                    ₹{image.prize}
+                    ₹{image.regFees}
                   </div>
                   <div className="font-poppins ml-6">{image.organizer}</div>
                   <div className="font-poppins ml-6">{image.place}</div>
-                  <div className="font-poppins ml-6">{image.state}</div>
+                  <div className="font-poppins ml-6">{image.Date}</div>
                 </div>
               </div>
             </div>

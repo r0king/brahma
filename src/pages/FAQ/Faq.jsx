@@ -56,7 +56,7 @@ function Faq() {
           <div className="textpart text-primary font-morganite">
             <h1>HOW CAN WE HELP YOU ?</h1>
             <div className="reach_team">
-            <div className="reach_container w-[20vw] h-[8vw]">
+            <button className="reach_container w-[20vw] h-[8vw]">
             <CardButton text={{head:"Reach",tail:"Our Team",caption:"Contact Us"}}/>
               {/* <p>Contact us</p>
               <div className="reach_bottom_part">
@@ -76,7 +76,7 @@ function Faq() {
                     />
                     </svg>
               </div> */}
-            </div>
+            </button>
           </div>
           </div>
           
@@ -90,7 +90,7 @@ function Faq() {
                     <article className={`accordian_item${index} accordian_item`} onClick={()=>{toggle(index)}}>
                         <div className={`accordian_content${index} accordian_content`} >
                             <h1>{ele.qstn}</h1>
-                            <span class={`accordion_icon${index}`}></span>
+                            <span className={`accordion_icon${index}`}></span>
                         </div>
                         <div className="faq_answer">
                             <p className={selected===index?'content-show':'content-hide'}>

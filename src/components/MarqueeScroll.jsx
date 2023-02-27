@@ -48,7 +48,7 @@ export default class MarqueeScroll extends Component {
     return (
       <div>
         <div
-          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
+          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90 leading-none"
           ref={this.marqueeRef}
         >
           <ul className="marquee__content uppercase">

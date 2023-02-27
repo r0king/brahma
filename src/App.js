@@ -13,6 +13,39 @@ import NavBar from "./components/NavBar";
 import Sponsors from "./components/Sponsors";
 
 function App() {
+  const headings = document.querySelectorAll("h1");
+  const paragraphs = document.querySelectorAll("p");
+  const listItems = document.querySelectorAll("ul");
+  const buttons = document.querySelectorAll("button");
+  const cards = document.querySelectorAll("card");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle("show", entry.isIntersecting)
+    })
+  },
+  )
+
+  headings.forEach((heading) => {
+    observer.observe(heading);
+  });
+
+  paragraphs.forEach((paragraph) => {
+    observer.observe(paragraph);
+  });
+
+  listItems.forEach((listItem) => {
+    observer.observe(listItem);
+  });
+
+  buttons.forEach((button) => {
+    observer.observe(button);
+  });
+
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+
   const [isLoading, setLoading] = useState(true); // add a loading state
 
   const rippleRef = useRef(null);
@@ -28,9 +61,8 @@ function App() {
   return (
     <>
       <div
-        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${
-          !isLoading && "hidden "
-        }`}
+        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${!isLoading && "hidden "
+          }`}
       >
         <div
           ref={rippleRef}
