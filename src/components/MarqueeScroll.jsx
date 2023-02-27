@@ -47,8 +47,14 @@ export default class MarqueeScroll extends Component {
   render() {
     return (
       <div>
+<<<<<<< HEAD:src/components/MarqueeScroll.jsx
+=======
+        <div className="mx-14 mt-10 md:mt-16 md:h-[10vw]">
+          <CardButton text={{ head: "View", tail: "Schedule", caption: "Speakers" }} />
+        </div>
+>>>>>>> amaan:src/components/Scroll.jsx
         <div
-          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
+          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90 leading-none"
           ref={this.marqueeRef}
         >
           <ul className="marquee__content uppercase">

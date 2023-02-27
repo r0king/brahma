@@ -49,14 +49,18 @@ export default function EventsHome() {
                     <h1 className='uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]'>General</h1>
                     <div className='text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-8 mr-2 md:mr-10 mt-[5vw] md:mt-[11vw]' dir='rtl'>
                         <ul className='list-none relative'>
-                            <li className='inline'>DJ War</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Mudhra</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Percusion Instrument</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Choreo Night</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Voice of Brahma</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Theme Show</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Spot Dance</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>MIME</li>
+                            <li className='inline'>Jam</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Fifa</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Valorant</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Spot Photography</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Brain Cycle</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Underarm Cricket</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Short Film Contest</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Basketball 3s</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Glowball</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Rj Hunt </li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Game Of Rooms</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Soapy Soccer</li>
                         </ul>
                     </div>
                 </div>
@@ -64,14 +68,18 @@ export default function EventsHome() {
                     <h1 className='uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]'>Events</h1>
                     <div className='text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-8 mr-2 md:mr-10' dir='rtl'>
                         <ul className='list-none relative'>
-                            <li className='inline'>Ragam</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Stand Up Comedy</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Street Show</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Rap Battle</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Band of Brahma</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Hip Hop Battle</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Step N Syncro</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Doodling</li>
+                            <li className='inline'>Fun Zone</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Fire And Rescue Team + Dog Squad</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Paint Ball</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Knives Out</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Maze</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Gun Expo</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Go Cart Museum</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Cryogenic Museum</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Photobooth With Poleroid Camera</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Treasure hunt</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Blind Fold</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Best Manager</li>
                         </ul>
                     </div>
                 </div>
@@ -142,14 +150,14 @@ export default function EventsHome() {
                                 All Events
                             </h1>
                             <div className='absolute bottom-1 right-1 md:bottom-5 md:right-5'>
-                                <span class="material-symbols-outlined text-5xl">
+                                <span className="material-symbols-outlined text-5xl">
                                     arrow_outward
                                 </span>
                             </div>
                         </button> */}
-                        <div className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]'>
+                        <button className='relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]'>
                             <CardButton text={{ head: "View", tail: "All Events", caption: "Events" }} />
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

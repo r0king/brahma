@@ -9,7 +9,7 @@ export default function Hero() {
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const [loaded, setLoaded] = React.useState(false);
   return (
-    <section className="p-[5vw] pl-0 pt-[2vw] pr-0 relative">
+    <section className="pb-[5vw] pl-0 pr-0 relative">
       <Parallax
         translateY={isMobile ? [0, 0] : [0, 10]}
         translateX={isMobile ? [100, 70] : [70, 70]}
@@ -40,24 +40,24 @@ export default function Hero() {
           easing="ease"
           className=""
         >
-          <div className="pl-6 md:pl-0 pt-7 md:pt-4">
-            <h1 className="text-secondary font-morganite text-[25vw] pt-[7vh] md:pt-[5vw] md:text-[13vw] leading-[0.5] uppercase ">
+          <div className="pl-6 md:pl-0 pt-7 md:pt-0">
+            <h1 className="text-secondary font-morganite text-[25vw] pt-[7vh] md:pt-[4vw] md:text-[13vw] leading-[0.5] uppercase ">
               Brahma '23
             </h1>
-            <h2 className="text-primary font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
+            <h1 className="text-primary font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
               Awaken the
               <br />
               Creator
               <br />
               Within.
-            </h2>
+            </h1>
           </div>
         </Parallax>
         <div>
           <div
             className=" 
           hidden md:block  mr-[5vw] 
-          absolute top-[6vw] right-[4vw] w-[calc((135vw-9.375rem)*2/14+0.625rem)] border-b 
+          absolute top-[4vw] right-[4vw] w-[calc((135vw-9.375rem)*2/14+0.625rem)] border-b 
           after:bg-current after:rounded-full after:bottom-1.5 after:content-[''] after:h-[6px] after:overflow-hidden after:absolute after:right-0 after:aspect-square"
           >
             <p

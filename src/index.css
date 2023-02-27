@@ -140,3 +140,14 @@ body {
       0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
   }
 }
+
+h1,p,ul,button,.card{
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1000ms;
+}
+
+h1.show,p.show,ul.show,button.show,.card.show{
+  transform: translateY(0);
+  opacity: 1;
+}

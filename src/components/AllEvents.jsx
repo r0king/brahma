@@ -98,13 +98,13 @@ const AllEvents = () => {
             (+30)
           </div>
         </div>
-        <div className='hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] mb-[6vw]'>
+        <button className='hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] mb-[6vw]'>
           <CardButton href='/' text={{ head: "Get", tail: "Slots", caption: "Registration" }} />
-        </div>
+        </button>
       </div>
-      <div className='mt-[2vw] h-full w-full md:hidden'>
+      <button className='mt-[2vw] h-full w-full md:hidden'>
           <CardButton href='/' text={{ head: "Get", tail: "Slots", caption: "Registration" }} />
-        </div>
+        </button>
       <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-2 ">
         {images.map((image, index) => (
           <div key={index}>
