@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import asietLogo from "../assets/images/asiet-logo.webp";
+import asietLogoDark from "../assets/images/asiet-logo-dark.webp";
 // import arrowSVG from "../assets/images/arrow.svg";
 
 const NavBar = () => {
   const [fade, setFade] = useState(false);
   const [theme, setTheme] = useState("light");
   const [showMenu, setShowMenu] = useState(false);
+  const logoRef = React.createRef();
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -14,6 +16,7 @@ const NavBar = () => {
   }, []);
   useEffect(() => {
     if (theme === "dark") {
+      logoRef.current.src = asietLogoDark;
       document.documentElement.style.setProperty("--color-primary", "#fafafa");
       document.documentElement.style.setProperty(
         "--color-secondary",
@@ -21,6 +24,7 @@ const NavBar = () => {
       );
       document.documentElement.style.setProperty("--color-accent", "#1f1f1f");
     } else {
+      logoRef.current.src = asietLogo;
       document.documentElement.style.setProperty("--color-primary", "#1f1f1f");
       document.documentElement.style.setProperty(
         "--color-secondary",
@@ -56,6 +60,7 @@ const NavBar = () => {
         >
           <img
             src={asietLogo}
+            ref={logoRef}
             alt="logo"
             className=" md:w-[9vw] p-2 md:pt-1  w-[40vw]"
           />
