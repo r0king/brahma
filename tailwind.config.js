@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        morganite: ["Morganite", "sans-serif"],
+        morganite: ["Morganite"],
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
