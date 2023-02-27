@@ -7,7 +7,7 @@ import Highlights from "../components/Highlights";
 import EventsHome from "../components/EventsHome";
 import "./HomePage.css";
 import Workshop from "../components/Workshop";
-import Sponsors from "../components/Sponsors";
+// import Sponsors from "../components/Sponsors";
 import Scroll from "../components/MarqueeScroll";
 import FollowUs from "../components/FollowUs";
 import CardButton from "../components/CardButton";
@@ -29,7 +29,6 @@ export default class HomePage extends Component {
         </div>
         <Scroll />
         <FollowUs />
-        <Sponsors />
         {/* <ContactUs /> */}
       </div>
     );
