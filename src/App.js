@@ -81,7 +81,7 @@ function App() {
               <Route exact path="/event/:eventId" element={<Event />} />
             </Routes>
           </BrowserRouter>
-          <Sponsors />
+          {/* <Sponsors /> */}
         </ParallaxProvider>
       </div>
     </>
