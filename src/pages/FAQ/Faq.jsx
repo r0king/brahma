@@ -56,7 +56,7 @@ function Faq() {
           <div className="textpart text-primary font-morganite">
             <h1>HOW CAN WE HELP YOU ?</h1>
             <div className="reach_team">
-            <button className="reach_container w-[20vw] h-[8vw]">
+            <button className="reach_container w-[45vw] md:w-[20vw] h-[30vw] md:h-[8vw]">
             <CardButton text={{head:"Reach",tail:"Our Team",caption:"Contact Us"}}/>
               {/* <p>Contact us</p>
               <div className="reach_bottom_part">
@@ -88,11 +88,11 @@ function Faq() {
                 faqs.map((ele,index)=>{
                     return(<>
                     <article className={`accordian_item${index} accordian_item`} onClick={()=>{toggle(index)}}>
-                        <div className={`accordian_content${index} accordian_content`} >
+                        <div className={`accordian_content${index} accordian_content text-primary`} >
                             <h1>{ele.qstn}</h1>
                             <span className={`accordion_icon${index}`}></span>
                         </div>
-                        <div className="faq_answer">
+                        <div className="faq_answer text-primary">
                             <p className={selected===index?'content-show':'content-hide'}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates.
                             </p>
@@ -105,7 +105,7 @@ function Faq() {
             </div>
         </div>
         <div className="part2 font-poppins">
-            <div className="additional_contact">
+            <div className="additional_contact text-primary">
                 <h1 className='text-secondary font-morganite'>Additional Contact</h1>
                 <p className='name'>Ajay Antu</p>
                 <p className='role'>Sample Role here</p>

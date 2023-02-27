@@ -68,17 +68,17 @@ export default function EventsHome() {
                     <h1 className='uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]'>Events</h1>
                     <div className='text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-8 mr-2 md:mr-10' dir='rtl'>
                         <ul className='list-none relative'>
-                            <li className='inline'>Fun Zone</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Fire And Rescue Team + Dog Squad</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Paint Ball</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Knives Out</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Maze</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Gun Expo</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Go Cart Museum</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Cryogenic Museum</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Photobooth With Poleroid Camera</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Treasure hunt</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
-                            <li className='inline'>Blind Fold</li><img className='inline stroke-secondary w-5' src={dotSVG} alt=" " />
+                            <li className='inline'>Fun Zone</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Fire And Rescue Team + Dog Squad</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Paint Ball</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Knives Out</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Maze</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Gun Expo</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Go Cart Museum</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Cryogenic Museum</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Photobooth With Poleroid Camera</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Treasure hunt</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
+                            <li className='inline'>Blind Fold</li><img className='inline stroke-secondary w-5' src={dotSVG} alt="." />
                             <li className='inline'>Best Manager</li>
                         </ul>
                     </div>

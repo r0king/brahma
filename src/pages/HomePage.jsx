@@ -30,22 +30,21 @@ export default class HomePage extends Component {
 
     return (
       <div className="bg-accent text-primary overflow-x-clip transition-all duration-500">
-        {/* <div class="card"><Hero /></div> */}
+        {/* <div className="card"><Hero /></div> */}
         <Hero />
         <Highlights />
-        <div class="card"><EventsHome /></div>
-        <div class="card"><Workshop /></div>
-        <div class="card"><SpotLight /></div>
+        <div className="card"><EventsHome /></div>
+        <div className="card"><Workshop /></div>
+        <div className="card"><SpotLight /></div>
         <div className="h-[35vh]">
           <CardButton
             text={{ head: "View", tail: "Schedule", caption: "Speakers" }}
             huge={true}
           />
         </div>
-        <div class="card"><Scroll /></div>
-        <div class="card"><FollowUs /></div>
-        <div class="card"><Sponsors /></div>
-        <h1 className="bg-accent text-center font-semibold font-poppins py-1">Copyright © 2023 - All right reserved by Brahma'23</h1>
+        <div className="card"><Scroll /></div>
+        <div className="card"><FollowUs /></div>
+        {/* <div className="card"><Sponsors /></div> */}
         {/* <ContactUs /> */}
       </div>
     );
