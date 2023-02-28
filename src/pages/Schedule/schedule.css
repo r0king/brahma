@@ -48,6 +48,10 @@
     padding: 2%;
 }
 
+.tabs h3{
+    text-align: center;
+}
+
 .tabs .button:hover{
     color: var(--color-secondary);
     cursor: pointer;
@@ -95,7 +99,7 @@
     font-size: x-large;
     color: var(--color-primary);
     width: 70%;
-    height: 75vh;
+    margin-bottom: 5%;
 }
 
 li {
@@ -195,6 +199,10 @@ li {
 @media (max-width:720px) {
     .schedule-menu {
         flex-direction: column;
+    }
+
+    .sched-table{
+        width: 100%;
     }
 
     .filter,

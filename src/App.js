@@ -88,7 +88,6 @@ function App() {
           <div class="card">
             <FollowUs />
           </div>
-          {/* <ContactUs /> */}
         </ParallaxProvider>
       </div>
     </>
