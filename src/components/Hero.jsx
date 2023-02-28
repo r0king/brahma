@@ -9,10 +9,11 @@ export default function Hero() {
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const [loaded, setLoaded] = React.useState(false);
   return (
-    <section className="pb-[5vw] pl-0 pr-0 relative pt-[1.5vw]">
+    <section className="pb-[5vw] pl-0 pr-0 relative pt-[0.5vw]">
       <Parallax
         translateY={isMobile ? [0, 0] : [0, 10]}
         translateX={isMobile ? [100, 70] : [70, 70]}
+        opacity = {isMobile?[1,1]:[200,0.1]}
         // rotateY={isMobile ? [40, -40] : [0, 0]}
         easing="easeInOut"
         className="z-10 absolute"
