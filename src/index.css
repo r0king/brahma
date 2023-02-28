@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;300;600;800&display=swap");
 
 @font-face {
   font-family: "Morganite";
@@ -65,12 +65,12 @@ body {
 }
 
 .circle-ripple {
-  background-color: #f1f1f1;
+  background-color: var(--color-accent);
   width: 3em;
   height: 3em;
   border-radius: 100%;
-  animation: ripple-scale 1.5s ease;
-  transform: scale(400);
+  animation: ripple-scale 2s ease;
+  transform: scale(250);
 }
 
 @keyframes ripple-scale {
@@ -81,7 +81,7 @@ body {
       0 0 0 5em rgba(0, 0, 0, 0.3);
   }
   90% {
-    transform: scale(400);
+    transform: scale(250);
     
     box-shadow: 0 0 0 1em rgba(117, 115, 114, 0.3), 0 0 0 3em rgba(0, 0, 0, 0.3),
       0 0 0 5em rgba(14, 13, 12, 0.3), 0 0 0 8em rgba(0, 0, 0, 0);

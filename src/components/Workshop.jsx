@@ -71,7 +71,7 @@ const Workshop = () => {
         <h2 className="leading-[0.75] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
           WORKSHOPS
         </h2>
-        <div className=" ml-24 mb-2 w-[20vw] self-end aspect-[7/3]">
+        <div className=" ml-24 mb-2 w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
             href="/"
             text={{ head: "View", tail: "All Workshops", caption: "Workshops" }}

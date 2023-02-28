@@ -9,12 +9,12 @@ export default function FollowUs() {
         <h1 className='text-primary font-bold font-poppins'>
           Follow Us
         </h1>
-        <div className='flex flex-wrap'>
-          <div className='border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaFacebookF /></div>
-          <div className='border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaTwitter /></div>
-          <div className='border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaYoutube /></div>
-          <div className='border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaInstagram /></div>
-          <div className='border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaLinkedin /></div>
+        <div className='flex flex-wrap pb-5'>
+          <div className='hover:bg-secondary cursor-pointer border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaFacebookF fill='var(--color-primary)' /></div>
+          <div className='hover:bg-secondary cursor-pointer border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaTwitter fill='var(--color-primary)' /></div>
+          <div className='hover:bg-secondary cursor-pointer border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaYoutube fill='var(--color-primary)' /></div>
+          <div className='hover:bg-secondary cursor-pointer border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaInstagram fill='var(--color-primary)' /></div>
+          <div className='hover:bg-secondary cursor-pointer border border-primary rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><FaLinkedin fill='var(--color-primary)' /></div>
         </div>
       </div>
       <div className='mt-8 md:mt-2 flex-auto'>
