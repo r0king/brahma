@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
 import SpotLight from "../components/SpotLight";
 import Highlights from "../components/Highlights";
@@ -30,7 +30,6 @@ export default class HomePage extends Component {
 
     return (
       <div className="bg-accent text-primary overflow-x-clip transition-all duration-500">
-        {/* <div class="card"><Hero /></div> */}
         <Hero />
         <Highlights />
         <div class="card"><EventsHome /></div>
@@ -44,9 +43,8 @@ export default class HomePage extends Component {
         </div>
         <div class="card"><Scroll /></div>
         <div class="card"><FollowUs /></div>
-        <div class="card"><Sponsors /></div>
+        <ContactUs />
         <h1 className="bg-accent text-center font-semibold font-poppins py-1">Copyright © 2023 - All right reserved by Brahma'23</h1>
-        {/* <ContactUs /> */}
       </div>
     );
   }

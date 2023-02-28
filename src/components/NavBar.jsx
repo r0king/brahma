@@ -3,7 +3,7 @@ import asietLogo from "../assets/images/asiet-logo.webp";
 import asietLogoDark from "../assets/images/asiet-logo-dark.webp";
 // import arrowSVG from "../assets/images/arrow.svg";
 
-const NavBar = () => {
+const NavBar = ({ rippleRef }) => {
   const [fade, setFade] = useState(false);
   const [theme, setTheme] = useState("dark");
   const [showMenu, setShowMenu] = useState(false);
@@ -37,9 +37,17 @@ const NavBar = () => {
       window.pageYOffset || document.documentElement.scrollTop;
     setFade(scrollPosition > 0);
   };
+  const handleClick = (name) => {
+    // toggle circle ripple
+    rippleRef.current.classList.toggle("circle-ripple");
+    // after timeout of 1.5 sec
+    setTimeout(() => {
+      window.location.pathname = `/${name}`;
+    }, 1500);
+  };
 
   return (
-    <nav className="text-black w-full font-poppins font-bold sticky -top-1 bg-accent z-30">
+    <nav className="text-black w-full font-poppins font-bold sticky -top-1 bg-accent z-50">
       <div className="flex justify-end items-center w-full">
         <label
           id="logo"
@@ -64,7 +72,12 @@ const NavBar = () => {
             <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
               Workshops
             </label>
-            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
+            <label
+              onClick={() => {
+                handleClick("schedule");
+              }}
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+            >
               Schedule
             </label>
             <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">

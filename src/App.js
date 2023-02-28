@@ -19,12 +19,11 @@ function App() {
   const buttons = document.querySelectorAll("button");
   const cards = document.querySelectorAll("card");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle("show", entry.isIntersecting)
-    })
-  },
-  )
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  });
 
   headings.forEach((heading) => {
     observer.observe(heading);
@@ -55,23 +54,24 @@ function App() {
     document.body.style.backgroundColor = "var(--color-accent)";
     setTimeout(() => {
       setLoading(false); // set the loading state to false
-    }, 1500);
+    }, 800);
   }, [isLoading]);
 
   return (
     <>
       <div
-        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${!isLoading && "hidden "
-          }`}
-      >
-        <div
-          ref={rippleRef}
-          className="circle-ripple-loading isLoading &&"
-        ></div>
-      </div>
-      <div ref={rootRef} className="load-to-view">
+      className="z-[350] relative"
+        ref={rippleRef}
+      ></div>
+      <div
+        className={`z-50 h-screen transition-all duration-75 -translate-y-[100%] overflow-hidden relative top-0 left-0 w-screen bg-[#ff0000] ${
+          !isLoading ? "hidden" : "absolute animate-moveUp"
+        }
+        `}
+      ></div>
+      <div ref={rootRef} className="bg-accent">
         <ParallaxProvider>
-          <NavBar />
+          <NavBar rippleRef={rippleRef} />
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
               <Route exact path="/" element={<HomePage />} />
