@@ -278,7 +278,7 @@ export class Card extends Component {
                 </div>
 
                 <div
-                  class="c-page-head_visual -home"
+                  className="c-page-head_visual -home"
                 >
                   <img src={diya} alt="lamp"/>
                 </div>
@@ -291,11 +291,11 @@ export class Card extends Component {
                 </div>
               </div>
             </div>
-            {/* <div class="c-section" data-scroll-section>
+            {/* <div className="c-section" data-scroll-section>
       </div> */}
 
-            <div class="marquee font-[neue-bit] text-[4vw] fixed bottom-0 font-bold opacity-40">
-              <ul class="marquee__content ">
+            <div className="marquee font-[neue-bit] text-[4vw] fixed bottom-0 font-bold opacity-40">
+              <ul className="marquee__content ">
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
@@ -304,7 +304,7 @@ export class Card extends Component {
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
               </ul>
-              <ul class="marquee__content" aria-hidden="true">
+              <ul className="marquee__content" aria-hidden="true">
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>
                 <li>&nbsp; ---Live Soon--- &nbsp;</li>

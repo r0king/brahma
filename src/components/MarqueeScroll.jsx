@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class CarouselAni extends Component {
+export default class Scroll extends Component {
   state = {
     prevScrollPos: window.pageYOffset,
     scrollDirection: "forwards",
@@ -26,7 +26,7 @@ export default class CarouselAni extends Component {
     if (currentScrollPos > prevScrollPos) {
       newScrollDirection = "forwards";
       if (scrollSpeed > 20) {
-        // newScrollSpeed = scrollSpeed - 0.1;
+        // newScrollSpeed = scrollSpeed - 0.2;
         newScrollSpeed = Math.max(30, scrollSpeed - scrollDiff / 50);
       }
       else {
@@ -35,7 +35,7 @@ export default class CarouselAni extends Component {
     } else if (currentScrollPos < prevScrollPos) {
       newScrollDirection = "reverse";
       if (scrollSpeed > 20) {
-        // newScrollSpeed = scrollSpeed - 0.1;
+        // newScrollSpeed = scrollSpeed - 0.2;
         newScrollSpeed = Math.max(30, scrollSpeed - scrollDiff / 50);
       }
       else {

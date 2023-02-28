@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import megaphone from "../../assets/images/megaphone.png"
+// import megaphone from "../../assets/images/megaphone.png"
+import CardButton from '../../components/CardButton'
 import "./Faq.css"
 function Faq() {
        const faqs=[
@@ -43,7 +44,6 @@ function Faq() {
     const [selected,setSelected] = useState(null)
 
     const toggle=(i)=>{
-        console.log("Hello",i);
         if(selected === i){
             return setSelected(null)
         }
@@ -51,27 +51,38 @@ function Faq() {
     }
   return (
     <>
-      <div className="faq_main_container">
+      <div className="faq_main_container bg-accent">
         <div className="top_part">
-          <div className="textpart">
+          <div className="textpart text-primary font-morganite">
             <h1>HOW CAN WE HELP YOU ?</h1>
             <div className="reach_team">
-            <div className="reach_container">
-              <p>Contact us</p>
+            <button className="reach_container w-[20vw] h-[8vw]">
+            <CardButton text={{head:"Reach",tail:"Our Team",caption:"Contact Us"}}/>
+              {/* <p>Contact us</p>
               <div className="reach_bottom_part">
                   <span>Reach Our Team</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path strokeLinecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                  </svg>
-
-              </div>
-            </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                    >
+                    <path
+                        strokelinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                    </svg>
+              </div> */}
+            </button>
           </div>
           </div>
           
         </div>
-        <div className="faq_part">
-            <img src={megaphone} alt="" />
+        <div className="faq_part font-poppins">
+            {/* <img src={megaphone} alt="" /> */}
             <div className="part1">
             {
                 faqs.map((ele,index)=>{
@@ -79,7 +90,7 @@ function Faq() {
                     <article className={`accordian_item${index} accordian_item`} onClick={()=>{toggle(index)}}>
                         <div className={`accordian_content${index} accordian_content`} >
                             <h1>{ele.qstn}</h1>
-                            <span class={`accordion_icon${index}`}></span>
+                            <span className={`accordion_icon${index}`}></span>
                         </div>
                         <div className="faq_answer">
                             <p className={selected===index?'content-show':'content-hide'}>
@@ -93,9 +104,9 @@ function Faq() {
                 
             </div>
         </div>
-        <div className="part2">
+        <div className="part2 font-poppins">
             <div className="additional_contact">
-                <h1>Additional Contact</h1>
+                <h1 className='text-secondary font-morganite'>Additional Contact</h1>
                 <p className='name'>Ajay Antu</p>
                 <p className='role'>Sample Role here</p>
                 <p className='email'>name@gmail.com</p>
