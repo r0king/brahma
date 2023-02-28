@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Scroll extends Component {
+export default class MarqueeScroll extends Component {
   state = {
     prevScrollPos: window.pageYOffset,
     scrollDirection: "forwards",
@@ -65,26 +65,28 @@ export default class Scroll extends Component {
 
   render() {
     return (
-      <div
-        className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90"
-        ref={this.marqueeRef}
-      >
-        <ul className="marquee__content uppercase">
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-        </ul>
-        <ul className="marquee__content uppercase" aria-hidden="true">
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-          <li>&nbsp;live Soon&nbsp;</li>
-        </ul>
+      <div>
+        <div
+          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90 leading-none"
+          ref={this.marqueeRef}
+        >
+          <ul className="marquee__content uppercase">
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+          </ul>
+          <ul className="marquee__content uppercase" aria-hidden="true">
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned _&nbsp;</li>
+          </ul>
+        </div>
       </div>
     );
   }
