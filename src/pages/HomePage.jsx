@@ -14,37 +14,40 @@ import CardButton from "../components/CardButton";
 
 export default class HomePage extends Component {
   render() {
+    const cards = document.querySelectorAll(".card");
 
-    const cards = document.querySelectorAll(".card")
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      });
+    });
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle("show", entry.isIntersecting)
-      })
-    },
-    )
-
-    cards.forEach(card => {
-      observer.observe(card)
-    })
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
 
     return (
       <div className="bg-accent text-primary overflow-x-clip transition-all duration-500">
         <Hero />
         <Highlights />
-        <div class="card"><EventsHome /></div>
-        <div class="card"><Workshop /></div>
-        <div class="card"><SpotLight /></div>
+        <div className="card">
+          <EventsHome />
+        </div>
+        <div className="card">
+          <Workshop />
+        </div>
+        <div className="card">
+          <SpotLight />
+        </div>
         <div className="h-[35vh]">
           <CardButton
             text={{ head: "View", tail: "Schedule", caption: "Speakers" }}
             huge={true}
           />
         </div>
-        <div class="card"><Scroll /></div>
-        <div class="card"><FollowUs /></div>
-        <ContactUs />
-        <h1 className="bg-accent text-center font-semibold font-poppins py-1">Copyright © 2023 - All right reserved by Brahma'23</h1>
+        <div class="card">
+          <Scroll />
+        </div>
       </div>
     );
   }

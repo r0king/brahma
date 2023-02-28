@@ -3,8 +3,8 @@ import Link from "react-ripples-hover";
 
 export default function CardButton({ onClick, href, text = {}, huge = false }) {
   return (
-    <button
-      className="card relative bg-secondary group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
+    <div
+      className="relative bg-secondary group scale-[0.98] rounded-md w-full h-full flex justify-center items-center"
       onClick={onClick}
     >
       <Link
@@ -55,6 +55,6 @@ export default function CardButton({ onClick, href, text = {}, huge = false }) {
           )}
         </div>
       </Link>
-    </button>
+    </div>
   );
 }

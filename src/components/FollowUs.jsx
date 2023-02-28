@@ -21,9 +21,9 @@ export default function FollowUs() {
         <h1 className='text-primary font-bold font-poppins'>
           Visit Us
         </h1>
-        <div className="relative mt-4 md:mt-8 mr-12 md:mr-24 text-4xl">
+        {/* <div className="relative mt-4 md:mt-8 mr-12 md:mr-24 text-4xl">
           adishankara.ac.in
-        </div>
+        </div> */}
       </div>
     </div>
   )

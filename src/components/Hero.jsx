@@ -66,10 +66,7 @@ export default function Hero() {
           font-poppins font-semibold text-primary text-xs leading-4          
           "
             >
-              Get ready to unleash your inner genius and ignite your passion for
-              learning, as our Brahma'23 event promises to be a one-of-a-kind
-              experience that will inspire, educate, and entertain you like
-              never before!
+              Welcome to BRAHMA'23, where technology meets culture in a unique celebration that promises to be an unforgettable experience.
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">

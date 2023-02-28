@@ -18,6 +18,7 @@ function App() {
   const listItems = document.querySelectorAll("ul");
   const buttons = document.querySelectorAll("button");
   const cards = document.querySelectorAll("card");
+  const images = document.querySelectorAll("img");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -44,7 +45,9 @@ function App() {
   cards.forEach((card) => {
     observer.observe(card);
   });
-
+  images.forEach((img) => {
+    observer.observe(img);
+  });
   const [isLoading, setLoading] = useState(true); // add a loading state
 
   const rippleRef = useRef(null);
@@ -82,6 +85,7 @@ function App() {
             </Routes>
           </BrowserRouter>
           <Sponsors />
+          <h1 className="bg-accent text-center font-semibold font-poppins py-1 text-primary">Copyright © 2023 - All right reserved by Brahma'23</h1>
         </ParallaxProvider>
       </div>
     </>
