@@ -10,9 +10,9 @@ import Schedule from "./pages/Schedule/Schedule";
 import "./App.css";
 import AllEvents from "./components/AllEvents";
 import NavBar from "./components/NavBar";
-import Sponsors from "./components/Sponsors";
+// import Sponsors from "./components/Sponsors";
 import ContactUs from "./components/ContactUs";
-import FollowUs from "./components/FollowUs";
+// import FollowUs from "./components/FollowUs";
 
 function App() {
   const today = new Date(),
@@ -71,7 +71,7 @@ function App() {
     setTimeout(() => {
       setLoading(false); // set the loading state to false
     }, 1000);
-  }, [isLoading]);
+  }, [isLoading,hours]);
 
   return (
     <>
