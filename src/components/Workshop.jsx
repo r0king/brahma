@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import P1 from "../assets/images/workshops/cnc.jpeg";
 import P2 from "../assets/images/workshops/3dprinting.jpeg";
 import P3 from "../assets/images/pic3.jpeg";
@@ -66,17 +66,23 @@ const Workshop = ({ rippleRef }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
-    swipeToSlide: true,
-    
+    slidesToScroll: 1,  
     responsive: [
       { breakpoint: 600, settings: { slidesToShow: 1 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
     ],
   };
-
+  const slickRef = useRef(null);
   const half=window.innerWidth/2;
   const arrowRef = React.useRef(null);
+
+  const handleCarouselClick = (e) => {
+    if (e.clientX > half) {
+      slickRef.current.slickNext();
+    } else {
+      slickRef.current.slickPrev();
+    }
+  };
 
 const handleMouseMove = (e) => {
   console.log(e.clientX,e.clientY);
@@ -108,16 +114,16 @@ const handleMouseMove = (e) => {
         </div>
       </div>
 
-      <div className="w-full " onMouseMove={handleMouseMove}>
-        <Slider {...settings}>
+        
+      <div className="w-full arrow-right " onMouseMove={handleMouseMove} ref={arrowRef}  onClick={handleCarouselClick}>
+        <Slider {...settings} ref={slickRef}>
           {images.map((image, index) => (
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] aspect-video object-top px-1"
+                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 "
                   src={image.src}
                   alt={`Slide ${index + 1}`}
-                  ref={arrowRef}
                 />
                 <div className="text-lg mt-4 font-poppins font-bold pl-2">
                   {image.name}
