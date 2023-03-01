@@ -8,6 +8,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardButton from "./CardButton";
+import '../App.css'
+import Arrow from '../assets/svg/left-arrow.svg';
 
 const Workshop = () => {
   const images = [
@@ -59,11 +61,25 @@ const Workshop = () => {
     slidesToShow: 3,
     slidesToScroll: 1,
     swipeToSlide: true,
+    
     responsive: [
       { breakpoint: 600, settings: { slidesToShow: 1 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
     ],
   };
+
+  const width=window.innerWidth;
+  const half=width/2;
+
+
+  const handleMouseMove = (e) => {
+    console.log(e.clientX,e.clientY)
+    if(e.clientX>half){
+      
+    }
+}
+ 
+
 
   return (
     <div className="mt-10">
@@ -79,13 +95,13 @@ const Workshop = () => {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full " onMouseMove={handleMouseMove}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1"
+                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 arrow"
                   src={image.src}
                   alt={`Slide ${index + 1}`}
                 />

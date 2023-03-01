@@ -11,6 +11,7 @@ import Sponsors from "../components/Sponsors";
 import Scroll from "../components/MarqueeScroll";
 import FollowUs from "../components/FollowUs";
 import CardButton from "../components/CardButton";
+import Carousel from "../components/Carousel";
 
 export default class HomePage extends Component {
   render() {
@@ -42,7 +43,8 @@ export default class HomePage extends Component {
             huge={true}
           />
         </div>
-        <div className="card"><Scroll /></div>
+          <div className="card"><Scroll /></div>
+        {/* <div className="card"><Carousel/></div> */}
         <div className="card"><FollowUs /></div>
         {/* <div className="card"><Sponsors /></div> */}
         {/* <ContactUs /> */}

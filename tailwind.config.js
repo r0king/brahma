@@ -37,6 +37,7 @@ module.exports = {
         rotateIn: "rotateIn 0.5s ease-in-out",
         rotateOut: "rotateOut 0.5s ease-in-out",
       },
+      
     },
   },
   plugins: [require("daisyui")],
