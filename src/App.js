@@ -69,7 +69,7 @@ function App() {
   return (
     <>
       <div
-        className={`z-[90] fixed ${isLoading && "hidden"}`}
+        className={`z-[90] fixed bottom-0 left-0 ${isLoading && "hidden"}`}
         ref={rippleRef}
       ></div>
       <div ref={rootRef} className="bg-accent">

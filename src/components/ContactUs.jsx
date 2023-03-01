@@ -23,7 +23,7 @@ const ContactUs = () => {
         {/* :CONTACT INFOS CONTAINER */}
         <div
           className="w-[90vw] col-span-full sm:col-span-3 md:col-span-2 pt-4 grow
- text-primary flex flex-col  h-full border-r-2 mr-5 border-black"
+ text-primary flex flex-col  h-full md:border-r-2 md:mr-5 border-accent"
         >
           {/* <img src={"Logo"} alt="Asiet Logo" className="   pl-0 md:pl-0    md:pt-0 pb-5" srcSet="" /> */}
           {/* ::Title Contact */}
@@ -36,40 +36,67 @@ const ContactUs = () => {
           >
             Contact Us
           </h2>
+          <div className="flex">
+            <div className="flex flex-col h-full">
+              {/* ::Address */}
+              <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
+                <h3 className="text-lg font-poppins font-semibold">Address</h3>
+                <p className="text-base font-poppins text-opacity-60 ">
+                  5CHJ+758,
+                  <br /> Vidya Bharathi Nagar, <br /> Mattoor, Kalady,
+                  <br /> Ernakulam, Kerala 683574
+                </p>
+              </div>
+              <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
+                <h3 className="text-lg font-poppins font-semibold">
+                  Staff Cordinators
+                </h3>
+                <p className="text-base font-poppins text-opacity-60 ">
+                  Musafir Ky
+                  <br /> Prof.AeroSpace <br /> Paul Martin
+                  <br /> Prof.Rocket Science
+                </p>
+              </div>
+            </div>
+            {/* ::Contact */}
+            <div className="flex flex-col h-full">
+              <div className="mt-5 sm:mt-5 space-y-3 text-accent px-5 ">
+                <div className="space-y-1 text-base text-opacity-60">
+                  <p className="font-poppins">
+                    <br />
+                    <br />
+                    qwer : +91-123456789
+                    <br />
+                    asdf : +91-123457678
+                    <br />
+                  </p>
+                  <a
+                    href="mailto:Brahma.in"
+                    aria-label="mail"
+                    className="inline-block font-poppins hover italic pt-3"
+                  >
+                    Brahma.in
+                  </a>
+                </div>
+              </div>
 
-          {/* ::Address */}
-          <div className="mt-5 sm:mt-5 space-y-3 text-accent">
-            <h3 className="text-lg font-poppins font-semibold">Address</h3>
-            <p className="text-base font-poppins text-opacity-60">
-              5CHJ+758,
-              <br /> Vidya Bharathi Nagar, <br /> Mattoor, Kalady,
-              <br /> Ernakulam, Kerala 683574
-            </p>
-          </div>
-
-          {/* ::Contact */}
-          <div className="mt-5 sm:mt-5 space-y-3 text-accent">
-            <div className="space-y-1 text-base text-opacity-60">
-              <p className="font-poppins">
-                qwer : +91-123456789
-                <br />
-                asdf : +91-123457678
-                <br />
-              </p>
-              <a
-                href="mailto:Brahma.in"
-                aria-label="mail"
-                className="inline-block font-poppins hover italic pt-3"
-              >
-                Brahma.in
-              </a>
+              <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
+                <h3 className="text-lg font-poppins font-semibold">
+                  Student Cordinators
+                </h3>
+                <p className="text-base font-poppins text-opacity-60 ">
+                  Musafir Ky
+                  <br /> Prof.AeroSpace <br /> Paul Martin
+                  <br /> Prof.Rocket Science
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* :MAP CONTAINER */}
         <div
-          className="rounded-tr-[3vw] w-full min-h-[30vh] transition-all duration-700 
+          className="rounded-tr-[3vw] w-full min-h-[30vh] pt-5 md:pt-0 transition-all duration-700 
           hover:fixed bottom-0 left-0 hover:ml-[5vw] hover:h-[60vh] hover:w-[90vw] hover:mb-[5vw] "
         >
           {/* Embed Google map */}
