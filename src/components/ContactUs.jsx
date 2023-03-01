@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import FollowUs from "./FollowUs";
 
 const ContactUs = () => {
   const myRef = useRef(null);
@@ -13,7 +14,7 @@ const ContactUs = () => {
     <div
       id="contact"
       ref={myRef}
-      className="flex p-3 pb-5 md:p-6 bg-primary w-full items-center relative z-10 "
+      className="flex p-3 pb-3 mt-5 md:p-6 bg-primary w-full items-center relative z-10 "
     >
       <div
         className="
@@ -22,13 +23,13 @@ const ContactUs = () => {
       >
         {/* :CONTACT INFOS CONTAINER */}
         <div
-          className="w-[90vw] col-span-full sm:col-span-3 md:col-span-2 pt-4 grow
+          className="w-[90vw] col-span-full sm:col-span-3 md:col-span-2 py-4 grow
  text-primary flex flex-col  h-full md:border-r-2 md:mr-5 border-accent"
         >
           {/* <img src={"Logo"} alt="Asiet Logo" className="   pl-0 md:pl-0    md:pt-0 pb-5" srcSet="" /> */}
           {/* ::Title Contact */}
           <h2
-            className="text-7xl leading-[0.75]  font-morganite tracking-wide p-2 pl-0 text-accent"
+            className="text-7xl leading-[0.75]  font-morganite tracking-wide p-5 text-accent"
             // style={{
             //   textOrientation: "mixed",
             //   writingMode: "vertical-rl",
@@ -92,6 +93,7 @@ const ContactUs = () => {
               </div>
             </div>
           </div>
+          <FollowUs />
         </div>
 
         {/* :MAP CONTAINER */}
@@ -105,7 +107,7 @@ const ContactUs = () => {
             title="map"
             scrolling="no"
             frameBorder="0"
-            className="w-full h-full rounded-xl"
+            className="w-full h-full rounded-md rounded-tr-[6vw]"
             loading="lazy"
           />
         </div>

@@ -85,9 +85,6 @@ function App() {
             </Routes>
           </BrowserRouter>
           <Sponsors />
-          <div class="card">
-            <FollowUs />
-          </div>
           <ContactUs />
         </ParallaxProvider>
       </div>

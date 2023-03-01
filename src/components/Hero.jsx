@@ -41,7 +41,7 @@ export default function Hero() {
           easing="ease"
           className=""
         >
-          <div className="pl-6 md:pl-0 pt-7 md:pt-0">
+          <div className="pl-6 md:pl-0  md:pt-0">
             <h1 className="text-secondary font-morganite text-[25vw] pt-[7vh] md:pt-[4vw] md:text-[13vw] leading-[0.5] uppercase ">
               Brahma '23
             </h1>
