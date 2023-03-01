@@ -114,16 +114,16 @@ const AllEvents = () => {
                 src={image.src}
                 alt=''
               />
-              <div className="pl-2 mt-4 text-lg font-bold font-poppins">
+              <div className="pl-2 mt-4 text-lg font-bold font-poppins text-primary">
                 {image.name}
               </div>
               <div className="flex flex-row pl-2 mt-4 font-semibold">
-                <div className="w-12 pl-1 text-sm border-2 border-orange-500 font-poppins md:h-6">
+                <div className="w-12 pl-1 text-sm border-2 border-orange-500 font-poppins md:h-6 text-primary">
                   ₹{image.prize}
                 </div>
-                <div className="ml-6 font-poppins">{image.organizer}</div>
-                <div className="ml-6 font-poppins">{image.place}</div>
-                <div className="ml-6 font-poppins">{image.state}</div>
+                <div className="ml-6 font-poppins text-primary">{image.organizer}</div>
+                <div className="ml-6 font-poppins text-primary">{image.place}</div>
+                <div className="ml-6 font-poppins text-primary">{image.state}</div>
               </div>
             </div>
           </div>
