@@ -98,16 +98,16 @@ const handleMouseMove = (e) => {
         </div>
       </div>
 
-      <div className="w-full " onMouseMove={handleMouseMove}>
+        
+      <div className="w-full arrow-right " onMouseMove={handleMouseMove} ref={arrowRef}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 arrow-right"
+                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 "
                   src={image.src}
                   alt={`Slide ${index + 1}`}
-                  ref={arrowRef}
                 />
                 <div className="text-lg mt-4 font-poppins font-bold pl-2">
                   {image.name}
