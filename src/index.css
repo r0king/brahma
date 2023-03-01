@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;300;600;800&display=swap");
 
 @font-face {
   font-family: "Morganite";
@@ -17,30 +17,23 @@
   }
 }
 
+html[data-theme="dark"] {
+  --color-primary: #fafafa;
+  --color-secondary: #d35c39;
+  --color-accent: #1f1f1f;
+}
+
+html[data-theme="light"] {
+  --color-primary: #1f1f1f;
+  --color-secondary: #d35c39;
+  --color-accent: #fafafa;
+}
 /* 
 :root {
   --color-primary: #1f1f1f;
   --color-secondary: #d35c39;
   --color-accent: #fafafa;
 } */
-.load-to-view {
-  transition: all 2s ease;
-  animation: load-to-view 2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  background-color: transparent;
-  animation-delay: 1.5s;
-}
-@keyframes load-to-view {
-  0% {
-    opacity: 0.5;
-    transform: translateY(150px);
-    background-color: #d35c39;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(75px);
-    background-color: #fafafa;
-  }
-}
 body {
   scroll-behavior: smooth;
 }
@@ -61,6 +54,7 @@ body {
   gap: var(--gap);
   animation: scroll 30s reverse linear infinite;
 }
+
 @keyframes scroll {
   from {
     transform: translateX(calc(-100% - var(--gap)));
@@ -70,81 +64,30 @@ body {
   }
 }
 
-/* -------------------------- */
-.fullscreen-fade{
-  background-color: #fafafa;
-  width: 1em;
-  height: 1em;
-  /* border-radius: 100%; */
-  -webkit-animation: fullscreen-fade-out 1.5s  ease;
-  animation: fullscreen-fade-out 1.5s  ease;
-  /* animation-duration: 2s; */
-  /* animation-delay: 0s; */
-    
-}
-
-
-/* -------------------------- */
-
-
-
-
-
-
 .circle-ripple {
-  background-color: #f1f1f1;
-  width: 1em;
-  height: 1em;
+  background-color: var(--color-accent);
+  width: 3em;
+  height: 3em;
   border-radius: 100%;
-  -webkit-animation: ripple-scale 1s  ease;
-  animation: ripple-scale 1s  ease;
-  /* animation-delay: 0.5s; */
-  /* animation-duration: 3s; */
-  animation-delay: 1s;
-
-   
-
-}
-
-
-
-
-.circle-ripple-loading {
-  background-color: #f1f1f1 ;
-  width: 1em;
-  height: 1em;
-  border-radius: 100%;
-  -webkit-animation: ripple-scale-down 1s ease;
-  animation: ripple-scale-down 1s ease;
-  animation-delay: 1s;
-  
-}
-
-@-webkit-keyframes ripple-scale {
-  0% {
-    transform: scale(0);
-    box-shadow: 0 0 0 0 rgba(211, 92, 57, 0.3), 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3);
-  }
-  100% {
-    transform: scale(200);
-    box-shadow: 0 0 0 1em rgba(211, 92, 57, 0.3),
-      0 0 0 3em rgba(211, 92, 57, 0.3), 0 0 0 5em rgba(211, 92, 57, 0.3),
-      0 0 0 8em rgba(211, 92, 57, 0);
-  }
+  animation: ripple-scale 2s ease;
+  transform: scale(250);
 }
 
 @keyframes ripple-scale {
   0% {
     transform: scale(0);
-    box-shadow: 0 0 0 0 rgba(117, 115, 114, 0.3), 0 0 0 1em rgba(104, 101, 98, 0.3),
-      0 0 0 3em rgba(179, 161, 161, 0.3), 0 0 0 5em rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 0 rgba(117, 115, 114, 0.3),
+      0 0 0 1em rgba(104, 101, 98, 0.3), 0 0 0 3em rgba(179, 161, 161, 0.3),
+      0 0 0 5em rgba(0, 0, 0, 0.3);
   }
-  100% {
-    transform: scale(200);
-    box-shadow: 0 0 0 1em rgba(117, 115, 114, 0.3),
-      0 0 0 3em rgba(0, 0, 0, 0.3), 0 0 0 5em rgba(14, 13, 12, 0.3),
-      0 0 0 8em rgba(0, 0, 0, 0);
+  90% {
+    transform: scale(250);
+    
+    box-shadow: 0 0 0 1em rgba(117, 115, 114, 0.3), 0 0 0 3em rgba(0, 0, 0, 0.3),
+      0 0 0 5em rgba(14, 13, 12, 0.3), 0 0 0 8em rgba(0, 0, 0, 0);
+  }
+  100%{
+    display: none;
   }
 }
 @-webkit-keyframes ripple-scale-down {
@@ -186,24 +129,4 @@ h1,p,ul,button,.card{
 h1.show,p.show,ul.show,button.show,.card.show{
   transform: translateY(0);
   opacity: 1;
-}
-/* ---------------------------------------------------------------------- */
-@-webkit-keyframes fullscreen-fade-out {
-  0% {
-    opacity: 1;
-    display: block;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fullscreen-fade-out {
-  0% {
-    opacity: 1;
-    display: block;
-  }
-  100% {
-    opacity: 0;
-   }
 }

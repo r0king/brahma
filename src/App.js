@@ -11,6 +11,8 @@ import "./App.css";
 import AllEvents from "./components/AllEvents";
 import NavBar from "./components/NavBar";
 import Sponsors from "./components/Sponsors";
+import ContactUs from "./components/ContactUs";
+import FollowUs from "./components/FollowUs";
 
 function App() {
   const headings = document.querySelectorAll("h1");
@@ -20,12 +22,11 @@ function App() {
   const cards = document.querySelectorAll("card");
   // const images = document.querySelectorAll("img");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle("show", entry.isIntersecting)
-    })
-  },
-  )
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle("show", entry.isIntersecting);
+    });
+  });
 
   headings.forEach((heading) => {
     observer.observe(heading);
@@ -55,26 +56,25 @@ function App() {
   const rootRef = useRef(null);
 
   useEffect(() => {
-    document.body.style.backgroundColor = "var(--color-accent)";
+    const theme = JSON.parse(localStorage.getItem("theme"));
+    if (theme === undefined || theme === null) {
+      localStorage.setItem("theme", JSON.stringify("dark"));
+    }
+
     setTimeout(() => {
       setLoading(false); // set the loading state to false
-    }, 1500);
+    }, 1000);
   }, [isLoading]);
 
   return (
     <>
       <div
-        className={`fixed z-50 h-screen w-screen justify-center items-center flex ${!isLoading && "hidden "
-          }`}
-      >
-        <div
-          ref={rippleRef}
-          className="circle-ripple-loading isLoading &&"
-        ></div>
-      </div>
-      <div ref={rootRef} className="load-to-view">
+        className={`z-[90] fixed bottom-0 left-0 ${isLoading && "hidden"}`}
+        ref={rippleRef}
+      ></div>
+      <div ref={rootRef} className="bg-accent">
         <ParallaxProvider>
-          <NavBar />
+          <NavBar rippleRef={rippleRef} />
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
               <Route exact path="/" element={<HomePage />} />
@@ -85,7 +85,7 @@ function App() {
             </Routes>
           </BrowserRouter>
           <Sponsors />
-          <h1 className="bg-accent text-center font-semibold font-poppins py-1 text-primary">Copyright © 2023 - All right reserved by Brahma'23</h1>
+          <ContactUs />
         </ParallaxProvider>
       </div>
     </>
