@@ -18,7 +18,7 @@ function App() {
   const listItems = document.querySelectorAll("ul");
   const buttons = document.querySelectorAll("button");
   const cards = document.querySelectorAll("card");
-  const images = document.querySelectorAll("img");
+  // const images = document.querySelectorAll("img");
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -46,9 +46,9 @@ function App() {
   cards.forEach((card) => {
     observer.observe(card);
   });
-  images.forEach((img) => {
-    observer.observe(img);
-  });
+  // images.forEach((img) => {
+  //   observer.observe(img);
+  // });
   const [isLoading, setLoading] = useState(true); // add a loading state
 
   const rippleRef = useRef(null);

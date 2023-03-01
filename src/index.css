@@ -177,13 +177,13 @@ body {
   }
 }
 
-h1,p,ul,button,img,.card{
+h1,p,ul,button,.card{
   transform: translateY(100px);
   opacity: 0;
   transition: 1000ms;
 }
 
-h1.show,img.show,p.show,ul.show,button.show,.card.show{
+h1.show,p.show,ul.show,button.show,.card.show{
   transform: translateY(0);
   opacity: 1;
 }

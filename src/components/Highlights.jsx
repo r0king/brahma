@@ -15,10 +15,10 @@ const Highlights = () => {
                         <CardButton text={{ head: "Get", tail: "Tickets", caption: "Tickets" }} />
                     </button>
                 </div>
-                <div className='order-1 mx-2 mr-10 mb-[4vw] relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]'>
+                <div className='order-1 mx-2 mr-10 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]'>
                     <video
                         width={"800"}
-                        className='aspect-video hover:opacity-80 shadow-overlay object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]'
+                        className='aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]'
                         src={brahmaVideo} autoPlay loop muted />
                 </div>
             </div>
