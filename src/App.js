@@ -10,17 +10,19 @@ import Schedule from "./pages/Schedule/Schedule";
 import "./App.css";
 import AllEvents from "./components/AllEvents";
 import NavBar from "./components/NavBar";
-import Sponsors from "./components/Sponsors";
+// import Sponsors from "./components/Sponsors";
 import ContactUs from "./components/ContactUs";
-import FollowUs from "./components/FollowUs";
+// import FollowUs from "./components/FollowUs";
 
 function App() {
+  const today = new Date(),
+    hours = today.getHours();
   const headings = document.querySelectorAll("h1");
   const paragraphs = document.querySelectorAll("p");
-  const listItems = document.querySelectorAll("ul");
+  // const listItems = document.querySelectorAll("ul");
   const buttons = document.querySelectorAll("button");
   const cards = document.querySelectorAll("card");
-  const images = document.querySelectorAll("img");
+  // const images = document.querySelectorAll("img");
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -36,9 +38,9 @@ function App() {
     observer.observe(paragraph);
   });
 
-  listItems.forEach((listItem) => {
-    observer.observe(listItem);
-  });
+  // listItems.forEach((listItem) => {
+  //   observer.observe(listItem);
+  // });
 
   buttons.forEach((button) => {
     observer.observe(button);
@@ -47,9 +49,9 @@ function App() {
   cards.forEach((card) => {
     observer.observe(card);
   });
-  images.forEach((img) => {
-    observer.observe(img);
-  });
+  // images.forEach((img) => {
+  //   observer.observe(img);
+  // });
   const [isLoading, setLoading] = useState(true); // add a loading state
 
   const rippleRef = useRef(null);
@@ -57,14 +59,19 @@ function App() {
 
   useEffect(() => {
     const theme = JSON.parse(localStorage.getItem("theme"));
+    // console.log()
     if (theme === undefined || theme === null) {
-      localStorage.setItem("theme", JSON.stringify("dark"));
+      if (hours > 6 && hours < 18) {
+        localStorage.setItem("theme", JSON.stringify("light"));
+      } else {
+        localStorage.setItem("theme", JSON.stringify("dark"));
+      }
     }
 
     setTimeout(() => {
       setLoading(false); // set the loading state to false
     }, 1000);
-  }, [isLoading]);
+  }, [isLoading,hours]);
 
   return (
     <>
@@ -77,14 +84,18 @@ function App() {
           <NavBar rippleRef={rippleRef} />
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
-              <Route exact path="/" element={<HomePage />} />
+              <Route
+                exact
+                path="/"
+                element={<HomePage rippleRef={rippleRef} />}
+              />
               <Route exact path="/faq" element={<Faq />} />
               <Route exact path="/schedule" element={<Schedule />} />
               <Route exact path="/events" element={<AllEvents />} />
               <Route exact path="/event/:eventId" element={<Event />} />
             </Routes>
           </BrowserRouter>
-          <Sponsors />
+          {/* <Sponsors /> */}
           <ContactUs />
         </ParallaxProvider>
       </div>

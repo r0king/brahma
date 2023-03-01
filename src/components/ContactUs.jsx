@@ -98,8 +98,8 @@ const ContactUs = () => {
 
         {/* :MAP CONTAINER */}
         <div
-          className="rounded-tr-[3vw] w-full min-h-[30vh] pt-5 md:pt-0 transition-all duration-700 
-          hover:fixed bottom-0 left-0 hover:ml-[5vw] hover:h-[60vh] hover:w-[90vw] hover:mb-[5vw] "
+          className="rounded-tr-[3vw] w-full min-h-[30vh] pt-5 md:pt-0 transition-all duration-100 
+          hover:fixed bottom-0 left-0 hover:ml-[5vw] hover:h-[85vh] hover:w-[90vw] hover:mb-[5vw] "
         >
           {/* Embed Google map */}
           <iframe
