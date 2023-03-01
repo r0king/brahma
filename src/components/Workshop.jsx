@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardButton from "./CardButton";
 import '../App.css'
-import Arrow from '../assets/svg/left-arrow.svg';
 
 const Workshop = () => {
   const images = [
@@ -68,16 +67,20 @@ const Workshop = () => {
     ],
   };
 
-  const width=window.innerWidth;
-  const half=width/2;
+  const half=window.innerWidth/2;
+  const arrowRef = React.useRef(null);
 
-
-  const handleMouseMove = (e) => {
-    console.log(e.clientX,e.clientY)
-    if(e.clientX>half){
-      
-    }
-}
+const handleMouseMove = (e) => {
+  console.log(e.clientX,e.clientY);
+  console.log(arrowRef.current.classList);
+  if (e.clientX > half) {
+    arrowRef.current.classList.remove("arrow-left");
+    arrowRef.current.classList.add("arrow-right");
+  } else {
+    arrowRef.current.classList.remove("arrow-right");
+    arrowRef.current.classList.add("arrow-left");
+  }
+};
  
 
 
@@ -87,7 +90,7 @@ const Workshop = () => {
         <h2 className="leading-[0.75] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
           WORKSHOPS
         </h2>
-        <div className=" ml-24 mb-2 w-[20vw] self-end aspect-[7/3]">
+        <div className=" ml-24 mb-2 w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
             href="/"
             text={{ head: "View", tail: "All Workshops", caption: "Workshops" }}
@@ -101,9 +104,10 @@ const Workshop = () => {
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 arrow"
+                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 arrow-right"
                   src={image.src}
                   alt={`Slide ${index + 1}`}
+                  ref={arrowRef}
                 />
                 <div className="text-lg mt-4 font-poppins font-bold pl-2">
                   {image.name}

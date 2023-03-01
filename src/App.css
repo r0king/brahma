@@ -1,3 +1,7 @@
-.arrow {
+.arrow-left {
     cursor: url('./assets/svg/left-arrow.svg'),pointer;
+}
+
+.arrow-right {
+    cursor: url('./assets/svg/right-arrow.svg'),pointer;
 }
