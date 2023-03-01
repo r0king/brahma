@@ -71,20 +71,20 @@ export default class MarqueeScroll extends Component {
           ref={this.marqueeRef}
         >
           <ul className="marquee__content uppercase">
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
           </ul>
           <ul className="marquee__content uppercase" aria-hidden="true">
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
-            <li>&nbsp;Stay Tuned _&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>&nbsp;Stay Tuned&nbsp;</li>
           </ul>
         </div>
       </div>

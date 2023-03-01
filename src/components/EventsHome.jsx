@@ -1,7 +1,13 @@
 import React from "react";
 // import dotSVG from "../assets/images/dot.svg"
 // import imgSrc from "../assets/images/imgSrc.jpg"
-import Event1 from "../assets/images/event1.jpg";
+// import Event1 from "../assets/images/event1.jpg";
+import Event1 from "../assets/images/events/theme_show.jpeg";
+import Event2 from "../assets/images/events/dj-war.jpeg";
+import Event3 from "../assets/images/events/voice.jpeg";
+import Event4 from "../assets/images/events/fifa.jpeg";
+import Event5 from "../assets/images/events/maze.jpeg";
+import Event6 from "../assets/images/events/spot-pic.jpeg";
 import CardButton from "./CardButton";
 // import { Parallax } from 'react-scroll-parallax';
 // import { useMediaQuery } from 'react-responsive';
@@ -21,50 +27,59 @@ function DotSVG() {
   );
 }
 
-export default function EventsHome() {
+export default function EventsHome({ rippleRef }) {
   // const isMobile = useMediaQuery({ maxWidth: 640 });
+
+  const handleClick = (name) => {
+    // toggle circle ripple
+    rippleRef.current.classList.toggle("circle-ripple");
+    // after timeout of 1.5 sec
+    setTimeout(() => {
+      window.location.pathname = `/${name}`;
+    }, 1500);
+  };
   const events = [
     {
       id: 1,
-      name: "DJ War",
-      venue: "Main Stage",
-      time: "31-03-2023 10:00 AM",
-      imgSrc: Event1,
-    },
-    {
-      id: 2,
       name: "Theme Show",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
       imgSrc: Event1,
     },
     {
-      id: 3,
-      name: "Choreo Night",
+      id: 2,
+      name: "DJ War",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      imgSrc: Event1,
+      imgSrc: Event2,
+    },
+    {
+      id: 3,
+      name: "Voice of Brahma",
+      venue: "Main Stage",
+      time: "31-03-2023 10:00 AM",
+      imgSrc: Event3,
     },
     {
       id: 4,
-      name: "RJ Hunt",
-      venue: "Main Stage",
+      name: "Fifa",
+      venue: "CCF Lab",
       time: "31-03-2023 10:00 AM",
-      imgSrc: Event1,
+      imgSrc: Event4,
     },
     {
       id: 5,
-      name: "Treasure Hunt",
-      venue: "College Premise",
+      name: "Maze",
+      venue: "PL Lab",
       time: "31-03-2023 10:00 AM",
-      imgSrc: Event1,
+      imgSrc: Event5,
     },
     {
       id: 6,
-      name: "Fifa",
-      venue: "PL Lab",
+      name: "Spot Photography",
+      venue: "College Premise",
       time: "31-03-2023 10:00 AM",
-      imgSrc: Event1,
+      imgSrc: Event6,
     },
   ];
 
@@ -214,176 +229,71 @@ export default function EventsHome() {
         <div className="flex flex-col">
           <div className="flex flex-row mb-10 gap-5">
             {events.slice(0, 2).map((event) => (
-              <div key={event.id} className="relative md:w-[32vw] md:h-[32vw] w-[55vw] h-[55vw] shadow-overlay-reverse">
+              <div
+                key={event.id}
+                className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+              >
                 <img
                   src={event.imgSrc}
                   alt={event.name}
-                  className="relative aspect-square w-full h-full rounded-md rounded-tr-[5vw]"
+                  className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
                 />
-                <div className="absolute bottom-8 p-3 text-2xl">{event.name}</div>
-                <div className="absolute bottom-0 p-3">{event.venue}</div>
-                <div className="absolute bottom-0 right-0 p-3">{event.time}</div>
+                <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                  {event.name}
+                </div>
+                <div className="absolute z-40 bottom-8 p-3">{event.venue}</div>
+                {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
               </div>
             ))}
           </div>
           <div className="flex flex-row-reverse mb-10 gap-5">
             {events.slice(2, 4).map((event) => (
-              <div key={event.id} className="relative md:w-[32vw] md:h-[32vw] w-[55vw] h-[55vw] shadow-overlay-reverse">
+              <div
+                key={event.id}
+                className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+              >
                 <img
                   src={event.imgSrc}
                   alt={event.name}
-                  className="aspect-square w-full h-full rounded-md rounded-tr-[5vw]"
+                  className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
                 />
-                <div className="absolute bottom-8 p-3 text-2xl">{event.name}</div>
-                <div className="absolute bottom-0 p-3">{event.venue}</div>
-                <div className="absolute bottom-0 right-0 p-3">{event.time}</div>
+                <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                  {event.name}
+                </div>
+                <div className="absolute z-40 bottom-8 p-3">{event.venue}</div>
+                {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
               </div>
             ))}
           </div>
           <div className="flex flex-wrap mb-10 gap-5">
-            {events.slice(2, 4).map((event) => (
-              <div key={event.id} className=" relative md:w-[32vw] md:h-[32vw] w-[55vw] h-[55vw] shadow-overlay-reverse">
+            {events.slice(4, 6).map((event) => (
+              <div
+                key={event.id}
+                className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+              >
                 <img
                   src={event.imgSrc}
                   alt={event.name}
-                  className="aspect-square w-full h-full rounded-md rounded-tr-[5vw]"
+                  className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
                 />
-                <div className="absolute bottom-8 p-3 text-2xl">{event.name}</div>
-                <div className="absolute bottom-0 p-3">{event.venue}</div>
-                <div className="absolute bottom-0 right-0 p-3">{event.time}</div>
+                <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                  {event.name}
+                </div>
+                <div className="absolute z-40 bottom-8 p-3">{event.venue}</div>
+                {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
               </div>
             ))}
             <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
               <CardButton
+                onClick={() => {
+                  handleClick("events");
+                }}
                 text={{ head: "View", tail: "All Events", caption: "Events" }}
               />
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="py-5 px-1 md:p-5 md:mt-0 mt-[3vw]">
-        <div className="flex flex-col">
-          <div className="flex flex-row mb-2 md:mb-5">
-            <div className="relative h-[50vh] md:h-[85vh] w-[50%] md:w-[29%] rounded-tr-[15%] hover:bg-gradient-to-t hover:from-secondary hover:to-primary">
-              <img
-                src={events.imgSrc}
-                alt=""
-                className="filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]"
-              />
-              <div className="absolute bottom-0 pb-1 md:pb-3">
-                <div className="text-accent pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl">
-                  MERCADO JUEGO
-                </div>
-                <div className="text-accent pl-1 md:pl-4 font-poppins text-sm md:text-xl">
-                  Venue
-                </div>
-              </div>
-              <div className="absolute text-accent p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0">
-                Date & Time
-              </div>
-            </div>
-            <div className="relative mt-7 md:mt-0 ml-2 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[43%] rounded-tr-[15%] bg-primary  hover:bg-gradient-to-t hover:from-secondary hover:to-primary">
-              <img
-                src={events.imgSrc}
-                alt=""
-                className="filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]"
-              />
-              <div className="absolute bottom-0 pb-1 md:pb-3">
-                <div className="text-accent pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl">
-                  MERCADO JUEGO
-                </div>
-                <div className="text-accent pl-1 md:pl-4 font-poppins text-sm md:text-xl">
-                  Venue
-                </div>
-              </div>
-              <div className="absolute text-accent p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0">
-                Date & Time
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-row md:flex-row-reverse mb-5">
-            <div className="relative -mt-8 md:mt-0 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[43%] rounded-tr-[15%] bg-primary  hover:bg-gradient-to-t hover:from-secondary hover:to-primary">
-              <img
-                src={events.imgSrc}
-                alt=""
-                className="filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]"
-              />
-              <div className="absolute bottom-0 pb-1 md:pb-3">
-                <div className="text-accent pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl">
-                  MERCADO JUEGO
-                </div>
-                <div className="text-accent pl-1 md:pl-4 font-poppins text-sm md:text-xl">
-                  Venue
-                </div>
-              </div>
-              <div className="absolute text-accent p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0">
-                Date & Time
-              </div>
-            </div>
-            <div className="relative ml-2 md:ml-0 md:mr-2 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[50%] md:w-[29%] rounded-tr-[15%] bg-primary  hover:bg-gradient-to-t hover:from-secondary hover:to-primary">
-              <img
-                src={events.imgSrc}
-                alt=""
-                className="filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]"
-              />
-              <div className="absolute bottom-0 pb-1 md:pb-3">
-                <div className="text-accent pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl">
-                  MERCADO JUEGO
-                </div>
-                <div className="text-accent pl-1 md:pl-4 font-poppins text-sm md:text-xl">
-                  Venue
-                </div>
-              </div>
-              <div className="absolute text-accent p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0">
-                Date & Time
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-wrap">
-            <div className="relative -mt-12 md:mt-0 bg-auto bg-no-repeat h-[50vh] md:h-[85vh] w-[48%] md:w-[29%] rounded-tr-[15%] bg-primary  hover:bg-gradient-to-t hover:from-secondary hover:to-primary">
-              <img
-                src={events.imgSrc}
-                alt=""
-                className="filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]"
-              />
-              <div className="absolute bottom-0 pb-1 md:pb-3">
-                <div className="text-accent pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl">
-                  MERCADO JUEGO
-                </div>
-                <div className="text-accent pl-1 md:pl-4 font-poppins text-sm md:text-xl">
-                  Venue
-                </div>
-              </div>
-              <div className="absolute text-accent p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0">
-                Date & Time
-              </div>
-            </div>
-            <div className="relative -mt-3 md:mt-0 ml-2 h-[50vh] md:h-[85vh] w-[48%] md:w-[43%] bg-primary  hover:bg-gradient-to-t hover:from-secondary hover:to-primary rounded-tr-[15%]">
-              <img
-                src={events.imgSrc}
-                alt=""
-                className="filter drop-shadow-2xl brightness-50 opacity-60 w-full h-full object-fill rounded-tr-[15%]"
-              />
-              <div className="absolute bottom-0 pb-1 md:pb-3">
-                <div className="text-accent pl-1 md:pl-4 font-poppins font-semibold text-md md:text-3xl">
-                  MERCADO JUEGO
-                </div>
-                <div className="text-accent pl-1 md:pl-4 font-poppins text-sm md:text-xl">
-                  Venue
-                </div>
-              </div>
-              <div className="absolute text-accent p-1 md:pb-3 md:pr-4 font-poppins text-sm md:text-xl bottom-0 right-0">
-                Date & Time
-              </div>
-            </div>
-            <button className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
-              <CardButton
-                text={{ head: "View", tail: "All Events", caption: "Events" }}
-              />
-            </button>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

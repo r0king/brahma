@@ -1,6 +1,6 @@
 import React from "react";
-import P1 from "../assets/images/pic1.jpeg";
-import P2 from "../assets/images/pic2.jpeg";
+import P1 from "../assets/images/workshops/cnc.jpeg";
+import P2 from "../assets/images/workshops/3dprinting.jpeg";
 import P3 from "../assets/images/pic3.jpeg";
 import P4 from "../assets/images/pic4.jpg";
 import P5 from "../assets/images/pic5.jpeg";
@@ -9,7 +9,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardButton from "./CardButton";
 
-const Workshop = () => {
+const Workshop = ({ rippleRef }) => {
+  const handleClick = (name) => {
+    // toggle circle ripple
+    rippleRef.current.classList.toggle("circle-ripple");
+    // after timeout of 1.5 sec
+    setTimeout(() => {
+      window.location.pathname = `/${name}`;
+    }, 1500);
+  };
   const images = [
     {
       name: "CNC Workshop",
@@ -73,7 +81,9 @@ const Workshop = () => {
         </h2>
         <div className=" ml-24 mb-2 w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
-            href="/"
+            onClick={() => {
+              handleClick("events");
+            }}
             text={{ head: "View", tail: "All Workshops", caption: "Workshops" }}
           />
         </div>
@@ -85,7 +95,7 @@ const Workshop = () => {
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1"
+                  className="rounded-tr-[4em] aspect-video object-top px-1"
                   src={image.src}
                   alt={`Slide ${index + 1}`}
                 />

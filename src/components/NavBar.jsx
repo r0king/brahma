@@ -6,10 +6,11 @@ import asietLogoDark from "../assets/images/asiet-logo-dark.webp";
 const NavBar = ({ rippleRef }) => {
   const [fade, setFade] = useState(false);
   const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme")) || "dark"
+    JSON.parse(localStorage.getItem("theme")) || "light"
   );
   const [showMenu, setShowMenu] = useState(false);
   const logoRef = React.createRef();
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -29,6 +30,7 @@ const NavBar = ({ rippleRef }) => {
       // set data theme as light
       document.documentElement.setAttribute("data-theme", "light");
     }
+    
   }, [theme, logoRef]);
   useEffect(() => {
     if (showMenu) {
@@ -71,17 +73,22 @@ const NavBar = ({ rippleRef }) => {
         </label>
         <div className="flex justify-end items-center w-full text-[12px] text-primary">
           <div className="hidden md:flex w-full justify-end ">
-            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
-              Speakers
-            </label>
             <label
+              onClick={() => {
+                handleClick("events");
+              }}
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+            >
+              Events
+            </label>
+            {/* <label
               className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
               onClick={() => {
                 handleClick("events");
               }}
             >
               Workshops
-            </label>
+            </label> */}
             <label
               onClick={() => {
                 handleClick("schedule");
@@ -90,8 +97,13 @@ const NavBar = ({ rippleRef }) => {
             >
               Schedule
             </label>
-            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
-              Venue
+            <label
+              onClick={() => {
+                handleClick("faq");
+              }}
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+            >
+              Faq
             </label>
             {/* <label className="p-2 pt-1 font-semibold ">about</label> */}
             <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
