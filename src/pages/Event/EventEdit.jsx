@@ -22,6 +22,21 @@ export default function EventEdit() {
     image_url: ""
   });
 
+  useEffect(() => {
+    setEventData({
+      title: document.getElementById('event_title').innerText,
+      type: document.getElementById('event_type').innerText,
+      date: document.getElementById('event_date').innerText,
+      location: document.getElementById('event_location').innerText,
+      price: document.getElementById('event_price').innerText,
+      speaker_title: document.getElementById('event_speaker_title').innerText,
+      speaker_description: document.getElementById('event_speaker_description').innerText,
+      about_title: document.getElementById('event_about_title').innerText,
+      about_description: document.getElementById('event_about_description').innerText,
+      image_url: ""
+    });
+  }, [])
+
   // useEffect(() => {
   //   setEventData(eventsData[eventId]);
   // }, [eventId]);
@@ -102,6 +117,7 @@ export default function EventEdit() {
       <div className="relative text-primary">
         <div className="md:h-[500px] md:flex ">
           <h3
+            id='event_title'
             contentEditable onClick={e => updateEventData("title", e)}
             className="text-secondary self-end font-semibold font-poppins text-4xl md:text-[3.14rem] mt-auto
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
@@ -113,13 +129,13 @@ export default function EventEdit() {
           <div className="flex flex-row w-full justify-between absolute md:static gap-2 p-2 md:gap-10 md:pl-5 z-10">
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Type</h4>
-              <p contentEditable onClick={e => updateEventData("type", e)} className="text-secondary  leading-none font-semibold font-poppins text-base md:text-xl ">
+              <p id='event_type' contentEditable onClick={e => updateEventData("type", e)} className="text-secondary  leading-none font-semibold font-poppins text-base md:text-xl ">
                 Design
               </p>
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Date</h4>
-              <p contentEditable onClick={e => updateEventData("date", e)} className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
+              <p id='event_date' contentEditable onClick={e => updateEventData("date", e)} className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Wed.3rd
                 <br />
                 09:00 - 16:00
@@ -127,7 +143,7 @@ export default function EventEdit() {
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Location</h4>
-              <p contentEditable onClick={e => updateEventData("location", e)} className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
+              <p id='event_location' contentEditable onClick={e => updateEventData("location", e)} className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 Level 100-North
                 <br />
                 Building (MTCC)
@@ -135,8 +151,8 @@ export default function EventEdit() {
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Price</h4>
-              <p contentEditable onClick={e => updateEventData("price", e)} className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
-                Starting at $323
+              <p id='event_price' className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
+                Starting at $<label onClick={e => updateEventData("price", e)} contentEditable >323</label>
               </p>
             </div>
           </div>
@@ -178,11 +194,11 @@ export default function EventEdit() {
           id="text-section"
           className="md:w-2/5 pr-[30%] md:pr-[calc((100vw-9.375rem)*1/14+.625rem)]"
         >
-          <h4 onClick={e => updateEventData("speaker_title", e)} contentEditable className="font-semibold pb-10 leading-[1.05]">
+          <h4 id='event_speaker_title' onClick={e => updateEventData("speaker_title", e)} contentEditable className="font-semibold pb-10 leading-[1.05]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum saepe
             nam amet laborum REM natus
           </h4>
-          <p onClick={e => updateEventData("speaker_description", e)} contentEditable className="text-sm">
+          <p id='event_speaker_description' onClick={e => updateEventData("speaker_description", e)} contentEditable className="text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             fuga laborum quia consectetur inventore dicta illo quo aspernatur
             sit, mollitia nostrum quam delectus quas quae eius animi labore, ex
@@ -197,11 +213,18 @@ export default function EventEdit() {
           </p>
         </div>
         <div className="">
-          <img
-            src={eventData.image_url}
-            alt=""
-            className="max-w-full w-[460px] aspect-square object-cover rounded-tr-[20%] my-5"
-          />
+          { }
+          {eventData.image_url !== "" ?
+            <img
+              src={eventData.image_url}
+              alt=""
+              className="max-w-full w-[460px] aspect-square object-cover rounded-tr-[20%] my-5"
+            />
+            :
+            <div class='bg-gray-200 h-8'>
+              <label class='m-8 text-bold text-blue-800'> Provide an image url above </label>
+            </div>
+          }
         </div>
       </div>
 
@@ -218,13 +241,13 @@ export default function EventEdit() {
           id="text-section"
           className="md:w-2/5 pr-[30%] md:pr-[calc((100vw-9.375rem)*1/14+.625rem)]"
         >
-          <h4 onClick={e => updateEventData("about_title", e)} contentEditable className="font-semibold pb-10 leading-[1.05]">
+          <h4 id='event_about_title' onClick={e => updateEventData("about_title", e)} contentEditable className="font-semibold pb-10 leading-[1.05]">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum saepe
             nam amet laborum REM natus
           </h4>
         </div>
         <div className="max-w-full w-[460px] aspect-square object-cover rounded-tr-[20%]">
-          <p onClick={e => updateEventData("about_description", e)} contentEditable className="text-sm">
+          <p id='event_about_description' onClick={e => updateEventData("about_description", e)} contentEditable className="text-sm">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             fuga laborum quia consectetur inventore dicta illo quo aspernatur
             sit, mollitia nostrum quam delectus quas quae eius animi labore, ex
