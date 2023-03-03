@@ -18,7 +18,8 @@ export default function EventEdit() {
     speaker_title: "",
     speaker_description: "",
     about_title: "",
-    about_description: ""
+    about_description: "",
+    image_url: ""
   });
 
   // useEffect(() => {
@@ -27,13 +28,17 @@ export default function EventEdit() {
 
   const sendToBackend = () => {
 
-    alert(JSON.stringify(eventData))
+    const payload = JSON.stringify(eventData)
+    alert(payload)
   }
+
+  useEffect(() => {
+    console.log(eventData)
+  }, [eventData])
 
   const updateEventData = (jsonfield, event) => {
     const value = event.target.innerText;
-    console.log(value)
-    console.log(eventData)
+    const img_value = event.target.value;
 
     if (jsonfield === "title")
       setEventData({
@@ -79,6 +84,11 @@ export default function EventEdit() {
       setEventData({
         ...eventData,
         about_description: value
+      })
+    else if (jsonfield === "image_url")
+      setEventData({
+        ...eventData,
+        image_url: img_value
       })
   }
 
@@ -130,13 +140,22 @@ export default function EventEdit() {
               </p>
             </div>
           </div>
-          <img
-            contentEditable
-            src={posterImg}
-            alt=""
-            className="max-w-full md:absolute w-[460px] aspect-square object-cover rounded-tr-[20%] my-5
-             relative right-[50%] md:left-[33%] md:top-0 "
-          />
+          <div>
+            {eventData.image_url !== "" ?
+              <img
+                src={eventData.image_url}
+                alt=""
+                className="max-w-full md:absolute w-[460px] aspect-square object-cover rounded-tr-[20%] my-5
+              relative right-[50%] md:left-[33%] md:top-0 "
+              />
+              :
+              <div>
+                <label>Enter image url: </label>
+                <input type="text" class='text-blue-800' onChange={(e => updateEventData("image_url", e))} />
+              </div>
+            }
+
+          </div>
           <div className="flex md:flex-col w-full justify-between ">
             <button className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
@@ -179,7 +198,7 @@ export default function EventEdit() {
         </div>
         <div className="">
           <img
-            src={posterImg}
+            src={eventData.image_url}
             alt=""
             className="max-w-full w-[460px] aspect-square object-cover rounded-tr-[20%] my-5"
           />
