@@ -85,8 +85,6 @@ const Workshop = ({ rippleRef }) => {
   };
 
 const handleMouseMove = (e) => {
-  console.log(e.clientX,e.clientY);
-  console.log(arrowRef.current.classList);
   if (e.clientX > half) {
     arrowRef.current.classList.remove("arrow-left");
     arrowRef.current.classList.add("arrow-right");
