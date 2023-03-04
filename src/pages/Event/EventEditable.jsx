@@ -9,7 +9,8 @@ export default function EventEditable() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(headingRef.current.innerHTML);
+    const heading = document.getElementById("heading");
+    console.log(heading.innerHTML);
   };
   useEffect(() => {
     setEventData(eventsData[eventId]);
@@ -25,6 +26,7 @@ export default function EventEditable() {
           <div className="md:h-[500px] md:flex ">
             <h3
               ref={headingRef}
+              id="heading"
               contentEditable
               className="text-secondary self-end font-semibold font-poppins text-4xl md:text-[3.14rem] mt-auto
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
