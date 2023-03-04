@@ -74,12 +74,12 @@ const Workshop = ({ rippleRef }) => {
   };
 
   return (
-    <div className="mt-10">
+    <div className="mt-32">
       <div className="flex flex-col md:flex-row">
-        <h2 className="leading-[0.75] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
+        <h2 className="ml-3 leading-[0.75] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw]">
           WORKSHOPS
         </h2>
-        <div className=" ml-24 mb-2 w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+        <div className="mx-auto md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
             onClick={() => {
               handleClick("events");

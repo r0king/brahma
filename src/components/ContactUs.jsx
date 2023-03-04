@@ -14,7 +14,7 @@ const ContactUs = () => {
     <div
       id="contact"
       ref={myRef}
-      className="flex p-3 pb-3 mt-5 md:p-6 bg-primary w-full items-center relative z-10 "
+      className="flex p-3 pb-3 mt-32 md:p-6 bg-primary w-full items-center relative z-10"
     >
       <div
         className="
@@ -24,7 +24,7 @@ const ContactUs = () => {
         {/* :CONTACT INFOS CONTAINER */}
         <div
           className="w-[90vw] col-span-full sm:col-span-3 md:col-span-2 py-4 grow
- text-primary flex flex-col  h-full md:border-r-2 md:mr-5 border-accent"
+      text-primary flex flex-col  h-full md:border-r-2 md:mr-5 border-accent"
         >
           {/* <img src={"Logo"} alt="Asiet Logo" className="   pl-0 md:pl-0    md:pt-0 pb-5" srcSet="" /> */}
           {/* ::Title Contact */}
@@ -53,9 +53,10 @@ const ContactUs = () => {
                   Staff Cordinators
                 </h3>
                 <p className="text-base font-poppins text-opacity-60 ">
-                  Musafir Ky
-                  <br /> Prof.AeroSpace <br /> Paul Martin
-                  <br /> Prof.Rocket Science
+                  Faculty 1
+                  <br /> Contact 1
+                  <br /> Faculty 2
+                  <br /> Contact 2
                 </p>
               </div>
             </div>
@@ -86,9 +87,10 @@ const ContactUs = () => {
                   Student Cordinators
                 </h3>
                 <p className="text-base font-poppins text-opacity-60 ">
-                  Musafir Ky
-                  <br /> Prof.AeroSpace <br /> Paul Martin
-                  <br /> Prof.Rocket Science
+                  Student 1
+                  <br /> Contact 1 
+                  <br /> Student 2
+                  <br /> Contact 2
                 </p>
               </div>
             </div>
@@ -97,10 +99,7 @@ const ContactUs = () => {
         </div>
 
         {/* :MAP CONTAINER */}
-        <div
-          className="rounded-tr-[3vw] w-full min-h-[30vh] pt-5 md:pt-0 transition-all duration-100 
-          hover:fixed bottom-0 left-0 hover:ml-[5vw] hover:h-[85vh] hover:w-[90vw] hover:mb-[5vw] "
-        >
+        <div className="rounded-tr-[3vw] w-full min-h-[30vh] pt-5 md:pt-0 transition-all duration-100 bottom-0 left-0">
           {/* Embed Google map */}
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6214.8211700506645!2d76.428809361558!3d10.17761954352797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0807bfa8906d61%3A0x11ad08dbd85357dc!2sAdi%20Shankara%20Institute%20of%20Engineering%20and%20Technology%20Kaladi!5e0!3m2!1sen!2sin!4v1672305829425!5m2!1sen!2sin"

@@ -92,7 +92,8 @@ body {
 }
 h1,
 p,
-/* ul, */
+ul,
+img,
 button,
 .card {
   transform: translateY(100px);
@@ -102,7 +103,8 @@ button,
 
 h1.show,
 p.show,
-/* ul.show, */
+ul.show,
+img.show,
 button.show,
 .card.show {
   transform: translateY(0);

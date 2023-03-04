@@ -10,7 +10,10 @@ import Event5 from "../assets/images/events/maze.jpeg";
 import Event6 from "../assets/images/events/spot-pic.jpeg";
 import CardButton from "./CardButton";
 // import { Parallax } from 'react-scroll-parallax';
-// import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from "react-responsive";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function DotSVG() {
   return (
@@ -28,7 +31,19 @@ function DotSVG() {
 }
 
 export default function EventsHome({ rippleRef }) {
-  // const isMobile = useMediaQuery({ maxWidth: 640 });
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    responsive: [
+      { breakpoint: 600, settings: { slidesToShow: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+    ],
+  };
+
+  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   const handleClick = (name) => {
     // toggle circle ripple
@@ -134,13 +149,13 @@ export default function EventsHome({ rippleRef }) {
   const genLen = genList.length;
 
   return (
-    <div className="mt-28 mb-48">
+    <div className="mt-48 md:mt-32">
       <div className="flex flex-col">
         <div className="flex flex-row">
           <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
             Cultural
           </h1>
-          <div className="text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-10 mt-[5vw] md:mt-[7vw] mr-2 md:mr-8">
+          <div className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mt-[-32vw] md:mt-[4vw] mr-2 md:mr-8">
             <ul className="list-none relative">
               {culList.map((item, index) => {
                 if (index < culLen / 2 - 1) {
@@ -160,7 +175,7 @@ export default function EventsHome({ rippleRef }) {
           <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
             Events
           </h1>
-          <div className="text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-10 mr-2 md:mr-8">
+          <div className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mr-2 md:mr-8">
             <ul className="list-none relative">
               {culList.map((item, index) => {
                 if (index > culLen / 2 - 1) {
@@ -177,13 +192,13 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col mt-10">
+      <div className="flex flex-col mt-60 md:mt-10">
         <div className="flex flex-row-reverse">
           <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
             General
           </h1>
           <div
-            className="text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-0 md:mr-10 mt-[5vw] md:mt-[7vw]"
+            className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.5vw] ml-2 md:ml-2 mr-4 md:mr-10 mt-[-57vw] md:mt-[1.5vw]"
             dir="rtl"
           >
             <ul className="list-none relative ">
@@ -206,7 +221,7 @@ export default function EventsHome({ rippleRef }) {
             Events
           </h1>
           <div
-            className="text-secondary font-poppins font-bold text-[2vw] ml-2 md:ml-20 md:mr-10"
+            className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.5vw] ml-2 md:ml-3 mr-4 md:mr-10"
             dir="rtl"
           >
             <ul className="list-none relative">
@@ -225,75 +240,116 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
       </div>
-      <div className="py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
-        <div className="flex flex-col">
-          <div className="flex flex-row mb-10 gap-5">
-            {events.slice(0, 2).map((event) => (
-              <div
-                key={event.id}
-                className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-              >
-                <img
-                  src={event.imgSrc}
-                  alt={event.name}
-                  className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
-                />
-                <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                  {event.name}
+      {isMobile ? (
+        <div>
+          <div className="w-full mt-10">
+            <Slider {...settings}>
+              {events.map((event, index) => (
+                <div key={index} className="text-base">
+                  <div className="flex flex-col">
+                    <img
+                      className="rounded-tr-[4em] aspect-auto object-top px-1"
+                      src={event.imgSrc}
+                      alt={`Slide ${index + 1}`}
+                    />
+                    <div className="mt-4 font-poppins font-bold pl-2">
+                      {event.name}
+                    </div>
+                    <div className="flex flex-row mt-4 font-semibold ml- 2">
+                      <div className="font-poppins ml-2">{event.venue}</div>
+                      <div className="font-poppins ml-6">{event.time}</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute z-40 bottom-8 p-3">{event.venue}</div>
-                {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-              </div>
-            ))}
+              ))}
+            </Slider>
           </div>
-          <div className="flex flex-row-reverse mb-10 gap-5">
-            {events.slice(2, 4).map((event) => (
-              <div
-                key={event.id}
-                className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-              >
-                <img
-                  src={event.imgSrc}
-                  alt={event.name}
-                  className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
-                />
-                <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                  {event.name}
-                </div>
-                <div className="absolute z-40 bottom-8 p-3">{event.venue}</div>
-                {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-              </div>
-            ))}
+          <div className="relative mt-3 md:mt-0 md:ml-5 h-[35vw] mx-auto md:mx-0 w-[95vw] md:w-[22%]">
+            <CardButton
+              onClick={() => {
+                handleClick("events");
+              }}
+              text={{ head: "View", tail: "All Events", caption: "Events" }}
+            />
           </div>
-          <div className="flex flex-wrap mb-10 gap-5">
-            {events.slice(4, 6).map((event) => (
-              <div
-                key={event.id}
-                className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-              >
-                <img
-                  src={event.imgSrc}
-                  alt={event.name}
-                  className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
-                />
-                <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                  {event.name}
+        </div>
+      ) : (
+        <div className="py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+          <div className="flex flex-col">
+            <div className="flex flex-row mb-10 gap-5">
+              {events.slice(0, 2).map((event) => (
+                <div
+                  key={event.id}
+                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                >
+                  <img
+                    src={event.imgSrc}
+                    alt={event.name}
+                    className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
+                  />
+                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                    {event.name}
+                  </div>
+                  <div className="absolute z-40 bottom-8 p-3">
+                    {event.venue}
+                  </div>
+                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                 </div>
-                <div className="absolute z-40 bottom-8 p-3">{event.venue}</div>
-                {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
+              ))}
+            </div>
+            <div className="flex flex-row-reverse mb-10 gap-5">
+              {events.slice(2, 4).map((event) => (
+                <div
+                  key={event.id}
+                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                >
+                  <img
+                    src={event.imgSrc}
+                    alt={event.name}
+                    className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
+                  />
+                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                    {event.name}
+                  </div>
+                  <div className="absolute z-40 bottom-8 p-3">
+                    {event.venue}
+                  </div>
+                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-wrap mb-10 gap-5">
+              {events.slice(4, 6).map((event) => (
+                <div
+                  key={event.id}
+                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                >
+                  <img
+                    src={event.imgSrc}
+                    alt={event.name}
+                    className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
+                  />
+                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                    {event.name}
+                  </div>
+                  <div className="absolute z-40 bottom-8 p-3">
+                    {event.venue}
+                  </div>
+                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
+                </div>
+              ))}
+              <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
+                <CardButton
+                  onClick={() => {
+                    handleClick("events");
+                  }}
+                  text={{ head: "View", tail: "All Events", caption: "Events" }}
+                />
               </div>
-            ))}
-            <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
-              <CardButton
-                onClick={() => {
-                  handleClick("events");
-                }}
-                text={{ head: "View", tail: "All Events", caption: "Events" }}
-              />
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

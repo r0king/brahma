@@ -14,7 +14,7 @@ const AboutUs = ({rippleRef}) => {
     }, 1500);
   };
   return (
-    <div className="mt-28 mb-10 overflow-hidden">
+    <div className="mt-20 md:mt-32 overflow-hidden">
       <div className="flex flex-col md:flex-row-reverse relative">
         <div className="flex flex-col order-2">
           <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-5 md:mr-7 md:ml-0">
@@ -29,7 +29,7 @@ const AboutUs = ({rippleRef}) => {
             />
           </button>
         </div>
-        <div className="order-1 mx-2 mr-10 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
+        <div className="order-1 mx-2 md:mr-10 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
           <video
             width={"800"}
             className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]"

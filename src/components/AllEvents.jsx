@@ -1,84 +1,402 @@
-import React from "react";
-import P1 from "../assets/images/pic1.jpeg";
-import P2 from "../assets/images/pic2.jpeg";
-import P3 from "../assets/images/pic3.jpeg";
-import P4 from "../assets/images/pic4.jpg";
-import P5 from "../assets/images/pic5.jpeg";
-import P6 from "../assets/images/pic6.jpeg";
+import React, { useState } from "react";
+import P1 from "../assets/images/events/dj-war.jpeg";
+import P2 from "../assets/images/events/fifa.jpeg";
+import P3 from "../assets/images/events/maze.jpeg";
+import P4 from "../assets/images/events/spot-pic.jpeg";
+import P5 from "../assets/images/events/theme_show.jpeg";
+import P6 from "../assets/images/events/voice.jpeg";
 import P7 from "../assets/images/pic7.jpeg";
+import w1 from "../assets/images/workshops/3dprinting.jpeg";
+import w2 from "../assets/images/workshops/cnc.jpeg";
+import w3 from "../assets/images/workshops/ieee.jpeg";
+import w4 from "../assets/images/workshops/iot.jpeg";
 import CardButton from "./CardButton";
 const AllEvents = () => {
   const images = [
     {
-      name: "Bike Engine Assembly",
+      name: "DJ War",
       src: P1,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "500",
+      venue: "Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "Fifa",
       src: P2,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "100",
+      venue: "PL Lab",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "Maze",
       src: P3,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "200/Team",
+      venue: "S1 CSA & S1 CS(AI)",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "Spot Photography",
       src: P4,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "100",
+      venue: "College Premise",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "Theme Show",
       src: P5,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "200",
+      venue: "Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "Voice of Brahma",
       src: P6,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "200",
+      venue: "Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
     },
     {
-      name: "Bike Engine Assembly",
+      name: "Mudhra",
       src: P7,
-      prize: "200",
-      organizer: "Pablo Stanley",
-      place: "Buenos",
-      state: "Mexico",
+      reg: "200",
+      venue: "Auditorium",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Percusion Instrument",
+      src: P7,
+      reg: "200",
+      venue: "Seminar Hall",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Choreo Night",
+      src: P7,
+      reg: "200",
+      venue: "Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Spot Dance",
+      src: P7,
+      reg: "200",
+      venue: "Outdoor",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Mime",
+      src: P7,
+      reg: "200",
+      venue: "Auditorium",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Ragam",
+      src: P7,
+      reg: "200",
+      venue: "Seminar Hall",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Stand Up Comedy",
+      src: P7,
+      reg: "150",
+      venue: "CS Seminar Hall",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Street Show",
+      src: P7,
+      reg: "100",
+      venue: "Outdoor",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Rap Battle",
+      src: P7,
+      reg: "200",
+      venue: "Mini Seminar Hall",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Band of Brahma",
+      src: P7,
+      reg: "200",
+      venue: "Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Hip Hop Battle",
+      src: P7,
+      reg: "150",
+      venue: "Auditorium",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Step N Synchro",
+      src: P7,
+      reg: "200",
+      venue: "Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Doodling",
+      src: P7,
+      reg: "100",
+      venue: "Mini Seminar Hall",
+      time: "30-03-2023 10:00 AM",
+      category: "Cultural",
+    },
+    {
+      name: "Jam",
+      src: P7,
+      reg: "150",
+      venue: "Classrooms",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Valorant",
+      src: P7,
+      reg: "150/Team",
+      venue: "Online",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Brain Cycle",
+      src: P7,
+      reg: "100",
+      venue: "Infront of Lobby",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Underarm Cricket",
+      src: P7,
+      reg: "300/Team",
+      venue: "Ground/Basketball Court",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Short Film Contest",
+      src: P7,
+      reg: "600/Team",
+      venue: "Seminar Hall",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Basketball 3S",
+      src: P7,
+      reg: "450/Team",
+      venue: "Basketball Court",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Glowball",
+      src: P7,
+      reg: "150/Team",
+      venue: "S1 ECA",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "RJ Hunt",
+      src: P7,
+      reg: "200",
+      venue: "Auditorium/Main Stage",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Game of Romms",
+      src: P7,
+      reg: "200/Team",
+      venue: "EEE S5/S6 Classroom",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Soapy Soccer",
+      src: P7,
+      reg: "300/Team",
+      venue: "Basketball Court",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Fun Zone",
+      src: P7,
+      reg: "20/Game",
+      venue: "Civil Block",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "CNC Workshop",
+      src: w2,
+      reg: "400",
+      venue: "CNC Lab",
+      time: "30-03-2023 10:00 AM",
+      category: "Workshop",
+    },
+    {
+      name: "Fire & Rescue + Dog Squad",
+      src: P7,
+      reg: "",
+      venue: "Basketball Court",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "3D Printing Workshop",
+      src: w1,
+      reg: "400",
+      venue: "CCF Lab",
+      time: "30-03-2023 10:00 AM",
+      category: "Workshops",
+    },
+    {
+      name: "IEI Workshop",
+      src: P7,
+      reg: "250",
+      venue: "Simulation Lab (Lab 7)",
+      time: "30-03-2023 10:00 AM",
+      category: "Workship",
+    },
+    {
+      name: "Paint Ball",
+      src: P7,
+      reg: "500/Team",
+      venue: "Civil Block Parking",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "IEEE Workshop",
+      src: w3,
+      reg: "100",
+      venue: "Simulation Lab (Lab 7)",
+      time: "30-03-2023 10:00 AM",
+      category: "Workshop",
+    },
+    {
+      name: "IoT Workshop",
+      src: w4,
+      reg: "300",
+      venue: "CCF Lab",
+      time: "30-03-2023 10:00 AM",
+      category: "Workshop",
+    },
+    {
+      name: "Knives Out",
+      src: P7,
+      reg: "100/Team",
+      venue: "Classroom",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Gun Expo",
+      src: P7,
+      reg: "30",
+      venue: "Mechanical Block",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Go Cart Museum",
+      src: P7,
+      reg: "30",
+      venue: "Main Block",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Cryogenic Museum",
+      src: P7,
+      reg: "50",
+      venue: "Main Block",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Photobooth With Poleroid Camera",
+      src: P7,
+      reg: "100/Pic",
+      venue: "Lawn",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Treasure Hunt",
+      src: P7,
+      reg: "250/Team",
+      venue: "College Premise",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Blind Fold",
+      src: P7,
+      reg: "",
+      venue: "Auditorium",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
+    },
+    {
+      name: "Best Manager",
+      src: P7,
+      reg: "300",
+      venue: "MBA Department",
+      time: "30-03-2023 10:00 AM",
+      category: "General",
     },
   ];
+
   return (
-    <div>
+    <div className="md:mb-32">
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
         <p className="absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-secondary">
-          (+30)
+          (46)
         </p>
         <p
           className=" text-secondary self-end font-semibold font-poppins text-lg 
            w-full leading-[0.9] tracking-tighter p-2  pb-[5vw]  mr-auto"
         >
-          Roll Up Your Sleeves For Practical Learning, Based On Real Projects
-          From Industry Pros. Meet Like-Minded Classmates & Upskill Your
-          Creative Toolkit.
+          <span className="font-morganite text-[19vw] md:text-[7vw] text-primary uppercase">
+            Total Prize Pool ₹6L{" "}
+          </span>
+          <span className="text-[6vw]">
+            Choreonite ₹80k
+            <br />
+            Theme Show ₹60k
+            <br />
+            Band of Brahma ₹30k
+            <br />
+            Mime ₹25k
+          </span>
         </p>
       </div>
 
@@ -92,33 +410,42 @@ const AllEvents = () => {
             className="mb-[12.8vw]  text-secondary self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
           >
-            Roll Up Your Sleeves For Practical Learning, Based On Real Projects
-            From Industry Pros. Meet Like-Minded Classmates & Upskill Your
-            Creative Toolkit.
+            <span className="font-morganite text-[7vw] text-primary uppercase">
+              Total Prize Pool ₹6L{" "}
+            </span>
+            <span className="text-[2vw]">
+              Choreonite ₹80k
+              <br />
+              Theme Show ₹60k
+              <br />
+              Band of Brahma ₹30k
+              <br />
+              Mime ₹25k
+            </span>
           </p>
           <div className="font-poppins absolute text-secondary  text-[3rem] font-bold  right-0">
-            (+30)
+            (46)
           </div>
         </div>
         <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] mb-[6vw]">
           <CardButton
             href="/"
-            text={{ head: "Get", tail: "Slots", caption: "Registration" }}
+            text={{ head: "Get", tail: "Slots", caption: "registration" }}
           />
         </button>
       </div>
       <button className="mt-[2vw] h-full w-full md:hidden">
         <CardButton
           href="/"
-          text={{ head: "Get", tail: "Slots", caption: "Registration" }}
+          text={{ head: "Get", tail: "Slots", caption: "registration" }}
         />
       </button>
-      <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-2 ">
+      <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3">
         {images.map((image, index) => (
-          <div key={index}>
-            <div className="flex flex-col text-primary">
+          <div key={index} className="max-w-sm">
+            <div className="flex flex-col justify-center text-primary">
               <img
-                className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:w-[50vw] px-1 card "
+                className="rounded-tr-[4em] md:w-full aspect-[3/4] hover:scale-105"
                 src={image.src}
                 alt=""
               />
@@ -126,12 +453,31 @@ const AllEvents = () => {
                 {image.name}
               </div>
               <div className="flex flex-row pl-2 mt-4 font-semibold">
-                <div className="w-12 pl-1 text-sm border-2 border-orange-500 font-poppins md:h-6 text-primary">
-                  ₹{image.prize}
+                <div className=" font-poppins text-primary">
+                  {image.reg === "" ? (
+                    "Free"
+                  ) : (
+                    <>
+                      <span className="px-1 text-sm border-2 border-orange-500">
+                        ₹{image.reg.split("/")[0]}
+                      </span>
+                      {image.reg.split("/")[1] && (
+                        <>
+                          <br />
+                          <span className="">
+                            per&nbsp;{image.reg.split("/")[1]}
+                          </span>
+                        </>
+                      )}
+                    </>
+                  )}
                 </div>
-                <div className="ml-6 font-poppins text-primary">{image.organizer}</div>
-                <div className="ml-6 font-poppins text-primary">{image.place}</div>
-                <div className="ml-6 font-poppins text-primary">{image.state}</div>
+                <div className="ml-6 font-poppins text-primary">
+                  {image.venue}
+                </div>
+                <div className="ml-6 font-poppins text-primary">
+                  {image.time}
+                </div>
               </div>
             </div>
           </div>

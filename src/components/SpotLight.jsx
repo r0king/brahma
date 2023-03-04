@@ -4,17 +4,17 @@ const SpotLight = () => {
   const isLinux = navigator.userAgent.indexOf("Linux") !== -1;
 
   return (
-    <div className="flex flex-col px-2 py-[5vh]">
+    <div className="flex flex-col px-2 mt-32">
       <div className="flex pt-[1vw] justify-center md:justify-end rounded-xl items-start">
         <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
-          36
+          3
         </h3>
         <h1
           className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >
-          TALKS
+          proshows
         </h1>
 
         <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video ml-4 md:inline rounded-xl ">
@@ -27,7 +27,7 @@ const SpotLight = () => {
       </div>
       <div className="flex flex-row-reverse pt-[1vw] justify-center md:justify-end rounded-xl align-bottom">
         <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
-          6
+          5
         </h3>
         <h1
           className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
@@ -46,7 +46,7 @@ const SpotLight = () => {
       </div>
       <div className="flex pt-[1vw] justify-center md:justify-end rounded-xl items-start">
         <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
-          3
+          46
         </h3>
         <h1
           className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${

@@ -6,28 +6,28 @@ import "./Faq.css"
 function Faq() {
        const faqs=[
         {
-            qstn:"What is award conference ?",
-            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates."
+            qstn:"What kind of events can I expect at Brahma'23?",
+            ans:"You can expect to see events such as coding contests, cultural performances, debates, quizzes, sports competitions, and much more."
         },
         {
-            qstn:"Do you offer discounts for multiple ticket purchases?",
-            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates."
+            qstn:"How can I register for Brahma'23?",
+            ans:"Typically, students can register online through the official website or in person at the college or university."
         },
         {
-            qstn:"Do you offer alternative payment options?",
-            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates."
+            qstn:"Can I volunteer for Brahma'23?",
+            ans:"Yes, you can volunteer for Brahma'23. The organizing team will put out a call for volunteers before the event."
         },
         {
-            qstn:"Will I be on camera?",
-            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates."
+            qstn:"How can I stay updated on the latest news and information about Brahma'23?",
+            ans:"You can stay updated on the latest news and information about us by visiting the official website and following the event on social media."
         },
         {
-            qstn:"How will ticket holders access the event once they have registered?",
-            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates."
+            qstn:"Are there any registration fees for participating in the fest?",
+            ans:"The registration fees, if any, will be mentioned on the website."
         },
         {
-            qstn:"Will attendees get access to the presentation slides?",
-            ans:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates."
+            qstn:"Can I participate in more than one event?",
+            ans:"Yes, you can participate in multiple events if they do not clash with each other."
         }
        ]
     // const handleAccordian=(e)=>{
@@ -94,7 +94,7 @@ function Faq() {
                         </div>
                         <div className="faq_answer text-primary">
                             <p className={selected===index?'content-show':'content-hide'}>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi cum quibusdam itaque in iusto adipisci dignissimos tempore hic deleniti voluptates.
+                                {ele.ans}
                             </p>
                         </div>
                     </article>

@@ -97,8 +97,7 @@ const Schedule = () => {
                     className=" text-secondary self-end font-semibold font-poppins text-lg 
            w-full leading-[0.9] tracking-tighter p-2  pb-[5vw]  mr-auto"
                 >
-                    Roll Up Your Sleeves For Practical Learning, Based On Real Projects From Industry Pros.
-                    Meet Like-Minded Classmates & Upskill Your Creative Toolkit.
+                    The schedule for our tech fest is packed with exciting events and activities, including workshops & events. Stay tuned for updates and timings for each event.
                 </p>
             </div>
 
@@ -112,7 +111,7 @@ const Schedule = () => {
                         className="mb-[12.8vw]  text-secondary self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
                     >
-                        Roll Up Your Sleeves For Practical Learning, Based On Real Projects From Industry Pros. Meet Like-Minded Classmates & Upskill Your Creative Toolkit.
+                        The schedule for our tech fest is packed with exciting events and activities, including workshops & events. Stay tuned for updates and timings for each vent.
                     </p>
 
                 </div>

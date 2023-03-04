@@ -47,7 +47,7 @@ export default class HomePage extends Component {
         <div className="card">
           <SpotLight />
         </div>
-        <div className="h-[35vh]">
+        <div className="h-[35vh] mt-32">
           <CardButton
             onClick={() => {
               handleClick("schedule");

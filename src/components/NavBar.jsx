@@ -10,7 +10,7 @@ const NavBar = ({ rippleRef }) => {
   );
   const [showMenu, setShowMenu] = useState(false);
   const logoRef = React.createRef();
-  
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -30,7 +30,6 @@ const NavBar = ({ rippleRef }) => {
       // set data theme as light
       document.documentElement.setAttribute("data-theme", "light");
     }
-    
   }, [theme, logoRef]);
   useEffect(() => {
     if (showMenu) {
@@ -58,31 +57,42 @@ const NavBar = ({ rippleRef }) => {
       <div className="flex justify-end items-center w-full">
         <label
           id="logo"
-          className={`font-semibold pl-[4vw] relative z-[55] ${
+          className={`font-semibold pl-[4vw] relative z-[55] cursor-pointer ${
             fade
               ? "opacity-0 transition-opacity duration-500"
               : "opacity-100 transition-opacity duration-500"
           }`}
+          onClick={() => {
+            handleClick("");
+          }}
         >
           <img
             src={asietLogo}
             ref={logoRef}
             alt="logo"
-            className=" md:w-[9vw] p-2 md:pt-1  w-[40vw]"
+            className=" md:w-[12vw] p-2 md:pt-2  w-[40vw]"
           />
         </label>
         <div className="flex justify-end items-center w-full text-[12px] text-primary">
-          <div className="hidden md:flex w-full justify-end ">
+          <div className="hidden md:flex w-full justify-end">
+            <label
+              onClick={() => {
+                handleClick("");
+              }}
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer"
+            >
+              Home
+            </label>
             <label
               onClick={() => {
                 handleClick("events");
               }}
-              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer"
             >
               Events
             </label>
             {/* <label
-              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer"
               onClick={() => {
                 handleClick("events");
               }}
@@ -93,7 +103,7 @@ const NavBar = ({ rippleRef }) => {
               onClick={() => {
                 handleClick("schedule");
               }}
-              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer"
             >
               Schedule
             </label>
@@ -101,19 +111,19 @@ const NavBar = ({ rippleRef }) => {
               onClick={() => {
                 handleClick("faq");
               }}
-              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]"
+              className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer"
             >
-              Faq
+              FAQ
             </label>
             {/* <label className="p-2 pt-1 font-semibold ">about</label> */}
-            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
+            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer">
               About
             </label>
-            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6]">
+            <label className="p-2 hover:opacity-100 pt-1 font-bold opacity-[0.6] cursor-pointer">
               Contact Us
             </label>
           </div>
-          <label className="p-2 md:hidden hover:opacity-100 md:pt-1 font-bold opacity-[0.6]">
+          <label className="p-2 md:hidden hover:opacity-100 md:pt-1 font-bold opacity-[0.6] cursor-pointer">
             <button
               onClick={() => {
                 setShowMenu(!showMenu);
@@ -122,7 +132,7 @@ const NavBar = ({ rippleRef }) => {
               Menu
             </button>
           </label>
-          <label className="swap swap-rotate pr-1 py-2 md:pt-1 opacity-70 hover:opacity-100">
+          <label className="swap swap-rotate py-3 pr-1 md:pt-1 opacity-70 hover:opacity-100">
             <input
               type="checkbox"
               checked={theme === "dark" ? true : false}
@@ -132,14 +142,14 @@ const NavBar = ({ rippleRef }) => {
               }}
             />
             <svg
-              className="swap-off fill-primary  focus:fill-white aspect-square w-5"
+              className="swap-off fill-primary  focus:fill-white aspect-square w-4"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
               <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
             </svg>
             <svg
-              className="swap-on fill-primary aspect-square w-5 "
+              className="swap-on fill-primary aspect-square w-4 "
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -185,20 +195,39 @@ const NavBar = ({ rippleRef }) => {
               <line x1={100} y1={10} x2={10} y2={100} strokeWidth={2} />
             </svg>
           </button>
-          <label className="hover:opacity-50 transition-opacity">
-            Speakers
+          <label
+            className="hover:opacity-50 transition-opacity"
+            onClick={() => {
+              handleClick("");
+            }}
+          >
+            Home
           </label>
-          <label className="hover:opacity-50 transition-opacity">
-            Workshops
+          <label
+            onClick={() => {
+              handleClick("events");
+            }}
+            className="hover:opacity-50 transition-opacity"
+          >
+            Events
           </label>
-          <label className="hover:opacity-50 transition-opacity">
+          <label
+            onClick={() => {
+              handleClick("schedule");
+            }}
+            className="hover:opacity-50 transition-opacity"
+          >
             Schedule
           </label>
-          <label className="hover:opacity-50 transition-opacity">Venue</label>
-          <label className="hover:opacity-50 transition-opacity">About</label>
-          <label className="hover:opacity-50 transition-opacity">
-            Get Tickets
+          <label
+            onClick={() => {
+              handleClick("faq");
+            }}
+            className="hover:opacity-50 transition-opacity"
+          >
+            FAQ
           </label>
+          <label className="hover:opacity-50 transition-opacity">About</label>
           <label className="hover:opacity-50 transition-opacity border-b-2 border-accent pb-10">
             Contact Us
           </label>
