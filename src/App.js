@@ -19,7 +19,7 @@ function App() {
     hours = today.getHours();
   const headings = document.querySelectorAll("h1");
   const paragraphs = document.querySelectorAll("p");
-  const listItems = document.querySelectorAll("ul");
+  // const listItems = document.querySelectorAll("ul");
   const buttons = document.querySelectorAll("button");
   const cards = document.querySelectorAll("card");
   const images = document.querySelectorAll("img");
@@ -41,9 +41,9 @@ function App() {
     observer.observe(paragraph);
   });
 
-  listItems.forEach((listItem) => {
-    observer.observe(listItem);
-  });
+  // listItems.forEach((listItem) => {
+  //   observer.observe(listItem);
+  // });
 
   buttons.forEach((button) => {
     observer.observe(button);

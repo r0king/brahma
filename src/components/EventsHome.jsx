@@ -153,7 +153,7 @@ export default function EventsHome({ rippleRef }) {
     <div className="mt-48 md:mt-32">
       <div className="flex flex-col">
         <div className="flex flex-row">
-          <Parallax translateY={isMobile ? [-130, 50] : [-10, 30]}>
+          <Parallax translateY={isMobile ? [-130, 50] : [-20, 30]}>
             <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
               Cultural
             </h2>
@@ -175,7 +175,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
         <div className="flex flex-row">
-          <Parallax translateY={isMobile ? [-50, 50] : [0, 30]}>
+          <Parallax translateY={isMobile ? [-50, 50] : [-30, 30]}>
             <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
               Events
             </h2>

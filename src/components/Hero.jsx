@@ -10,18 +10,18 @@ export default function Hero() {
   const [loaded, setLoaded] = React.useState(false);
   return (
     <section className="pb-[5vw] pl-0 pr-0 relative pt-[0.5vw]">
-      <Parallax
-        translateY={isMobile ? [0, 0] : [0, 10]}
-        translateX={isMobile ? [100, 70] : [70, 70]}
-        opacity = {isMobile?[1,1]:[200,0.1]}
-        // rotateY={isMobile ? [40, -40] : [0, 0]}
-        easing="easeInOut"
-        className="z-10 absolute"
+      <div
+        className={`md:absolute ${
+          loaded ? "" : "hidden"
+        } top-[4vw] aspect-auto pt-[16vw] md:pt-0 md:left-[22.5vw] z-10 w-[55vw] md:w-[32vw]`}
       >
-        <div
-          className={`md:absolute ${
-            loaded ? "" : "hidden"
-          } top-[4vw] aspect-auto pt-[16vw] md:pt-0 md:left-[22.5vw] z-10 w-[55vw] md:w-[32vw]`}
+        <Parallax
+          translateY={isMobile ? [0, 0] : [0, 10]}
+          // translateX={isMobile ? [100, 70] : [70, 70]}
+          opacity={isMobile ? [1, 1] : [2, -0.1]}
+          // rotateY={isMobile ? [40, -40] : [0, 0]}
+          easing="easeInOut"
+          className="z-10 absolute"
         >
           <img
             src={isMobile ? logoAnimationM : logoAnimationD}
@@ -31,8 +31,8 @@ export default function Hero() {
             alt="logo"
             className="w-full h-full"
           />
-        </div>
-      </Parallax>
+        </Parallax>
+      </div>
       <div className="relative pl-[5vw] h-screen md:h-auto">
         <Parallax
           translateY={isMobile ? [0, 0] : [130, -30]}
@@ -67,7 +67,8 @@ export default function Hero() {
           font-poppins font-semibold text-primary text-xs leading-4          
           "
             >
-              Welcome to BRAHMA'23, where technology meets culture in a unique celebration that promises to be an unforgettable experience.
+              Welcome to BRAHMA'23, where technology meets culture in a unique
+              celebration that promises to be an unforgettable experience.
             </p>
           </div>
           <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">

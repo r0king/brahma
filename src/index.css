@@ -92,7 +92,6 @@ body {
 }
 h1,
 p,
-ul,
 img,
 button,
 .card {
@@ -103,7 +102,6 @@ button,
 
 h1.show,
 p.show,
-ul.show,
 img.show,
 button.show,
 .card.show {
