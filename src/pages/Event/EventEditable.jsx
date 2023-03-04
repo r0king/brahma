@@ -82,8 +82,8 @@ export default function EventEditable() {
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Price</h4>
-              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
-                Starting at $<label id='event_price' contentEditable>323</label>
+              <p id='event_price' contentEditable className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
+                Starting at $323
               </p>
             </div>
           </div>
