@@ -11,6 +11,7 @@ import Workshop from "../components/Workshop";
 import MarqueeScroll from "../components/MarqueeScroll";
 // import FollowUs from "../components/FollowUs";
 import CardButton from "../components/CardButton";
+import Carousel from "../components/Carousel";
 
 export default class HomePage extends Component {
   render() {
