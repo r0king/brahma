@@ -17,7 +17,7 @@ export default function Hero() {
           opacity={isMobile ? [1, 1] : [2, -0.1]}
           // rotateY={isMobile ? [40, -40] : [0, 0]}
           easing="easeInOut"
-          className="z-10 absolute right-0 md:left-[22.5vw] "
+          className="z-10 absolute right-0 md:left-[22.5vw] md:w-[32vw]"
         >
           <img
             src={isMobile ? logoAnimationM : logoAnimationD}
@@ -25,7 +25,7 @@ export default function Hero() {
               setLoaded(true);
             }}
             alt="logo"
-            className="aspect-auto  pt-[16vw] md:pt-0 z-10 w-[55vw] md:w-[32vw]"
+            className="aspect-auto pt-[16vw] md:pt-0 z-10 w-[55vw] "
           />
         </Parallax>
       </div>
@@ -102,7 +102,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-[10vh] opacity-40">
+      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-[10vh] md:bottom-0 opacity-40">
         <ul className="marquee__content" aria-hidden="true">
           <li>&nbsp; Brahma'23 &nbsp;</li>
           <li>&nbsp; Brahma'23 &nbsp;</li>
