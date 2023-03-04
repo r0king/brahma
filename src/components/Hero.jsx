@@ -10,18 +10,14 @@ export default function Hero() {
   const [loaded, setLoaded] = React.useState(false);
   return (
     <section className="pb-[5vw] pl-0 pr-0 relative pt-[0.5vw]">
-      <div
-        className={`md:absolute ${
-          loaded ? "" : "hidden"
-        } top-[4vw] aspect-auto pt-[16vw] md:pt-0 md:left-[22.5vw] z-10 w-[55vw] md:w-[32vw]`}
-      >
+      <div className={`md:absolute ${loaded ? "" : "hidden"} top-[4vw]  `}>
         <Parallax
-          translateY={isMobile ? [0, 0] : [0, 10]}
+          translateY={isMobile ? [30, -30] : [0, 10]}
           // translateX={isMobile ? [100, 70] : [70, 70]}
           opacity={isMobile ? [1, 1] : [2, -0.1]}
           // rotateY={isMobile ? [40, -40] : [0, 0]}
           easing="easeInOut"
-          className="z-10 absolute"
+          className="z-10 absolute right-0 md:left-[22.5vw] "
         >
           <img
             src={isMobile ? logoAnimationM : logoAnimationD}
@@ -29,7 +25,7 @@ export default function Hero() {
               setLoaded(true);
             }}
             alt="logo"
-            className="w-full h-full"
+            className="aspect-auto  pt-[16vw] md:pt-0 z-10 w-[55vw] md:w-[32vw]"
           />
         </Parallax>
       </div>
@@ -71,10 +67,10 @@ export default function Hero() {
               celebration that promises to be an unforgettable experience.
             </p>
           </div>
-          <div className="flex justify-center w-full mt-[-25vh] md:mt-0 pr-3 md:pr-0">
-            <div className="absolute top-[60%] w-full sm:top-[70%] md:top-[50%] md:right-0">
+          <div className="flex justify-center w-full md:mt-0 pr-3 md:pr-0">
+            <div className="absolute top-[50%] w-full sm:top-[70%] md:top-[50%] md:right-0">
               <Parallax
-                translateY={isMobile ? [0, 0] : [60, -30]}
+                translateY={isMobile ? [0, -40] : [60, -30]}
                 easing="ease"
               >
                 <h1 className="md:text-right text-primary font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
@@ -84,7 +80,7 @@ export default function Hero() {
               </Parallax>
               <div className="absolute w-max md:top-[90%] right-4 md:right-0  md:flex">
                 <Parallax
-                  translateY={isMobile ? [20, -40] : [20, -40]}
+                  translateY={isMobile ? [-20, -60] : [20, -40]}
                   easing="ease"
                 >
                   <h1
@@ -106,7 +102,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-0 opacity-40">
+      <div className="marquee font-poppins md:text-[1.2vw] absolute bottom-[10vh] opacity-40">
         <ul className="marquee__content" aria-hidden="true">
           <li>&nbsp; Brahma'23 &nbsp;</li>
           <li>&nbsp; Brahma'23 &nbsp;</li>

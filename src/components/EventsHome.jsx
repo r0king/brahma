@@ -34,12 +34,16 @@ function DotSVG() {
 export default function EventsHome({ rippleRef }) {
   const settings = {
     infinite: true,
+    centerMode: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
     slidesToScroll: 1,
     swipeToSlide: true,
+    pauseOnHover: true,
     responsive: [
-      { breakpoint: 600, settings: { slidesToShow: 1 } },
+      { breakpoint: 600, settings: { slidesToShow: 1.01 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
     ],
   };
@@ -153,7 +157,7 @@ export default function EventsHome({ rippleRef }) {
     <div className="mt-48 md:mt-32">
       <div className="flex flex-col">
         <div className="flex flex-row">
-          <Parallax translateY={isMobile ? [-130, 50] : [-20, 30]}>
+          <Parallax translateY={isMobile ? [-130, 50] : [-40, 20]}>
             <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
               Cultural
             </h2>
@@ -175,7 +179,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
         <div className="flex flex-row">
-          <Parallax translateY={isMobile ? [-50, 50] : [-30, 30]}>
+          <Parallax translateY={isMobile ? [-50, 50] : [-30, 40]}>
             <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
               Events
             </h2>
@@ -199,7 +203,7 @@ export default function EventsHome({ rippleRef }) {
       </div>
       <div className="flex flex-col mt-60 md:mt-10">
         <div className="flex flex-row-reverse">
-          <Parallax translateY={isMobile ? [-200, 50] : [-10, 30]}>
+          <Parallax translateY={isMobile ? [-200, 50] : [-30, 30]}>
             <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
               General
             </h2>
@@ -224,7 +228,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
         <div className="flex flex-row-reverse">
-          <Parallax translateY={isMobile ? [-50, 50] : [0, 30]}>
+          <Parallax translateY={isMobile ? [-50, 50] : [-10, 40]}>
             <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
               Events
             </h2>
