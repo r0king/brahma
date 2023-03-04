@@ -14,6 +14,7 @@ import NavBar from "./components/NavBar";
 import Sponsors from "./components/Sponsors";
 import ContactUs from "./components/ContactUs";
 import FollowUs from "./components/FollowUs";
+import EventEditable from "./pages/Event/EventEditable";
 
 function App() {
   const headings = document.querySelectorAll("h1");
@@ -83,7 +84,7 @@ function App() {
               <Route exact path="/schedule" element={<Schedule />} />
               <Route exact path="/events" element={<AllEvents />} />
               <Route exact path="/event/:eventId" element={<Event />} />
-              <Route exact path="/eventedit/:eventId" element={<EventEdit />} />
+              <Route exact path="/eventedit/:eventId" element={<EventEditable />} />
             </Routes>
           </BrowserRouter>
           <Sponsors />
