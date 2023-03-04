@@ -14,6 +14,7 @@ import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Parallax } from "react-scroll-parallax";
 
 function DotSVG() {
   return (
@@ -152,9 +153,11 @@ export default function EventsHome({ rippleRef }) {
     <div className="mt-48 md:mt-32">
       <div className="flex flex-col">
         <div className="flex flex-row">
-          <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
-            Cultural
-          </h1>
+          <Parallax translateY={isMobile ? [-130, 50] : [-10, 30]}>
+            <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
+              Cultural
+            </h2>
+          </Parallax>
           <div className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mt-[-32vw] md:mt-[4vw] mr-2 md:mr-8">
             <ul className="list-none relative">
               {culList.map((item, index) => {
@@ -172,9 +175,11 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
         <div className="flex flex-row">
-          <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
-            Events
-          </h1>
+          <Parallax translateY={isMobile ? [-50, 50] : [0, 30]}>
+            <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
+              Events
+            </h2>
+          </Parallax>
           <div className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mr-2 md:mr-8">
             <ul className="list-none relative">
               {culList.map((item, index) => {
@@ -194,9 +199,11 @@ export default function EventsHome({ rippleRef }) {
       </div>
       <div className="flex flex-col mt-60 md:mt-10">
         <div className="flex flex-row-reverse">
-          <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
-            General
-          </h1>
+          <Parallax translateY={isMobile ? [-200, 50] : [-10, 30]}>
+            <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
+              General
+            </h2>
+          </Parallax>
           <div
             className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.5vw] ml-2 md:ml-2 mr-4 md:mr-10 mt-[-57vw] md:mt-[1.5vw]"
             dir="rtl"
@@ -217,9 +224,11 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
         <div className="flex flex-row-reverse">
-          <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
-            Events
-          </h1>
+          <Parallax translateY={isMobile ? [-50, 50] : [0, 30]}>
+            <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75]">
+              Events
+            </h2>
+          </Parallax>
           <div
             className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.5vw] ml-2 md:ml-3 mr-4 md:mr-10"
             dir="rtl"
