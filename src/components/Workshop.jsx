@@ -1,14 +1,13 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import P1 from "../assets/images/workshops/cnc.jpeg";
 import P2 from "../assets/images/workshops/3dprinting.jpeg";
-import P3 from "../assets/images/pic3.jpeg";
-import P4 from "../assets/images/pic4.jpg";
-import P5 from "../assets/images/pic5.jpeg";
+import P3 from "../assets/images/workshops/ieee.jpeg";
+import P4 from "../assets/images/workshops/iot.jpeg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CardButton from "./CardButton";
-import '../App.css'
+import "../App.css";
 
 const Workshop = ({ rippleRef }) => {
   const handleClick = (name) => {
@@ -19,46 +18,38 @@ const Workshop = ({ rippleRef }) => {
       window.location.pathname = `/${name}`;
     }, 1500);
   };
-  const images = [
+  const events = [
     {
       name: "CNC Workshop",
       src: P1,
-      regFees: "400",
-      organizer: "Pablo Stanley",
+      regFees: "",
+      organizer: "9:00AM",
       place: "CNC Lab",
-      Date: "31-03-2023",
+      Date: "Wed, 29 Mar 2023",
     },
     {
       name: "3D Printing Workshop",
       src: P2,
-      regFees: "400",
-      organizer: "Pablo Stanley",
+      regFees: "",
+      organizer: "9:00AM",
       place: "CCF Lab",
-      Date: "31-03-2023",
-    },
-    {
-      name: "IEI Workshop ",
-      src: P3,
-      regFees: "250",
-      organizer: "Pablo Stanley",
-      place: "Simulation Lab (Lab 7)",
-      Date: "31-03-2023",
+      Date: "Wed, 29 Mar 2023 ",
     },
     {
       name: "IEEE Workshop",
-      src: P4,
-      regFees: "100",
-      organizer: "Pablo Stanley",
+      src: P3,
+      regFees: "",
+      organizer: "9:00AM",
       place: "Simulation Lab (Lab 7)",
-      Date: "31-03-2023",
+      Date: "Wed, 29 Mar 2023",
     },
     {
       name: "IoT Workshop",
-      src: P5,
-      regFees: "300",
-      organizer: "Pablo Stanley",
+      src: P4,
+      regFees: "",
+      organizer: "9:00AM",
       place: "CCF Lab",
-      Date: "31-03-2023",
+      Date: "Wed, 29 Mar 2023",
     },
   ];
 
@@ -66,14 +57,14 @@ const Workshop = ({ rippleRef }) => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,  
+    slidesToScroll: 1,
     responsive: [
       { breakpoint: 600, settings: { slidesToShow: 1 } },
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
     ],
   };
   const slickRef = useRef(null);
-  const half=window.innerWidth/2;
+  const half = window.innerWidth / 2;
   const arrowRef = React.useRef(null);
 
   const handleCarouselClick = (e) => {
@@ -84,17 +75,15 @@ const Workshop = ({ rippleRef }) => {
     }
   };
 
-const handleMouseMove = (e) => {
-  if (e.clientX > half) {
-    arrowRef.current.classList.remove("arrow-left");
-    arrowRef.current.classList.add("arrow-right");
-  } else {
-    arrowRef.current.classList.remove("arrow-right");
-    arrowRef.current.classList.add("arrow-left");
-  }
-};
- 
-
+  const handleMouseMove = (e) => {
+    if (e.clientX > half) {
+      arrowRef.current.classList.remove("arrow-left");
+      arrowRef.current.classList.add("arrow-right");
+    } else {
+      arrowRef.current.classList.remove("arrow-right");
+      arrowRef.current.classList.add("arrow-left");
+    }
+  };
 
   return (
     <div className="mt-32">
@@ -112,27 +101,38 @@ const handleMouseMove = (e) => {
         </div>
       </div>
 
-        
-      <div className="w-full arrow-right " onMouseMove={handleMouseMove} ref={arrowRef}  onClick={handleCarouselClick}>
+      <div
+        className="w-full arrow-right "
+        onMouseMove={handleMouseMove}
+        ref={arrowRef}
+        onClick={handleCarouselClick}
+      >
         <Slider {...settings} ref={slickRef}>
-          {images.map((image, index) => (
+          {events.map((image, index) => (
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] h-[50vw] sm:h-[30vw] md:h-[30vw] md:max-h-[40vh] md:max-w-[50vw] px-1 "
+                  className="rounded-tr-[4em] px-1 w-full aspect-[4/3]"
                   src={image.src}
                   alt={`Slide ${index + 1}`}
                 />
                 <div className="text-lg mt-4 font-poppins font-bold pl-2">
                   {image.name}
                 </div>
-                <div className="flex flex-row mt-4 font-semibold pl-2">
-                  <div className="border-2 text-sm font-poppins w-12 md:h-6 pl-1 border-orange-500">
-                    ₹{image.regFees}
-                  </div>
-                  <div className="font-poppins ml-6">{image.organizer}</div>
-                  <div className="font-poppins ml-6">{image.place}</div>
-                  <div className="font-poppins ml-6">{image.Date}</div>
+                <div className="flex flex-row mt-4 font-semibold pl-2 gap-5">
+                  {/* if registration frees then show */}
+                  {image.regFees === "" ? (
+                    <></>
+                  ) : (
+                    <>
+                      <div className="border-2 text-sm font-poppins w-12 md:h-6 pl-1 border-orange-500">
+                        {image.regFees}
+                      </div>
+                    </>
+                  )}
+                  <div className="font-poppins">{image.organizer}</div>
+                  <div className="font-poppins">{image.place}</div>
+                  <div className="font-poppins">{image.Date}</div>
                 </div>
               </div>
             </div>

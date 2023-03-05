@@ -9,9 +9,7 @@ import "./HomePage.css";
 import Workshop from "../components/Workshop";
 // import Sponsors from "../components/Sponsors";
 import MarqueeScroll from "../components/MarqueeScroll";
-// import FollowUs from "../components/FollowUs";
 import CardButton from "../components/CardButton";
-import Carousel from "../components/Carousel";
 
 export default class HomePage extends Component {
   render() {
@@ -42,9 +40,7 @@ export default class HomePage extends Component {
         <div className="card">
           <EventsHome rippleRef={this.props.rippleRef} />
         </div>
-        <div className="card">
-          <Workshop rippleRef={this.props.rippleRef} />
-        </div>
+        <Workshop rippleRef={this.props.rippleRef} />
         <div className="card">
           <SpotLight />
         </div>
@@ -58,8 +54,6 @@ export default class HomePage extends Component {
           />
         </div>
         <MarqueeScroll />
-        {/* <div className="card"><Sponsors /></div> */}
-        {/* <ContactUs /> */}
       </div>
     );
   }

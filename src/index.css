@@ -70,22 +70,27 @@ body {
   height: 3em;
   border-radius: 100%;
   animation: ripple-scale 2s ease;
-  transform: scale(250);
-  border: var(--color-primary) 1px solid;
-  
+  border-color: var(--color-primary);
+  border-style: solid;
+  border-width: 1px;
+  bottom: -120%;
+  left: -50%;
 }
 
 @keyframes ripple-scale {
   0% {
-    transform: scale(0);
+    width: 3em;
+    height: 3em;
   }
   90% {
-    transform: scale(250);
+    width: 250em;
+    height: 250em;
   }
-  100%{
+  100% {
     display: none;
   }
 }
+
 h1,
 p,
 img,
