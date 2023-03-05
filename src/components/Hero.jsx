@@ -59,7 +59,7 @@ export default function Hero() {
           >
             <p
               className="
-          relative pb-2.5 pr-9 overflow-y-scroll max-h-[8rem]
+          relative pb-2.5 pr-9 overflow-y-scroll max-h-[8rem] 
           font-poppins font-semibold text-primary text-xs leading-4          
           "
             >

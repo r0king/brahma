@@ -4,7 +4,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import HomePage from "./pages/HomePage";
 import Faq from "./pages/FAQ/Faq";
-import Event from "./pages/Event/Event";
+// import Event from "./pages/Event/Event";
 import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
@@ -29,7 +29,7 @@ function App() {
       entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
       });
-    },
+    }
     // { threshold: 0.9 }
   );
 
@@ -62,7 +62,6 @@ function App() {
 
   useEffect(() => {
     const theme = JSON.parse(localStorage.getItem("theme"));
-    // console.log()
     if (theme === undefined || theme === null) {
       if (hours > 6 && hours < 18) {
         localStorage.setItem("theme", JSON.stringify("light"));
@@ -95,7 +94,17 @@ function App() {
               <Route exact path="/faq" element={<Faq />} />
               <Route exact path="/schedule" element={<Schedule />} />
               <Route exact path="/events" element={<AllEvents />} />
-              <Route exact path="/event/:eventId" element={<Event />} />
+              <Route
+                path="*"
+                element={
+                  <>
+                    <h1 className="text-center text-primary font-morganite leading-none py-[5vw] text-[10vw] uppercase">
+                      Oops, looks like you stumbled upon a page that's as lost
+                      as you are.
+                    </h1>
+                  </>
+                }
+              />
             </Routes>
           </BrowserRouter>
           {/* <Sponsors /> */}

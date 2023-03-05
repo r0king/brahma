@@ -37,13 +37,9 @@ export default class HomePage extends Component {
       <div className="bg-accent text-primary overflow-x-clip transition-all duration-500">
         <Hero />
         <AboutUs rippleRef={this.props.rippleRef} />
-        <div className="card">
-          <EventsHome rippleRef={this.props.rippleRef} />
-        </div>
+        <EventsHome rippleRef={this.props.rippleRef} />
         <Workshop rippleRef={this.props.rippleRef} />
-        <div className="card">
-          <SpotLight />
-        </div>
+        <SpotLight />
         <div className="h-[35vh] mt-32">
           <CardButton
             onClick={() => {

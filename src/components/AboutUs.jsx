@@ -4,7 +4,7 @@ import React from "react";
 import brahmaVideo from "../assets/videos/brahmaVideo.mp4";
 import CardButton from "./CardButton";
 
-const AboutUs = ({rippleRef}) => {
+const AboutUs = ({ rippleRef }) => {
   const handleClick = (name) => {
     // toggle circle ripple
     rippleRef.current.classList.toggle("circle-ripple");
@@ -14,7 +14,7 @@ const AboutUs = ({rippleRef}) => {
     }, 1500);
   };
   return (
-    <div className="mt-20 md:mt-32 overflow-hidden">
+    <div className="mt-20 md:mt-32 md:mb-[30vh]">
       <div className="flex flex-col md:flex-row-reverse relative">
         <div className="flex flex-col order-2">
           <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-5 md:mr-7 md:ml-0">
@@ -44,14 +44,13 @@ const AboutUs = ({rippleRef}) => {
         Flagged off in 2003 as a technical festival of the students of Adi
         Shankara Institute of Engineering and Technology, our festival is a
         showcase of innovation, creativity and diversity bringing together
-        students from across India to explore their talents and
-        learn from each other. Brahma witnesses footfall of 3500+
-        undergraduates, 70+ technical events, 45+ cultural competitions,
-        attractive prize pools worth 1 Lakh+ in tandem with 2+
-        proshows each year. Scheduled to be a hybrid event comprising of online
-        and offline events, Brahma 2023 offers thrilling competitions, exciting
-        events , dynamic workshops, captivating live concert and
-        electrifying DJ night.
+        students from across India to explore their talents and learn from each
+        other. Brahma witnesses footfall of 3500+ undergraduates, 70+ technical
+        events, 45+ cultural competitions, attractive prize pools worth 1 Lakh+
+        in tandem with 2+ proshows each year. Scheduled to be a hybrid event
+        comprising of online and offline events, Brahma 2023 offers thrilling
+        competitions, exciting events , dynamic workshops, captivating live
+        concert and electrifying DJ night.
       </p>
     </div>
   );
