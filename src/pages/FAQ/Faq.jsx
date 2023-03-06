@@ -104,14 +104,14 @@ function Faq() {
                 
             </div>
         </div>
-        <div className="part2 font-poppins">
+        {/* <div className="part2 font-poppins">
             <div className="additional_contact text-primary">
                 <h1 className='text-secondary font-morganite'>Additional Contact</h1>
                 <p className='name'>Ajay Antu</p>
                 <p className='role'>Sample Role here</p>
                 <p className='email'>name@gmail.com</p>
             </div>
-        </div>
+        </div> */}
       </div>
     </>
   )
