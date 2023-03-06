@@ -37,7 +37,7 @@ const ContactUs = () => {
           >
             Contact Us
           </h2>
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <div className="flex flex-col h-full">
               {/* ::Address */}
               <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
@@ -46,32 +46,7 @@ const ContactUs = () => {
                   5CHJ+758,
                   <br /> Vidya Bharathi Nagar, <br /> Mattoor, Kalady,
                   <br /> Ernakulam, Kerala 683574
-                </p>
-              </div>
-              <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
-                <h3 className="text-lg font-poppins font-semibold">
-                  Staff Cordinators
-                </h3>
-                <p className="text-base font-poppins text-opacity-60 ">
-                  Faculty 1
-                  <br /> Contact 1
-                  <br /> Faculty 2
-                  <br /> Contact 2
-                </p>
-              </div>
-            </div>
-            {/* ::Contact */}
-            <div className="flex flex-col h-full">
-              <div className="mt-5 sm:mt-5 space-y-3 text-accent px-5 ">
-                <div className="space-y-1 text-base text-opacity-60">
-                  <p className="font-poppins">
-                    <br />
-                    <br />
-                    qwer : +91-123456789
-                    <br />
-                    asdf : +91-123457678
-                    <br />
-                  </p>
+                  <br />
                   <a
                     href="mailto:Brahma.in"
                     aria-label="mail"
@@ -79,18 +54,30 @@ const ContactUs = () => {
                   >
                     Brahma.in
                   </a>
+                </p>
+              </div>
+            </div>
+            {/* ::Contact */}
+            <div className="flex flex-col h-full">
+              <div className="mt-5 sm:mt-5 space-y-3 text-accent px-5 ">
+                <div className="space-y-1 text-base text-opacity-60">
+                  <h3 className="text-lg font-poppins font-semibold mb-4">
+                    Coordinators
+                  </h3>
+                  <p className="font-poppins">
+                    <p className="text-base font-poppins text-opacity-60">
+                      Adith Menon : +91 95266 35524
+                      <br /> Jithu Krishna : +91 9567373010
+                    </p>
+                  </p>
                 </div>
               </div>
 
-              <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
-                <h3 className="text-lg font-poppins font-semibold">
-                  Student Cordinators
-                </h3>
+              <div className="mt-0 px-5 sm:mt-0 space-y-3 text-accent">
                 <p className="text-base font-poppins text-opacity-60 ">
-                  Student 1
-                  <br /> Contact 1 
-                  <br /> Student 2
-                  <br /> Contact 2
+                  Treesa Jomol k : +91 73564 74358
+                  <br />
+                  Anjanamol jose : +91 75929 80883
                 </p>
               </div>
             </div>

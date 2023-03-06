@@ -2,9 +2,9 @@ import React from "react";
 // import dotSVG from "../assets/images/dot.svg"
 // import imgSrc from "../assets/images/imgSrc.jpg"
 // import Event1 from "../assets/images/event1.jpg";
-import Event1 from "../assets/images/events/theme_show.jpeg";
+import Event1 from "../assets/images/events/themeShow.jpeg";
 import Event2 from "../assets/images/events/dj-war.jpeg";
-import Event3 from "../assets/images/events/voice.jpeg";
+import Event3 from "../assets/images/events/voiceOfBrahma.jpeg";
 import Event4 from "../assets/images/events/fifa.jpeg";
 import Event5 from "../assets/images/events/maze.jpeg";
 import Event6 from "../assets/images/events/spot-pic.jpeg";
@@ -64,6 +64,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Theme Show",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
+      regLink: "https://min.lc/Theme-Show",
       imgSrc: Event1,
     },
     {
@@ -71,6 +72,7 @@ export default function EventsHome({ rippleRef }) {
       name: "DJ War",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/dj-war",
       imgSrc: Event2,
     },
     {
@@ -78,6 +80,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Voice of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
+      regLink: "https://min.lc/voiceofbrahma",
       imgSrc: Event3,
     },
     {
@@ -85,6 +88,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Fifa",
       venue: "CCF Lab",
       time: "31-03-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/fifa-versus2",
       imgSrc: Event4,
     },
     {
@@ -92,6 +96,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Maze",
       venue: "PL Lab",
       time: "31-03-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/maze",
       imgSrc: Event5,
     },
     {
@@ -99,6 +104,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Spot Photography",
       venue: "College Premise",
       time: "31-03-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/spot-photography1",
       imgSrc: Event6,
     },
   ];
@@ -260,11 +266,13 @@ export default function EventsHome({ rippleRef }) {
               {events.map((event, index) => (
                 <div key={index} className="text-base">
                   <div className="flex flex-col">
-                    <img
-                      className="rounded-tr-[4em] aspect-auto object-top px-1"
-                      src={event.imgSrc}
-                      alt={`Slide ${index + 1}`}
-                    />
+                    <a href={event.regLink} alt={event.name}>
+                      <img
+                        className="rounded-tr-[4em] aspect-auto object-top px-1"
+                        src={event.imgSrc}
+                        alt={`Slide ${index + 1}`}
+                      />
+                    </a>
                     <div className="mt-4 font-poppins font-bold pl-2">
                       {event.name}
                     </div>
@@ -287,7 +295,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
       ) : (
-        <div className="py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+        <div className="text-accent py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
           <div className="flex flex-col">
             <div className="flex flex-row mb-10 gap-5">
               {events.slice(0, 2).map((event) => (
@@ -295,11 +303,13 @@ export default function EventsHome({ rippleRef }) {
                   key={event.id}
                   className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
                 >
-                  <img
-                    src={event.imgSrc}
-                    alt={event.name}
-                    className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
-                  />
+                  <a href={event.regLink} alt={event.name}>
+                    <img
+                      src={event.imgSrc}
+                      alt={event.name}
+                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                    />
+                  </a>
                   <div className="absolute z-40 bottom-16 p-3 text-2xl">
                     {event.name}
                   </div>
@@ -316,11 +326,13 @@ export default function EventsHome({ rippleRef }) {
                   key={event.id}
                   className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
                 >
-                  <img
-                    src={event.imgSrc}
-                    alt={event.name}
-                    className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
-                  />
+                  <a href={event.regLink} alt={event.name}>
+                    <img
+                      src={event.imgSrc}
+                      alt={event.name}
+                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                    />
+                  </a>
                   <div className="absolute z-40 bottom-16 p-3 text-2xl">
                     {event.name}
                   </div>
@@ -340,7 +352,7 @@ export default function EventsHome({ rippleRef }) {
                   <img
                     src={event.imgSrc}
                     alt={event.name}
-                    className="relative aspect-[3/4] object-cover w-full rounded-md rounded-tr-[5vw]"
+                    className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
                   />
                   <div className="absolute z-40 bottom-16 p-3 text-2xl">
                     {event.name}
