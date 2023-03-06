@@ -15,6 +15,7 @@ import Sponsors from "./components/Sponsors";
 import ContactUs from "./components/ContactUs";
 import FollowUs from "./components/FollowUs";
 import EventEditable from "./pages/Event/EventEditable";
+import { AirtableContextProvider } from "./context/AirtableContext";
 
 function App() {
   const headings = document.querySelectorAll("h1");
@@ -70,6 +71,7 @@ function App() {
 
   return (
     <>
+      <AirtableContextProvider> 
       <div
         className={`z-[90] fixed bottom-0 left-0 ${isLoading && "hidden"}`}
         ref={rippleRef}
@@ -84,7 +86,7 @@ function App() {
               <Route exact path="/schedule" element={<Schedule />} />
               <Route exact path="/events" element={<AllEvents />} />
               <Route exact path="/event/:eventId" element={<Event />} />
-              <Route exact path="/eventedit/:eventId" element={<EventEditable />} />
+                <Route exact path="/eventedit/:eventId" element={<EventEditable />} />
             </Routes>
           </BrowserRouter>
           <Sponsors />
@@ -94,6 +96,7 @@ function App() {
           <ContactUs />
         </ParallaxProvider>
       </div>
+      </AirtableContextProvider> 
     </>
   );
 }

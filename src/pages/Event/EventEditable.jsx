@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import CardButton from "../../components/CardButton";
 import eventsData from "./events.json";
 import posterImg from "../../assets/images/pic6.jpeg";
+import { useContext } from "react";
+import AirtableContext from "../../context/AirtableContext";
 
 export default function EventEditable() {
   const eventId = 1;
   const [eventData, setEventData] = useState(null);
   const [imageUrl, setImageUrl] = useState("")
+
+  const {Request_Edit_Event} = useContext(AirtableContext)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -33,7 +37,7 @@ export default function EventEditable() {
       image_url: imageUrl,
     }
 
-    alert(JSON.stringify(payload))
+    Request_Edit_Event(eventId, payload)
 
   };
   useEffect(() => {
