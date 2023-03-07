@@ -15,7 +15,7 @@ import w2 from "../assets/images/workshops/cnc.jpeg";
 import w3 from "../assets/images/workshops/ieee.jpeg";
 import w4 from "../assets/images/workshops/iot.jpeg";
 // import lightSVG from "../assets/svg/light.svg";
-import darkSVG from "../assets/svg/dark2.svg";
+// import darkSVG from "../assets/svg/dark2.svg";
 import CardButton from "./CardButton";
 const AllEvents = () => {
   const images = [
