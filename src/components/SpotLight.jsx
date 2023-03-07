@@ -1,4 +1,7 @@
 import React from "react";
+import proshowImg from "../assets/images/spotlight/dj.jpg";
+import workshopImg from "../assets/images/spotlight/themeShow.jpg";
+import eventImg from "../assets/images/spotlight/denceOrmime.jpg";
 
 const SpotLight = () => {
   const isLinux = navigator.userAgent.indexOf("Linux") !== -1;
@@ -20,7 +23,7 @@ const SpotLight = () => {
         <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video ml-4 md:inline rounded-xl ">
           <img
             className="rounded-xl object-cover pt-[0.5vw]"
-            src="https://source.unsplash.com/1200x800/?3"
+            src={proshowImg}
             alt="talks"
           />
         </div>
@@ -39,7 +42,7 @@ const SpotLight = () => {
         <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video md:inline rounded-xl  ">
           <img
             className="rounded-xl object-cover pt-[0.5vw]"
-            src="https://source.unsplash.com/1200x800/?2"
+            src={workshopImg}
             alt="workshop"
           />
         </div>
@@ -58,7 +61,7 @@ const SpotLight = () => {
         <div className="hidden relative shadow-overlay-reverse h-[15.5vw] aspect-video ml-4 md:inline rounded-xl ">
           <img
             className="rounded-xl object-cover pt-[0.5vw]"
-            src="https://source.unsplash.com/1200x800/?1"
+            src={eventImg}
             alt="events"
           />
         </div>
