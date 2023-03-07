@@ -1,15 +1,11 @@
 import React from "react";
-// import dotSVG from "../assets/images/dot.svg"
-// import imgSrc from "../assets/images/imgSrc.jpg"
-// import Event1 from "../assets/images/event1.jpg";
 import Event1 from "../assets/images/events/themeShow.jpeg";
-import Event2 from "../assets/images/events/dj-war.jpeg";
+import Event2 from "../assets/images/events/DJ_War.jpg";
 import Event3 from "../assets/images/events/voiceOfBrahma.jpeg";
-import Event4 from "../assets/images/events/fifa.jpeg";
-import Event5 from "../assets/images/events/maze.jpeg";
-import Event6 from "../assets/images/events/spot-pic.jpeg";
+import Event4 from "../assets/images/events/bandOfBrahma.jpeg";
+import Event5 from "../assets/images/events/hipHopBattle.jpeg";
+import Event6 from "../assets/images/events/rapBattle.jpeg";
 import CardButton from "./CardButton";
-// import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -64,7 +60,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Theme Show",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://min.lc/Theme-Show",
+      regLink: "https://www.yepdesk.com/theme-show",
       imgSrc: Event1,
     },
     {
@@ -80,31 +76,31 @@ export default function EventsHome({ rippleRef }) {
       name: "Voice of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://min.lc/voiceofbrahma",
+      regLink: "https://www.yepdesk.com/voice-of-brahma",
       imgSrc: Event3,
     },
     {
       id: 4,
-      name: "Fifa",
-      venue: "CCF Lab",
+      name: "Band Of Brahma",
+      venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
       regLink: "https://www.yepdesk.com/fifa-versus2",
       imgSrc: Event4,
     },
     {
       id: 5,
-      name: "Maze",
-      venue: "PL Lab",
-      time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/maze",
+      name: "Hip Hop Hustle",
+      venue: "Auditorium",
+      time: "01-04-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/hip-hop-hustle",
       imgSrc: Event5,
     },
     {
       id: 6,
-      name: "Spot Photography",
-      venue: "College Premise",
-      time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/spot-photography1",
+      name: "Rap Battle",
+      venue: "Mini Seminar Hall",
+      time: "01-04-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/rap-battle2",
       imgSrc: Event6,
     },
   ];
@@ -295,7 +291,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
       ) : (
-        <div className="text-accent py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+        <div className="text-primary py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
           <div className="flex flex-col">
             <div className="flex flex-row mb-10 gap-5">
               {events.slice(0, 2).map((event) => (

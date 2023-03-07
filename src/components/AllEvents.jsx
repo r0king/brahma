@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import P1 from "../assets/images/events/dj-war.jpeg";
+import P1 from "../assets/images/events/DJ_War.jpg";
 import P2 from "../assets/images/events/fifa.jpeg";
 import P3 from "../assets/images/events/maze.jpeg";
 import P4 from "../assets/images/events/spot-pic.jpeg";
@@ -14,6 +14,8 @@ import w1 from "../assets/images/workshops/3dprinting.jpeg";
 import w2 from "../assets/images/workshops/cnc.jpeg";
 import w3 from "../assets/images/workshops/ieee.jpeg";
 import w4 from "../assets/images/workshops/iot.jpeg";
+import lightSVG from "../assets/svg/light.svg";
+// import darkSVG from "../assets/svg/dark.svg";
 import CardButton from "./CardButton";
 const AllEvents = () => {
   const images = [
@@ -22,7 +24,7 @@ const AllEvents = () => {
       src: P1,
       reg: "500",
       venue: "Main Stage",
-      time: "30-03-2023 10:00 AM",
+      time: "01-04-2023 10:00 AM",
       regLink: "https://www.yepdesk.com/dj-war",
       category: "Cultural",
     },
@@ -434,7 +436,7 @@ const AllEvents = () => {
           className=" text-secondary self-end font-semibold font-poppins text-lg 
            w-full leading-[0.9] tracking-tighter p-2  pb-[5vw]  mr-auto"
         >
-          <span className="font-morganite text-[19vw] md:text-[7vw] text-primary uppercase">
+          {/* <span className="font-morganite text-[19vw] md:text-[7vw] text-primary uppercase">
             Total Prize Pool ₹6L{" "}
           </span>
           <span className="text-[6vw]">
@@ -445,7 +447,8 @@ const AllEvents = () => {
             Band of Brahma ₹30k
             <br />
             Mime ₹25k
-          </span>
+          </span> */}
+          <img src={lightSVG} alt="Prize Money"/>
         </p>
       </div>
 
@@ -459,7 +462,7 @@ const AllEvents = () => {
             className="mb-[12.8vw]  text-secondary self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
           >
-            <span className="font-morganite text-[7vw] text-primary uppercase">
+            {/* <span className="font-morganite text-[7vw] text-primary uppercase">
               Total Prize Pool ₹6L{" "}
             </span>
             <span className="text-[2vw]">
@@ -470,7 +473,8 @@ const AllEvents = () => {
               Band of Brahma ₹30k
               <br />
               Mime ₹25k
-            </span>
+            </span> */}
+            <img src={lightSVG} alt="Prize Money"/>
           </p>
           <div className="font-poppins absolute text-secondary  text-[3rem] font-bold  right-0">
             (46)
