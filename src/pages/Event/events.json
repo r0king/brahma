@@ -15,19 +15,19 @@
         "event_content": "'Doodles are the expression of your innermost thoughts and feelings.'<br><br>Welcome to the world of creativity! ✍️<br><br>Let your imagination soar and explore the possibilities of Doodle Art✏️ with BRAHMA'23⚡.<br><br>Doodle art is a fun and fulfilling activity that can help you express yourself.<br><br>Unleash your inner artist and discover your unique style. Whether you are a beginner or a professional.<br><br>Discover the power of doodle art!🔥<br><br>Join us and start creating with us!"
     },
     {
-        "id" : 1,
-        "name": "Band of Brahma",
-        "main_img": "",
-        "speaker": true,
-        "type": "music",
-        "date": "2023-07-15",
-        "location": "CCF",
-        "price": "₹ 100",
+        "id" : 2,
+        "name": "Theme Show",
+        "main_img": "https://live.staticflickr.com/65535/52731535861_0fa7e72f7d_z.jpg",
+        "speaker": false,
+        "type": "Show",
+        "date": "2023-03-29",
+        "location": "Stage",
+        "price": "₹&nbsp;&nbsp;&nbsp;200",
         "speaker_img": "SOURCE",
-        "speaker_tagline": "#brahma23#asiet#BandofBrahma",
+        "speaker_tagline": "asdfasdf sadf asdf safd",
         "speaker_content": "speaker sambavam aahn blah",
-        "event_tagline": "Poli event",
-        "event_content": "safsadf "
+        "event_tagline": "#brahma'23        #asiet        #espece        #ThemeShow",
+        "event_content": "Style is something each of us already has, all we need to do is find it.<br><br>—Diane von Furstenberg<br><br>It's time to shine!✨<br><br> Unleash your inner fashionista with unmatched confidence and style to set the stage on fire like you own it all!<br><br>Be a part of the ever scintillating ESPÈCE - Theme Show👠 organized by ASIET as a part of their annual national techno-cultural fest, BRAHMA'23⚡ and stand a chance to win a prize pool of ₹60k just with a dash of chic look and couture extravaganza!<br><br>Experience the magic of fashion as art come to in our theme show - where creativity meets style, and every runway moment is a work of art!!<br><br>Register at :<br>Registration fee: 200/- per head (min. 8 participants)"
     },
     {
         "id" : 2,
