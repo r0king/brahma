@@ -15,19 +15,19 @@
         "event_content": "'Doodles are the expression of your innermost thoughts and feelings.'<br><br>Welcome to the world of creativity! ✍️<br><br>Let your imagination soar and explore the possibilities of Doodle Art✏️ with BRAHMA'23⚡.<br><br>Doodle art is a fun and fulfilling activity that can help you express yourself.<br><br>Unleash your inner artist and discover your unique style. Whether you are a beginner or a professional.<br><br>Discover the power of doodle art!🔥<br><br>Join us and start creating with us!"
     },
     {
-        "id" : 2,
-        "name": "Theme Show",
-        "main_img": "https://live.staticflickr.com/65535/52731535861_0fa7e72f7d_z.jpg",
+        "id" : 1,
+        "name": "Band of Brahma",
+        "main_img": "",
         "speaker": false,
-        "type": "Show",
+        "type": "music",
         "date": "2023-03-29",
         "location": "Stage",
-        "price": "₹&nbsp;&nbsp;&nbsp;200",
+        "price": "₹&nbsp;&nbsp;&nbsp;100/- per head",
         "speaker_img": "SOURCE",
-        "speaker_tagline": "asdfasdf sadf asdf safd",
-        "speaker_content": "speaker sambavam aahn blah",
-        "event_tagline": "#brahma'23        #asiet        #espece        #ThemeShow",
-        "event_content": "Style is something each of us already has, all we need to do is find it.<br><br>—Diane von Furstenberg<br><br>It's time to shine!✨<br><br> Unleash your inner fashionista with unmatched confidence and style to set the stage on fire like you own it all!<br><br>Be a part of the ever scintillating ESPÈCE - Theme Show👠 organized by ASIET as a part of their annual national techno-cultural fest, BRAHMA'23⚡ and stand a chance to win a prize pool of ₹60k just with a dash of chic look and couture extravaganza!<br><br>Experience the magic of fashion as art come to in our theme show - where creativity meets style, and every runway moment is a work of art!!<br><br>Register at :<br>Registration fee: 200/- per head (min. 8 participants)"
+        "speaker_tagline": "",
+        "speaker_content": "",
+        "event_tagline": "#brahma23#asiet#DBand",
+        "event_content": "<br><br>Music touches us emotionally, where words alone can't.<br><br>~Johnny Depp<br><br>Are you someone with a musical flair and can get the crowd grooving to the rhythm?<br><br> Then we have something just right for you!! Band of Brahma -the ultimate battle of the bands and a golden opportunity for you to show your musical brilliance to the world out there.<br><br>Brought to you as part of Brahma '23⚡, this is your perfect platform to shine and let your inner rockstar dazzle the floor.🎵🎶<br><br><br><br>Think you've got what it takes to rock the stage to your victory and win prizes worth 30k!!<br><br><br><br>Don't miss out on this epic battle ✨<br><br><br><br>Register at:<br><br><br><br>Registration fee: 200/- per head (max 16 members)<br><br>"
     },
     {
         "id" : 2,
