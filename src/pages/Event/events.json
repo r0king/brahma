@@ -188,21 +188,23 @@
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "Poli event",
         "event_content": "safsadf "
-    },{
-        "id" : 0,
-        "name": "How To Create & Sell Digital Collectibles With No Code",
+    },
+    {
+        "id" : 13,
+        "name": "Stand-Up Comedy",
         "main_img": "",
-        "speaker": true,
-        "type": "asdfsadf",
-        "date": "2023-07-15",
-        "location": "CCF",
-        "price": "Starting for 444",
-        "speaker_img": "SOURCE",
-        "speaker_tagline": "asdfasdf sadf asdf safd",
-        "speaker_content": "speaker sambavam aahn blah",
-        "event_tagline": "Poli event",
-        "event_content": "safsadf "
-    },{
+        "speaker": false,
+        "type": "Cultural",
+        "date": "2023-03-30",
+        "location": "",
+        "price": "₹&nbsp;&nbsp;&nbsp;150/- per head",
+        "speaker_img": "",
+        "speaker_tagline": "",
+        "speaker_content": "",
+        "event_tagline": "#standupcomedy",
+        "event_content": "A sense of humor is the ability to laugh at one's self, to take a joke and to not be the joke.<br><br>'It's time to take a break from the seriousness of life and join us for some comic relief.'<br><br>BRAHMA'23⚡ is excited to announce the upcoming Stand-up comedy🥳 show and cordially invites everyone to join in on the laughter-filled fun.<br><br>Get ready to laugh until you cry as the most hilarious and talented comedians among us battle it out in an epic stand-up comedy competition.<br><br><br>Rules and Regulations<br><br><br>🔸This is an individual event. Event is open to all.<br><br>🔸Stand Up in Malayalam (Casual English words in between is permitted). Time limit is 7 minutes.<br><br>🔸No participant can point out any individual,religion, caste, race or political party in any way.<br><br>🔸Imitation of existing ideas, in-appropriate & offensive contents and dirty jokes will lead to disqualification. Usage of abusive language is strictly prohibited.<br><br>🔸Negative marking for exceeding time limit.<br><br>For more queries, contact<br><br>Arjun : 9961423400<br><br>Darshana : 8547129821 "
+    },
+    {
         "id" : 0,
         "name": "How To Create & Sell Digital Collectibles With No Code",
         "main_img": "",
