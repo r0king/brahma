@@ -46,7 +46,12 @@ export default function Event() {
               <h4 className="text-[10px] md:text-xs font-medium">Location</h4>
               <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
                 {eventData.location}
-
+              </p>
+            </div>
+            <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
+              <h4 className="text-[10px] md:text-xs font-medium">Time</h4>
+              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
+                {eventData.time}
               </p>
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
