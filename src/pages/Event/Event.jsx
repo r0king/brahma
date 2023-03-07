@@ -51,8 +51,7 @@ export default function Event() {
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
               <h4 className="text-[10px] md:text-xs font-medium">Price</h4>
-              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl ">
-                {eventData.price}
+              <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl " dangerouslySetInnerHTML={{ __html: eventData.price }}>
               </p>
             </div>
           </div>
