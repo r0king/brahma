@@ -16,70 +16,105 @@ const Schedule = () => {
     const sched1 = [
         {
             id: 0,
-            timing: "09:00 - 16:00",
-            category: "Business",
+            timing: "09:00 - 10:00",
+            category: "Cultural",
             img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "How to create and sell digital collectibles with no code",
-            personnel: "Pablo Stanley"
+            description: "Thyagaraj Program",
+            personnel: "Main Stage"
         },
         {
             id: 1,
-            timing: "10:00 - 15:00",
-            category: "Fashion",
+            timing: "10:00 - 10:30",
+            category: "Cultural",
             img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "How to create and sell digital collectibles with no code",
-            personnel: "larry"
+            description: "Voice of Brahma - Preliminary",
+            personnel: "CS Seminar Hall"
         },
         {
             id: 2,
-            timing: "09:00 - 16:00",
-            category: "Entertainment",
+            timing: "10:30 - 16:00",
+            category: "General",
             img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "Bike Workshop",
-            personnel: "Leonardo Dicaprio"
+            description: "Fun Zone",
+            personnel: "Civil Block"
         },
         {
             id: 3,
-            timing: "09:00 - 16:00",
-            category: "Technology",
+            timing: "12:10 - 12:30",
+            category: "Cultural",
             img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
-            description: "Full stack development",
-            personnel: "michael"
+            description: "Ranga Pooja",
+            personnel: "Main Stage"
         }
     ]
 
     const sched2 = [
         {
             id: 0,
-            timing: "09:00 - 16:00",
-            category: "aoshdoasd",
+            timing: "10:00 - 13:00",
+            category: "Cultural",
             img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "How to create and sell digital collectibles with no code",
-            personnel: "Pablo Stanley"
+            description: "Mudhra",
+            personnel: "Main Stage"
         },
         {
             id: 1,
-            timing: "10:00 - 15:00",
-            category: "Fashion",
+            timing: "10:30 - 12:00",
+            category: "General",
             img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "How to create and sell digital collectibles with no code",
-            personnel: "larry"
+            description: "RJ Hunt",
+            personnel: "Auditorium"
         },
         {
             id: 2,
-            timing: "09:00 - 16:00",
-            category: "Business",
+            timing: "10:00 - 14:00",
+            category: "Workshop",
             img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "How to create and sell digital collectibles with no code",
-            personnel: "Pablo Stanley"
+            description: "IEEE Workshop",
+            personnel: "ADP Lab"
         },
         {
             id: 3,
-            timing: "09:00 - 16:00",
-            category: "Business",
+            timing: "10:00 - 14:00",
+            category: "General",
             img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
-            description: "How to create and sell digital collectibles with no code",
-            personnel: "Pablo Stanley"
+            description: "Fifa",
+            personnel: "PL Lab"
+        }
+    ]
+
+    const sched3 = [
+        {
+            id: 0,
+            timing: "09:30 - 12:30",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "Step N Synchro",
+            personnel: "Main Stage"
+        },
+        {
+            id: 1,
+            timing: "10:00 - 13:00",
+            category: "Workshop",
+            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "Mural Workshop",
+            personnel: "AE&I Seminar Hall"
+        },
+        {
+            id: 2,
+            timing: "10:00 - 12:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "Short Film",
+            personnel: "Main Seminar Hall"
+        },
+        {
+            id: 3,
+            timing: "10:00 - 14:00",
+            category: "Workshop",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "IEI Workshop",
+            personnel: "Simulation Lab"
         }
     ]
 
@@ -122,17 +157,16 @@ const Schedule = () => {
                 <div className="filter-schedule">
                     <select value={category} onChange={categorySelect}>
                         <option value="" selected>All</option>
-                        <option value="Business">Business</option>
-                        <option value="Entertainment">Entertainment</option>
-                        <option value="Fashion">Fashion</option>
-                        <option value="Technology">Technology</option>
+                        <option value="Cultural">Cultural</option>
+                        <option value="General">General</option>
+                        <option value="Workshop">Workshop</option>
                     </select>
                 </div>
 
                 <div className="tabs">
                     <h3 className={`button  ${dayselect === 1 ? "btn1" : ""}`} onClick={() => { setSchedule(sched1); setdayselect(1) }}>Day 1</h3>
                     <h3 className={`button ${dayselect === 2 ? "btn2" : ""}`} onClick={() => { setSchedule(sched2); setdayselect(2) }}>Day 2</h3>
-                    <h3 className={`button ${dayselect === 3 ? "btn3" : ""}`} onClick={() => { setSchedule([]); setdayselect(3) }}>Day 3</h3>
+                    <h3 className={`button ${dayselect === 3 ? "btn3" : ""}`} onClick={() => { setSchedule(sched3); setdayselect(3) }}>Day 3</h3>
                 </div>
             </div>
 
