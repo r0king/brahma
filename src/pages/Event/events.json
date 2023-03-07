@@ -61,7 +61,7 @@
     },{
         "id" : 4,
         "name": "Rap Battle",
-        "main_img": "",
+        "main_img": "https://live.staticflickr.com/65535/52731603506_03f8a03fd5_b.jpg",
         "speaker": false,
         "type": "Rock and Roll",
         "date": "2023-04-02",
@@ -119,7 +119,7 @@
     {
         "id" : 8,
         "name": "Spot Dance",
-        "main_img": "",
+        "main_img": "https://live.staticflickr.com/65535/52732085288_4900fa13a3_b.jpg",
         "speaker": false,
         "type": "Culural",
         "date": "2023-04-02",
