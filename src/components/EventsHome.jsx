@@ -264,24 +264,24 @@ export default function EventsHome({ rippleRef }) {
           <div className="w-full mt-10">
             <Slider {...settings}>
               {events.map((event, index) => (
-                <div key={index} className="text-base">
-                  <div className="flex flex-col">
-                    <a href={event.regLink} alt={event.name}>
+                <a href={event.regLink} alt={event.name}>
+                  <div key={index} className="text-base">
+                    <div className="flex flex-col">
                       <img
                         className="rounded-tr-[4em] aspect-auto object-top px-1"
                         src={event.imgSrc}
                         alt={`Slide ${index + 1}`}
                       />
-                    </a>
-                    <div className="mt-4 font-poppins font-bold pl-2">
-                      {event.name}
-                    </div>
-                    <div className="flex flex-row mt-4 font-semibold ml- 2">
-                      <div className="font-poppins ml-2">{event.venue}</div>
-                      <div className="font-poppins ml-6">{event.time}</div>
+                      <div className="mt-4 font-poppins font-bold pl-2">
+                        {event.name}
+                      </div>
+                      <div className="flex flex-row mt-4 font-semibold ml- 2">
+                        <div className="font-poppins ml-2">{event.venue}</div>
+                        <div className="font-poppins ml-6">{event.time}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </Slider>
           </div>
@@ -299,69 +299,71 @@ export default function EventsHome({ rippleRef }) {
           <div className="flex flex-col">
             <div className="flex flex-row mb-10 gap-5">
               {events.slice(0, 2).map((event) => (
-                <div
-                  key={event.id}
-                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-                >
-                  <a href={event.regLink} alt={event.name}>
+                <a href={event.regLink} alt={event.name}>
+                  <div
+                    key={event.id}
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                  >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
                       className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
                     />
-                  </a>
-                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                    {event.name}
+                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      {event.name}
+                    </div>
+                    <div className="absolute z-40 bottom-8 p-3">
+                      {event.venue}
+                    </div>
+                    {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
-                  <div className="absolute z-40 bottom-8 p-3">
-                    {event.venue}
-                  </div>
-                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-                </div>
+                </a>
               ))}
             </div>
             <div className="flex flex-row-reverse mb-10 gap-5">
               {events.slice(2, 4).map((event) => (
-                <div
-                  key={event.id}
-                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-                >
-                  <a href={event.regLink} alt={event.name}>
+                <a href={event.regLink} alt={event.name}>
+                  <div
+                    key={event.id}
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                  >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
                       className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
                     />
-                  </a>
-                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                    {event.name}
+                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      {event.name}
+                    </div>
+                    <div className="absolute z-40 bottom-8 p-3">
+                      {event.venue}
+                    </div>
+                    {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
-                  <div className="absolute z-40 bottom-8 p-3">
-                    {event.venue}
-                  </div>
-                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-                </div>
+                </a>
               ))}
             </div>
             <div className="flex flex-wrap mb-10 gap-5">
               {events.slice(4, 6).map((event) => (
-                <div
-                  key={event.id}
-                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-                >
-                  <img
-                    src={event.imgSrc}
-                    alt={event.name}
-                    className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
-                  />
-                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                    {event.name}
+                <a href={event.regLink} alt={event.name}>
+                  <div
+                    key={event.id}
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                  >
+                    <img
+                      src={event.imgSrc}
+                      alt={event.name}
+                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                    />
+                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      {event.name}
+                    </div>
+                    <div className="absolute z-40 bottom-8 p-3">
+                      {event.venue}
+                    </div>
+                    {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
-                  <div className="absolute z-40 bottom-8 p-3">
-                    {event.venue}
-                  </div>
-                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-                </div>
+                </a>
               ))}
               <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
                 <CardButton
