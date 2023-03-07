@@ -7,12 +7,12 @@
         "type": "Arts",
         "date": "2023-07-15",
         "location": "CCF",
-        "price": "₹100",
+        "price": "₹&nbsp;&nbsp;&nbsp;100",
         "speaker_img": "SOURCE",
         "speaker_tagline": "asdfasdf sadf asdf safd",
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "Poli event",
-        "event_content": "safsadf "
+        "event_content": ""
     },
     {
         "id" : 1,
