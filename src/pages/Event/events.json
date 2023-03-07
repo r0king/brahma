@@ -28,7 +28,8 @@
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "Poli event",
         "event_content": "safsadf "
-    },{
+    },
+    {
         "id" : 2,
         "name": "Theme Show",
         "main_img": "",
@@ -42,7 +43,8 @@
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "#brahma'23        #asiet        #espece        #ThemeShow",
         "event_content": "Style is something each of us already has, all we need to do is find it.<br><br>—Diane von Furstenberg<br><br>It's time to shine!✨<br><br> Unleash your inner fashionista with unmatched confidence and style to set the stage on fire like you own it all!<br><br>Be a part of the ever scintillating ESPÈCE - Theme Show👠 organized by ASIET as a part of their annual national techno-cultural fest, BRAHMA'23⚡ and stand a chance to win a prize pool of ₹60k just with a dash of chic look and couture extravaganza!<br><br>Experience the magic of fashion as art come to in our theme show - where creativity meets style, and every runway moment is a work of art!!<br><br>Register at :<br>Registration fee: 200/- per head (min. 8 participants)"
-    },{
+    },
+    {
         "id" : 3,
         "name": "How To Create & Sell Digital Collectibles With No Code",
         "main_img": "",
@@ -56,21 +58,23 @@
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "Poli event",
         "event_content": "safsadf "
-    },{
+    },
+    {
         "id" : 4,
-        "name": "How To Create & Sell Digital Collectibles With No Code",
+        "name": "Rap Battle",
         "main_img": "",
-        "speaker": true,
-        "type": "asdfsadf",
-        "date": "2023-07-15",
-        "location": "CCF",
-        "price": "₹",
-        "speaker_img": "SOURCE",
-        "speaker_tagline": "asdfasdf sadf asdf safd",
-        "speaker_content": "speaker sambavam aahn blah",
-        "event_tagline": "Poli event",
-        "event_content": "safsadf "
-    },{
+        "speaker": false,
+        "type": "Rock and Roll",
+        "date": "02-04-2023",
+        "location": "Main Auditorium",
+        "price": "₹&nbsp;&nbsp;&nbsp;100",
+        "speaker_img": "",
+        "speaker_tagline": "",
+        "speaker_content": "",
+        "event_tagline": "#Rap-Battle",
+        "event_content": "It's time to show your skills and bring your rhymes to the mic! 🎤<br><br>Step up and drop the beat, let's see what you got in store at the ultimate rap battle competition. Brahma'23 presents you Rap-Battle- The Battle Royal🎵.<br><br>So let's get your rhyme on. Whether you're a seasoned pro or a beginner just starting out, we want to see what you've got.<br><br>Are you ready to bring the heat and make some noise?<br><br>Get ready to spit your hottest bars and put your skills to the test.<br><br>It's time for the ultimate rap battle showdown!"
+    },
+    {
         "id" : 5,
         "name": "How To Create & Sell Digital Collectibles With No Code",
         "main_img": "",
