@@ -24,11 +24,12 @@
         "location": "CCF",
         "price": "₹ 100",
         "speaker_img": "SOURCE",
-        "speaker_tagline": "asdfasdf sadf asdf safd",
+        "speaker_tagline": "#brahma23#asiet#BandofBrahma",
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "Poli event",
         "event_content": "safsadf "
-    },{
+    },
+    {
         "id" : 2,
         "name": "Theme Show",
         "main_img": "https://live.staticflickr.com/65535/52731535861_0fa7e72f7d_z.jpg",
@@ -42,7 +43,8 @@
         "speaker_content": "speaker sambavam aahn blah",
         "event_tagline": "#brahma'23        #asiet        #espece        #ThemeShow",
         "event_content": "Style is something each of us already has, all we need to do is find it.<br><br>—Diane von Furstenberg<br><br>It's time to shine!✨<br><br> Unleash your inner fashionista with unmatched confidence and style to set the stage on fire like you own it all!<br><br>Be a part of the ever scintillating ESPÈCE - Theme Show👠 organized by ASIET as a part of their annual national techno-cultural fest, BRAHMA'23⚡ and stand a chance to win a prize pool of ₹60k just with a dash of chic look and couture extravaganza!<br><br>Experience the magic of fashion as art come to in our theme show - where creativity meets style, and every runway moment is a work of art!!<br><br>Register at :<br>Registration fee: 200/- per head (min. 8 participants)"
-    },{
+    },
+    {
         "id" : 3,
         "name": "Mudhra",
         "main_img": "https://live.staticflickr.com/65535/52731535861_0fa7e72f7d_z.jpg",
@@ -54,23 +56,31 @@
         "speaker_img": "SOURCE",
         "speaker_tagline": "asdfasdf sadf asdf safd",
         "speaker_content": "speaker sambavam aahn blah",
+<<<<<<< HEAD
+        "event_tagline": "Poli event",
+        "event_content": "safsadf "
+    },
+    {
+=======
         "event_tagline": "#brahma23        #asiet        #mudhra",
         "event_content": "The true essence of dance is not in the steps or the technique, but in the emotion and expression that it conveys.<br> -Sitara Devi<br><br>Are you skilled in the art of storytelling through Indian classical dance?<br><br>Join us to celebrate the rich cultural heritage of India and its diverse dance forms at Mudhra, presented to you by Brahma’23⚡.<br><br>With a prize pool of 33k, Mudhra👌🏻 offers a pulsating stage for classical dancers to compete and captivate us with their grace!<br><br>Step into a world of grace, beauty, and rhythm with our classical dance performances, where every movement tells a story and every performance is a breathtaking display of skill and artistry!!✨<br><br>Do not miss out on this powerful display of talent, register now and be a part!<br><br>Register at : <br>Registration fee: 200/- per head"
     },{
+>>>>>>> 39ca083d43b443131bfb41acd897f01b26a4444f
         "id" : 4,
         "name": "Rap Battle",
         "main_img": "",
-        "speaker": true,
-        "type": "asdfsadf",
-        "date": "2023-07-15",
-        "location": "CCF",
-        "price": "₹",
-        "speaker_img": "SOURCE",
-        "speaker_tagline": "asdfasdf sadf asdf safd",
-        "speaker_content": "speaker sambavam aahn blah",
-        "event_tagline": "Poli event",
-        "event_content": "safsadf "
-    },{
+        "speaker": false,
+        "type": "Rock and Roll",
+        "date": "02-04-2023",
+        "location": "Main Auditorium",
+        "price": "₹&nbsp;&nbsp;&nbsp;100",
+        "speaker_img": "",
+        "speaker_tagline": "",
+        "speaker_content": "",
+        "event_tagline": "#Rap-Battle",
+        "event_content": "It's time to show your skills and bring your rhymes to the mic! 🎤<br><br>Step up and drop the beat, let's see what you got in store at the ultimate rap battle competition. Brahma'23 presents you Rap-Battle- The Battle Royal🎵.<br><br>So let's get your rhyme on. Whether you're a seasoned pro or a beginner just starting out, we want to see what you've got.<br><br>Are you ready to bring the heat and make some noise?<br><br>Get ready to spit your hottest bars and put your skills to the test.<br><br>It's time for the ultimate rap battle showdown!"
+    },
+    {
         "id" : 5,
         "name": "RAAGAM",
         "main_img": "https://live.staticflickr.com/65535/52731535861_0fa7e72f7d_z.jpg",
