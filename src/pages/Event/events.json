@@ -1,18 +1,24 @@
 [
     {
-        "id": 1,
-        "name": "React Conference",
-        "date": "2023-05-01",
-        "location": "San Francisco, CA"
+        "name": "How To Create & Sell Digital Collectibles With No Code",
+        "main_img": "",
+        "speaker": true,
+        "type": "asdfsadf",
+        "date": "2023-07-15",
+        "location": "CCF",
+        "price": "Starting for 444",
+        "speaker_img": "SOURCE",
+        "speaker_tagline": "asdfasdf sadf asdf safd",
+        "speaker_content": "speaker sambavam aahn blah",
+        "event_tagline": "Poli event",
+        "event_content": "safsadf "
     },
     {
-        "id": 2,
         "name": "Angular Summit",
         "date": "2023-07-15",
         "location": "New York, NY"
     },
     {
-        "id": 3,
         "name": "Vue.js Conf",
         "date": "2023-09-30",
         "location": "Toronto, ON"
