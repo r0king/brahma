@@ -221,7 +221,7 @@
         "id" : 14,
         "name": "Ditto - Step N Syncro",
         "main_img": "https://live.staticflickr.com/65535/52732866917_75f4810146_b.jpg",
-        "speaker": true,
+        "speaker": false,
         "type": "Dance",
         "date": "01-04-2023",
         "location": "Main Stage",
