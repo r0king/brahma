@@ -18,7 +18,7 @@ const Schedule = () => {
             id: 0,
             timing: "09:00 - 12:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Thyagaraj Program",
             personnel: "Main Stage"
         },
@@ -26,7 +26,7 @@ const Schedule = () => {
             id: 1,
             timing: "10:00 - 12:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Voice of Brahma - Preliminary",
             personnel: "CS Seminar Hall"
         },
@@ -34,7 +34,7 @@ const Schedule = () => {
             id: 2,
             timing: "10:30 - 16:00",
             category: "General",
-            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Fun Zone",
             personnel: "Civil Block"
         },
@@ -42,7 +42,7 @@ const Schedule = () => {
             id: 3,
             timing: "12:10 - 12:30",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Ranga Pooja",
             personnel: "Main Stage"
         },
@@ -50,7 +50,7 @@ const Schedule = () => {
             id: 4,
             timing: "12:30 - 16:30",
             category: "General",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52733962550_46a37085fb_z.jpg",
             description: "3D Printing Workshop",
             personnel: "CCF Lab"
         },
@@ -157,7 +157,7 @@ const Schedule = () => {
             id: 1,
             timing: "10:00 - 14:00",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52734033158_0b426fa95b_z.jpg   ",
             description: "IEEE Workshop",
             personnel: "ADP Lab"
         },
@@ -173,7 +173,7 @@ const Schedule = () => {
             id: 3,
             timing: "10:30 - 12:00",
             category: "General",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "RJ Hunt",
             personnel: "Auditorium"
         },        
@@ -182,7 +182,7 @@ const Schedule = () => {
             id: 4,
             timing: "10:30 - 14:30",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Paint Ball",
             personnel: "Civil Parking"
         }
@@ -191,7 +191,7 @@ const Schedule = () => {
             id: 5,
             timing: "11:00 - 15:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Soapy Soccer",
             personnel: "TBD"
         },
@@ -199,7 +199,7 @@ const Schedule = () => {
             id: 6,
             timing: "11:00 - 15:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Cryogenic Museum",
             personnel: "Robotics Seminar Hall"
         },
@@ -215,7 +215,7 @@ const Schedule = () => {
             id: 8,
             timing: "11:30 - 15:30",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52734033138_bd8ef23322_z.jpg",
             description: "IOT Workshop",
             personnel: "NP Lab"
         },
@@ -231,7 +231,7 @@ const Schedule = () => {
             id: 10,
             timing: "12:00 - 16:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Glow Ball",
             personnel: "S1 ECA"
         },
@@ -239,7 +239,7 @@ const Schedule = () => {
             id: 11,
             timing: "13:00 - 17:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Treasure Hunt",
             personnel: "College Premises"
         },
@@ -271,7 +271,7 @@ const Schedule = () => {
             id: 15,
             timing: "14:30 - 17:30",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Maze",
             personnel: "EEE Classrooms"
         },
@@ -279,7 +279,7 @@ const Schedule = () => {
             id: 16,
             timing: "18:00 - 21:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Choreo Night",
             personnel: "Main Stage"
         }
@@ -298,7 +298,7 @@ const Schedule = () => {
             id: 1,
             timing: "10:00 - 12:00",
             category: "General",
-            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Short Film",
             personnel: "Main Seminar Hall"
         },
@@ -306,7 +306,7 @@ const Schedule = () => {
             id: 2,
             timing: "10:00 - 14:00",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "IEI Workshop",
             personnel: "Simulation Lab"
         },
@@ -322,7 +322,7 @@ const Schedule = () => {
             id: 4,
             timing: "10:30 - 13:30",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Knives Out",
             personnel: "S5 CSA"
         },
@@ -338,7 +338,7 @@ const Schedule = () => {
             id: 6,
             timing: "10:30 - 14:30",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Brain Cycle",
             personnel: "Infront of Lobby"
         },
@@ -346,7 +346,7 @@ const Schedule = () => {
             id: 7,
             timing: "11:00 - 15:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Soapy Soccer",
             personnel: "TBD"
         },
@@ -354,7 +354,7 @@ const Schedule = () => {
             id: 8,
             timing: "11:00 - 15:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Gun Expo",
             personnel: "Mechanical Block"
         },
@@ -378,7 +378,7 @@ const Schedule = () => {
             id: 11,
             timing: "12:00 - 16:00",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52734033188_53191baa85_z.jpg",
             description: "CNC Workshop",
             personnel: "CNC Lab"
         },
@@ -386,7 +386,7 @@ const Schedule = () => {
             id: 12,
             timing: "12:00 - 14:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Street Show",
             personnel: "Lobby"
         },
@@ -394,7 +394,7 @@ const Schedule = () => {
             id: 13,
             timing: "13:00 - 15:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Fire & Rescue Team + Dog Squad",
             personnel: "TBD"
         },
@@ -402,7 +402,7 @@ const Schedule = () => {
             id: 14,
             timing: "15:00 -17:30",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "UnderArm Cricket",
             personnel: "Ground"
         },
@@ -410,7 +410,7 @@ const Schedule = () => {
             id: 15,
             timing: "15:00 - 17:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "BasketBall 3S",
             personnel: "BasketBall Court"
         },
@@ -418,7 +418,7 @@ const Schedule = () => {
             id: 16,
             timing: "17:00 - 22:00",
             category: "-",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Band and DJ",
             personnel: "Main Stage"
         }
