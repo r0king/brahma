@@ -59,14 +59,6 @@ const Schedule = () => {
         },
         {
             id: 1,
-            timing: "10:30 - 12:00",
-            category: "General",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "RJ Hunt",
-            personnel: "Auditorium"
-        },
-        {
-            id: 2,
             timing: "10:00 - 14:00",
             category: "Workshop",
             img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -74,12 +66,126 @@ const Schedule = () => {
             personnel: "ADP Lab"
         },
         {
-            id: 3,
+            id: 2,
             timing: "10:00 - 14:00",
             category: "General",
             img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
-            description: "Fifa",
+            description: "FIFA",
             personnel: "PL Lab"
+        },
+        {
+            id: 3,
+            timing: "10:30 - 12:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "RJ Hunt",
+            personnel: "Auditorium"
+        },        
+        
+        {
+            id: 4,
+            timing: "10:30 - 14:30",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Paint Ball",
+            personnel: "Civil Parking"
+        }
+        ,
+        {
+            id: 5,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Soapy Soccer",
+            personnel: "TBD"
+        },
+        {
+            id: 6,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Cryogenic Museum",
+            personnel: "Robotics Seminar Hall"
+        },
+        {
+            id: 7,
+            timing: "11:00 - 13:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Doodling",
+            personnel: "EC Seminar Hall"
+        },
+        {
+            id: 8,
+            timing: "11:30 - 15:30",
+            category: "Workshop",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "IOT Workshop",
+            personnel: "NP Lab"
+        },
+        {
+            id: 9,
+            timing: "11:30 - 14:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Stand Up Comedy",
+            personnel: "Main Seminar Hall"
+        },
+        {
+            id: 10,
+            timing: "12:00 - 16:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Glow Ball",
+            personnel: "S1 ECA"
+        },
+        {
+            id: 11,
+            timing: "13:00 - 17:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Treasure Hunt",
+            personnel: "College Premises"
+        },
+        {
+            id: 12,
+            timing: "14:00 - 16:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Spot Dance",
+            personnel: "Lobby"
+        },
+        {
+            id: 13,
+            timing: "14:00 - 16:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Mime",
+            personnel: "Auditorium"
+        },
+        {
+            id: 14,
+            timing: "14:30 - 16:30",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Band of Brahma",
+            personnel: "Main Stage"
+        },
+        {
+            id: 15,
+            timing: "14:30 - 17:30",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Maze",
+            personnel: "EEE Classrooms"
+        },
+        {
+            id: 16,
+            timing: "18:00 - 21:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Choreo Night",
+            personnel: "Main Stage"
         }
     ]
 
