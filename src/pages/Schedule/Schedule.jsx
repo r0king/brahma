@@ -58,7 +58,7 @@ const Schedule = () => {
             id: 5,
             timing: "12:30 - 14:30",
             category: "Cultural",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52733810815_f8067e6406_z.jpg",
             description: "Percusion Instrument",
             personnel: "EC Seminar Hall"
         },
@@ -66,8 +66,8 @@ const Schedule = () => {
             id: 6,
             timing: "12:30 - 14:30",
             category: "Cultural",
-            img: "",
-            description: "Ragam",
+            img: "https://live.staticflickr.com/65535/52731093272_133dcda96c_z.jpg",
+            description: "Raagam",
             personnel: "CS Seminar Hall"
         },
         {
@@ -98,7 +98,7 @@ const Schedule = () => {
             id: 10,
             timing: "13:00 - 15:00",
             category: "Cultural",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52733875633_642dab9705_z.jpg",
             description: "Voice Of Brahma - Final",
             personnel: "Main Stage"
         },
@@ -138,7 +138,7 @@ const Schedule = () => {
             id: 15,
             timing: "17:00 - 21:00",
             category: "Cultural",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52733389566_a89f348ae0_z.jpg",
             description: "Theme Show",
             personnel: "Main Stage"
         },
@@ -149,7 +149,7 @@ const Schedule = () => {
             id: 0,
             timing: "10:00 - 13:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52732099308_1e05417470_b.jpg",
             description: "Mudhra",
             personnel: "Main Stage"
         },
@@ -165,7 +165,7 @@ const Schedule = () => {
             id: 2,
             timing: "10:00 - 14:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52731603426_5c8bb9ec0e_z.jpg",
             description: "FIFA",
             personnel: "PL Lab"
         },
@@ -207,7 +207,7 @@ const Schedule = () => {
             id: 7,
             timing: "11:00 - 13:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52733389601_f4897b2501_z.jpg",
             description: "Doodling",
             personnel: "EC Seminar Hall"
         },
@@ -223,7 +223,7 @@ const Schedule = () => {
             id: 9,
             timing: "11:30 - 14:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52732874067_1154577282_z.jpg",
             description: "Stand Up Comedy",
             personnel: "Main Seminar Hall"
         },
@@ -247,7 +247,7 @@ const Schedule = () => {
             id: 12,
             timing: "14:00 - 16:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52733875698_d868d91a36_z.jpg",
             description: "Spot Dance",
             personnel: "Lobby"
         },
@@ -255,7 +255,7 @@ const Schedule = () => {
             id: 13,
             timing: "14:00 - 16:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52733883018_7b0bb8e7ee_z.jpg",
             description: "Mime",
             personnel: "Auditorium"
         },
@@ -263,7 +263,7 @@ const Schedule = () => {
             id: 14,
             timing: "14:30 - 16:30",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52731850939_db76a22a31_z.jpg",
             description: "Band of Brahma",
             personnel: "Main Stage"
         },
@@ -290,7 +290,7 @@ const Schedule = () => {
             id: 0,
             timing: "09:30 - 12:30",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52732866917_75f4810146_z.jpg",
             description: "Step N Synchro",
             personnel: "Main Stage"
         },
@@ -314,7 +314,7 @@ const Schedule = () => {
             id: 3,
             timing: "10:00 - 13:00",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52733650649_1742728873_z.jpg",
             description: "Mural Workshop",
             personnel: "AE&I Seminar Hall"
         },
@@ -330,7 +330,7 @@ const Schedule = () => {
             id: 5,
             timing: "10:30 - 12:30",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52733803945_e804fa9df2_z.jpg",
             description: "Hip Hop Battle",
             personnel: "Auditorium"
         },
@@ -362,7 +362,7 @@ const Schedule = () => {
             id: 9,
             timing: "11:00 - 13:30",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52733397331_0b3296a2b7_z.jpg",
             description: "DJ War",
             personnel: "Main Stage"
         },
@@ -370,7 +370,7 @@ const Schedule = () => {
             id: 10,
             timing: "11:00 - 13:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "https://live.staticflickr.com/65535/52733875663_cf9d22dc67_z.jpg",
             description: "Rap Battle",
             personnel: "EC Seminar Hall"
         },
