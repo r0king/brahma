@@ -296,14 +296,6 @@ const Schedule = () => {
         },
         {
             id: 1,
-            timing: "10:00 - 13:00",
-            category: "Workshop",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "Mural Workshop",
-            personnel: "AE&I Seminar Hall"
-        },
-        {
-            id: 2,
             timing: "10:00 - 12:00",
             category: "General",
             img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -311,12 +303,124 @@ const Schedule = () => {
             personnel: "Main Seminar Hall"
         },
         {
-            id: 3,
+            id: 2,
             timing: "10:00 - 14:00",
             category: "Workshop",
             img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
             description: "IEI Workshop",
             personnel: "Simulation Lab"
+        },
+        {
+            id: 3,
+            timing: "10:00 - 13:00",
+            category: "Workshop",
+            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "Mural Workshop",
+            personnel: "AE&I Seminar Hall"
+        },
+        {
+            id: 4,
+            timing: "10:30 - 13:30",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Knives Out",
+            personnel: "S5 CSA"
+        },
+        {
+            id: 5,
+            timing: "10:30 - 12:30",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Hip Hop Battle",
+            personnel: "Auditorium"
+        },
+        {
+            id: 6,
+            timing: "10:30 - 14:30",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Brain Cycle",
+            personnel: "Infront of Lobby"
+        },
+        {
+            id: 7,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Soapy Soccer",
+            personnel: "TBD"
+        },
+        {
+            id: 8,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Gun Expo",
+            personnel: "Mechanical Block"
+        },
+        {
+            id: 9,
+            timing: "11:00 - 13:30",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "DJ War",
+            personnel: "Main Stage"
+        },
+        {
+            id: 10,
+            timing: "11:00 - 13:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Rap Battle",
+            personnel: "EC Seminar Hall"
+        },
+        {
+            id: 11,
+            timing: "12:00 - 16:00",
+            category: "Workshop",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "CNC Workshop",
+            personnel: "CNC Lab"
+        },
+        {
+            id: 12,
+            timing: "12:00 - 14:00",
+            category: "Cultural",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Street Show",
+            personnel: "Lobby"
+        },
+        {
+            id: 13,
+            timing: "13:00 - 15:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Fire & Rescue Team + Dog Squad",
+            personnel: "TBD"
+        },
+        {
+            id: 14,
+            timing: "15:00 -17:30",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "UnderArm Cricket",
+            personnel: "Ground"
+        },
+        {
+            id: 15,
+            timing: "15:00 - 17:00",
+            category: "General",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "BasketBall 3S",
+            personnel: "BasketBall Court"
+        },
+        {
+            id: 16,
+            timing: "17:00 - 22:00",
+            category: "-",
+            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            description: "Band and DJ",
+            personnel: "Main Stage"
         }
     ]
 
