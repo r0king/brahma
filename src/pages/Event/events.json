@@ -284,8 +284,8 @@
     {
         "id" : 18,
         "name": "Groove N Move - Choreo Night!",
-        "main_img": "",
-        "speaker": true,
+        "main_img": "https://live.staticflickr.com/65535/52736090640_b1c6e0d4e7_b.jpg",
+        "speaker": false,
         "type": "Cultural",
         "date": "31-03-2023",
         "location": "MAIN STAGE",
