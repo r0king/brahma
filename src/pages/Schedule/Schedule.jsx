@@ -26,7 +26,7 @@ const Schedule = () => {
             id: 1,
             timing: "10:00 - 12:00",
             category: "Cultural",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52733875633_642dab9705_z.jpg",
             description: "Voice of Brahma - Preliminary",
             personnel: "CS Seminar Hall"
         },
@@ -82,7 +82,7 @@ const Schedule = () => {
             id: 8,
             timing: "12:30 - 15:30",
             category: "Workshop",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52735714251_c82e03209e_b.jpg",
             description: "Spotlight Acting Workshop",
             personnel: "TBD"
         },
@@ -279,7 +279,7 @@ const Schedule = () => {
             id: 16,
             timing: "18:00 - 21:00",
             category: "Cultural",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52736090640_b1c6e0d4e7_b.jpg",
             description: "Choreo Night",
             personnel: "Main Stage"
         }
@@ -386,7 +386,7 @@ const Schedule = () => {
             id: 12,
             timing: "12:00 - 14:00",
             category: "Cultural",
-            img: "",
+            img: "https://live.staticflickr.com/65535/52736128675_d66f633c89_b.jpg",
             description: "Street Show",
             personnel: "Lobby"
         },
