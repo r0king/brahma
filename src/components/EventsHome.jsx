@@ -264,7 +264,7 @@ export default function EventsHome({ rippleRef }) {
                   <div key={index} className="text-base">
                     <div className="flex flex-col">
                       <img
-                        className="rounded-tr-[4em] aspect-auto object-top px-1"
+                        className="aspect-auto object-top px-1"
                         src={event.imgSrc}
                         alt={`Slide ${index + 1}`}
                       />
@@ -298,12 +298,12 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-md"
                     />
                     <div className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
@@ -321,12 +321,12 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-md"
                     />
                     <div className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
@@ -344,17 +344,18 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                    id="mainDiv"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-md"
                     />
-                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                    <div id="subDiv1" className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
                     </div>
-                    <div className="absolute z-40 bottom-8 p-3">
+                    <div id="subDiv2" className="absolute z-40 bottom-8 p-3">
                       {event.venue}
                     </div>
                     {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}

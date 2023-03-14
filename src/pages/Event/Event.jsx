@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardButton from "../../components/CardButton";
-import eventsData from "./events.json";
-import posterImg from "../../assets/images/pic6.jpeg";
+import eventsData from "../../assets/events.json";
+// import posterImg from "../../assets/images/pic6.jpeg";
 // import { Parallax } from "react-scroll-parallax";
 export default function Event() {
   const { eventId } = useParams();
@@ -63,7 +63,7 @@ export default function Event() {
           <img
             src={eventData.main_img}
             alt=""
-            className="max-w-full md:absolute w-[460px] aspect-square object-cover rounded-tr-[20%] my-5
+            className="max-w-full md:absolute w-[460px] aspect-square object-cover my-5
              relative right-[50%] md:left-[33%] md:top-0 "
           />
           <div className="flex md:flex-col w-full justify-between ">
@@ -101,7 +101,7 @@ export default function Event() {
               <img
                 src={eventData.speaker_img}
                 alt=""
-                className="max-w-full w-[460px] aspect-square object-cover rounded-tr-[20%] my-5"
+                className="max-w-full w-[460px] aspect-square object-cover my-5"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Event() {
             {eventData.event_tagline}
           </h4>
         </div>
-        <div className="max-w-full  w-[460px] aspect-square object-cover rounded-tr-[20%]">
+        <div className="max-w-full  w-[460px] aspect-square object-cover">
           <p className="text-sm" dangerouslySetInnerHTML={{ __html: eventData.event_content }}>
           </p>
         </div>

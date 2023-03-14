@@ -112,7 +112,7 @@ const Workshop = ({ rippleRef }) => {
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="rounded-tr-[4em] px-1 w-full aspect-[4/3]"
+                  className="px-1 w-full aspect-[4/3]"
                   src={image.src}
                   alt={`Slide ${index + 1}`}
                 />
