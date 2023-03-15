@@ -73,6 +73,9 @@ export default function Event() {
             <button className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
                 href={eventData.reg_link}
+                onClick={() => {
+                  window.open(eventData.reg_link, "_blank");
+                }}
                 text={{ head: "Get", tail: "Tickets", caption: "Booking" }}
               />
             </button>

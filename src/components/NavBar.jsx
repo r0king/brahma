@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import asietLogo from "../assets/images/asiet-logo.webp";
-import asietLogoDark from "../assets/images/asiet-logo-dark.webp";
+import asietLogoDark from "../assets/images/asiet-logo-whitec.webp";
+import asietLogoWhite from "../assets/images/asiet-logo-darkc.webp";
 // import arrowSVG from "../assets/images/arrow.svg";
 import { Link } from "react-scroll";
 
@@ -26,7 +26,7 @@ const NavBar = ({ rippleRef }) => {
 
       document.documentElement.setAttribute("data-theme", "dark");
     } else {
-      logoRef.current.src = asietLogo;
+      logoRef.current.src = asietLogoWhite;
       localStorage.setItem("theme", JSON.stringify("light"));
       // set data theme as light
       document.documentElement.setAttribute("data-theme", "light");
@@ -68,7 +68,7 @@ const NavBar = ({ rippleRef }) => {
           }}
         >
           <img
-            src={asietLogo}
+            src={asietLogoWhite}
             ref={logoRef}
             alt="logo"
             className=" md:w-[12vw] p-2 md:pt-2  w-[40vw]"
@@ -149,7 +149,7 @@ const NavBar = ({ rippleRef }) => {
               Menu
             </button>
           </label>
-          <label className="swap swap-rotate py-3 pr-1 md:pt-1 opacity-70 hover:opacity-100">
+          <label className="swap swap-rotate py-3 pr-1 md:pt-[5.5px] opacity-70 hover:opacity-100">
             <input
               type="checkbox"
               checked={theme === "dark" ? true : false}
