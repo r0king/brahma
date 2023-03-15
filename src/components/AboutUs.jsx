@@ -20,7 +20,7 @@ const AboutUs = ({ rippleRef }) => {
           <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-5 md:mr-7 md:ml-0">
             About Us
           </h1>
-          <button className="h-[30vw] md:h-[8vw] md:w-[25vw] md:ml-[14vw] mt-8 md:mt-0 mx-3 md:mx-0">
+          <button className="w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
             <CardButton
               text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
               onClick={() => {

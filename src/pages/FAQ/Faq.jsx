@@ -85,7 +85,7 @@ function Faq() {
         </p>
 
          <div className="reach_team w-full justify-start ">
-            <button className="reach_container w-[95vw]  md:w-[20vw] h-[30vw] md:h-[8vw]">
+            <button className="reach_container  w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
                 
             <CardButton text={{head:"Reach",tail:"Our Team",caption:"Contact Us"}}/>
               {/* <p>Contact us</p>
@@ -93,7 +93,7 @@ function Faq() {
                   <span>Reach Our Team</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
+                    fill="none"                                 
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
