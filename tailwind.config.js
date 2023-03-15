@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         primary: "var(--color-primary)",
+        primarysub: "var(--color-primary-sub)",
         secondary: "var(--color-secondary)",
         accent: "var(--color-accent)",
       },

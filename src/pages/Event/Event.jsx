@@ -66,7 +66,7 @@ export default function Event() {
             className="max-w-full md:absolute w-[460px] aspect-square object-cover my-5
              relative right-[50%] md:left-[33%] md:top-0 "
           />
-          <div className="flex md:flex-col w-full justify-between ">
+          <div className="flex md:flex-col md:pl-[15vw] justify-between ">
             <button className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
                 onClick={() => {

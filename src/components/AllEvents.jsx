@@ -75,7 +75,7 @@ const AllEvents = () => {
             <div className="flex flex-col justify-center text-primary">
               <a href={`event\\${index}`} alt={event.name}>
                 <img
-                  className="rounded md:w-full aspect-[1/1] hover:scale-105"
+                  className="rounded-xl md:w-full aspect-[1/1] hover:scale-105"
                   src={event.main_img}
                   alt={event.name}
                 />

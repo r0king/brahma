@@ -298,12 +298,12 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay rounded-xl"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md"
+                      className="relative aspect-[1/1] object-cover w-full rounded-xl "
                     />
                     <div className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
@@ -321,12 +321,12 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay rounded-xl"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md"
+                      className="relative aspect-[1/1] object-cover w-full rounded-xl "
                     />
                     <div className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
@@ -345,14 +345,17 @@ export default function EventsHome({ rippleRef }) {
                   <div
                     key={event.id}
                     id="mainDiv"
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay rounded-xl"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md"
+                      className="relative aspect-[1/1] object-cover w-full rounded-xl"
                     />
-                    <div id="subDiv1" className="absolute z-40 bottom-16 p-3 text-2xl">
+                    <div
+                      id="subDiv1"
+                      className="absolute z-40 bottom-16 p-3 text-2xl"
+                    >
                       {event.name}
                     </div>
                     <div id="subDiv2" className="absolute z-40 bottom-8 p-3">
