@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 // import ContactUs from "../components/ContactUs";
 import Hero from "../components/Hero";
 import SpotLight from "../components/SpotLight";
