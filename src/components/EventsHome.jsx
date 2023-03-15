@@ -163,14 +163,25 @@ export default function EventsHome({ rippleRef }) {
     setTarget(targetCulturallRef.current);
     setGeneralTarget(targetGenerallRef.current);
   }, [targetCulturallRef, targetGenerallRef]);
-  const scale_point = 1 - scale * 2
+
+  const maxScale = 2.5; // maximum scale value
+  const minScale = 1; // minimum scale value
+  const pivot = 0.4; // point where scale starts decreasing
+
+  const calculateScalePoint = (progress) => {
+    if (progress < pivot) {
+      return minScale + (progress / pivot) * (maxScale - minScale);
+    } else {
+      return maxScale - ((progress - pivot) / (1 - pivot)) * (maxScale - minScale);
+    }
+  };
   return (
     <>
       <div ref={targetCulturallRef} className="relative h-1 w-full"></div>
       <div className="mt-48 md:mt-[20vh]">
         <div className="flex flex-col">
           <div className="flex flex-row">
-            <Parallax translateY={isMobile ? [-130, 50] : [-40, 0]} targetElement={targetCulturall}>
+            <Parallax translateY={isMobile ? [-130, 50] : [-40, 0]} targetElement={!isMobile && targetCulturall}>
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3" >
                 Cultural
               </h2>
@@ -192,7 +203,7 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
           <div className="flex flex-row">
-            <Parallax translateY={isMobile ? [-50, 50] : [-40, 0]} targetElement={targetCulturall}>
+            <Parallax translateY={isMobile ? [-50, 50] : [-40, 0]} targetElement={!isMobile && targetCulturall}>
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
                 Events
               </h2>
@@ -214,29 +225,30 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
         </div>
-        <div ref={targetGenerallRef} style={
-          {
-            '--point-scale': 1
-          }
-        } className="relative h-full w-full my-[5vh] mb-[15vh]">
+        <div ref={targetGenerallRef}
+          className="relative invisible md:visible h-full w-full my-[5vh] mb-[15vh] bg-primary">
           <Parallax
             easing="ease"
             onProgressChange={(progress) => {
-              setScale(progress)
+              setScale(calculateScalePoint(progress))
             }}
-            className={`transform-[scale] will-change-transform`}
-            translateX={isMobile ? [0, 0] : [0, 150]}>
+            style={{
+              scale: 1.1
+            }}
+            id="parallax"
+            className={`bg-accent z-20`}
+            translateX={isMobile ? [-50, -50] : [0, 100]}>
             <div
               id="glow-ball"
               style={{
                 "transform": `scale(${scale})`
               }}
-              className="shadow transform rounded-full h-4 w-4 aspect-square bg-secondary border-primary "></div>
+              className="transform h-8 w-8 bg-primary"></div>
           </Parallax>
         </div>
         <div className="flex flex-col mt-60 md:mt-10">
           <div className="flex flex-row-reverse">
-            <Parallax translateY={isMobile ? [-200, 50] : [-33, 0]} targetElement={targetGeneral}>
+            <Parallax translateY={isMobile ? [-200, 50] : [-33, 0]} targetElement={!isMobile && targetGeneral}>
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pr-3">
                 General
               </h2>
@@ -261,7 +273,7 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
           <div className="flex flex-row-reverse">
-            <Parallax translateY={isMobile ? [-50, 50] : [-30, 3]} targetElement={targetGeneral}>
+            <Parallax translateY={isMobile ? [-50, 50] : [-30, 3]} targetElement={!isMobile && targetGeneral}>
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pr-3">
                 Events
               </h2>
