@@ -53,16 +53,16 @@ export default class CountDown extends Component {
       <div
         className="           
              h-min py-4 px-[9vw] md:pl-4 md:pr-4 md:pt-3 md:pb-5 rounded-md md:mr-0 md:ml-[5vw] mx-auto md:mx-0 w-fit
-             bg-secondary md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none
+             bg-secondary md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none text-primarysub
              grid grid-flow-col justify-center md:justify-start gap-5 auto-cols-max
-             text-center text-xl"
+             text-center text-xl group"
       >
         <div className="flex flex-col font-['Montserrat',sans-serif] md:p-2 md:pb-0 rounded-box text-base">
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold ">
             <span style={{ "--value": this.state.days }}></span>
-          </span >
+          </span>
 
-          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs md:text- transition-all">
+          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs transition-all">
             days
           </span>
         </div>
@@ -70,7 +70,7 @@ export default class CountDown extends Component {
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold">
             <span style={{ "--value": this.state.hours }}></span>
           </span>
-          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs md:text- transition-all ">
+          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs transition-all ">
             hours
           </span>
         </div>
@@ -78,7 +78,7 @@ export default class CountDown extends Component {
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold">
             <span style={{ "--value": this.state.minutes }}></span>
           </span>
-          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs md:text- transition-all ">
+          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs transition-all ">
             min
           </span>
         </div>
@@ -86,7 +86,7 @@ export default class CountDown extends Component {
           <span className="countdown text-[4vh] md:text-[5vh] font-semibold">
             <span style={{ "--value": this.state.seconds }}></span>
           </span>
-          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs md:text- transition-all ">
+          <span className="c-button_tag group-hover:text-[#1F1F1F] text-xs transition-all ">
             sec
           </span>
         </div>
