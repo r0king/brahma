@@ -1,15 +1,11 @@
 import React from "react";
-// import dotSVG from "../assets/images/dot.svg"
-// import imgSrc from "../assets/images/imgSrc.jpg"
-// import Event1 from "../assets/images/event1.jpg";
 import Event1 from "../assets/images/events/themeShow.jpeg";
-import Event2 from "../assets/images/events/dj-war.jpeg";
+import Event2 from "../assets/images/events/DJ_War.jpg";
 import Event3 from "../assets/images/events/voiceOfBrahma.jpeg";
-import Event4 from "../assets/images/events/fifa.jpeg";
-import Event5 from "../assets/images/events/maze.jpeg";
-import Event6 from "../assets/images/events/spot-pic.jpeg";
+import Event4 from "../assets/images/events/bandOfBrahma.jpeg";
+import Event5 from "../assets/images/events/hipHopBattle.jpeg";
+import Event6 from "../assets/images/events/rapBattle.jpeg";
 import CardButton from "./CardButton";
-// import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -64,7 +60,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Theme Show",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://min.lc/Theme-Show",
+      regLink: "https://www.yepdesk.com/theme-show",
       imgSrc: Event1,
     },
     {
@@ -80,31 +76,31 @@ export default function EventsHome({ rippleRef }) {
       name: "Voice of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://min.lc/voiceofbrahma",
+      regLink: "https://www.yepdesk.com/voice-of-brahma",
       imgSrc: Event3,
     },
     {
       id: 4,
-      name: "Fifa",
-      venue: "CCF Lab",
+      name: "Band Of Brahma",
+      venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
       regLink: "https://www.yepdesk.com/fifa-versus2",
       imgSrc: Event4,
     },
     {
       id: 5,
-      name: "Maze",
-      venue: "PL Lab",
-      time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/maze",
+      name: "Hip Hop Hustle",
+      venue: "Auditorium",
+      time: "01-04-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/hip-hop-hustle",
       imgSrc: Event5,
     },
     {
       id: 6,
-      name: "Spot Photography",
-      venue: "College Premise",
-      time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/spot-photography1",
+      name: "Rap Battle",
+      venue: "Mini Seminar Hall",
+      time: "01-04-2023 10:00 AM",
+      regLink: "https://www.yepdesk.com/rap-battle2",
       imgSrc: Event6,
     },
   ];
@@ -264,24 +260,24 @@ export default function EventsHome({ rippleRef }) {
           <div className="w-full mt-10">
             <Slider {...settings}>
               {events.map((event, index) => (
-                <div key={index} className="text-base">
-                  <div className="flex flex-col">
-                    <a href={event.regLink} alt={event.name}>
+                <a href={event.regLink} alt={event.name}>
+                  <div key={index} className="text-base">
+                    <div className="flex flex-col">
                       <img
-                        className="rounded-tr-[4em] aspect-auto object-top px-1"
+                        className="aspect-auto object-top px-1"
                         src={event.imgSrc}
                         alt={`Slide ${index + 1}`}
                       />
-                    </a>
-                    <div className="mt-4 font-poppins font-bold pl-2">
-                      {event.name}
-                    </div>
-                    <div className="flex flex-row mt-4 font-semibold ml- 2">
-                      <div className="font-poppins ml-2">{event.venue}</div>
-                      <div className="font-poppins ml-6">{event.time}</div>
+                      <div className="mt-4 font-poppins font-bold pl-2">
+                        {event.name}
+                      </div>
+                      <div className="flex flex-row mt-4 font-semibold ml- 2">
+                        <div className="font-poppins ml-2">{event.venue}</div>
+                        <div className="font-poppins ml-6">{event.time}</div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               ))}
             </Slider>
           </div>
@@ -295,73 +291,76 @@ export default function EventsHome({ rippleRef }) {
           </div>
         </div>
       ) : (
-        <div className="text-accent py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+        <div className="text-primary py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
           <div className="flex flex-col">
             <div className="flex flex-row mb-10 gap-5">
               {events.slice(0, 2).map((event) => (
-                <div
-                  key={event.id}
-                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-                >
-                  <a href={event.regLink} alt={event.name}>
+                <a href={event.regLink} alt={event.name}>
+                  <div
+                    key={event.id}
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                  >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-md"
                     />
-                  </a>
-                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                    {event.name}
+                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      {event.name}
+                    </div>
+                    <div className="absolute z-40 bottom-8 p-3">
+                      {event.venue}
+                    </div>
+                    {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
-                  <div className="absolute z-40 bottom-8 p-3">
-                    {event.venue}
-                  </div>
-                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-                </div>
+                </a>
               ))}
             </div>
             <div className="flex flex-row-reverse mb-10 gap-5">
               {events.slice(2, 4).map((event) => (
-                <div
-                  key={event.id}
-                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-                >
-                  <a href={event.regLink} alt={event.name}>
+                <a href={event.regLink} alt={event.name}>
+                  <div
+                    key={event.id}
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                  >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-md"
                     />
-                  </a>
-                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                    {event.name}
+                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      {event.name}
+                    </div>
+                    <div className="absolute z-40 bottom-8 p-3">
+                      {event.venue}
+                    </div>
+                    {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
-                  <div className="absolute z-40 bottom-8 p-3">
-                    {event.venue}
-                  </div>
-                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-                </div>
+                </a>
               ))}
             </div>
             <div className="flex flex-wrap mb-10 gap-5">
               {events.slice(4, 6).map((event) => (
-                <div
-                  key={event.id}
-                  className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
-                >
-                  <img
-                    src={event.imgSrc}
-                    alt={event.name}
-                    className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
-                  />
-                  <div className="absolute z-40 bottom-16 p-3 text-2xl">
-                    {event.name}
+                <a href={event.regLink} alt={event.name}>
+                  <div
+                    key={event.id}
+                    id="mainDiv"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                  >
+                    <img
+                      src={event.imgSrc}
+                      alt={event.name}
+                      className="relative aspect-[1/1] object-cover w-full rounded-md"
+                    />
+                    <div id="subDiv1" className="absolute z-40 bottom-16 p-3 text-2xl">
+                      {event.name}
+                    </div>
+                    <div id="subDiv2" className="absolute z-40 bottom-8 p-3">
+                      {event.venue}
+                    </div>
+                    {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
-                  <div className="absolute z-40 bottom-8 p-3">
-                    {event.venue}
-                  </div>
-                  {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
-                </div>
+                </a>
               ))}
               <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
                 <CardButton
