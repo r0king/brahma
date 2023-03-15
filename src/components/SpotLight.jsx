@@ -49,7 +49,7 @@ const SpotLight = () => {
       </div>
       <div className="flex pt-[1vw] justify-center md:justify-end rounded-xl items-start">
         <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
-          46
+          45+
         </h3>
         <h1
           className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
