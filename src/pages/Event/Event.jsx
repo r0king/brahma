@@ -55,7 +55,7 @@ export default function Event() {
               </p>
             </div>
             <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
-              <h4 className="text-[10px] md:text-xs font-medium">Price</h4>
+              <h4 className="text-[10px] md:text-xs font-medium">Registration Fees</h4>
               <p className="text-secondary leading-none  font-semibold font-poppins text-base md:text-xl " dangerouslySetInnerHTML={{ __html: eventData.price }}>
               </p>
             </div>
@@ -69,6 +69,9 @@ export default function Event() {
           <div className="flex md:flex-col w-full justify-between ">
             <button className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
+                onClick={() => {
+                  window.open(eventData.reg_link,"_blank");
+                }}
                 text={{ head: "Get", tail: "Tickets", caption: "Booking" }}
               />
             </button>
