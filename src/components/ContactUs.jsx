@@ -42,7 +42,7 @@ const ContactUs = () => {
               {/* ::Address */}
               <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
                 <h3 className="text-lg font-poppins font-semibold">Address</h3>
-                <p className="text-base font-poppins text-opacity-60 ">
+                <h4 className="text-base font-poppins text-opacity-60 ">
                   5CHJ+758,
                   <br /> Vidya Bharathi Nagar, <br /> Mattoor, Kalady,
                   <br /> Ernakulam, Kerala 683574
@@ -54,7 +54,7 @@ const ContactUs = () => {
                   >
                     Brahma.in
                   </a>
-                </p>
+                </h4>
               </div>
             </div>
             {/* ::Contact */}
@@ -64,21 +64,21 @@ const ContactUs = () => {
                   <h3 className="text-lg font-poppins font-semibold mb-4">
                     Coordinators
                   </h3>
-                  <p className="font-poppins">
-                    <p className="text-base font-poppins text-opacity-60">
+                  <h4 className="font-poppins">
+                    <h4 className="text-base font-poppins text-opacity-60">
                       Adith Menon : +91 95266 35524
                       <br /> Jithu Krishna : +91 9567373010
-                    </p>
-                  </p>
+                    </h4>
+                  </h4>
                 </div>
               </div>
 
               <div className="mt-0 px-5 sm:mt-0 space-y-3 text-accent">
-                <p className="text-base font-poppins text-opacity-60 ">
+                <h4 className="text-base font-poppins text-opacity-60 ">
                   Treesa Jomol k : +91 73564 74358
                   <br />
                   Anjanamol jose : +91 75929 80883
-                </p>
+                </h4>
               </div>
             </div>
           </div>
