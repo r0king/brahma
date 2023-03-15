@@ -10,6 +10,7 @@ export default function Event() {
 
   useEffect(() => {
     setEventData(eventsData[eventId]);
+    console.log(eventsData);
   }, [eventId]);
 
   if (!eventData) {
