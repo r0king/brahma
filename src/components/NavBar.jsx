@@ -7,7 +7,7 @@ import { Link } from "react-scroll";
 const NavBar = ({ rippleRef }) => {
   const [fade, setFade] = useState(false);
   const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme")) || "light"
+    JSON.parse(localStorage.getItem("theme")) || "dark"
   );
   const [showMenu, setShowMenu] = useState(false);
   const logoRef = React.createRef();
