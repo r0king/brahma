@@ -29,8 +29,8 @@ function App() {
       entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
       });
-    }
-    // { threshold: 0.9 }
+    },
+    // { threshold: 0.2 }
   );
 
   headings.forEach((heading) => {

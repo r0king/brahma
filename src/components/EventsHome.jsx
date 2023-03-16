@@ -60,7 +60,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Theme Show",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/theme-show",
+      regLink: "/event/2",
       imgSrc: Event1,
     },
     {
@@ -68,7 +68,7 @@ export default function EventsHome({ rippleRef }) {
       name: "DJ War",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/dj-war",
+      regLink: "/event/15",
       imgSrc: Event2,
     },
     {
@@ -76,7 +76,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Voice of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/voice-of-brahma",
+      regLink: "/event/7",
       imgSrc: Event3,
     },
     {
@@ -84,7 +84,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Band Of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/fifa-versus2",
+      regLink: "/event/1",
       imgSrc: Event4,
     },
     {
@@ -92,7 +92,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Hip Hop Hustle",
       venue: "Auditorium",
       time: "01-04-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/hip-hop-hustle",
+      regLink: "/event/6",
       imgSrc: Event5,
     },
     {
@@ -100,7 +100,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Rap Battle",
       venue: "Mini Seminar Hall",
       time: "01-04-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/rap-battle2",
+      regLink: "/event/4",
       imgSrc: Event6,
     },
   ];
