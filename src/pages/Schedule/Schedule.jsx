@@ -16,17 +16,17 @@ const Schedule = () => {
     const sched1 = [
         {
             id: 0,
-            timing: "09:00 - 10:00",
+            timing: "09:00 - 12:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Thyagaraj Program",
             personnel: "Main Stage"
         },
         {
             id: 1,
-            timing: "10:00 - 10:30",
+            timing: "10:00 - 12:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52733875633_642dab9705_z.jpg",
             description: "Voice of Brahma - Preliminary",
             personnel: "CS Seminar Hall"
         },
@@ -34,7 +34,7 @@ const Schedule = () => {
             id: 2,
             timing: "10:30 - 16:00",
             category: "General",
-            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Fun Zone",
             personnel: "Civil Block"
         },
@@ -42,10 +42,106 @@ const Schedule = () => {
             id: 3,
             timing: "12:10 - 12:30",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "Ranga Pooja",
             personnel: "Main Stage"
-        }
+        },
+        {
+            id: 4,
+            timing: "12:30 - 16:30",
+            category: "General",
+            img: "https://live.staticflickr.com/65535/52733962550_46a37085fb_z.jpg",
+            description: "3D Printing Workshop",
+            personnel: "CCF Lab"
+        },
+        {
+            id: 5,
+            timing: "12:30 - 14:30",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733810815_f8067e6406_z.jpg",
+            description: "Percusion Instrument",
+            personnel: "EC Seminar Hall"
+        },
+        {
+            id: 6,
+            timing: "12:30 - 14:30",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52731093272_133dcda96c_z.jpg",
+            description: "Raagam",
+            personnel: "CS Seminar Hall"
+        },
+        {
+            id: 7,
+            timing: "12:30 - 16:30",
+            category: "General",
+            img: "",
+            description: "Blind Fold",
+            personnel: "TBD"
+        },
+        {
+            id: 8,
+            timing: "12:30 - 15:30",
+            category: "Workshop",
+            img: "https://live.staticflickr.com/65535/52735714251_c82e03209e_b.jpg",
+            description: "Spotlight Acting Workshop",
+            personnel: "TBD"
+        },
+        {
+            id: 9,
+            timing: "13:00 - 17:00",
+            category: "General",
+            img: "",
+            description: "Game Of Rooms",
+            personnel: "S6 EEE Class"
+        },
+        {
+            id: 10,
+            timing: "13:00 - 15:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733875633_642dab9705_z.jpg",
+            description: "Voice Of Brahma - Final",
+            personnel: "Main Stage"
+        },
+        {
+            id: 11,
+            timing: "13:00 - 17:00",
+            category: "General",
+            img: "",
+            description: "Go Cart Expo",
+            personnel: "TBD"
+        },
+        {
+            id: 12,
+            timing: "13:30 - 15:30",
+            category: "General",
+            img: "",
+            description: "Best Manager",
+            personnel: "MBA DEPT"
+        },
+        {
+            id: 13,
+            timing: "13:30 - 15:30",
+            category: "General",
+            img: "",
+            description: "JAM",
+            personnel: "Stage Near CCF"
+        },
+        {
+            id: 14,
+            timing: "15:30 - 17:30",
+            category: "Cultural",
+            img: "",
+            description: "Melam",
+            personnel: "Lobby Stairs"
+        },
+        {
+            id: 15,
+            timing: "17:00 - 21:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733389566_a89f348ae0_z.jpg",
+            description: "Theme Show",
+            personnel: "Main Stage"
+        },
     ]
 
     const sched2 = [
@@ -53,33 +149,139 @@ const Schedule = () => {
             id: 0,
             timing: "10:00 - 13:00",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52732099308_1e05417470_b.jpg",
             description: "Mudhra",
             personnel: "Main Stage"
         },
         {
             id: 1,
-            timing: "10:30 - 12:00",
-            category: "General",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "RJ Hunt",
-            personnel: "Auditorium"
-        },
-        {
-            id: 2,
             timing: "10:00 - 14:00",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52734033158_0b426fa95b_z.jpg   ",
             description: "IEEE Workshop",
             personnel: "ADP Lab"
         },
         {
-            id: 3,
+            id: 2,
             timing: "10:00 - 14:00",
             category: "General",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
-            description: "Fifa",
+            img: "https://live.staticflickr.com/65535/52731603426_5c8bb9ec0e_z.jpg",
+            description: "FIFA",
             personnel: "PL Lab"
+        },
+        {
+            id: 3,
+            timing: "10:30 - 12:00",
+            category: "General",
+            img: "",
+            description: "RJ Hunt",
+            personnel: "Auditorium"
+        },        
+        
+        {
+            id: 4,
+            timing: "10:30 - 14:30",
+            category: "General",
+            img: "",
+            description: "Paint Ball",
+            personnel: "Civil Parking"
+        }
+        ,
+        {
+            id: 5,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "",
+            description: "Soapy Soccer",
+            personnel: "TBD"
+        },
+        {
+            id: 6,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "",
+            description: "Cryogenic Museum",
+            personnel: "Robotics Seminar Hall"
+        },
+        {
+            id: 7,
+            timing: "11:00 - 13:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733389601_f4897b2501_z.jpg",
+            description: "Doodling",
+            personnel: "EC Seminar Hall"
+        },
+        {
+            id: 8,
+            timing: "11:30 - 15:30",
+            category: "Workshop",
+            img: "https://live.staticflickr.com/65535/52734033138_bd8ef23322_z.jpg",
+            description: "IOT Workshop",
+            personnel: "NP Lab"
+        },
+        {
+            id: 9,
+            timing: "11:30 - 14:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52732874067_1154577282_z.jpg",
+            description: "Stand Up Comedy",
+            personnel: "Main Seminar Hall"
+        },
+        {
+            id: 10,
+            timing: "12:00 - 16:00",
+            category: "General",
+            img: "",
+            description: "Glow Ball",
+            personnel: "S1 ECA"
+        },
+        {
+            id: 11,
+            timing: "13:00 - 17:00",
+            category: "General",
+            img: "",
+            description: "Treasure Hunt",
+            personnel: "College Premises"
+        },
+        {
+            id: 12,
+            timing: "14:00 - 16:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733875698_d868d91a36_z.jpg",
+            description: "Spot Dance",
+            personnel: "Lobby"
+        },
+        {
+            id: 13,
+            timing: "14:00 - 16:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733883018_7b0bb8e7ee_z.jpg",
+            description: "Mime",
+            personnel: "Auditorium"
+        },
+        {
+            id: 14,
+            timing: "14:30 - 16:30",
+            category: "General",
+            img: "https://live.staticflickr.com/65535/52731850939_db76a22a31_z.jpg",
+            description: "Band of Brahma",
+            personnel: "Main Stage"
+        },
+        {
+            id: 15,
+            timing: "14:30 - 17:30",
+            category: "General",
+            img: "",
+            description: "Maze",
+            personnel: "EEE Classrooms"
+        },
+        {
+            id: 16,
+            timing: "18:00 - 21:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52736090640_b1c6e0d4e7_b.jpg",
+            description: "Choreo Night",
+            personnel: "Main Stage"
         }
     ]
 
@@ -88,33 +290,137 @@ const Schedule = () => {
             id: 0,
             timing: "09:30 - 12:30",
             category: "Cultural",
-            img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "https://live.staticflickr.com/65535/52732866917_75f4810146_z.jpg",
             description: "Step N Synchro",
             personnel: "Main Stage"
         },
         {
             id: 1,
-            timing: "10:00 - 13:00",
-            category: "Workshop",
-            img: "https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            description: "Mural Workshop",
-            personnel: "AE&I Seminar Hall"
-        },
-        {
-            id: 2,
             timing: "10:00 - 12:00",
             category: "General",
-            img: "https://images.pexels.com/photos/445109/pexels-photo-445109.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            img: "",
             description: "Short Film",
             personnel: "Main Seminar Hall"
         },
         {
-            id: 3,
+            id: 2,
             timing: "10:00 - 14:00",
             category: "Workshop",
-            img: "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
+            img: "",
             description: "IEI Workshop",
             personnel: "Simulation Lab"
+        },
+        {
+            id: 3,
+            timing: "10:00 - 13:00",
+            category: "Workshop",
+            img: "https://live.staticflickr.com/65535/52733650649_1742728873_z.jpg",
+            description: "Mural Workshop",
+            personnel: "AE&I Seminar Hall"
+        },
+        {
+            id: 4,
+            timing: "10:30 - 13:30",
+            category: "General",
+            img: "",
+            description: "Knives Out",
+            personnel: "S5 CSA"
+        },
+        {
+            id: 5,
+            timing: "10:30 - 12:30",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733803945_e804fa9df2_z.jpg",
+            description: "Hip Hop Battle",
+            personnel: "Auditorium"
+        },
+        {
+            id: 6,
+            timing: "10:30 - 14:30",
+            category: "General",
+            img: "",
+            description: "Brain Cycle",
+            personnel: "Infront of Lobby"
+        },
+        {
+            id: 7,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "",
+            description: "Soapy Soccer",
+            personnel: "TBD"
+        },
+        {
+            id: 8,
+            timing: "11:00 - 15:00",
+            category: "General",
+            img: "",
+            description: "Gun Expo",
+            personnel: "Mechanical Block"
+        },
+        {
+            id: 9,
+            timing: "11:00 - 13:30",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733397331_0b3296a2b7_z.jpg",
+            description: "DJ War",
+            personnel: "Main Stage"
+        },
+        {
+            id: 10,
+            timing: "11:00 - 13:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52733875663_cf9d22dc67_z.jpg",
+            description: "Rap Battle",
+            personnel: "EC Seminar Hall"
+        },
+        {
+            id: 11,
+            timing: "12:00 - 16:00",
+            category: "Workshop",
+            img: "https://live.staticflickr.com/65535/52734033188_53191baa85_z.jpg",
+            description: "CNC Workshop",
+            personnel: "CNC Lab"
+        },
+        {
+            id: 12,
+            timing: "12:00 - 14:00",
+            category: "Cultural",
+            img: "https://live.staticflickr.com/65535/52736128675_d66f633c89_b.jpg",
+            description: "Street Show",
+            personnel: "Lobby"
+        },
+        {
+            id: 13,
+            timing: "13:00 - 15:00",
+            category: "General",
+            img: "",
+            description: "Fire & Rescue Team + Dog Squad",
+            personnel: "TBD"
+        },
+        {
+            id: 14,
+            timing: "15:00 -17:30",
+            category: "General",
+            img: "",
+            description: "UnderArm Cricket",
+            personnel: "Ground"
+        },
+        {
+            id: 15,
+            timing: "15:00 - 17:00",
+            category: "General",
+            img: "",
+            description: "BasketBall 3S",
+            personnel: "BasketBall Court"
+        },
+        {
+            id: 16,
+            timing: "17:00 - 22:00",
+            category: "-",
+            img: "",
+            description: "Band and DJ",
+            personnel: "Main Stage"
         }
     ]
 

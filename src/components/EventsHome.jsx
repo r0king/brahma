@@ -60,7 +60,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Theme Show",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/theme-show",
+      regLink: "/event/2",
       imgSrc: Event1,
     },
     {
@@ -68,7 +68,7 @@ export default function EventsHome({ rippleRef }) {
       name: "DJ War",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/dj-war",
+      regLink: "/event/15",
       imgSrc: Event2,
     },
     {
@@ -76,7 +76,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Voice of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/voice-of-brahma",
+      regLink: "/event/7",
       imgSrc: Event3,
     },
     {
@@ -84,7 +84,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Band Of Brahma",
       venue: "Main Stage",
       time: "31-03-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/fifa-versus2",
+      regLink: "/event/1",
       imgSrc: Event4,
     },
     {
@@ -92,7 +92,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Hip Hop Hustle",
       venue: "Auditorium",
       time: "01-04-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/hip-hop-hustle",
+      regLink: "/event/6",
       imgSrc: Event5,
     },
     {
@@ -100,7 +100,7 @@ export default function EventsHome({ rippleRef }) {
       name: "Rap Battle",
       venue: "Mini Seminar Hall",
       time: "01-04-2023 10:00 AM",
-      regLink: "https://www.yepdesk.com/rap-battle2",
+      regLink: "/event/4",
       imgSrc: Event6,
     },
   ];
@@ -264,7 +264,7 @@ export default function EventsHome({ rippleRef }) {
                   <div key={index} className="text-base">
                     <div className="flex flex-col">
                       <img
-                        className="rounded-tr-[4em] aspect-auto object-top px-1"
+                        className="aspect-auto object-top px-1"
                         src={event.imgSrc}
                         alt={`Slide ${index + 1}`}
                       />
@@ -298,12 +298,12 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay rounded-xl"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-xl "
                     />
                     <div className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
@@ -321,12 +321,12 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay rounded-xl"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-xl "
                     />
                     <div className="absolute z-40 bottom-16 p-3 text-2xl">
                       {event.name}
@@ -344,24 +344,28 @@ export default function EventsHome({ rippleRef }) {
                 <a href={event.regLink} alt={event.name}>
                   <div
                     key={event.id}
-                    className="relative md:w-[32vw] w-[55vw] shadow-overlay-reverse"
+                    id="mainDiv"
+                    className="relative md:w-[32vw] w-[55vw] shadow-overlay rounded-xl"
                   >
                     <img
                       src={event.imgSrc}
                       alt={event.name}
-                      className="relative aspect-[1/1] object-cover w-full rounded-md rounded-tr-[5vw]"
+                      className="relative aspect-[1/1] object-cover w-full rounded-xl"
                     />
-                    <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                    <div
+                      id="subDiv1"
+                      className="absolute z-40 bottom-16 p-3 text-2xl"
+                    >
                       {event.name}
                     </div>
-                    <div className="absolute z-40 bottom-8 p-3">
+                    <div id="subDiv2" className="absolute z-40 bottom-8 p-3">
                       {event.venue}
                     </div>
                     {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
                   </div>
                 </a>
               ))}
-              <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
+              <div className="relative w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
                 <CardButton
                   onClick={() => {
                     handleClick("events");

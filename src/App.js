@@ -4,7 +4,7 @@ import { ParallaxProvider } from "react-scroll-parallax";
 
 import HomePage from "./pages/HomePage";
 import Faq from "./pages/FAQ/Faq";
-// import Event from "./pages/Event/Event";
+import Event from "./pages/Event/Event";
 import Schedule from "./pages/Schedule/Schedule";
 
 import "./App.css";
@@ -29,8 +29,8 @@ function App() {
       entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
       });
-    }
-    // { threshold: 0.9 }
+    },
+    // { threshold: 0.2 }
   );
 
   headings.forEach((heading) => {
@@ -94,6 +94,7 @@ function App() {
               <Route exact path="/faq" element={<Faq />} />
               <Route exact path="/schedule" element={<Schedule />} />
               <Route exact path="/events" element={<AllEvents />} />
+              <Route exact path="/event/:eventId" element={<Event />} />
               <Route
                 path="*"
                 element={

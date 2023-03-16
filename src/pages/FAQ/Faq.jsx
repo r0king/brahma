@@ -54,16 +54,46 @@ function Faq() {
       <div className="faq_main_container bg-accent">
         <div className="top_part">
           <div className="textpart text-primary font-morganite">
-            <h1>HOW CAN WE HELP YOU ?</h1>
-            <div className="reach_team">
-            <button className="reach_container w-[45vw] md:w-[20vw] h-[30vw] md:h-[8vw]">
+            <h1>FREQUENTLY ASKED QUESTIONS</h1>
+            
+          </div>
+          
+        </div>
+        
+        <p className="faq_part font-poppins">
+            {/* <img src={megaphone} alt="" /> */}
+            <div className="part1">
+            {
+                faqs.map((ele,index)=>{
+                    return(<>
+                    <article className={`accordian_item${index} accordian_item`} onClick={()=>{toggle(index)}}>
+                        <div className={`accordian_content${index} accordian_content text-primary`} >
+                            <h2>{ele.qstn}</h2>
+                            <span className={`accordion_icon${index}`}></span>
+                        </div>
+                        <div className="faq_answer text-primary">
+                            <h4 className={selected===index? 'text-sm pb-1 content-show':'content-hide'}>
+                                {ele.ans}
+                            </h4>
+                        </div>
+                    </article>
+                    </>)
+                })
+            }
+                
+            </div>
+        </p>
+
+         <div className="reach_team w-full justify-start ">
+            <button className="reach_container  w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+                
             <CardButton text={{head:"Reach",tail:"Our Team",caption:"Contact Us"}}/>
               {/* <p>Contact us</p>
               <div className="reach_bottom_part">
                   <span>Reach Our Team</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
+                    fill="none"                                 
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="currentColor"
@@ -78,32 +108,6 @@ function Faq() {
               </div> */}
             </button>
           </div>
-          </div>
-          
-        </div>
-        <div className="faq_part font-poppins">
-            {/* <img src={megaphone} alt="" /> */}
-            <div className="part1">
-            {
-                faqs.map((ele,index)=>{
-                    return(<>
-                    <article className={`accordian_item${index} accordian_item`} onClick={()=>{toggle(index)}}>
-                        <div className={`accordian_content${index} accordian_content text-primary`} >
-                            <h1>{ele.qstn}</h1>
-                            <span className={`accordion_icon${index}`}></span>
-                        </div>
-                        <div className="faq_answer text-primary">
-                            <p className={selected===index?'content-show':'content-hide'}>
-                                {ele.ans}
-                            </p>
-                        </div>
-                    </article>
-                    </>)
-                })
-            }
-                
-            </div>
-        </div>
         {/* <div className="part2 font-poppins">
             <div className="additional_contact text-primary">
                 <h1 className='text-secondary font-morganite'>Additional Contact</h1>
