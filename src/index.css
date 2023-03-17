@@ -14,6 +14,7 @@
     --color-primary: #fafafa;
     --color-secondary: #d35c39;
     --color-accent: #1f1f1f;
+    --color-primary-sub: #fafafa;
   }
 }
 
@@ -72,9 +73,15 @@ body {
   animation: ripple-scale 2s ease;
   border-color: var(--color-primary);
   border-style: solid;
-  border-width: 1px;
+  border-width: 5px;
   bottom: -120%;
   left: -50%;
+}
+
+@media screen and (max-width: 768px) {
+  .circle-ripple {
+    left: -100%;
+  }
 }
 
 @keyframes ripple-scale {
@@ -96,7 +103,7 @@ p,
 img,
 button,
 .card {
-  transform: translateY(100px);
+  transform: translateY(30%);
   opacity: 0;
   transition: 1000ms;
 }

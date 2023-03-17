@@ -1,9 +1,7 @@
-import eventsData from "../assets/events.json"
-
+import eventsData from "../assets/events.json";
 
 import CardButton from "./CardButton";
 const AllEvents = () => {
-
   return (
     <div className="md:mb-32">
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
@@ -31,7 +29,7 @@ const AllEvents = () => {
       </div>
 
       <div className="justify-between md:flex">
-        <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[8%]">
+        <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[6%]">
           <h1 className="leading-[0.75]">ALL</h1>
           <h1 className="leading-[0.75]">EVENTS</h1>
         </div>
@@ -58,7 +56,7 @@ const AllEvents = () => {
             (45+)
           </div>
         </div>
-        <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] mb-[6vw]">
+        <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] md:mt-[37vw] mb-[6vw]">
           <CardButton
             href="/"
             text={{ head: "Get", tail: "Slots", caption: "registration" }}
@@ -77,7 +75,7 @@ const AllEvents = () => {
             <div className="flex flex-col justify-center text-primary">
               <a href={`event\\${index}`} alt={event.name}>
                 <img
-                  className="rounded md:w-full aspect-[1/1] hover:scale-105"
+                  className="rounded-xl md:w-full aspect-[1/1] hover:scale-105"
                   src={event.main_img}
                   alt={event.name}
                 />
@@ -85,24 +83,17 @@ const AllEvents = () => {
               <div className="pl-2 mt-4 text-lg font-bold font-poppins text-primary">
                 {event.name}
               </div>
-              <div className="flex flex-row pl-2 mt-4 font-semibold">
+              <div className="flex flex-row pl-2 mt-4 font-semibold w-[100vw]">
                 <div className=" font-poppins text-primary">
                   {event.price === "" ? (
                     "Free"
                   ) : (
-                    <>
-                      <span className="px-1 text-sm border-2 border-orange-500">
-                        ₹{event.price.split("/")[0]}
-                      </span>
-                      {event.price.split("/")[1] && (
-                        <>
-                          <br />
-                          <span className="">
-                            per&nbsp;{event.price.split("/")[1]}
-                          </span>
-                        </>
-                      )}
-                    </>
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: event.price,
+                      }}
+                      className="px-1 text-sm border-2 border-orange-500"
+                    ></span>
                   )}
                 </div>
                 <div className="ml-6 font-poppins text-primary">
