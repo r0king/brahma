@@ -104,7 +104,6 @@ img,
 button,
 .card {
   transform: translateY(30%);
-  overflow: hidden;
   opacity: 0;
   transition: 1000ms;
 }
