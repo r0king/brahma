@@ -16,29 +16,26 @@ const AboutUs = ({ rippleRef }) => {
   const isMobile = useMediaQuery({ maxWidth: 640 });
 
   return (
-    <div className=" md:mt-32 md:mb-[3vh]">
+    <div className=" md:mt-32 md:mb-[3vh]" id="about">
       <div className="flex flex-col md:flex-row-reverse relative">
-
         <div className="flex flex-col md:order-2">
-          <Parallax
-            translateY={isMobile ? [0, 0] : [60, -30]}
-            easing="ease" >
+          <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease">
             <h1 className="uppercase order-2 font-morganite text-[30vw] md:text-[22vw] mt-10 leading-[0.75] ml-3 md:mr-7 md:ml-0">
               About Us
             </h1>
-            <button className="order-1 h-[30vw] md:h-[8vw] md:w-[25vw] md:ml-[14vw] md:mt-0 px-2 md:mx-0">
-              <CardButton
-                text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
-                onClick={() => {
-                  handleClick("events");
-                }}
-              />
-            </button>
+            <div className="order-1 w-full flex justify-center">
+              <button className=" mx-auto md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+                <CardButton
+                  text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
+                  onClick={() => {
+                    handleClick("events");
+                  }}
+                />
+              </button>
+            </div>
           </Parallax>
         </div>
-        <Parallax
-          translateY={isMobile ? [0, 0] : [10, -10]}
-          easing="ease" >
+        <Parallax translateY={isMobile ? [0, 0] : [10, -10]} easing="ease">
           <div className="order-1 mx-3 md:mr-10 mt-10 md:mt-0 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
             <video
               width={"800"}

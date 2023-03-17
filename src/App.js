@@ -72,7 +72,7 @@ function App() {
 
     setTimeout(() => {
       setLoading(false); // set the loading state to false
-    }, 1000);
+    }, 2000);
   }, [isLoading, hours]);
 
   return (

@@ -164,15 +164,17 @@ export default function EventsHome({ rippleRef }) {
     setGeneralTarget(targetGenerallRef.current);
   }, [targetCulturallRef, targetGenerallRef]);
 
-  const maxScale = 2.5; // maximum scale value
-  const minScale = 1; // minimum scale value
+  const maxScale = 5.5; // maximum scale value
+  const minScale = 0.5; // minimum scale value
   const pivot = 0.4; // point where scale starts decreasing
 
   const calculateScalePoint = (progress) => {
     if (progress < pivot) {
       return minScale + (progress / pivot) * (maxScale - minScale);
     } else {
-      return maxScale - ((progress - pivot) / (1 - pivot)) * (maxScale - minScale);
+      return (
+        maxScale - ((progress - pivot) / (1 - pivot)) * (maxScale - minScale)
+      );
     }
   };
   return (
@@ -181,8 +183,11 @@ export default function EventsHome({ rippleRef }) {
       <div className="mt-48 md:mt-[20vh]">
         <div className="flex flex-col">
           <div className="flex flex-row">
-            <Parallax translateY={isMobile ? [-130, 50] : [-40, 0]} targetElement={!isMobile && targetCulturall}>
-              <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3" >
+            <Parallax
+              translateY={isMobile ? [-130, 50] : [-40, 0]}
+              targetElement={!isMobile && targetCulturall}
+            >
+              <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
                 Cultural
               </h2>
             </Parallax>
@@ -203,7 +208,10 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
           <div className="flex flex-row">
-            <Parallax translateY={isMobile ? [-50, 50] : [-40, 0]} targetElement={!isMobile && targetCulturall}>
+            <Parallax
+              translateY={isMobile ? [-50, 50] : [-40, 0]}
+              targetElement={!isMobile && targetCulturall}
+            >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
                 Events
               </h2>
@@ -225,30 +233,39 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
         </div>
-        <div ref={targetGenerallRef}
-          className="relative invisible md:visible h-full w-full my-[5vh] mb-[15vh] bg-primary">
+        <div
+          ref={targetGenerallRef}
+          className="relative invisible md:visible h-full w-full my-[5vh] mb-[15vh]"
+        >
           <Parallax
             easing="ease"
             onProgressChange={(progress) => {
-              setScale(calculateScalePoint(progress))
+              setScale(calculateScalePoint(progress));
             }}
             style={{
-              scale: 1.1
+              scale: 1.2,
             }}
             id="parallax"
             className={`bg-accent z-20`}
-            translateX={isMobile ? [-50, -50] : [0, 100]}>
+            translateX={isMobile ? [-50, -50] : [0, 100]}
+          >
             <div
               id="glow-ball"
               style={{
-                "transform": `scale(${scale})`
+                // transform: `scale(${scale})`,
+                //scaley
+                transform: `scaleX(${scale*1.5})`,                
               }}
-              className="transform h-8 w-8 bg-primary"></div>
+              className="transform h-2 w-8 bg-white ease-in-out duration-75 rounded-xl"
+            ></div>
           </Parallax>
         </div>
         <div className="flex flex-col mt-60 md:mt-10">
           <div className="flex flex-row-reverse">
-            <Parallax translateY={isMobile ? [-200, 50] : [-33, 0]} targetElement={!isMobile && targetGeneral}>
+            <Parallax
+              translateY={isMobile ? [-200, 50] : [-33, 0]}
+              targetElement={!isMobile && targetGeneral}
+            >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pr-3">
                 General
               </h2>
@@ -273,7 +290,10 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
           <div className="flex flex-row-reverse">
-            <Parallax translateY={isMobile ? [-50, 50] : [-30, 3]} targetElement={!isMobile && targetGeneral}>
+            <Parallax
+              translateY={isMobile ? [-50, 50] : [-30, 3]}
+              targetElement={!isMobile && targetGeneral}
+            >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pr-3">
                 Events
               </h2>
@@ -324,7 +344,7 @@ export default function EventsHome({ rippleRef }) {
                 ))}
               </Slider>
             </div>
-            <div className="relative mt-3 md:mt-0 md:ml-5 h-[35vw] mx-auto md:mx-0 w-[95vw] md:w-[22%]">
+            <div className="mx-auto md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
               <CardButton
                 onClick={() => {
                   handleClick("events");
@@ -395,7 +415,10 @@ export default function EventsHome({ rippleRef }) {
                         alt={event.name}
                         className="relative aspect-[1/1] object-cover w-full rounded-md"
                       />
-                      <div id="subDiv1" className="absolute z-40 bottom-16 p-3 text-2xl">
+                      <div
+                        id="subDiv1"
+                        className="absolute z-40 bottom-16 p-3 text-2xl"
+                      >
                         {event.name}
                       </div>
                       <div id="subDiv2" className="absolute z-40 bottom-8 p-3">
@@ -405,12 +428,16 @@ export default function EventsHome({ rippleRef }) {
                     </div>
                   </a>
                 ))}
-                <div className="relative -mt-7 md:mt-0 md:ml-5 h-[35vh] w-[48%] md:w-[22%]">
+                <div className="mx-auto md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
                   <CardButton
                     onClick={() => {
                       handleClick("events");
                     }}
-                    text={{ head: "View", tail: "All Events", caption: "Events" }}
+                    text={{
+                      head: "View",
+                      tail: "All Events",
+                      caption: "Events",
+                    }}
                   />
                 </div>
               </div>
