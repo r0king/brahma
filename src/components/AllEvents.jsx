@@ -73,7 +73,7 @@ const AllEvents = () => {
       <div className="flex justify-center mb-4 space-x-4">
   <button
     className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "All" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+      filter === "All" ? "bg-primary text-secondary" : "bg-secondary text-primary"
     }`}
     onClick={() => setFilter("All")}
   >
@@ -81,7 +81,7 @@ const AllEvents = () => {
   </button>
   <button
     className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "Cultural" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+      filter === "Cultural" ? "bg-primary text-secondary" : "bg-secondary text-primary"
     }`}
     onClick={() => setFilter("Cultural")}
   >
@@ -89,7 +89,7 @@ const AllEvents = () => {
   </button>
   <button
     className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "General" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+      filter === "General" ? "bg-primary text-secondary" : "bg-secondary text-primary"
     }`}
     onClick={() => setFilter("General")}
   >
@@ -97,7 +97,7 @@ const AllEvents = () => {
   </button>
   <button
     className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "Workshop" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+      filter === "Workshop" ? "bg-primary text-secondary" : "bg-secondary text-primary"
     }`}
     onClick={() => setFilter("Workshop")}
   >
