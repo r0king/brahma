@@ -48,11 +48,11 @@ const ContactUs = () => {
                   <br /> Ernakulam, Kerala 683574
                   <br />
                   <a
-                    href="mailto:Brahma.in"
+                    href="mailto:brahma@adishankara.ac.in"
                     aria-label="mail"
                     className="inline-block font-poppins hover italic pt-3"
                   >
-                    Brahma.in
+                    brahma@adishankara.ac.in
                   </a>
                 </div>
               </div>

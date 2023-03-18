@@ -11,7 +11,7 @@ export default function FollowUs() {
           Follow Us
         </h1> */}
         <div className='flex flex-wrap pb-5 justify-center'>
-          <div className='hover:bg-secondary cursor-pointer border border-accent rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><SiGmail fill='var(--color-accent)' /></div>
+          <div className='hover:bg-secondary cursor-pointer border border-accent rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><a href="mailto:brahma@adishankara.ac.in" target="_blank" rel="noopener noreferrer"><SiGmail fill='var(--color-accent)' /></a></div>
           <div className='hover:bg-secondary cursor-pointer border border-accent rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]'><a href="https://www.instagram.com/brahma_asiet/" target="_blank" rel="noopener noreferrer"><FaInstagram fill='var(--color-accent)' /></a></div>
         </div>
       </div>
