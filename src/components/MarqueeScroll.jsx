@@ -71,20 +71,20 @@ export default class MarqueeScroll extends Component {
           ref={this.marqueeRef}
         >
           <ul className="marquee__content uppercase">
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
           </ul>
           <ul className="marquee__content uppercase" aria-hidden="true">
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
-            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
+            <li dangerouslySetInnerHTML={{ __html: ` &nbsp; &nbsp;${this.props.text} &nbsp; &nbsp;` }}/>
           </ul>
         </div>
       </div>

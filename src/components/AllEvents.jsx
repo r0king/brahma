@@ -1,9 +1,9 @@
 import eventsData from "../assets/events.json";
 
 import CardButton from "./CardButton";
-const AllEvents = () => {
+const AllEvents = ({ rippleRef }) => {
   return (
-    <div className="md:mb-32">
+    <div className="md:mb-32 overflow-hidden">
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
         <p className="absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-secondary">
           (45+)
@@ -59,21 +59,34 @@ const AllEvents = () => {
         <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] md:mt-[37vw] mb-[6vw]">
           <CardButton
             href="/"
-            text={{ head: "Get", tail: "Slots", caption: "registration" }}
+            text={{ head: "Get", tail: "Slots", caption: "Registration" }}
           />
         </button>
       </div>
       <button className="mt-[2vw] h-full w-full md:hidden">
         <CardButton
           href="/"
-          text={{ head: "Get", tail: "Slots", caption: "registration" }}
+          text={{ head: "Get", tail: "Slots", caption: "Registration" }}
         />
       </button>
       <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3">
         {eventsData.map((event, index) => (
           <div key={index} className="max-w-sm">
             <div className="flex flex-col justify-center text-primary">
-              <a href={`event\\${index}`} alt={event.name}>
+              <a
+                href={`event\\${index}`}
+                alt={event.name}
+                onClick={(e) => {
+                  e.preventDefault();
+                  rippleRef.current.classList.toggle(
+                    "circle-ripple"
+                  );
+                  // after timeout of 1.5 sec
+                  setTimeout(() => {
+                    window.location.pathname = `event\\${index}`;
+                  }, 1500);
+                }}
+              >
                 <img
                   className="rounded-xl md:w-full aspect-[1/1] hover:scale-105"
                   src={event.main_img}
