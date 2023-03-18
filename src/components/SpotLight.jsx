@@ -8,12 +8,12 @@ const SpotLight = () => {
 
   return (
     <div className="flex flex-col px-2 mt-32">
-      <div className="flex pt-[1vw] justify-center md:justify-end rounded-xl items-start">
-        <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
+      <div className="flex pt-[1vw] justify-end rounded-xl items-start">
+        <h3 className="text-[11.75vw] leading-none font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
           3
         </h3>
         <h1
-          className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >
@@ -28,12 +28,12 @@ const SpotLight = () => {
           />
         </div>
       </div>
-      <div className="flex flex-row-reverse pt-[1vw] justify-center md:justify-end rounded-xl align-bottom">
-        <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
+      <div className="flex flex-row-reverse pt-[1vw] justify-end rounded-xl align-bottom">
+        <h3 className="text-[11.75vw] leading-none font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
           5
         </h3>
         <h1
-          className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[30vw] ml-4 font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >
@@ -47,12 +47,12 @@ const SpotLight = () => {
           />
         </div>
       </div>
-      <div className="flex pt-[1vw] justify-center md:justify-end rounded-xl items-start">
-        <h3 className="text-6xl font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
+      <div className="flex pt-[1vw] justify-end rounded-xl items-start">
+        <h3 className="text-[11.75vw] leading-none font-semibold md:font-normal md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
           45+
         </h3>
         <h1
-          className={`leading-none mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >

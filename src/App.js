@@ -29,8 +29,8 @@ function App() {
       entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
       });
-    }
-    // { threshold: 0.9 }
+    },
+    // { threshold: 0.2 }
   );
 
   headings.forEach((heading) => {
@@ -72,7 +72,7 @@ function App() {
 
     setTimeout(() => {
       setLoading(false); // set the loading state to false
-    }, 1000);
+    }, 2000);
   }, [isLoading, hours]);
 
   return (

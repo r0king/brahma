@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CardButton from "../../components/CardButton";
 import eventsData from "../../assets/events.json";
+import MarqueeScroll from "../../components/MarqueeScroll";
 // import posterImg from "../../assets/images/pic6.jpeg";
 // import { Parallax } from "react-scroll-parallax";
 export default function Event() {
@@ -20,6 +21,9 @@ export default function Event() {
   return (
     <div className="font-poppins">
       <div className="relative text-primary">
+        <div className="md:absolute">
+          <MarqueeScroll text={eventData.name} />
+        </div>
         <div className="md:h-[500px] md:flex ">
           <h3
             className="text-secondary self-end font-semibold font-poppins text-4xl md:text-[3.14rem] mt-auto
@@ -64,14 +68,14 @@ export default function Event() {
               ></p>
             </div>
           </div>
-          <img
-            src={eventData.main_img}
-            alt=""
-            className="max-w-full md:absolute w-[460px] aspect-square object-cover my-5
-             relative right-[50%] md:left-[33%] md:top-0 "
-          />
+          <div
+            className="max-w-full md:absolute w-[460px] aspect-square object-cover my-5 rounded-md
+           relative right-[50%] md:left-[33%] md:top-0 shadow-overlay-event"
+          >
+            <img alt="" src={eventData.main_img} />
+          </div>
           <div className="flex md:flex-col md:pl-[15vw] justify-between ">
-            <button className="ml-auto md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
+            <button className="ml-auto px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
                 href={eventData.reg_link}
                 onClick={() => {
@@ -85,7 +89,7 @@ export default function Event() {
       </div>
       {eventData.speaker && (
         <>
-          <div className="flex w-full px-2 flex-col md:flex-row">
+          <div className="flex w-full px-3 flex-col md:flex-row ">
             <h1 className="py-[10vw] text-5xl md:text-9xl text-secondary font-poppins font-semibold -tracking-widest">
               Speaker
             </h1>
@@ -93,7 +97,7 @@ export default function Event() {
               01
             </h2>
           </div>
-          <div className="-mt-[20%] md:mt-0 px-2 flex flex-col text-primary md:flex-row justify-center w-full text-lg md:px-[calc((100vw-9.375rem)*2/14+1.875rem)]">
+          <div className="-mt-[20%] md:mt-0 px-3 flex flex-col text-primary md:flex-row justify-center w-full text-lg md:px-[calc((100vw-9.375rem)*2/14+1.875rem)]">
             <div
               id="text-section"
               className="md:w-2/5 pr-[30%] md:pr-[calc((100vw-9.375rem)*1/14+.625rem)]"
@@ -107,7 +111,7 @@ export default function Event() {
               <img
                 src={eventData.speaker_img}
                 alt=""
-                className="max-w-full w-[460px] aspect-square object-cover my-5"
+                className="max-w-full w-[460px] rounded-md aspect-square object-cover my-5"
               />
             </div>
           </div>

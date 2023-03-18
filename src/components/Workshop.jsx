@@ -116,10 +116,10 @@ const Workshop = ({ rippleRef }) => {
                   src={image.src}
                   alt={`Slide ${index + 1}`}
                 />
-                <div className="text-lg mt-4 font-poppins font-bold pl-2">
+                <h1 className="text-lg reverse mt-4 font-poppins font-bold pl-2">
                   {image.name}
-                </div>
-                <div className="flex flex-row mt-4 font-semibold pl-2 gap-5">
+                </h1>
+                <div className="flex flex-row mt-4 font-semibold">
                   {/* if registration frees then show */}
                   {image.regFees === "" ? (
                     <></>
@@ -130,9 +130,11 @@ const Workshop = ({ rippleRef }) => {
                       </div>
                     </>
                   )}
-                  <div className="font-poppins">{image.organizer}</div>
-                  <div className="font-poppins">{image.place}</div>
-                  <div className="font-poppins">{image.Date}</div>
+                  <div className="show flex font-poppins gap-5 justify-between w-full px-3 ">
+                    <p className="reverse">{image.organizer}</p>
+                    <p className="reverse">{image.place}</p>
+                    <p className="reverse">{image.Date}</p>
+                  </div>
                 </div>
               </div>
             </div>

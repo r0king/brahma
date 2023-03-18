@@ -52,9 +52,9 @@ const AllEvents = () => {
             </span>
             {/* <img src={darkSVG} alt="Prize Money"/> */}
           </p>
-          <div className="font-poppins absolute text-secondary  text-[3rem] font-bold  right-0">
+          <p className="font-poppins absolute text-secondary  text-[3rem] font-bold  right-0">
             (45+)
-          </div>
+          </p>
         </div>
         <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] md:mt-[37vw] mb-[6vw]">
           <CardButton
@@ -88,12 +88,22 @@ const AllEvents = () => {
                   {event.price === "" ? (
                     "Free"
                   ) : (
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: event.price,
-                      }}
-                      className="px-1 text-sm border-2 border-orange-500"
-                    ></span>
+                    <>
+                      <div className="border-2 border-orange-500 w-min">
+                        ₹
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: event.price,
+                          }}
+                          className="px-1 text-sm "
+                        ></span>
+                      </div>
+                      {event.team ? (
+                        <span className="text-xs">per team</span>
+                      ) : (
+                        <span className="text-xs">per person</span>
+                      )}
+                    </>
                   )}
                 </div>
                 <div className="ml-6 font-poppins text-primary">

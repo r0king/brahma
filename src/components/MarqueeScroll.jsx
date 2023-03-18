@@ -67,24 +67,24 @@ export default class MarqueeScroll extends Component {
     return (
       <div>
         <div
-          className="marquee font-morganite text-[20vh] md:text-[35vh] opacity-90 leading-none"
+          className="marquee font-morganite text-[20vh] md:text-[35vh] text-primary leading-none"
           ref={this.marqueeRef}
         >
           <ul className="marquee__content uppercase">
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
           </ul>
           <ul className="marquee__content uppercase" aria-hidden="true">
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
-            <li>&nbsp;Stay Tuned&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
+            <li>-{" "}&nbsp;{this.props.text}&nbsp;&nbsp;</li>
           </ul>
         </div>
       </div>
