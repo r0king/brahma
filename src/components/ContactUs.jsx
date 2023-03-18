@@ -52,7 +52,7 @@ const ContactUs = () => {
                     aria-label="mail"
                     className="inline-block font-poppins hover italic pt-3"
                   >
-                    Brahma.in
+                    brahma23.live
                   </a>
                 </div>
               </div>

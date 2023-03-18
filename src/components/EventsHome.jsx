@@ -164,7 +164,7 @@ export default function EventsHome({ rippleRef }) {
     setGeneralTarget(targetGenerallRef.current);
   }, [targetCulturallRef, targetGenerallRef]);
 
-  const maxScale = 5.5; // maximum scale value
+  const maxScale = 7; // maximum scale value
   const minScale = 0.5; // minimum scale value
   const pivot = 0.4; // point where scale starts decreasing
 
@@ -327,7 +327,7 @@ export default function EventsHome({ rippleRef }) {
                     <div key={index} className="text-base">
                       <div className="flex flex-col">
                         <img
-                          className="aspect-auto object-top px-1"
+                          className="aspect-auto mobile object-top px-1"
                           src={event.imgSrc}
                           alt={`Slide ${index + 1}`}
                         />
@@ -361,7 +361,7 @@ export default function EventsHome({ rippleRef }) {
                   <a href={event.regLink} alt={event.name}>
                     <div
                       key={event.id}
-                      className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                      className="relative md:w-[32vw] w-[55vw] shadow-overlay-event"
                     >
                       <img
                         src={event.imgSrc}
@@ -384,7 +384,7 @@ export default function EventsHome({ rippleRef }) {
                   <a href={event.regLink} alt={event.name}>
                     <div
                       key={event.id}
-                      className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                      className="relative md:w-[32vw] w-[55vw] shadow-overlay-event"
                     >
                       <img
                         src={event.imgSrc}
@@ -408,7 +408,7 @@ export default function EventsHome({ rippleRef }) {
                     <div
                       key={event.id}
                       id="mainDiv"
-                      className="relative md:w-[32vw] w-[55vw] shadow-overlay"
+                      className="relative md:w-[32vw] w-[55vw] shadow-overlay-event"
                     >
                       <img
                         src={event.imgSrc}

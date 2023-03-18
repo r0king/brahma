@@ -17,14 +17,14 @@ const AboutUs = ({ rippleRef }) => {
 
   return (
     <div className=" md:mt-32 md:mb-[3vh]" id="about">
-      <div className="flex flex-col md:flex-row-reverse relative">
+      <div className="flex flex-col md:flex-row-reverse relative justify-between px-3">
         <div className="flex flex-col md:order-2">
-          <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease">
+          <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease" className="flex flex-col">
             <h1 className="uppercase order-2 font-morganite text-[30vw] md:text-[22vw] mt-10 leading-[0.75] ml-3 md:mr-7 md:ml-0">
               About Us
             </h1>
-            <div className="order-1 w-full flex justify-center">
-              <button className=" mx-auto md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+            <div className="order-1 w-full flex ">
+              <button className="md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
                 <CardButton
                   text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
                   onClick={() => {
@@ -48,7 +48,7 @@ const AboutUs = ({ rippleRef }) => {
           </div>
         </Parallax>
       </div>
-      <p className="mx-3 font-poppins font-semibold mt-8 md:mt-0 text-justify">
+      <p className="mx-3 md:mx-[9vw] font-poppins font-semibold mt-8 md:mt-0 text-justify">
         Flagged off in 2003 as a technical festival of the students of Adi
         Shankara Institute of Engineering and Technology, our festival is a
         showcase of innovation, creativity and diversity bringing together
