@@ -1,9 +1,10 @@
 import eventsData from "../assets/events.json";
-
+import { useState } from "react";
 import CardButton from "./CardButton";
 const AllEvents = () => {
+  const [filter, setFilter] = useState("All");
   return (
-    <div className="md:mb-32">
+    <div className="md:mb-32">     
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
         <p className="absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-secondary">
           (45+)
@@ -69,8 +70,44 @@ const AllEvents = () => {
           text={{ head: "Get", tail: "Slots", caption: "registration" }}
         />
       </button>
+      <div className="flex justify-center mb-4 space-x-4">
+  <button
+    className={`px-4 py-2 rounded-full text-sm font-medium ${
+      filter === "All" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+    }`}
+    onClick={() => setFilter("All")}
+  >
+    All
+  </button>
+  <button
+    className={`px-4 py-2 rounded-full text-sm font-medium ${
+      filter === "Cultural" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+    }`}
+    onClick={() => setFilter("Cultural")}
+  >
+    Cultural
+  </button>
+  <button
+    className={`px-4 py-2 rounded-full text-sm font-medium ${
+      filter === "General" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+    }`}
+    onClick={() => setFilter("General")}
+  >
+    General
+  </button>
+  <button
+    className={`px-4 py-2 rounded-full text-sm font-medium ${
+      filter === "Workshop" ? "bg-secondary text-primary" : "bg-secondary text-primary"
+    }`}
+    onClick={() => setFilter("Workshop")}
+  >
+    Workshop
+  </button>
+</div>
       <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3">
-        {eventsData.map((event, index) => (
+        {eventsData.map((event, index) => {
+  if (filter === "All" || event.type === filter) {
+    return (
           <div key={index} className="max-w-sm">
             <div className="flex flex-col justify-center text-primary">
               <a href={`event\\${index}`} alt={event.name}>
@@ -105,7 +142,9 @@ const AllEvents = () => {
               </div>
             </div>
           </div>
-        ))}
+        );
+      }
+    })}
       </div>
     </div>
   );
