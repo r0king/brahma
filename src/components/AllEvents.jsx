@@ -3,8 +3,9 @@ import { useState } from "react";
 import CardButton from "./CardButton";
 const AllEvents = () => {
   const [filter, setFilter] = useState("All");
+
   return (
-    <div className="md:mb-32">     
+    <div className="md:mb-32">
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
         <p className="absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-secondary">
           (45+)
@@ -71,80 +72,90 @@ const AllEvents = () => {
         />
       </button>
       <div className="flex justify-center mb-4 space-x-4">
-  <button
-    className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "All" ? "bg-primary text-secondary" : "bg-secondary text-primary"
-    }`}
-    onClick={() => setFilter("All")}
-  >
-    All
-  </button>
-  <button
-    className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "Cultural" ? "bg-primary text-secondary" : "bg-secondary text-primary"
-    }`}
-    onClick={() => setFilter("Cultural")}
-  >
-    Cultural
-  </button>
-  <button
-    className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "General" ? "bg-primary text-secondary" : "bg-secondary text-primary"
-    }`}
-    onClick={() => setFilter("General")}
-  >
-    General
-  </button>
-  <button
-    className={`px-4 py-2 rounded-full text-sm font-medium ${
-      filter === "Workshop" ? "bg-primary text-secondary" : "bg-secondary text-primary"
-    }`}
-    onClick={() => setFilter("Workshop")}
-  >
-    Workshop
-  </button>
-</div>
+        <h3
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+            filter === "All"
+              ? "bg-primary text-secondary"
+              : "bg-secondary text-primary"
+          }`}
+          onClick={() => setFilter("All")}
+        >
+          All
+        </h3>
+        <h3
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+            filter === "Cultural"
+              ? "bg-primary text-secondary"
+              : "bg-secondary text-primary"
+          }`}
+          onClick={() => setFilter("Cultural")}
+        >
+          Cultural
+        </h3>
+        <h3
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+            filter === "General"
+              ? "bg-primary text-secondary"
+              : "bg-secondary text-primary"
+          }`}
+          onClick={() => setFilter("General")}
+        >
+          General
+        </h3>
+        <h3
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+            filter === "Workshop"
+              ? "bg-primary text-secondary"
+              : "bg-secondary text-primary"
+          }`}
+          onClick={() => setFilter("Workshop")}
+        >
+          Workshop
+        </h3>
+      </div>
       <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3">
         {eventsData.map((event, index) => {
-  if (filter === "All" || event.type === filter) {
-    return (
-          <div key={index} className="max-w-sm">
-            <div className="flex flex-col justify-center text-primary">
-              <a href={`event\\${index}`} alt={event.name}>
-                <img
-                  className="rounded-xl md:w-full aspect-[1/1] hover:scale-105"
-                  src={event.main_img}
-                  alt={event.name}
-                />
-              </a>
-              <div className="pl-2 mt-4 text-lg font-bold font-poppins text-primary">
-                {event.name}
+          if (filter === "All" || event.type === filter) {
+            return (
+              <div key={index} className="max-w-sm">
+                <div className="flex flex-col justify-center text-primary">
+                  <a href={`event\\${index}`} alt={event.name}>
+                    <img
+                      className="rounded-xl md:w-full aspect-[1/1] hover:scale-105 show"
+                      src={event.main_img}
+                      alt={event.name}
+                    />
+                  </a>
+                  <div className="pl-2 mt-4 text-lg font-bold font-poppins text-primary">
+                    {event.name}
+                  </div>
+                  <div className="flex flex-row pl-2 mt-4 font-semibold w-[100vw]">
+                    <div className=" font-poppins text-primary">
+                      {event.price === "" ? (
+                        "Free"
+                      ) : (
+                        <span
+                          dangerouslySetInnerHTML={{
+                            __html: event.price,
+                          }}
+                          className="px-1 text-sm border-2 border-orange-500"
+                        ></span>
+                      )}
+                    </div>
+                    <div className="ml-6 font-poppins text-primary">
+                      {event.location}
+                    </div>
+                    <div className="ml-6 font-poppins text-primary">
+                      {event.time}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-row pl-2 mt-4 font-semibold w-[100vw]">
-                <div className=" font-poppins text-primary">
-                  {event.price === "" ? (
-                    "Free"
-                  ) : (
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: event.price,
-                      }}
-                      className="px-1 text-sm border-2 border-orange-500"
-                    ></span>
-                  )}
-                </div>
-                <div className="ml-6 font-poppins text-primary">
-                  {event.location}
-                </div>
-                <div className="ml-6 font-poppins text-primary">
-                  {event.time}
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      }
-    })}
+            );
+          } else {
+            return "";
+          }
+        })}
       </div>
     </div>
   );
