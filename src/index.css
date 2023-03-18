@@ -67,8 +67,8 @@ body {
 
 .circle-ripple {
   background-color: var(--color-accent);
-  width: 3em;
-  height: 3em;
+  width: 250em;
+  height: 250em;
   border-radius: 100%;
   animation: ripple-scale 2s ease;
   border-color: var(--color-primary);

@@ -179,7 +179,10 @@ export default function EventsHome({ rippleRef }) {
   };
   return (
     <>
-      <div ref={targetCulturallRef} className="relative h-1 w-full"></div>
+      <div
+        ref={targetCulturallRef}
+        className="relative h-1 mt-[5vh] w-full"
+      ></div>
       <div className="mt-48 md:mt-[20vh]">
         <div className="flex flex-col">
           <div className="flex flex-row">
@@ -209,7 +212,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
           <div className="flex flex-row">
             <Parallax
-              translateY={isMobile ? [-50, 50] : [-40, 0]}
+              translateY={isMobile ? [-50, 50] : [-55, -13]}
               targetElement={!isMobile && targetCulturall}
             >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
@@ -246,17 +249,17 @@ export default function EventsHome({ rippleRef }) {
               scale: 1.2,
             }}
             id="parallax"
-            className={`bg-accent z-20`}
+            className={`bg-accent z-20 `}
             translateX={isMobile ? [-50, -50] : [0, 100]}
           >
             <div
               id="glow-ball"
               style={{
-                // transform: `scale(${scale})`,
-                //scaley
-                transform: `scaleX(${scale*1.5})`,                
+                //also set border radius
+                borderRadius: `${(1 / scale) * 8}px`,
+                transform: `scaleX(${scale * 1.5})`,
               }}
-              className="transform h-2 w-8 bg-white ease-in-out duration-75 rounded-xl"
+              className="transform h-2 w-8 bg-primary ease-linear duration-75"
             ></div>
           </Parallax>
         </div>
@@ -354,7 +357,7 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
         ) : (
-          <div className="text-primary py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+          <div className="text-primarysub py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
             <div className="flex flex-col">
               <div className="flex flex-row mb-10 gap-5">
                 {events.slice(0, 2).map((event) => (
@@ -428,7 +431,7 @@ export default function EventsHome({ rippleRef }) {
                     </div>
                   </a>
                 ))}
-                <div className="mx-auto md:ml-24 mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+                <div className="mb-2 mt-2 md:mb-auto md:mr-auto md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
                   <CardButton
                     onClick={() => {
                       handleClick("events");

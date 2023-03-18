@@ -6,3 +6,6 @@
 .arrow-right {
     cursor: url('./assets/svg/right-arrow.svg'),pointer;
 }
+b{
+    color: var(--color-secondary);
+}

@@ -30,6 +30,8 @@ function App() {
         entry.target.classList.toggle("show", entry.isIntersecting);
       });
     },
+    // only once
+    
     // { threshold: 0.2 }
   );
 
@@ -93,7 +95,7 @@ function App() {
               />
               <Route exact path="/faq" element={<Faq />} />
               <Route exact path="/schedule" element={<Schedule />} />
-              <Route exact path="/events" element={<AllEvents />} />
+              <Route exact path="/events" element={<AllEvents rippleRef={rippleRef}/>} />
               <Route exact path="/event/:eventId" element={<Event />} />
               <Route
                 path="*"

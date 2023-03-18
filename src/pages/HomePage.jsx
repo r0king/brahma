@@ -119,7 +119,7 @@ export default class HomePage extends Component {
         <EventsHome rippleRef={this.props.rippleRef} />
         <Workshop rippleRef={this.props.rippleRef} />
         <SpotLight />
-        <div className="mx-auto md:mx-2 md:-translate-y-full mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+        <div className="mx-auto md:hidden md:mx-2 md:-translate-y-full mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
             onClick={() => {
               handleClick("schedule");
