@@ -1,7 +1,7 @@
 import React from "react";
-import proshowImg from "../assets/images/spotlight/dj.jpg";
-import workshopImg from "../assets/images/spotlight/themeShow.jpg";
-import eventImg from "../assets/images/spotlight/denceOrmime.jpg";
+import proshowImg from "../assets/images/spotlight/dj.webp";
+import workshopImg from "../assets/images/spotlight/themeShow.webp";
+import eventImg from "../assets/images/spotlight/denceOrmime.webp";
 import CardButton from "./CardButton";
 
 const SpotLight = () => {
