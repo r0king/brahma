@@ -1,8 +1,8 @@
 import React from "react";
-import { Parallax } from "react-scroll-parallax";
+// import { Parallax } from "react-scroll-parallax";
 import brahmaVideo from "../assets/videos/brahmaVideo.mp4";
 import CardButton from "./CardButton";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 
 const AboutUs = ({ rippleRef }) => {
   const handleClick = (name) => {
@@ -13,13 +13,13 @@ const AboutUs = ({ rippleRef }) => {
       window.location.pathname = `/${name}`;
     }, 1500);
   };
-  const isMobile = useMediaQuery({ maxWidth: 640 });
+  // const isMobile = useMediaQuery({ maxWidth: 640 });
 
   return (
     <div className=" md:mt-32 md:mb-[3vh]" id="about">
       <div className="flex flex-col md:flex-row-reverse relative justify-between px-3">
         <div className="flex flex-col md:order-2 ml-auto">
-          <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease" className="flex flex-col ml-auto">
+          {/* <Parallax translateY={isMobile ? [0, 0] : [60, -21]} easing="ease" className="flex flex-col ml-auto"> */}
             <h1 className="uppercase order-2 font-morganite text-[30vw] md:text-[22vw] mt-10 leading-[0.75] ml-3 md:ml-0">
               About Us
             </h1>
@@ -33,9 +33,9 @@ const AboutUs = ({ rippleRef }) => {
                 />
               </button>
             </div>
-          </Parallax>
+          {/* </Parallax> */}
         </div>
-        <Parallax translateY={isMobile ? [0, 0] : [10, -10]} easing="ease">
+        {/* <Parallax translateY={isMobile ? [0, 0] : [10, -10]} easing="ease"> */}
           <div className="order-1 mx-3 md:mr-10 mt-10 md:mt-0 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
             <video
               width={"800"}
@@ -46,7 +46,7 @@ const AboutUs = ({ rippleRef }) => {
               muted
             />
           </div>
-        </Parallax>
+        {/* </Parallax> */}
       </div>
       <p className="mx-3 md:mx-[9vw] font-poppins font-semibold mt-8 md:-mt-[5vh] text-justify">
         Flagged off in 2003 as a technical festival of the students of Adi

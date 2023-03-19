@@ -106,50 +106,48 @@ export default function EventsHome({ rippleRef }) {
   ];
 
   const culList = [
-    "DJ War",
-    "Mudhra",
-    "Percusion Instrument",
-    "Choreo Night",
-    "Voice Of Brahma",
-    "Theme Show",
-    "Spot Dance",
-    "Mime",
-    "Ragam",
-    "Stand Up Comedy",
-    "Street Show",
-    "Rap Battle",
-    "Band Of Brahma",
-    "Hip Hop Battle",
-    "Step N Syncro",
-    "Doodling",
-    "Spotlight",
+    ["DJ War", 15],
+    ["Mudhra", 3],
+    ["Percusion Instrument", 10],
+    ["Choreo Night", 11],
+    ["Voice Of Brahma", 7],
+    ["Theme Show", 2],
+    ["Spot Dance", 8],
+    ["Mime", 12],
+    ["Ragam", 5],
+    ["Stand Up Comedy", 13],
+    ["Street Show", 9],
+    ["Rap Battle", 4],
+    ["Band Of Brahma", 1],
+    ["Hip Hop Hustle", 6],
+    ["Step N Syncro", 14],
+    ["Doodling", 0],
+    ["Spotlight", 17],
+    ["Aalekh", 16],
   ];
 
   const genList = [
-    "Jam",
-    "Fifa",
-    "Valorant",
-    "Spot Photography",
-    "Brain Cycle",
-    "Underarm Cricket",
-    "Short Film Contest",
-    "Basketball 3s",
-    "Glowball",
-    "Rj Hunt",
-    "Game Of Rooms",
-    "Soapy Soccer",
-    "Fun Zone",
-    "Fire And Rescue Team + Dog Squad",
-    "Paint Ball",
-    "Knives Out",
-    "Maze",
-    "Gun Expo",
-    "Go Cart Museum",
-    "Cryogenic Museum",
-    "Photobooth With Poleroid Camera",
-    "Treasure Hunt",
-    "Blind Fold",
-    "Best Manager",
+    ["Jam", 36],
+    ["Fifa", 31],
+    ["Valorant", 34],
+    ["Spot Photography", 38],
+    ["Brain Cycle", 35],
+    ["Underarm Cricket", 30],
+    ["Short Film Contest", 37],
+    ["Basketball 3s", 32],
+    ["Glowball", 27],
+    ["Rj Hunt", 19],
+    ["Game Of Rooms", 24],
+    ["Soapy Soccer", 26],
+    ["Fun Zone", 25],
+    ["Fire And Rescue Team + Dog Squad", 21],
+    ["Paint Ball", 28],
+    ["Knives Out", 29],
+    ["Maze", 22],
+    ["Go Kart Museum", 33],
+    ["Cryo Laboratory", 20],
+    ["Treasure Hunt",23],
+    ["Best Manager", 18],
   ];
 
   const culLen = culList.length;
@@ -199,10 +197,12 @@ export default function EventsHome({ rippleRef }) {
                 {culList.map((item, index) => {
                   if (index < culLen / 2 - 1) {
                     return (
-                      <li key={index} className="inline">
-                        {item}
-                        {index < culLen / 2 - 2 && <DotSVG />}
-                      </li>
+                      <a href={`event/${item[1]}`}>
+                        <li key={index} className="inline">
+                          {item[0]}
+                          {index < culLen / 2 - 2 && <DotSVG />}
+                        </li>
+                      </a>
                     );
                   }
                   return null;
@@ -224,10 +224,12 @@ export default function EventsHome({ rippleRef }) {
                 {culList.map((item, index) => {
                   if (index > culLen / 2 - 1) {
                     return (
-                      <li key={index} className="inline">
-                        {item}
-                        {index < culLen - 1 && <DotSVG />}
-                      </li>
+                      <a href={`event/${item[1]}`}>
+                        <li key={index} className="inline">
+                          {item[0]}
+                          {index < culLen - 1 && <DotSVG />}
+                        </li>
+                      </a>
                     );
                   }
                   return null;
@@ -281,10 +283,12 @@ export default function EventsHome({ rippleRef }) {
                 {genList.map((item, index) => {
                   if (index < genLen / 2) {
                     return (
-                      <li key={index} className="inline">
-                        {item}
-                        {index < genLen / 2 - 1 && <DotSVG />}
-                      </li>
+                      <a href={`event/${item[1]}`}>
+                        <li key={index} className="inline">
+                          {item[0]}
+                          {index < genLen / 2 - 1 && <DotSVG />}
+                        </li>
+                      </a>
                     );
                   }
                   return null;
@@ -309,10 +313,12 @@ export default function EventsHome({ rippleRef }) {
                 {genList.map((item, index) => {
                   if (index > genLen / 2 - 1) {
                     return (
-                      <li key={index} className="inline">
-                        {item}
-                        {index < genLen - 1 && <DotSVG />}
-                      </li>
+                      <a href={`event/${item[1]}`}>
+                        <li key={index} className="inline">
+                          {item[0]}
+                          {index < genLen - 1 && <DotSVG />}
+                        </li>
+                      </a>
                     );
                   }
                   return null;

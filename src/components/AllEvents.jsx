@@ -88,7 +88,7 @@ const AllEvents = ({ rippleRef }) => {
                 }}
               >
                 <img
-                  className="rounded-xl md:w-full aspect-[1/1] hover:scale-105"
+                  className="rounded-xl md:w-full aspect-[1/1] hover:scale-105 w-[95vw] mx-auto md:mx-0"
                   src={event.main_img}
                   alt={event.name}
                 />

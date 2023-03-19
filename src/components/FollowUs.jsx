@@ -10,9 +10,13 @@ export default function FollowUs() {
         <div className="flex flex-wrap pb-5 justify-start">
           <a
             className="hover:bg-secondary cursor-pointer border border-accent rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]"
-            href="mailto:brahma@adishankara.ac.in"
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://mail.google.com/mail/?view=cm&fs=1&to=brahma@adishankara.ac.in&su=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
+              );
+            }}
+            href="mailto:youremail@gmail.com?subject=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
           >
             <SiGmail fill="var(--color-accent)" />
           </a>
