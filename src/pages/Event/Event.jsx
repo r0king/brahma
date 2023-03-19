@@ -109,7 +109,7 @@ export default function Event() {
               <h4 className="font-semibold pb-10 leading-[1.05]">
                 {eventData.speaker_tagline}
               </h4>
-              <p className="text-sm">{eventData.speaker_content}</p>
+              <p className="text-sm" dangerouslySetInnerHTML={{ __html: eventData.speaker_content }}></p>
             </div>
             <div className="">
               <img
