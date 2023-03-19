@@ -1,8 +1,8 @@
 import React from "react";
-import proshowImg from "../assets/images/spotlight/dj.jpg";
-import workshopImg from "../assets/images/spotlight/themeShow.jpg";
-import eventImg from "../assets/images/spotlight/denceOrmime.jpg";
 import CardButton from "./CardButton";
+import proshowImg from "../assets/images/spotlight/dj.webp";
+import workshopImg from "../assets/images/spotlight/themeShow.webp";
+import eventImg from "../assets/images/spotlight/denceOrmime.webp";
 
 const SpotLight = () => {
   const isLinux = navigator.userAgent.indexOf("Linux") !== -1;

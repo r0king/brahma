@@ -1,6 +1,7 @@
 import React from "react";
-// import { Parallax } from "react-scroll-parallax";
-import brahmaVideo from "../assets/videos/brahmaVideo.mp4";
+// import Arrow from '../src/assets/svg/arrow-top-right.svg'
+// import Arrow from '../assets/svg/arrow-top-right.svg'
+import brahmaVideo from "../assets/videos/brahmaVideo.webm";
 import CardButton from "./CardButton";
 // import { useMediaQuery } from "react-responsive";
 

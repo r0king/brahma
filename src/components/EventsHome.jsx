@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import Event1 from "../assets/images/events/themeShow.jpeg";
-import Event2 from "../assets/images/events/DJ_War.jpg";
-import Event3 from "../assets/images/events/voiceOfBrahma.jpeg";
-import Event4 from "../assets/images/events/bandOfBrahma.jpeg";
-import Event5 from "../assets/images/events/hipHopBattle.jpeg";
-import Event6 from "../assets/images/events/rapBattle.jpeg";
+import Event1 from "../assets/images/events/themeShow.webp";
+import Event2 from "../assets/images/events/DJ_War.webp";
+import Event3 from "../assets/images/events/voiceOfBrahma.webp";
+import Event4 from "../assets/images/events/bandOfBrahma.webp";
+import Event5 from "../assets/images/events/hipHopBattle.webp";
+import Event6 from "../assets/images/events/rapBattle.webp";
 import CardButton from "./CardButton";
 import { useMediaQuery } from "react-responsive";
 import Slider from "react-slick";
