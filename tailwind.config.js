@@ -35,6 +35,10 @@ module.exports = {
           "0%": { transform: "rotate(360deg)", scale: "1" },
           "100%": { transform: "rotate(0deg)", scale: "0" },
         },
+        selectedHeptics: {
+          "0%": { transform: "scale(0.8)" },
+          "100%": { transform: "scale(1)"},
+        },
       },
       animation: {
         moveDown: "moveDown 0.5s ease-in-out",
@@ -42,6 +46,7 @@ module.exports = {
         moveUpFast: "moveUpOpQ 1s ease",
         rotateIn: "rotateIn 0.5s ease-in-out",
         rotateOut: "rotateOut 0.5s ease-in-out",
+        selectedHeptics: "selectedHeptics 0.2s ease-in-out ",
       },
       
     },

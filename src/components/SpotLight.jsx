@@ -57,7 +57,7 @@ const SpotLight = () => {
         </div>
       </div>
       <div className="flex pt-[1vw] justify-end rounded-xl items-start">
-        <div className="hidden mr-auto mb-auto md:block mt-2 md:-mt-4 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+        <div className="hidden mr-auto mb-auto md:block mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
             onClick={() => {
               handleClick("schedule");

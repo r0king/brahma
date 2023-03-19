@@ -14,7 +14,7 @@ const ContactUs = () => {
     <div
       id="contact"
       ref={myRef}
-      className="flex p-3 pb-3 mt-28 md:p-6 bg-primary w-full items-center relative z-10"
+      className="flex p-3 pb-3 mt-28 md:mt-10 md:p-6 bg-primary w-full items-center relative z-10"
     >
       <div
         className="
@@ -48,11 +48,11 @@ const ContactUs = () => {
                   <br /> Ernakulam, Kerala 683574
                   <br />
                   <a
-                    href="mailto:Brahma.in"
+                    href="mailto:brahma@adishankara.ac.in"
                     aria-label="mail"
                     className="inline-block font-poppins hover italic pt-3"
                   >
-                    brahma23.live
+                    brahma@adishankara.ac.in
                   </a>
                 </div>
               </div>

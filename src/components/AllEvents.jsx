@@ -73,40 +73,40 @@ const AllEvents = ({ rippleRef }) => {
       </button>
       <div className="flex justify-center mb-4 space-x-4">
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "All"
-              ? "bg-secondary text-accent"
-              : "bg-accent text-secondary border"
+              ? "bg-secondary text-accent animate-selectedHeptics"
+              : "bg-accent text-primary border"
           }`}
           onClick={() => setFilter("All")}
         >
           All
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Cultural"
-              ? "bg-secondary text-accent"
-              : "bg-accent text-secondary border"
+              ? "bg-secondary text-accent animate-selectedHeptics"
+              : "bg-accent text-primary border"
           }`}
           onClick={() => setFilter("Cultural")}
         >
           Cultural
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "General"
-              ? "bg-secondary text-accent"
-              : "bg-accent text-secondary border"
+              ? "bg-secondary text-accent animate-selectedHeptics"
+              : "bg-accent text-primary border"
           }`}
           onClick={() => setFilter("General")}
         >
           General
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Workshop"
-              ? "bg-secondary text-accent"
-              : "bg-accent text-secondary border"
+              ? "bg-secondary text-accent animate-selectedHeptics"
+              : "bg-accent text-primary border"
           }`}
           onClick={() => setFilter("Workshop")}
         >
