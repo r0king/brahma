@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import P1 from "../assets/images/workshops/cnc.jpeg";
-import P2 from "../assets/images/workshops/3dprinting.jpeg";
-import P3 from "../assets/images/workshops/ieee.jpeg";
-import P4 from "../assets/images/workshops/iot.jpeg";
+import P1 from "../assets/images/workshops/cnc.webp";
+import P2 from "../assets/images/workshops/3dprinting.webp";
+import P3 from "../assets/images/workshops/ieee.webp";
+import P4 from "../assets/images/workshops/iot.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

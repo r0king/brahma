@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./schedule.css";
-import blank from "../../assets/images/blankimg.png";
+import blank from "../../assets/images/blankimg.webp";
 
 const Schedule = () => {
   const [image, setImage] = useState(-1);
