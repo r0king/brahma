@@ -1,11 +1,11 @@
 import eventsData from "../assets/events.json";
 import { useState } from "react";
 import CardButton from "./CardButton";
-const AllEvents = () => {
+const AllEvents = ({ rippleRef }) => {
   const [filter, setFilter] = useState("All");
 
   return (
-    <div className="md:mb-32">
+    <div className="md:mb-32 overflow-hidden">
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
         <p className="absolute top-[24.8vw] left-0 text-lg font-bold font-poppins text-secondary">
           (45+)
@@ -54,72 +54,83 @@ const AllEvents = () => {
             </span>
             {/* <img src={darkSVG} alt="Prize Money"/> */}
           </p>
-          <div className="font-poppins absolute text-secondary  text-[3rem] font-bold  right-0">
+          <p className="font-poppins absolute text-secondary  text-[3rem] font-bold  right-0">
             (45+)
-          </div>
+          </p>
         </div>
         <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] md:mt-[37vw] mb-[6vw]">
           <CardButton
             href="/"
-            text={{ head: "Get", tail: "Slots", caption: "registration" }}
+            text={{ head: "Get", tail: "Slots", caption: "Registration" }}
           />
         </button>
       </div>
       <button className="mt-[2vw] h-full w-full md:hidden">
         <CardButton
           href="/"
-          text={{ head: "Get", tail: "Slots", caption: "registration" }}
+          text={{ head: "Get", tail: "Slots", caption: "Registration" }}
         />
       </button>
       <div className="flex justify-center mb-4 space-x-4">
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
             filter === "All"
-              ? "bg-primary text-secondary"
-              : "bg-secondary text-primary"
+              ? "bg-secondary text-accent"
+              : "bg-accent text-secondary border"
           }`}
           onClick={() => setFilter("All")}
         >
           All
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
             filter === "Cultural"
-              ? "bg-primary text-secondary"
-              : "bg-secondary text-primary"
+              ? "bg-secondary text-accent"
+              : "bg-accent text-secondary border"
           }`}
           onClick={() => setFilter("Cultural")}
         >
           Cultural
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
             filter === "General"
-              ? "bg-primary text-secondary"
-              : "bg-secondary text-primary"
+              ? "bg-secondary text-accent"
+              : "bg-accent text-secondary border"
           }`}
           onClick={() => setFilter("General")}
         >
           General
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer ${
+          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  ${
             filter === "Workshop"
-              ? "bg-primary text-secondary"
-              : "bg-secondary text-primary"
+              ? "bg-secondary text-accent"
+              : "bg-accent text-secondary border"
           }`}
           onClick={() => setFilter("Workshop")}
         >
           Workshop
         </h3>
       </div>
-      <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3">
+      <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3 ">
         {eventsData.map((event, index) => {
           if (filter === "All" || event.type === filter) {
             return (
               <div key={index} className="max-w-sm">
                 <div className="flex flex-col justify-center text-primary">
-                  <a href={`event\\${index}`} alt={event.name}>
+                  <a
+                    href={`event\\${index}`}
+                    alt={event.name}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      rippleRef.current.classList.toggle("circle-ripple");
+                      // after timeout of 1.5 sec
+                      setTimeout(() => {
+                        window.location.pathname = `event\\${index}`;
+                      }, 1500);
+                    }}
+                  >
                     <img
                       className="rounded-xl md:w-full aspect-[1/1] hover:scale-105 show"
                       src={event.main_img}
@@ -134,12 +145,22 @@ const AllEvents = () => {
                       {event.price === "" ? (
                         "Free"
                       ) : (
-                        <span
-                          dangerouslySetInnerHTML={{
-                            __html: event.price,
-                          }}
-                          className="px-1 text-sm border-2 border-orange-500"
-                        ></span>
+                        <>
+                          <div className="border-2 border-orange-500 w-min inline">
+                            ₹
+                            <span
+                              dangerouslySetInnerHTML={{
+                                __html: event.price,
+                              }}
+                              className="px-1 text-sm "
+                            ></span>
+                          </div>
+                          {event.team ? (
+                            <span className=""> per Team</span>
+                          ) : (
+                            <span className=""> per Head</span>
+                          )}
+                        </>
                       )}
                     </div>
                     <div className="ml-6 font-poppins text-primary">

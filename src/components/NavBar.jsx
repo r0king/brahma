@@ -244,9 +244,40 @@ const NavBar = ({ rippleRef }) => {
           >
             FAQ
           </label>
-          <label className="hover:opacity-50 transition-opacity">About</label>
+          {window.location.pathname !== "/" ? (
+            ""
+          ) : (
+            <label
+              className="hover:opacity-50 transition-opacity "
+              onClick={(e) => {
+                if (window.location.pathname !== "/") {
+                  handleClick("/");
+                }
+              }}
+            >
+              <Link
+                to="about"
+                smooth={true}
+                duration={1000}
+                onClick={() => {
+                  setShowMenu(!showMenu);
+                }}
+              >
+                About
+              </Link>
+            </label>
+          )}
           <label className="hover:opacity-50 transition-opacity border-b-2 border-accent pb-10">
-            Contact Us
+            <Link
+              to="contact"
+              smooth={true}
+              duration={1000}
+              onClick={() => {
+                setShowMenu(!showMenu);
+              }}
+            >
+              Contact Us
+            </Link>
           </label>
           <label className="hover:opacity-50 transition-opacity text-[0.625em]">
             Kalady

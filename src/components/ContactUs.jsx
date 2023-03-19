@@ -14,7 +14,7 @@ const ContactUs = () => {
     <div
       id="contact"
       ref={myRef}
-      className="flex p-3 pb-3 mt-32 md:p-6 bg-primary w-full items-center relative z-10"
+      className="flex p-3 pb-3 mt-28 md:p-6 bg-primary w-full items-center relative z-10"
     >
       <div
         className="
@@ -52,7 +52,7 @@ const ContactUs = () => {
                     aria-label="mail"
                     className="inline-block font-poppins hover italic pt-3"
                   >
-                    Brahma.in
+                    brahma23.live
                   </a>
                 </div>
               </div>

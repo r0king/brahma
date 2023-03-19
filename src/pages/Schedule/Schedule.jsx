@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import "./schedule.css";
-import blank from "../../assets/images/blankimg.png";
 
 const Schedule = () => {
-  const [image, setImage] = useState(-1);
-  const [hovering, sethovering] = useState(false);
   const [category, setcategory] = useState("");
   const [dayselect, setdayselect] = useState(1);
 
@@ -17,7 +14,6 @@ const Schedule = () => {
       id: 0,
       timing: "09:00 - 12:00",
       category: "Cultural",
-      img: "",
       description: "Thyagaraj Program",
       personnel: "Main Stage",
     },
@@ -25,7 +21,6 @@ const Schedule = () => {
       id: 1,
       timing: "10:00 - 12:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733875633_642dab9705_z.jpg",
       description: "Voice of Brahma - Preliminary",
       personnel: "CS Seminar Hall",
     },
@@ -33,7 +28,6 @@ const Schedule = () => {
       id: 2,
       timing: "10:30 - 16:00",
       category: "General",
-      img: "",
       description: "Fun Zone",
       personnel: "Civil Block",
     },
@@ -41,7 +35,6 @@ const Schedule = () => {
       id: 3,
       timing: "12:10 - 12:30",
       category: "Cultural",
-      img: "",
       description: "Ranga Pooja",
       personnel: "Main Stage",
     },
@@ -49,7 +42,6 @@ const Schedule = () => {
       id: 4,
       timing: "12:30 - 16:30",
       category: "General",
-      img: "https://live.staticflickr.com/65535/52733962550_46a37085fb_z.jpg",
       description: "3D Printing Workshop",
       personnel: "CCF Lab",
     },
@@ -57,7 +49,6 @@ const Schedule = () => {
       id: 5,
       timing: "12:30 - 14:30",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733810815_f8067e6406_z.jpg",
       description: "Percusion Instrument",
       personnel: "EC Seminar Hall",
     },
@@ -65,7 +56,6 @@ const Schedule = () => {
       id: 6,
       timing: "12:30 - 14:30",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52731093272_133dcda96c_z.jpg",
       description: "Raagam",
       personnel: "CS Seminar Hall",
     },
@@ -73,7 +63,6 @@ const Schedule = () => {
       id: 7,
       timing: "12:30 - 16:30",
       category: "General",
-      img: "",
       description: "Blind Fold",
       personnel: "TBD",
     },
@@ -81,7 +70,6 @@ const Schedule = () => {
       id: 8,
       timing: "12:30 - 15:30",
       category: "Workshop",
-      img: "https://live.staticflickr.com/65535/52735714251_c82e03209e_b.jpg",
       description: "Spotlight Acting Workshop",
       personnel: "TBD",
     },
@@ -89,7 +77,6 @@ const Schedule = () => {
       id: 9,
       timing: "13:00 - 17:00",
       category: "General",
-      img: "",
       description: "Game Of Rooms",
       personnel: "S6 EEE Class",
     },
@@ -97,7 +84,6 @@ const Schedule = () => {
       id: 10,
       timing: "13:00 - 15:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733875633_642dab9705_z.jpg",
       description: "Voice Of Brahma - Final",
       personnel: "Main Stage",
     },
@@ -105,7 +91,6 @@ const Schedule = () => {
       id: 11,
       timing: "13:00 - 17:00",
       category: "General",
-      img: "",
       description: "Go Cart Expo",
       personnel: "TBD",
     },
@@ -113,7 +98,6 @@ const Schedule = () => {
       id: 12,
       timing: "13:30 - 15:30",
       category: "General",
-      img: "",
       description: "Best Manager",
       personnel: "MBA DEPT",
     },
@@ -121,7 +105,6 @@ const Schedule = () => {
       id: 13,
       timing: "13:30 - 15:30",
       category: "General",
-      img: "",
       description: "JAM",
       personnel: "Stage Near CCF",
     },
@@ -129,7 +112,6 @@ const Schedule = () => {
       id: 14,
       timing: "15:30 - 17:30",
       category: "Cultural",
-      img: "",
       description: "Melam",
       personnel: "Lobby Stairs",
     },
@@ -137,7 +119,6 @@ const Schedule = () => {
       id: 15,
       timing: "17:00 - 21:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733389566_a89f348ae0_z.jpg",
       description: "Theme Show",
       personnel: "Main Stage",
     },
@@ -148,7 +129,6 @@ const Schedule = () => {
       id: 0,
       timing: "10:00 - 13:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52732099308_1e05417470_b.jpg",
       description: "Mudhra",
       personnel: "Main Stage",
     },
@@ -156,7 +136,6 @@ const Schedule = () => {
       id: 1,
       timing: "10:00 - 14:00",
       category: "Workshop",
-      img: "https://live.staticflickr.com/65535/52734033158_0b426fa95b_z.jpg   ",
       description: "IEEE Workshop",
       personnel: "ADP Lab",
     },
@@ -164,7 +143,6 @@ const Schedule = () => {
       id: 2,
       timing: "10:00 - 14:00",
       category: "General",
-      img: "https://live.staticflickr.com/65535/52731603426_5c8bb9ec0e_z.jpg",
       description: "FIFA",
       personnel: "PL Lab",
     },
@@ -172,7 +150,6 @@ const Schedule = () => {
       id: 3,
       timing: "10:30 - 12:00",
       category: "General",
-      img: "",
       description: "RJ Hunt",
       personnel: "Auditorium",
     },
@@ -181,7 +158,6 @@ const Schedule = () => {
       id: 4,
       timing: "10:30 - 14:30",
       category: "General",
-      img: "",
       description: "Paint Ball",
       personnel: "Civil Parking",
     },
@@ -189,7 +165,6 @@ const Schedule = () => {
       id: 5,
       timing: "11:00 - 15:00",
       category: "General",
-      img: "",
       description: "Soapy Soccer",
       personnel: "TBD",
     },
@@ -197,7 +172,6 @@ const Schedule = () => {
       id: 6,
       timing: "11:00 - 15:00",
       category: "General",
-      img: "",
       description: "Cryogenic Museum",
       personnel: "Robotics Seminar Hall",
     },
@@ -205,7 +179,6 @@ const Schedule = () => {
       id: 7,
       timing: "11:00 - 13:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733389601_f4897b2501_z.jpg",
       description: "Doodling",
       personnel: "EC Seminar Hall",
     },
@@ -213,7 +186,6 @@ const Schedule = () => {
       id: 8,
       timing: "11:30 - 15:30",
       category: "Workshop",
-      img: "https://live.staticflickr.com/65535/52734033138_bd8ef23322_z.jpg",
       description: "IOT Workshop",
       personnel: "NP Lab",
     },
@@ -221,7 +193,6 @@ const Schedule = () => {
       id: 9,
       timing: "11:30 - 14:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52732874067_1154577282_z.jpg",
       description: "Stand Up Comedy",
       personnel: "Main Seminar Hall",
     },
@@ -229,7 +200,6 @@ const Schedule = () => {
       id: 10,
       timing: "12:00 - 16:00",
       category: "General",
-      img: "",
       description: "Glow Ball",
       personnel: "S1 ECA",
     },
@@ -237,7 +207,6 @@ const Schedule = () => {
       id: 11,
       timing: "13:00 - 17:00",
       category: "General",
-      img: "",
       description: "Treasure Hunt",
       personnel: "College Premises",
     },
@@ -245,7 +214,6 @@ const Schedule = () => {
       id: 12,
       timing: "14:00 - 16:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733875698_d868d91a36_z.jpg",
       description: "Spot Dance",
       personnel: "Lobby",
     },
@@ -253,7 +221,6 @@ const Schedule = () => {
       id: 13,
       timing: "14:00 - 16:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733883018_7b0bb8e7ee_z.jpg",
       description: "Mime",
       personnel: "Auditorium",
     },
@@ -261,7 +228,6 @@ const Schedule = () => {
       id: 14,
       timing: "14:30 - 16:30",
       category: "General",
-      img: "https://live.staticflickr.com/65535/52731850939_db76a22a31_z.jpg",
       description: "Band of Brahma",
       personnel: "Main Stage",
     },
@@ -269,7 +235,6 @@ const Schedule = () => {
       id: 15,
       timing: "14:30 - 17:30",
       category: "General",
-      img: "",
       description: "Maze",
       personnel: "EEE Classrooms",
     },
@@ -277,7 +242,6 @@ const Schedule = () => {
       id: 16,
       timing: "18:00 - 21:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52736090640_b1c6e0d4e7_b.jpg",
       description: "Choreo Night",
       personnel: "Main Stage",
     },
@@ -288,7 +252,6 @@ const Schedule = () => {
       id: 0,
       timing: "09:30 - 12:30",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52732866917_75f4810146_z.jpg",
       description: "Step N Synchro",
       personnel: "Main Stage",
     },
@@ -296,7 +259,6 @@ const Schedule = () => {
       id: 1,
       timing: "10:00 - 12:00",
       category: "General",
-      img: "",
       description: "Short Film",
       personnel: "Main Seminar Hall",
     },
@@ -304,7 +266,6 @@ const Schedule = () => {
       id: 2,
       timing: "10:00 - 14:00",
       category: "Workshop",
-      img: "",
       description: "IEI Workshop",
       personnel: "Simulation Lab",
     },
@@ -312,7 +273,6 @@ const Schedule = () => {
       id: 3,
       timing: "10:00 - 13:00",
       category: "Workshop",
-      img: "https://live.staticflickr.com/65535/52733650649_1742728873_z.jpg",
       description: "Mural Workshop",
       personnel: "AE&I Seminar Hall",
     },
@@ -320,7 +280,6 @@ const Schedule = () => {
       id: 4,
       timing: "10:30 - 13:30",
       category: "General",
-      img: "",
       description: "Knives Out",
       personnel: "S5 CSA",
     },
@@ -328,7 +287,6 @@ const Schedule = () => {
       id: 5,
       timing: "10:30 - 12:30",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733803945_e804fa9df2_z.jpg",
       description: "Hip Hop Battle",
       personnel: "Auditorium",
     },
@@ -336,7 +294,6 @@ const Schedule = () => {
       id: 6,
       timing: "10:30 - 14:30",
       category: "General",
-      img: "",
       description: "Brain Cycle",
       personnel: "Infront of Lobby",
     },
@@ -344,7 +301,6 @@ const Schedule = () => {
       id: 7,
       timing: "11:00 - 15:00",
       category: "General",
-      img: "",
       description: "Soapy Soccer",
       personnel: "TBD",
     },
@@ -352,7 +308,6 @@ const Schedule = () => {
       id: 8,
       timing: "11:00 - 15:00",
       category: "General",
-      img: "",
       description: "Gun Expo",
       personnel: "Mechanical Block",
     },
@@ -360,7 +315,6 @@ const Schedule = () => {
       id: 9,
       timing: "11:00 - 13:30",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733397331_0b3296a2b7_z.jpg",
       description: "DJ War",
       personnel: "Main Stage",
     },
@@ -368,7 +322,6 @@ const Schedule = () => {
       id: 10,
       timing: "11:00 - 13:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52733875663_cf9d22dc67_z.jpg",
       description: "Rap Battle",
       personnel: "EC Seminar Hall",
     },
@@ -376,7 +329,6 @@ const Schedule = () => {
       id: 11,
       timing: "12:00 - 16:00",
       category: "Workshop",
-      img: "https://live.staticflickr.com/65535/52734033188_53191baa85_z.jpg",
       description: "CNC Workshop",
       personnel: "CNC Lab",
     },
@@ -384,7 +336,6 @@ const Schedule = () => {
       id: 12,
       timing: "12:00 - 14:00",
       category: "Cultural",
-      img: "https://live.staticflickr.com/65535/52736128675_d66f633c89_b.jpg",
       description: "Street Show",
       personnel: "Lobby",
     },
@@ -392,7 +343,6 @@ const Schedule = () => {
       id: 13,
       timing: "13:00 - 15:00",
       category: "General",
-      img: "",
       description: "Fire & Rescue Team + Dog Squad",
       personnel: "TBD",
     },
@@ -400,7 +350,6 @@ const Schedule = () => {
       id: 14,
       timing: "15:00 -17:30",
       category: "General",
-      img: "",
       description: "UnderArm Cricket",
       personnel: "Ground",
     },
@@ -408,7 +357,6 @@ const Schedule = () => {
       id: 15,
       timing: "15:00 - 17:00",
       category: "General",
-      img: "",
       description: "BasketBall 3S",
       personnel: "BasketBall Court",
     },
@@ -416,7 +364,6 @@ const Schedule = () => {
       id: 16,
       timing: "17:00 - 22:00",
       category: "-",
-      img: "",
       description: "Band and DJ",
       personnel: "Main Stage",
     },
@@ -455,8 +402,12 @@ const Schedule = () => {
       </div>
 
       <div className="schedule-menu">
-        <div className="filter-schedule">
-          <select value={category} onChange={categorySelect} className="border-r-[1vw]">
+        <div className="filter-schedule flex justify-center w-[99%] md:w-1/2 py-[3%] px-[2%]">
+          <select
+            value={category}
+            onChange={categorySelect}
+            className="border-r-[1vw]"
+          >
             <option value="" selected>
               All
             </option>
@@ -467,9 +418,9 @@ const Schedule = () => {
         </div>
 
         <div
-          className="tabs relative"
+          className="tabs relative mr-[2%]"
           // set css variable "curr_tab" as selected tab
-          style={{ "--selectedtab": dayselect-1 }}
+          style={{ "--selectedtab": dayselect - 1 }}
         >
           <div className="absolute bg-accent border-secondary border h-full p-1 w-1/3 rounded-[1vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
           <h3
@@ -502,7 +453,7 @@ const Schedule = () => {
         </div>
       </div>
 
-      <div className="schedule">
+      <div className="schedule justify-center">
         <div className="sched-table">
           {schedule.map((item) => {
             if (category === "")
@@ -510,14 +461,6 @@ const Schedule = () => {
                 <li
                   className="row group"
                   key={item.id}
-                  onMouseEnter={() => {
-                    setImage(item.id);
-                    sethovering(true);
-                  }}
-                  onMouseLeave={() => {
-                    setImage(-1);
-                    sethovering(false);
-                  }}
                 >
                   <li className="timing group-hover:text-accent">
                     {item.timing}
@@ -535,14 +478,6 @@ const Schedule = () => {
                   <li
                     className="row group"
                     key={item.id}
-                    onMouseEnter={() => {
-                      setImage(item.id);
-                      sethovering(true);
-                    }}
-                    onMouseLeave={() => {
-                      setImage(-1);
-                      sethovering(false);
-                    }}
                   >
                     <li className="timing group-hover:text-accent">
                       {item.timing}
@@ -563,20 +498,6 @@ const Schedule = () => {
               No Schedule Available
             </h2>
           )}
-        </div>
-
-        <div className={`images ${hovering ? "slidein" : "slideout"}`}>
-          <img
-            className="person-image "
-            src={
-              image === -1
-                ? setTimeout(() => {
-                    return blank;
-                  }, 1000)
-                : schedule[image].img
-            }
-            alt=""
-          />
         </div>
       </div>
     </>

@@ -1,8 +1,8 @@
 import React from "react";
-// import Arrow from '../src/assets/svg/arrow-top-right.svg'
-// import Arrow from '../assets/svg/arrow-top-right.svg'
+import { Parallax } from "react-scroll-parallax";
 import brahmaVideo from "../assets/videos/brahmaVideo.mp4";
 import CardButton from "./CardButton";
+import { useMediaQuery } from "react-responsive";
 
 const AboutUs = ({ rippleRef }) => {
   const handleClick = (name) => {
@@ -13,34 +13,42 @@ const AboutUs = ({ rippleRef }) => {
       window.location.pathname = `/${name}`;
     }, 1500);
   };
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+
   return (
-    <div className="mt-20 md:mt-32 md:mb-[30vh]" id="about">
-      <div className="flex flex-col md:flex-row-reverse relative">
-        <div className="flex flex-col order-2">
-          <h1 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-5 md:mr-7 md:ml-0">
-            About Us
-          </h1>
-          <button className="w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
-            <CardButton
-              text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
-              onClick={() => {
-                handleClick("events");
-              }}
+    <div className=" md:mt-32 md:mb-[3vh]" id="about">
+      <div className="flex flex-col md:flex-row-reverse relative justify-between px-3">
+        <div className="flex flex-col md:order-2 ml-auto">
+          <Parallax translateY={isMobile ? [0, 0] : [60, -30]} easing="ease" className="flex flex-col ml-auto">
+            <h1 className="uppercase order-2 font-morganite text-[30vw] md:text-[22vw] mt-10 leading-[0.75] ml-3 md:ml-0">
+              About Us
+            </h1>
+            <div className="order-1 w-full flex md:justify-end">
+              <button className="md:ml-24 mb-2 mt-2 ml-auto md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+                <CardButton
+                  text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
+                  onClick={() => {
+                    handleClick("events");
+                  }}
+                />
+              </button>
+            </div>
+          </Parallax>
+        </div>
+        <Parallax translateY={isMobile ? [0, 0] : [10, -10]} easing="ease">
+          <div className="order-1 mx-3 md:mr-10 mt-10 md:mt-0 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
+            <video
+              width={"800"}
+              className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]"
+              src={brahmaVideo}
+              autoPlay
+              loop
+              muted
             />
-          </button>
-        </div>
-        <div className="order-1 mx-2 md:mr-10 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
-          <video
-            width={"800"}
-            className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]"
-            src={brahmaVideo}
-            autoPlay
-            loop
-            muted
-          />
-        </div>
+          </div>
+        </Parallax>
       </div>
-      <p className="mx-[9vw] font-poppins font-semibold mt-8 md:mt-0 text-justify">
+      <p className="mx-3 md:mx-[9vw] font-poppins font-semibold mt-8 md:-mt-[5vh] text-justify">
         Flagged off in 2003 as a technical festival of the students of Adi
         Shankara Institute of Engineering and Technology, our festival is a
         showcase of innovation, creativity and diversity bringing together
