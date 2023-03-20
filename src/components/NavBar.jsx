@@ -196,8 +196,8 @@ const NavBar = ({ rippleRef }) => {
                 font-poppins text-xs leading-4  text-left py-[10vh]         
                 "
             >
-              Unleash your genius at Brahma'23 - an unforgettable event that
-              will inspire, educate, and entertain you!
+              Welcome to BRAHMA'23, where technology meets culture in a unique
+              celebration that promises to be an unforgettable experience.
             </p>
             <svg
               className={`swap-on ml-auto stroke-current transition-all opacity-75 aspect-square ${

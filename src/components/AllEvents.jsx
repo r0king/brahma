@@ -65,13 +65,13 @@ const AllEvents = ({ rippleRef }) => {
           />
         </button>
       </div>
-      <button className="mt-[2vw] h-full w-full md:hidden">
+      <button className="mt-[5vw] h-full w-full md:hidden">
         <CardButton
           href="/"
           text={{ head: "Get", tail: "Slots", caption: "Registration" }}
         />
       </button>
-      <div className="flex justify-center mb-4 space-x-4">
+      <div className="flex justify-center mb-4 mt-4 md:mt-0 space-x-3 md:space-x-4 md:mx-0">
         <h3
           className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "All"
@@ -117,7 +117,7 @@ const AllEvents = ({ rippleRef }) => {
         {eventsData.map((event, index) => {
           if (filter === "All" || event.type === filter) {
             return (
-              <div key={index} className="max-w-sm">
+              <div key={index} className="max-w-sm mt-8 md:mt-0">
                 <div className="flex flex-col justify-center text-primary">
                   <a
                     href={`event\\${index}`}
@@ -132,7 +132,7 @@ const AllEvents = ({ rippleRef }) => {
                     }}
                   >
                     <img
-                      className="rounded-xl md:w-full aspect-[1/1] hover:scale-105 show"
+                      className="rounded-xl w-[95vw] md:w-full mx-auto md:mx-0 aspect-[1/1] hover:scale-105 show"
                       src={event.main_img}
                       alt={event.name}
                     />
