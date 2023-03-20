@@ -26,7 +26,9 @@ export default function Event() {
               // if char count is more than 10, then use the event name else snd it twice
               eventData.name && eventData.name.length > 10
                 ? eventData.name
-                : eventData.name + " &nbsp; &nbsp;  &nbsp; &nbsp;" + eventData.name
+                : eventData.name +
+                  " &nbsp; &nbsp;  &nbsp; &nbsp;" +
+                  eventData.name
             }
           />
         </div>
@@ -39,46 +41,51 @@ export default function Event() {
           </h3>
         </div>
         <div className="flex flex-col md:flex-row relative md:static">
-          <div className="flex flex-row w-full justify-between absolute md:static gap-2 p-2 md:gap-10 md:pl-5 z-10">
-            <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
+          <div className="flex flex-col md:flex-row w-full justify-between absolute md:static gap-2 p-2 md:gap-10 md:pl-5 z-10">
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
               <h4 className="text-xl font-medium">Type</h4>
-              <p className="text-secondary  leading-none font-semibold font-poppins text-lg">
+              <p className="text-secondary md:leading-none font-semibold font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.type}
               </p>
             </div>
-            <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
               <h4 className="text-xl font-medium">Date</h4>
-              <p className="text-secondary leading-none  font-semibold font-poppins text-lg">
+              <p className="text-secondary md:leading-none  font-semibold font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.date}
               </p>
             </div>
-            <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
               <h4 className="text-xl font-medium">Location</h4>
-              <p className="text-secondary leading-none  font-semibold font-poppins text-lg">
+              <p className="text-secondary md:leading-none  font-semibold font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.location}
               </p>
             </div>
-            <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
               <h4 className="text-xl font-medium">Time</h4>
-              <p className="text-secondary leading-none  font-semibold font-poppins text-lg">
+              <p className="text-secondary md:leading-none  font-semibold font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.time}
               </p>
             </div>
-            <div className="flex flex-col h-[17vh] md:h-[13vh] justify-between">
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
               <h4 className="text-xl font-medium">Registration Fees</h4>
               <p
-                className="text-secondary leading-none  font-semibold font-poppins text-lg"
+                className="text-secondary md:leading-none font-semibold font-poppins text-xl md:text-lg ml-7 md:ml-0"
                 dangerouslySetInnerHTML={{ __html: eventData.price }}
               ></p>
+              {eventData.team ? (
+                <span className="text-secondary font-semibold">&nbsp; per Team</span>
+              ) : (
+                <span className="text-secondary font-semibold">&nbsp; per Head</span>
+              )}
             </div>
           </div>
           <div
-            className="max-w-full md:absolute w-[460px] aspect-square object-cover my-5 rounded-xl
-           relative right-[50%] md:left-[33.33%] md:top-0"
+            className="max-w-full md:absolute mx-auto md:mx-0 w-[95vw] md:w-[460px] aspect-square object-cover my-5 rounded-xl
+           relative md:right-[50%] md:left-[33.33%] top-60 md:top-0"
           >
-            <img alt="poster" src={eventData.main_img} className="rounded-xl"/>
+            <img alt="poster" src={eventData.main_img} className="rounded-xl" />
           </div>
-          <div className="flex md:flex-col md:pl-[15vw] justify-between ">
+          <div className="flex md:flex-col md:pl-[15vw] justify-between mt-60 md:mt-0">
             <button className="ml-auto px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
                 href={eventData.reg_link}
@@ -109,7 +116,10 @@ export default function Event() {
               <h4 className="font-semibold pb-10 leading-[1.05]">
                 {eventData.speaker_tagline}
               </h4>
-              <p className="text-sm" dangerouslySetInnerHTML={{ __html: eventData.speaker_content }}></p>
+              <p
+                className="text-sm"
+                dangerouslySetInnerHTML={{ __html: eventData.speaker_content }}
+              ></p>
             </div>
             <div className="">
               <img
@@ -125,20 +135,20 @@ export default function Event() {
         <h1 className="py-[10vw] text-5xl md:text-9xl text-primary font-poppins font-semibold -tracking-widest">
           About <br /> The Event
         </h1>
-        <h2 className="ml-auto text-right my-auto leading-[0.8] pt-11 text-secondary text-[10rem] md:text-[20rem] font-morganite">
+        <h2 className="ml-auto text-right my-auto leading-[0.8] pt-0 md:pt-11 text-secondary text-[10rem] md:text-[20rem] font-morganite">
           {eventData.speaker ? "02" : "01"}
         </h2>
       </div>
-      <div className="-mt-[20%] text-primary md:mt-0 px-2 flex flex-col md:flex-row justify-center w-full text-lg md:px-[calc((100vw-9.375rem)*2/14+1.875rem)]">
+      <div className="-mt-[9%] text-primary md:mt-0 px-2 flex flex-col md:flex-row justify-center w-full text-lg md:px-[calc((100vw-9.375rem)*2/14+1.875rem)]">
         <div
           id="text-section"
           className="md:w-2/5 pr-[30%] md:pr-[calc((100vw-9.375rem)*1/14+.625rem)]"
         >
-          <h4 className="font-semibold pb-10 text-2xl leading-[1.05] text-secondary">
+          <h4 className="font-semibold pb-10 text-xl md:text-2xl leading-[1.05] text-secondary">
             {eventData.event_tagline}
           </h4>
         </div>
-        <div className="max-w-full  w-[460px] aspect-square object-cover font-poppins">
+        <div className="max-w-full  w-[460px] object-cover font-poppins">
           <p
             className="text-lg"
             dangerouslySetInnerHTML={{ __html: eventData.event_content }}
