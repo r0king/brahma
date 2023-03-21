@@ -30,7 +30,7 @@ export default class MarqueeScroll extends Component {
         newScrollSpeed = Math.max(30, scrollSpeed - scrollDiff / 50);
       }
       else {
-        newScrollSpeed = 20;
+        newScrollSpeed = 60;
       }
     } else if (currentScrollPos < prevScrollPos) {
       newScrollDirection = "reverse";
@@ -39,7 +39,7 @@ export default class MarqueeScroll extends Component {
         newScrollSpeed = Math.max(30, scrollSpeed - scrollDiff / 50);
       }
       else {
-        newScrollSpeed = 20;
+        newScrollSpeed = 60;
       }
     }
 
