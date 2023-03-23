@@ -21,7 +21,7 @@ const AboutUs = ({ rippleRef }) => {
       <div className="flex flex-col md:flex-row-reverse relative justify-between px-3">
         <div className="flex flex-col md:order-2 ml-auto">
           {/* <Parallax translateY={isMobile ? [0, 0] : [60, -21]} easing="ease" className="flex flex-col ml-auto"> */}
-            <h1 className="uppercase order-2 font-morganite text-[30vw] md:text-[22vw] mt-10 leading-[0.75] ml-3 md:ml-0">
+            <h1 className="uppercase order-2 font-morganite text-[30vw] md:text-[22vw] leading-[0.75] ml-3 md:ml-0">
               About Us
             </h1>
             <div className="order-1 w-full flex md:justify-end">

@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 
 const NavBar = ({ rippleRef }) => {
   const [fade, setFade] = useState(false);
+  const [hidden, setHidden] = useState("invisible")
   const [theme, setTheme] = useState(
     JSON.parse(localStorage.getItem("theme")) || "dark"
   );
@@ -14,6 +15,7 @@ const NavBar = ({ rippleRef }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    setTimeout(() => setHidden("visible"), 1000)
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -44,7 +46,7 @@ const NavBar = ({ rippleRef }) => {
     } else {
       document.documentElement.style.setProperty("overflow", "auto");
     }
-  }, [showMenu,logoRef,theme]);
+  }, [showMenu, logoRef, theme]);
   const handleScroll = () => {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
@@ -64,11 +66,10 @@ const NavBar = ({ rippleRef }) => {
       <div className="flex justify-end items-center w-full">
         <label
           id="logo"
-          className={`font-semibold pl-[4vw] relative z-[55] cursor-pointer ${
-            fade
-              ? "opacity-0 transition-opacity duration-500"
-              : "opacity-100 transition-opacity duration-500"
-          }`}
+          className={`font-semibold pl-[4vw] relative z-[55] cursor-pointer ${fade
+            ? "opacity-0 transition-opacity duration-500"
+            : "opacity-100 transition-opacity duration-500"
+            }`}
           onClick={() => {
             handleClick("");
           }}
@@ -183,12 +184,11 @@ const NavBar = ({ rippleRef }) => {
       </div>
       <div>
         <div
-          className={`${
-            showMenu
-              ? " translate-y-[0%] animate-moveDown"
-              : "animate-moveUp translate-y-[-100%]"
-          } md:hidden gap-2 p-2 pb-6 z-50 fixed w-screen h-screen top-0 left-0 flex justify-end flex-col font-normal 
-          text-5xl bg-primary text-accent`}
+          className={`${showMenu
+            ? " translate-y-[0%] animate-moveDown"
+            : "animate-moveUp translate-y-[-100%]"
+            } md:hidden gap-2 p-2 pb-6 z-50 fixed w-screen h-screen top-0 left-0 flex justify-end flex-col font-normal 
+          text-5xl bg-primary text-accent ${hidden}`}
         >
           <button
             onClick={() => {
@@ -206,9 +206,8 @@ const NavBar = ({ rippleRef }) => {
               celebration that promises to be an unforgettable experience.
             </p>
             <svg
-              className={`swap-on ml-auto stroke-current transition-all opacity-75 aspect-square ${
-                showMenu ? "animate-rotateIn" : "animate-rotateOut"
-              }`}
+              className={`swap-on ml-auto stroke-current transition-all opacity-75 aspect-square ${showMenu ? "animate-rotateIn" : "animate-rotateOut"
+                }`}
               width="100"
               height="100"
               xmlns="http://www.w3.org/2000/svg"

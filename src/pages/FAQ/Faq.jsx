@@ -94,8 +94,8 @@ function Faq() {
           </div>
         </p>
 
-        <div className="reach_team w-full justify-start ">
-          <button className="reach_container  w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+        {/* <div className="reach_team w-full justify-start "> */}
+          <div className="mx-auto md:ml-[25vw] md:mt-[2vw] mb-2 w-full md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
             <CardButton
               text={{ head: "Reach", tail: "Our Team", caption: "Contact Us" }}
               onClick={(e) => {
@@ -106,8 +106,8 @@ function Faq() {
               }}
               href="mailto:youremail@gmail.com?subject=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
             />
-          </button>
-        </div>
+          </div>
+        {/* </div> */}
       </div>
     </>
   );
