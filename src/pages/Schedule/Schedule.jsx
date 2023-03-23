@@ -370,7 +370,7 @@ const Schedule = () => {
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
         <p
           className=" text-secondary self-end font-semibold font-poppins text-lg 
-           w-full leading-[0.9] tracking-tighter p-2  pb-[5vw]  mr-auto"
+           w-full leading-[0.9] tracking-tighter p-2 pb-6 md:pb-[5vw] mr-1 md:mr-auto text-justify md:text-start"
         >
           The schedule for our tech fest is packed with exciting events and
           activities, including workshops & events. Stay tuned for updates and
@@ -379,7 +379,7 @@ const Schedule = () => {
       </div>
 
       <div className="justify-between md:flex">
-        <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[8%]">
+        <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[6.5%]">
           <h1 className="leading-[0.75]">FULL</h1>
           <h1 className="leading-[0.75]">SCHEDULE</h1>
         </div>
@@ -396,7 +396,7 @@ const Schedule = () => {
       </div>
 
       <div className="schedule-menu">
-        <div className="filter-schedule flex justify-center w-[99%] md:w-1/2 py-[3%] px-[2%]">
+        <div className="filter-schedule font-semibold flex justify-center w-[96%] md:w-1/3 py-[1%] mx-auto md:ml-[16vw]">
           <select
             value={category}
             onChange={categorySelect}
@@ -412,7 +412,7 @@ const Schedule = () => {
         </div>
 
         <div
-          className="tabs relative mr-[2%]"
+          className="tabs relative md:mr-[16vw] w-[50%] md:w-1/3 font-semibold"
           // set css variable "curr_tab" as selected tab
           style={{ "--selectedtab": dayselect - 1 }}
         >
@@ -456,10 +456,10 @@ const Schedule = () => {
                   className="row group"
                   key={item.id}
                 >
-                  <li className="timing group-hover:text-accent">
+                  <li className="timing group-hover:text-accent font-semibold">
                     {item.timing}
                   </li>
-                  <li className="description">
+                  <li className="description roun">
                     <li className="category">{item.category}</li>
                     <li>{item.description}</li>
                   </li>

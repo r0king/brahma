@@ -25,7 +25,7 @@ const AboutUs = ({ rippleRef }) => {
               About Us
             </h1>
             <div className="order-1 w-full flex md:justify-end">
-              <button className="md:ml-24 mb-2 mt-2 ml-auto md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+              <button className="md:ml-24 mb-2 mt-2 ml-auto md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3] z-10">
                 <CardButton
                   text={{ head: "Get", tail: "Tickets", caption: "Tickets" }}
                   onClick={() => {

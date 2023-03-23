@@ -25,7 +25,7 @@ const Workshop = ({ rippleRef }) => {
       regFees: "",
       organizer: "9:00AM",
       place: "CNC Lab",
-      Date: "Wed, 29 Mar 2023",
+      Date: "Wed, 29 Mar",
     },
     {
       name: "3D Printing Workshop",
@@ -33,7 +33,7 @@ const Workshop = ({ rippleRef }) => {
       regFees: "",
       organizer: "9:00AM",
       place: "CCF Lab",
-      Date: "Wed, 29 Mar 2023 ",
+      Date: "Wed, 29 Mar ",
     },
     {
       name: "IEEE Workshop",
@@ -41,7 +41,7 @@ const Workshop = ({ rippleRef }) => {
       regFees: "",
       organizer: "9:00AM",
       place: "Simulation Lab (Lab 7)",
-      Date: "Wed, 29 Mar 2023",
+      Date: "Wed, 29 Mar",
     },
     {
       name: "IoT Workshop",
@@ -49,7 +49,7 @@ const Workshop = ({ rippleRef }) => {
       regFees: "",
       organizer: "9:00AM",
       place: "CCF Lab",
-      Date: "Wed, 29 Mar 2023",
+      Date: "Wed, 29 Mar",
     },
   ];
 
@@ -112,7 +112,7 @@ const Workshop = ({ rippleRef }) => {
             <div key={index}>
               <div className="flex flex-col">
                 <img
-                  className="px-1 w-full aspect-[4/3]"
+                  className="px-1 w-full relative z-30 aspect-[1/1]"
                   src={image.src}
                   alt={`Slide ${index + 1}`}
                 />

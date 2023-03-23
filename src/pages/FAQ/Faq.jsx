@@ -53,7 +53,7 @@ function Faq() {
     <>
       <div className="faq_main_container bg-accent">
         <div className="top_part">
-          <div className="textpart text-primary font-morganite">
+          <div className="textpart text-primary font-morganite leading-[0.8]">
             <h1>FREQUENTLY ASKED QUESTIONS</h1>
           </div>
         </div>

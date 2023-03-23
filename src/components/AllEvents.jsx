@@ -60,20 +60,28 @@ const AllEvents = ({ rippleRef }) => {
         </div>
         <button className="hidden mr-6 w-[28vw] h-[8vw] md:inline mt-[38vw] md:mt-[37vw] mb-[6vw]">
           <CardButton
-            href="/"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("https://www.yepdesk.com/profile/brahmaasiet");
+            }}
+            target={"_blank"}
             text={{ head: "Get", tail: "Slots", caption: "Registration" }}
           />
         </button>
       </div>
       <button className="mt-[5vw] h-full w-full md:hidden">
         <CardButton
-          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.open("https://www.yepdesk.com/profile/brahmaasiet");
+          }}
+          target={"_blank"}
           text={{ head: "Get", tail: "Slots", caption: "Registration" }}
         />
       </button>
-      <div className="flex justify-center mb-4 mt-4 md:mt-0 space-x-3 md:space-x-4 md:mx-0">
+      <div className="flex justify-center md:mb-4 mt-4 md:mt-0 space-x-2 md:space-x-4 md:mx-0">
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "All"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -83,7 +91,7 @@ const AllEvents = ({ rippleRef }) => {
           All
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Cultural"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -93,7 +101,7 @@ const AllEvents = ({ rippleRef }) => {
           Cultural
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "General"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -103,7 +111,7 @@ const AllEvents = ({ rippleRef }) => {
           General
         </h3>
         <h3
-          className={`px-4 py-2 rounded-full text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Workshop"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -137,16 +145,17 @@ const AllEvents = ({ rippleRef }) => {
                       alt={event.name}
                     />
                   </a>
-                  <div className="pl-2 mt-4 text-lg font-bold font-poppins text-primary">
-                    {event.name}
+                  <div className="pl-2 mt-4 text-lg font-bold flex w-full justify-between font-poppins text-primary">
+                    <div className="w-[20vw]">{event.name}</div>
+                    {event.day===""?"":<div className="mr-2">Day {event.day}</div>}
                   </div>
-                  <div className="flex flex-row pl-2 mt-4 font-semibold w-[100vw]">
+                  <div className="flex flex-row w-full justify-between pl-2 mt-4 font-semibold">
                     <div className=" font-poppins text-primary">
                       {event.price === "" ? (
                         "Free"
                       ) : (
                         <>
-                          <div className="border-2 border-orange-500 w-min inline">
+                          <div className="border-2 border-orange-500 rounded-md w-min inline pl-1">
                             ₹
                             <span
                               dangerouslySetInnerHTML={{
@@ -156,9 +165,9 @@ const AllEvents = ({ rippleRef }) => {
                             ></span>
                           </div>
                           {event.team ? (
-                            <span className=""> per Team</span>
+                            <span className="ml-1"> per team</span>
                           ) : (
-                            <span className=""> per Head</span>
+                            <span className="ml-1"> per head</span>
                           )}
                         </>
                       )}
@@ -166,7 +175,7 @@ const AllEvents = ({ rippleRef }) => {
                     <div className="ml-6 font-poppins text-primary">
                       {event.location}
                     </div>
-                    <div className="ml-6 font-poppins text-primary">
+                    <div className="ml-6 md:mr-2 font-poppins text-primary">
                       {event.time}
                     </div>
                   </div>

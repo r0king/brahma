@@ -94,7 +94,7 @@ function App() {
                 element={<HomePage rippleRef={rippleRef} />}
               />
               <Route exact path="/faq" element={<Faq />} />
-              <Route exact path="/schedule" element={<Schedule />} />
+              <Route exact path="/schedule" element={<Schedule rippleRef={rippleRef} />} />
               <Route exact path="/events" element={<AllEvents rippleRef={rippleRef}/>} />
               <Route exact path="/event/:eventId" element={<Event />} />
               <Route
