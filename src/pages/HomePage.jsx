@@ -8,7 +8,7 @@ import EventsHome from "../components/EventsHome";
 import "./HomePage.css";
 import Workshop from "../components/Workshop";
 // import Sponsors from "../components/Sponsors";
-import MarqueeScroll from "../components/MarqueeScroll";
+// import MarqueeScroll from "../components/MarqueeScroll";
 import CardButton from "../components/CardButton";
 import LoadingIcons from "react-loading-icons";
 
@@ -118,7 +118,7 @@ export default class HomePage extends Component {
         <AboutUs rippleRef={this.props.rippleRef} />
         <EventsHome rippleRef={this.props.rippleRef} />
         <Workshop rippleRef={this.props.rippleRef} />
-        <SpotLight />
+        <SpotLight rippleRef={this.props.rippleRef} />
         <div className="mx-auto md:hidden md:mx-2 md:-translate-y-full mb-2 mt-2 md:mt-0 w-[95vw] md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
           <CardButton
             onClick={() => {
@@ -127,7 +127,7 @@ export default class HomePage extends Component {
             text={{ head: "View", tail: "Schedule", caption: "Speakers" }}
           />
         </div>
-        <MarqueeScroll text="Stay tuned"/>
+        {/* <MarqueeScroll text="Stay tuned"/> */}
       </div>
     );
   }

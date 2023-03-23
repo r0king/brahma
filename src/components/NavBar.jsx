@@ -35,10 +35,16 @@ const NavBar = ({ rippleRef }) => {
   useEffect(() => {
     if (showMenu) {
       document.documentElement.style.setProperty("overflow", "hidden");
+      if (theme === "dark") {
+        logoRef.current.src = asietLogoWhite;
+      }
+      else {
+        logoRef.current.src = asietLogoDark;
+      }
     } else {
       document.documentElement.style.setProperty("overflow", "auto");
     }
-  }, [showMenu]);
+  }, [showMenu,logoRef,theme]);
   const handleScroll = () => {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
@@ -149,7 +155,7 @@ const NavBar = ({ rippleRef }) => {
               Menu
             </button>
           </label>
-          <label className="swap swap-rotate py-3 pr-1 md:pt-[5.5px] opacity-70 hover:opacity-100">
+          <label className="swap swap-rotate py-3 pr-2 md:pr-1 md:pt-[5.5px] opacity-70 hover:opacity-100">
             <input
               type="checkbox"
               checked={theme === "dark" ? true : false}
@@ -213,7 +219,7 @@ const NavBar = ({ rippleRef }) => {
             </svg>
           </button>
           <label
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
             onClick={() => {
               handleClick("");
             }}
@@ -224,7 +230,7 @@ const NavBar = ({ rippleRef }) => {
             onClick={() => {
               handleClick("events");
             }}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
           >
             Events
           </label>
@@ -232,7 +238,7 @@ const NavBar = ({ rippleRef }) => {
             onClick={() => {
               handleClick("schedule");
             }}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
           >
             Schedule
           </label>
@@ -240,7 +246,7 @@ const NavBar = ({ rippleRef }) => {
             onClick={() => {
               handleClick("faq");
             }}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
           >
             FAQ
           </label>
@@ -248,7 +254,7 @@ const NavBar = ({ rippleRef }) => {
             ""
           ) : (
             <label
-              className="hover:opacity-50 transition-opacity "
+              className="hover:opacity-50 transition-opacity font-semibold "
               onClick={(e) => {
                 if (window.location.pathname !== "/") {
                   handleClick("/");
@@ -267,7 +273,7 @@ const NavBar = ({ rippleRef }) => {
               </Link>
             </label>
           )}
-          <label className="hover:opacity-50 transition-opacity border-b-2 border-accent pb-10">
+          <label className="hover:opacity-50 transition-opacity font-semibold border-b-2 border-dashed border-accent pb-10">
             <Link
               to="contact"
               smooth={true}
@@ -279,8 +285,8 @@ const NavBar = ({ rippleRef }) => {
               Contact Us
             </Link>
           </label>
-          <label className="hover:opacity-50 transition-opacity text-[0.625em]">
-            Kalady
+          <label className="hover:opacity-50 transition-opacity font-semibold border-t-2 border-accent text-[0.625em]">
+            &nbsp;
           </label>
         </div>
       </div>

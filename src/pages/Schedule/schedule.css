@@ -35,7 +35,7 @@
     background-color: var(--color-secondary);
     color: var(--color-accent);
     font-size: 2em;
-    width: 50%;
+    /* width: 50%; */
     border-radius: 1vw;
 }
 
@@ -109,7 +109,7 @@ li.personnel{
 
 .timing {
     color: var(--color-secondary);
-    font-weight: 500;
+    /* font-weight: 1000; */
     width: 20%;
 }
 
@@ -212,7 +212,7 @@ li.personnel{
     .timing,
     .personnel {
         width: 100%;
-        margin: 10% 0;
+        margin: 4% 0;
     }
 }
 
