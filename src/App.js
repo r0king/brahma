@@ -18,6 +18,7 @@ function App() {
   const today = new Date(),
     hours = today.getHours();
   const headings = document.querySelectorAll("h1");
+  const headingh4 = document.querySelectorAll("h4");
   const paragraphs = document.querySelectorAll("p");
   // const listItems = document.querySelectorAll("ul");
   const buttons = document.querySelectorAll("button");
@@ -29,9 +30,9 @@ function App() {
       entries.forEach((entry) => {
         entry.target.classList.toggle("show", entry.isIntersecting);
       });
-    },
+    }
     // only once
-    
+
     // { threshold: 0.2 }
   );
 
@@ -55,6 +56,9 @@ function App() {
     observer.observe(card);
   });
   images.forEach((img) => {
+    observer.observe(img);
+  });
+  headingh4.forEach((img) => {
     observer.observe(img);
   });
   const [isLoading, setLoading] = useState(true); // add a loading state
@@ -94,8 +98,16 @@ function App() {
                 element={<HomePage rippleRef={rippleRef} />}
               />
               <Route exact path="/faq" element={<Faq />} />
-              <Route exact path="/schedule" element={<Schedule rippleRef={rippleRef} />} />
-              <Route exact path="/events" element={<AllEvents rippleRef={rippleRef}/>} />
+              <Route
+                exact
+                path="/schedule"
+                element={<Schedule rippleRef={rippleRef} />}
+              />
+              <Route
+                exact
+                path="/events"
+                element={<AllEvents rippleRef={rippleRef} />}
+              />
               <Route exact path="/event/:eventId" element={<Event />} />
               <Route
                 path="*"

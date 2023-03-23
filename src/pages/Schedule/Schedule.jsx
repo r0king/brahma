@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./schedule.css";
 // import blank from "../../assets/images/blankimg.webp";
 
-const Schedule = () => {
+const Schedule = ({ rippleRef }) => {
   const [category, setcategory] = useState("");
   const [dayselect, setdayselect] = useState(1);
 
@@ -364,7 +364,13 @@ const Schedule = () => {
   ];
 
   const [schedule, setSchedule] = useState(sched1);
-
+  const changePage = (name) => {
+    // toggle circle ripple
+    rippleRef.current.classList.toggle("circle-ripple");
+    setTimeout(() => {
+      window.location.pathname = `/${name}`;
+    }, 1500);
+  };
   return (
     <>
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
@@ -390,13 +396,13 @@ const Schedule = () => {
           >
             The schedule for our tech fest is packed with exciting events and
             activities, including workshops & events. Stay tuned for updates and
-            timings for each vent.
+            timings for each event.
           </p>
         </div>
       </div>
 
       <div className="schedule-menu">
-        <div className="filter-schedule font-semibold flex justify-center w-[96%] md:w-1/3 py-[1%] mx-auto md:ml-[16vw]">
+        <div className="filter-schedule hover:border-[2px] border-secondary h-min font-semibold flex justify-center w-[96%] md:w-1/3 rounded-[1vw] my-[1%] mx-auto md:ml-[16vw]">
           <select
             value={category}
             onChange={categorySelect}
@@ -416,7 +422,7 @@ const Schedule = () => {
           // set css variable "curr_tab" as selected tab
           style={{ "--selectedtab": dayselect - 1 }}
         >
-          <div className="absolute bg-accent border-secondary border h-full p-1 w-1/3 rounded-[1vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
+          <div className="absolute bg-accent border-secondary border-2 h-full p-1 w-1/3 rounded-[1vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
           <h3
             className={`button  ${dayselect === 1 ? "btn1" : ""}`}
             onClick={() => {
@@ -452,36 +458,44 @@ const Schedule = () => {
           {schedule.map((item) => {
             if (category === "")
               return (
-                <li
-                  className="row group"
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    changePage(`event\\${item.id}`);
+                  }}
                   key={item.id}
+                  className="group hover:py-5 transition-all duration-500 ease-in-out "
                 >
-                  <li className="timing group-hover:text-accent font-semibold">
-                    {item.timing}
-                  </li>
-                  <li className="description roun">
-                    <li className="category">{item.category}</li>
-                    <li>{item.description}</li>
-                  </li>
-                  <li className="personnel">{item.personnel}</li>
-                </li>
-              );
-            else {
-              return (
-                category === item.category && (
-                  <li
-                    className="row group"
-                    key={item.id}
-                  >
-                    <li className="timing group-hover:text-accent">
-                      {item.timing}
-                    </li>
-                    <li className="description">
+                  <li className="row ">
+                    <li className="timing font-semibold">{item.timing}</li>
+                    <li className="description roun">
                       <li className="category">{item.category}</li>
                       <li>{item.description}</li>
                     </li>
                     <li className="personnel">{item.personnel}</li>
                   </li>
+                </div>
+              );
+            else {
+              return (
+                category === item.category && (
+                  <div
+                    onClick={(e) => {
+                      e.preventDefault();
+                      changePage(`event\\${item.id}`);
+                    }}
+                    key={item.id}
+                    className="group hover:py-5 transition-all duration-500 ease-in-out"
+                  >
+                    <li className="row">
+                      <li className="timing">{item.timing}</li>
+                      <li className="description">
+                        <li className="category">{item.category}</li>
+                        <li>{item.description}</li>
+                      </li>
+                      <li className="personnel">{item.personnel}</li>
+                    </li>
+                  </div>
                 )
               );
             }

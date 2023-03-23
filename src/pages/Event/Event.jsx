@@ -33,12 +33,12 @@ export default function Event() {
           />
         </div>
         <div className="md:h-[500px] md:flex ">
-          <h3 
+          <h1
             className="text-secondary self-end font-semibold font-poppins text-3xl md:text-[3.14rem] mt-28 md:mt-auto 
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto z-50"
           >
             {eventData.name}
-          </h3>
+          </h1>
         </div>
         <div className="flex flex-col md:flex-row relative md:static">
           <div className="flex flex-col md:flex-row w-full justify-between absolute md:static gap-2 p-2 md:gap-10 md:pl-5 z-10">
@@ -67,17 +67,24 @@ export default function Event() {
               </p>
             </div>
             <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
-              <h4 className="text-xl font-semibold text-primary">Registration Fees</h4>
-              <div className="flex items-end">
-              <span
-                className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0"
-                dangerouslySetInnerHTML={{ __html: eventData.price }}
-              ></span>
-              {eventData.team ? (
-                <span className="text-secondary font-normal">&nbsp; per Team</span>
-              ) : (
-                <span className="text-secondary font-normal">&nbsp; per Head</span>
-              )}</div>
+              <h4 className="text-xl font-semibold text-primary">
+                Registration Fees
+              </h4>
+              <p className="flex items-start md:items-end">
+                <span
+                  className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0"
+                  dangerouslySetInnerHTML={{ __html: eventData.price }}
+                ></span>
+                {eventData.team ? (
+                  <span className="text-secondary font-normal">
+                    &nbsp; per Team
+                  </span>
+                ) : (
+                  <span className="text-secondary font-normal">
+                    &nbsp; per Head
+                  </span>
+                )}
+              </p>
             </div>
           </div>
           <div

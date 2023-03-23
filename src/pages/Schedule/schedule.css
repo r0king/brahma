@@ -6,13 +6,18 @@
 }
 
 .filter-schedule {
-    border-radius: 50px;
+    /* border-radius: 50px; */
+    border-color: var(--color-secondary);
 }
+
 .styled-select select {
-    -moz-appearance:none; /* Firefox */
-    -webkit-appearance:none; /* Safari and Chrome */
-    appearance:none;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
 }
+
 .filter-schedule select {
     width: 100%;
     font-size: 20px;
@@ -24,7 +29,7 @@
 
 .filter-schedule option {
     width: 50%;
-    background-color: var(--color-accent);
+    /* background-color: var(--color-secondary); */
     color: var(--color-secondary);
 }
 
@@ -46,25 +51,27 @@
     z-index: 5;
 }
 
-.tabs h3{
+.tabs h3 {
     text-align: center;
     border-radius: 1vw;
 }
 
-.tabs .button:hover{
+.tabs .button:hover {
     color: var(--color-secondary);
     cursor: pointer;
     color: var(--color-primary);
     transition: all 0.5s;
 }
+
 .tabs .btn1 {
     color: var(--color-primary);
 }
-.tabs .btn2{
+
+.tabs .btn2 {
     color: var(--color-primary);
 }
 
-.tabs .btn3{
+.tabs .btn3 {
     color: var(--color-primary);
 }
 
@@ -80,7 +87,7 @@
 
 .sched-table {
     font-family: 'Popins', sans-serif;
-    font-size: 20px;    
+    font-size: 20px;
     color: var(--color-primary);
     width: 70%;
     margin-bottom: 5%;
@@ -88,21 +95,24 @@
 
 li {
     list-style: none;
-    font-weight: bold;
+    font-weight: 500;
 }
+
 li.category {
     font-weight: normal;
 }
-li.personnel{
+
+li.personnel {
     font-weight: normal;
 }
+
 .row {
     border-bottom: 1px solid var(--color-primary);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2% 0;
+    padding: 2% 2%;
     cursor: pointer;
 }
 
@@ -138,8 +148,12 @@ li.personnel{
 }
 
 .row:hover {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary-sub);
     transition: all 0.3s ease-in;
+    border-radius: 1vw;    
+    border-top: 1px solid var(--color-primary);
+    /* padding: 5% 2%; */
+    /* margin:2% 0%; */
 }
 
 .schedule img {
@@ -191,7 +205,7 @@ li.personnel{
         flex-direction: column;
     }
 
-    .sched-table{
+    .sched-table {
         width: 100%;
     }
 
@@ -218,31 +232,33 @@ li.personnel{
 
 /* Hide the default arrow */
 select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><path fill="white" d="M0 3l5 4 5-4H0z"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 10px;
-  padding-right: 15px; /* Add some space for the arrow */
-  border: 1px solid var(--color-secondary);
-  border-radius: 4px;
-  font-size: 16px;
-  line-height: 1.4;
-  color: var(--color-accent);
-  padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><path fill="white" d="M0 3l5 4 5-4H0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 10px;
+    padding-right: 15px;
+    /* Add some space for the arrow */
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: var(--color-accent);
+    padding: 10px;
 }
 
 /* Hover/focus styles */
-select:hover, select:focus {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+select:hover,
+select:focus {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border-color: var(--color-accent);
 }
 
 /* Disabled state */
 select:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+    opacity: 0.5;
+    cursor: not-allowed;
 }
