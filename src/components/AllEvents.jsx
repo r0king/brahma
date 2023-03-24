@@ -79,8 +79,8 @@ const AllEvents = ({ rippleRef }) => {
           text={{ head: "Get", tail: "Slots", caption: "Registration" }}
         />
       </button>
-      <div className="flex justify-center md:mb-4 mt-4 md:mt-0 space-x-2 md:space-x-4 md:mx-0">
-        <h3
+      <div className="flex justify-center flex-wrap gap-y-2 md:mb-4 mt-4 md:mt-0 space-x-2 md:space-x-4 md:mx-0">
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "All"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -92,8 +92,8 @@ const AllEvents = ({ rippleRef }) => {
           }}
         >
           All Events
-        </h3>
-        <h3
+        </p>
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Cultural"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -102,8 +102,8 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setFilter("Cultural")}
         >
           Cultural
-        </h3>
-        <h3
+        </p>
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "General"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -112,8 +112,8 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setFilter("General")}
         >
           General
-        </h3>
-        <h3
+        </p>
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Workshop"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -122,8 +122,8 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setFilter("Workshop")}
         >
           Workshop
-        </h3>
-        {/* <h3
+        </p>
+        {/* <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "All"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -132,8 +132,8 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("All")}
         >
           All Days
-        </h3> */}
-        <h3
+        </p> */}
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "1"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -142,8 +142,8 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("1")}
         >
           Day 1
-        </h3>
-        <h3
+        </p>
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "2"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -152,8 +152,8 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("2")}
         >
           Day 2
-        </h3>
-        <h3
+        </p>
+        <p
           className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "3"
               ? "bg-secondary text-accent animate-selectedHeptics"
@@ -162,7 +162,7 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("3")}
         >
           Day 3
-        </h3>
+        </p>
       </div>
       <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3 ">
         {eventsData.map((event, index) => {

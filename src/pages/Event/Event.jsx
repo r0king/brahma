@@ -32,64 +32,57 @@ export default function Event() {
             }
           />
         </div>
-        <div className="md:h-[500px] md:flex ">
-          <h1
-            className="text-secondary self-end font-semibold font-poppins text-3xl md:text-[3.14rem] mt-28 md:mt-auto 
-           w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto z-50"
+        <div className="md:h-[500px] md:flex md:mt-0 mt-[14vw]">
+          <h3 
+            className="text-primary self-end font-semibold font-poppins text-[52px] text-center md:text-left md:text-[3.14rem] pt-5 md:mt-auto 
+           w-full leading-[0.9]  p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto z-50"
           >
             {eventData.name}
-          </h1>
+          </h3>
         </div>
-        <div className="flex flex-col md:flex-row relative md:static">
-          <div className="flex flex-col md:flex-row w-full justify-between absolute md:static gap-2 p-2 md:gap-10 md:pl-5 z-10">
-            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
-              <h4 className="text-xl font-semibold text-primary ">Type</h4>
+        <div className="flex flex-col md:flex-row relative md:static ">
+          <div className="flex flex-col md:flex-row w-full justify-between absolute md:static gap-0 p-2 md:gap-10 md:pl-5 z-10">
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between text-right md:justify-between">
+              <h4 className="text-xl font-semibold text-primary ">Type :</h4>
               <p className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.type}
               </p>
             </div>
-            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
-              <h4 className="text-xl font-semibold text-primary ">Date</h4>
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between md:justify-between">
+              <h4 className="text-xl font-semibold text-primary ">Date :</h4>
               <p className="text-secondary md:leading-none  font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.date}
               </p>
             </div>
-            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
-              <h4 className="text-xl font-semibold text-primary ">Location</h4>
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between md:justify-between">
+              <h4 className="text-xl font-semibold text-primary ">Location :</h4>
               <p className="text-secondary md:leading-none  font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.location}
               </p>
             </div>
-            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
-              <h4 className="text-xl font-semibold text-primary ">Time</h4>
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between md:justify-between">
+              <h4 className="text-xl font-semibold text-primary ">Time :</h4>
               <p className="text-secondary md:leading-none  font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.time}
               </p>
             </div>
-            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] md:justify-between">
-              <h4 className="text-xl font-semibold text-primary">
-                Registration Fees
-              </h4>
-              <p className="flex items-start md:items-end">
-                <span
-                  className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0"
-                  dangerouslySetInnerHTML={{ __html: eventData.price }}
-                ></span>
-                {eventData.team ? (
-                  <span className="text-secondary font-normal">
-                    &nbsp; per Team
-                  </span>
-                ) : (
-                  <span className="text-secondary font-normal">
-                    &nbsp; per Head
-                  </span>
-                )}
-              </p>
+            <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between md:justify-between">
+              <h4 className="text-xl font-semibold text-primary">Registration Fees :</h4>
+              <div className="flex items-start md:items-end">
+              <span
+                className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0"
+                dangerouslySetInnerHTML={{ __html: eventData.price }}
+              ></span>
+              {eventData.team ? (
+                <span className="text-secondary font-normal">&nbsp; per Team</span>
+              ) : (
+                <span className="text-secondary font-normal">&nbsp; per Head</span>
+              )}</div>
             </div>
           </div>
           <div
             className="max-w-full md:absolute mx-auto md:mx-0 w-[75vw] md:w-[460px] aspect-square object-cover md:my-5 rounded-xl
-           relative md:right-[50%] md:left-[33.33%] -mt-[100vw] md:mt-0 md:top-0"
+           relative md:right-[50%] md:left-[33.33%] -mt-[98vw] md:-mt-[100vw]  md:top-0 -top-10"
           >
             <img alt="poster" src={eventData.main_img} className="rounded-xl" />
           </div>
@@ -123,7 +116,7 @@ export default function Event() {
             >
               <h4 className="font-semibold pb-10 leading-[1.05]">
                 {eventData.speaker_tagline}
-              </h4>
+               :</h4>
               <p
                 className="text-sm"
                 dangerouslySetInnerHTML={{ __html: eventData.speaker_content }}
@@ -154,7 +147,7 @@ export default function Event() {
         >
           <h4 className="font-semibold pb-10 text-xl md:text-2xl leading-[1.05] text-secondary">
             {eventData.event_tagline}
-          </h4>
+           :</h4>
         </div>
         <div className="max-w-full  w-[460px] object-cover font-poppins">
           <p

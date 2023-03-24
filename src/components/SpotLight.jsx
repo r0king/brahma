@@ -23,7 +23,7 @@ const SpotLight = ({ rippleRef }) => {
           3
         </h3>
         <h1
-          className={`leading-[0.8] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[36vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >
@@ -43,7 +43,7 @@ const SpotLight = ({ rippleRef }) => {
           5
         </h3>
         <h1
-          className={`leading-[0.8] mb-[-2vw] text-[30vw] ml-4 font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[36vw] ml-4 font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >
@@ -70,7 +70,7 @@ const SpotLight = ({ rippleRef }) => {
           45+
         </h3>
         <h1
-          className={`leading-[0.8] mb-[-2vw] text-[30vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[36vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >
