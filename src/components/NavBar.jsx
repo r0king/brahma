@@ -6,6 +6,7 @@ import { Link } from "react-scroll";
 
 const NavBar = ({ rippleRef }) => {
   const [fade, setFade] = useState(false);
+  const [hidden, setHidden] = useState("invisible")
   const [theme, setTheme] = useState(
     JSON.parse(localStorage.getItem("theme")) || "dark"
   );
@@ -14,6 +15,7 @@ const NavBar = ({ rippleRef }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    setTimeout(() => setHidden("visible"), 1000)
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -35,10 +37,16 @@ const NavBar = ({ rippleRef }) => {
   useEffect(() => {
     if (showMenu) {
       document.documentElement.style.setProperty("overflow", "hidden");
+      if (theme === "dark") {
+        logoRef.current.src = asietLogoWhite;
+      }
+      else {
+        logoRef.current.src = asietLogoDark;
+      }
     } else {
       document.documentElement.style.setProperty("overflow", "auto");
     }
-  }, [showMenu]);
+  }, [showMenu, logoRef, theme]);
   const handleScroll = () => {
     const scrollPosition =
       window.pageYOffset || document.documentElement.scrollTop;
@@ -58,11 +66,10 @@ const NavBar = ({ rippleRef }) => {
       <div className="flex justify-end items-center w-full">
         <label
           id="logo"
-          className={`font-semibold pl-[4vw] relative z-[55] cursor-pointer ${
-            fade
-              ? "opacity-0 transition-opacity duration-500"
-              : "opacity-100 transition-opacity duration-500"
-          }`}
+          className={`font-semibold pl-[4vw] relative z-[55] cursor-pointer ${fade
+            ? "opacity-0 transition-opacity duration-500"
+            : "opacity-100 transition-opacity duration-500"
+            }`}
           onClick={() => {
             handleClick("");
           }}
@@ -149,7 +156,7 @@ const NavBar = ({ rippleRef }) => {
               Menu
             </button>
           </label>
-          <label className="swap swap-rotate py-3 pr-1 md:pt-[5.5px] opacity-70 hover:opacity-100">
+          <label className="swap swap-rotate py-3 pr-2 md:pr-1 md:pt-[5.5px] opacity-70 hover:opacity-100">
             <input
               type="checkbox"
               checked={theme === "dark" ? true : false}
@@ -177,12 +184,11 @@ const NavBar = ({ rippleRef }) => {
       </div>
       <div>
         <div
-          className={`${
-            showMenu
-              ? " translate-y-[0%] animate-moveDown"
-              : "animate-moveUp translate-y-[-100%]"
-          } md:hidden gap-2 p-2 pb-6 z-50 fixed w-screen h-screen top-0 left-0 flex justify-end flex-col font-normal 
-          text-5xl bg-primary text-accent`}
+          className={`${showMenu
+            ? " translate-y-[0%] animate-moveDown"
+            : "animate-moveUp translate-y-[-100%]"
+            } md:hidden gap-2 p-2 pb-6 z-50 fixed w-screen h-screen top-0 left-0 flex justify-end flex-col font-normal 
+          text-5xl bg-primary text-accent ${hidden}`}
         >
           <button
             onClick={() => {
@@ -200,9 +206,8 @@ const NavBar = ({ rippleRef }) => {
               celebration that promises to be an unforgettable experience.
             </p>
             <svg
-              className={`swap-on ml-auto stroke-current transition-all opacity-75 aspect-square ${
-                showMenu ? "animate-rotateIn" : "animate-rotateOut"
-              }`}
+              className={`swap-on ml-auto stroke-current transition-all opacity-75 aspect-square ${showMenu ? "animate-rotateIn" : "animate-rotateOut"
+                }`}
               width="100"
               height="100"
               xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +218,7 @@ const NavBar = ({ rippleRef }) => {
             </svg>
           </button>
           <label
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
             onClick={() => {
               handleClick("");
             }}
@@ -224,7 +229,7 @@ const NavBar = ({ rippleRef }) => {
             onClick={() => {
               handleClick("events");
             }}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
           >
             Events
           </label>
@@ -232,7 +237,7 @@ const NavBar = ({ rippleRef }) => {
             onClick={() => {
               handleClick("schedule");
             }}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
           >
             Schedule
           </label>
@@ -240,7 +245,7 @@ const NavBar = ({ rippleRef }) => {
             onClick={() => {
               handleClick("faq");
             }}
-            className="hover:opacity-50 transition-opacity"
+            className="hover:opacity-50 transition-opacity font-semibold"
           >
             FAQ
           </label>
@@ -248,7 +253,7 @@ const NavBar = ({ rippleRef }) => {
             ""
           ) : (
             <label
-              className="hover:opacity-50 transition-opacity "
+              className="hover:opacity-50 transition-opacity font-semibold "
               onClick={(e) => {
                 if (window.location.pathname !== "/") {
                   handleClick("/");
@@ -267,7 +272,7 @@ const NavBar = ({ rippleRef }) => {
               </Link>
             </label>
           )}
-          <label className="hover:opacity-50 transition-opacity border-b-2 border-accent pb-10">
+          <label className="hover:opacity-50 transition-opacity font-semibold border-b-2 border-dashed border-accent pb-10">
             <Link
               to="contact"
               smooth={true}
@@ -279,8 +284,8 @@ const NavBar = ({ rippleRef }) => {
               Contact Us
             </Link>
           </label>
-          <label className="hover:opacity-50 transition-opacity text-[0.625em]">
-            Kalady
+          <label className="hover:opacity-50 transition-opacity font-semibold border-t-2 border-accent text-[0.625em]">
+            &nbsp;
           </label>
         </div>
       </div>

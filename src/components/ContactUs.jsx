@@ -29,7 +29,7 @@ const ContactUs = () => {
           {/* <img src={"Logo"} alt="Asiet Logo" className="   pl-0 md:pl-0    md:pt-0 pb-5" srcSet="" /> */}
           {/* ::Title Contact */}
           <h2
-            className="text-7xl leading-[0.75]  font-morganite tracking-wide p-5 text-accent"
+            className="text-5xl leading-[0.75]  font-poppins font-semibold tracking-wide p-5 text-accent"
             // style={{
             //   textOrientation: "mixed",
             //   writingMode: "vertical-rl",
@@ -41,7 +41,7 @@ const ContactUs = () => {
             <div className="flex flex-col h-full">
               {/* ::Address */}
               <div className="mt-5 px-5 sm:mt-5 space-y-3 text-accent">
-                <h3 className="text-lg font-poppins font-semibold">Address</h3>
+                <h5 className="text-lg font-poppins font-semibold">Address</h5>
                 <div className="text-base font-poppins text-opacity-60 ">
                   5CHJ+758,
                   <br /> Vidya Bharathi Nagar, <br /> Mattoor, Kalady,
@@ -61,24 +61,24 @@ const ContactUs = () => {
             <div className="flex flex-col h-full">
               <div className="mt-5 sm:mt-5 space-y-3 text-accent px-5 ">
                 <div className="space-y-1 text-base text-opacity-60">
-                  <h3 className="text-lg font-poppins font-semibold mb-4">
+                  <h5 className="text-lg font-poppins font-semibold mb-4">
                     Coordinators
-                  </h3>
+                  </h5>
                   <div className="font-poppins">
-                    <h4 className="text-base font-poppins text-opacity-60">
+                    <h5 className="text-base font-poppins text-opacity-60">
                       Adith Menon : +91 95266 35524
                       <br /> Jithu Krishna : +91 9567373010
-                    </h4>
+                    </h5>
                   </div>
                 </div>
               </div>
 
               <div className="mt-0 px-5 sm:mt-0 space-y-3 text-accent">
-                <h4 className="text-base font-poppins text-opacity-60 ">
+                <h5 className="text-base font-poppins text-opacity-60 ">
                   Treesa Jomol k : +91 73564 74358
                   <br />
                   Anjanamol jose : +91 75929 80883
-                </h4>
+                </h5>
               </div>
             </div>
           </div>

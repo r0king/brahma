@@ -54,53 +54,54 @@ export default function EventsHome({ rippleRef }) {
       window.location.pathname = `/${name}`;
     }, 1500);
   };
+
   const events = [
     {
       id: 1,
       name: "Theme Show",
       venue: "Main Stage",
-      time: "31-03-2023 10:00 AM",
-      regLink: "/event/2",
+      time: "31<sup>st</sup> Mar",
+      regLink: "event/2",
       imgSrc: Event1,
     },
     {
       id: 2,
       name: "DJ War",
       venue: "Main Stage",
-      time: "31-03-2023 10:00 AM",
-      regLink: "/event/15",
+      time: "31<sup>st</sup> Mar",
+      regLink: "event/15",
       imgSrc: Event2,
     },
     {
       id: 3,
       name: "Voice of Brahma",
       venue: "Main Stage",
-      time: "31-03-2023 10:00 AM",
-      regLink: "/event/7",
+      time: "31<sup>st</sup> Mar",
+      regLink: "event/7",
       imgSrc: Event3,
     },
     {
       id: 4,
       name: "Band Of Brahma",
       venue: "Main Stage",
-      time: "31-03-2023 10:00 AM",
-      regLink: "/event/1",
+      time: "31<sup>st</sup> Mar",
+      regLink: "event/1",
       imgSrc: Event4,
     },
     {
       id: 5,
       name: "Hip Hop Hustle",
       venue: "Auditorium",
-      time: "01-04-2023 10:00 AM",
-      regLink: "/event/6",
+      time: "1<sup>st</sup> Apr",
+      regLink: "event/6",
       imgSrc: Event5,
     },
     {
       id: 6,
       name: "Rap Battle",
       venue: "Mini Seminar Hall",
-      time: "01-04-2023 10:00 AM",
-      regLink: "/event/4",
+      time: "1<sup>st</sup> Apr",
+      regLink: "event/4",
       imgSrc: Event6,
     },
   ];
@@ -146,7 +147,7 @@ export default function EventsHome({ rippleRef }) {
     ["Maze", 22],
     ["Go Kart Museum", 33],
     ["Cryo Laboratory", 20],
-    ["Treasure Hunt",23],
+    ["Treasure Hunt", 23],
     ["Best Manager", 18],
   ];
 
@@ -162,7 +163,7 @@ export default function EventsHome({ rippleRef }) {
     setGeneralTarget(targetGenerallRef.current);
   }, [targetCulturallRef, targetGenerallRef]);
 
-  const maxScale = 7; // maximum scale value
+  const maxScale = 18; // maximum scale value
   const minScale = 0.5; // minimum scale value
   const pivot = 0.4; // point where scale starts decreasing
 
@@ -197,7 +198,13 @@ export default function EventsHome({ rippleRef }) {
                 {culList.map((item, index) => {
                   if (index < culLen / 2 - 1) {
                     return (
-                      <a href={`event/${item[1]}`}>
+                      <a
+                        href={`event/${item[1]}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleClick(`event/${item[1]}`);
+                        }}
+                      >
                         <li key={index} className="inline">
                           {item[0]}
                           {index < culLen / 2 - 2 && <DotSVG />}
@@ -224,7 +231,13 @@ export default function EventsHome({ rippleRef }) {
                 {culList.map((item, index) => {
                   if (index > culLen / 2 - 1) {
                     return (
-                      <a href={`event/${item[1]}`}>
+                      <a
+                        href={`event/${item[1]}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleClick(`event/${item[1]}`);
+                        }}
+                      >
                         <li key={index} className="inline">
                           {item[0]}
                           {index < culLen - 1 && <DotSVG />}
@@ -258,10 +271,10 @@ export default function EventsHome({ rippleRef }) {
               id="glow-ball"
               style={{
                 //also set border radius
-                borderRadius: `${(1 / scale) * 8}px`,
+                // borderRadius: `${(1 / scale) * 8}px`,
                 transform: `scaleX(${scale * 1.5})`,
               }}
-              className="transform h-2 w-8 bg-primary ease-linear duration-75"
+              className="transform h-2 w-8 bg-primary ease-in-out"
             ></div>
           </Parallax>
         </div>
@@ -283,7 +296,13 @@ export default function EventsHome({ rippleRef }) {
                 {genList.map((item, index) => {
                   if (index < genLen / 2) {
                     return (
-                      <a href={`event/${item[1]}`}>
+                      <a
+                        href={`event/${item[1]}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleClick(`event/${item[1]}`);
+                        }}
+                      >
                         <li key={index} className="inline">
                           {item[0]}
                           {index < genLen / 2 - 1 && <DotSVG />}
@@ -313,7 +332,13 @@ export default function EventsHome({ rippleRef }) {
                 {genList.map((item, index) => {
                   if (index > genLen / 2 - 1) {
                     return (
-                      <a href={`event/${item[1]}`}>
+                      <a
+                        href={`event/${item[1]}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleClick(`event/${item[1]}`);
+                        }}
+                      >
                         <li key={index} className="inline">
                           {item[0]}
                           {index < genLen - 1 && <DotSVG />}
@@ -367,7 +392,14 @@ export default function EventsHome({ rippleRef }) {
             <div className="flex flex-col">
               <div className="flex flex-row mb-10 gap-5">
                 {events.slice(0, 2).map((event) => (
-                  <a href={event.regLink} alt={event.name}>
+                  <a
+                    href={event.regLink}
+                    alt={event.name}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClick(event.regLink);
+                    }}
+                  >
                     <div
                       key={event.id}
                       className="relative md:w-[32vw] w-[55vw] shadow-overlay-event"
@@ -377,20 +409,32 @@ export default function EventsHome({ rippleRef }) {
                         alt={event.name}
                         className="relative aspect-[1/1] object-cover w-full rounded-md"
                       />
-                      <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      <div className="absolute z-40 bottom-6 p-3 text-2xl">
                         {event.name}
                       </div>
-                      <div className="absolute z-40 bottom-8 p-3">
+                      <div className="absolute z-40 bottom-0 p-3">
                         {event.venue}
                       </div>
-                      {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
+                      <div
+                        className="absolute z-40 bottom-0 right-0 p-3"
+                        dangerouslySetInnerHTML={{
+                          __html: event.time,
+                        }}
+                      ></div>
                     </div>
                   </a>
                 ))}
               </div>
               <div className="flex flex-row-reverse mb-10 gap-5">
                 {events.slice(2, 4).map((event) => (
-                  <a href={event.regLink} alt={event.name}>
+                  <a
+                    href={event.regLink}
+                    alt={event.name}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClick(event.regLink);
+                    }}
+                  >
                     <div
                       key={event.id}
                       className="relative md:w-[32vw] w-[55vw] shadow-overlay-event"
@@ -400,20 +444,32 @@ export default function EventsHome({ rippleRef }) {
                         alt={event.name}
                         className="relative aspect-[1/1] object-cover w-full rounded-md"
                       />
-                      <div className="absolute z-40 bottom-16 p-3 text-2xl">
+                      <div className="absolute z-40 bottom-6 p-3 text-2xl">
                         {event.name}
                       </div>
-                      <div className="absolute z-40 bottom-8 p-3">
+                      <div className="absolute z-40 bottom-0 p-3">
                         {event.venue}
                       </div>
-                      {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
+                      <div
+                        className="absolute z-40 bottom-0 right-0 p-3"
+                        dangerouslySetInnerHTML={{
+                          __html: event.time,
+                        }}
+                      ></div>
                     </div>
                   </a>
                 ))}
               </div>
               <div className="flex flex-wrap mb-10 gap-5">
                 {events.slice(4, 6).map((event) => (
-                  <a href={event.regLink} alt={event.name}>
+                  <a
+                    href={event.regLink}
+                    alt={event.name}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleClick(event.regLink);
+                    }}
+                  >
                     <div
                       key={event.id}
                       id="mainDiv"
@@ -424,16 +480,18 @@ export default function EventsHome({ rippleRef }) {
                         alt={event.name}
                         className="relative aspect-[1/1] object-cover w-full rounded-md"
                       />
-                      <div
-                        id="subDiv1"
-                        className="absolute z-40 bottom-16 p-3 text-2xl"
-                      >
+                      <div className="absolute z-40 bottom-6 p-3 text-2xl">
                         {event.name}
                       </div>
-                      <div id="subDiv2" className="absolute z-40 bottom-8 p-3">
+                      <div className="absolute z-40 bottom-0 p-3">
                         {event.venue}
                       </div>
-                      {/* <div className="absolute bottom-0 right-0 p-3">{event.time}</div> */}
+                      <div
+                        className="absolute z-40 bottom-0 right-0 p-3"
+                        dangerouslySetInnerHTML={{
+                          __html: event.time,
+                        }}
+                      ></div>
                     </div>
                   </a>
                 ))}
