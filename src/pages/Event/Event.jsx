@@ -22,7 +22,7 @@ export default function Event() {
       <div className="relative text-primary overflow-hidden">
         <div
           className="max-w-full max-h-[75%] mx-auto w-full md:w-[460px] aspect-square object-cover md:my-5 rounded-xl
-          absolute z-20 md:right-0 md:left-0 md:top-0"
+          absolute z-20 md:right-0 md:left-0 md:top-0 top-2"
         >
           <img
             alt="poster"
@@ -90,11 +90,11 @@ export default function Event() {
                 {eventData.price !== "FREE" ? (
                   eventData.team ? (
                     <span className="text-secondary md:leading-none text-xl font-semibold">
-                      &nbsp;/Team
+                      /Team
                     </span>
                   ) : (
                     <span className="text-secondary md:leading-none text-xl font-semibold">
-                      &nbsp;/Head
+                      /Head
                     </span>
                   )
                 ) : (

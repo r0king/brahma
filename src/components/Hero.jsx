@@ -74,7 +74,7 @@ export default function Hero() {
                 easing="ease"
               >
                 <h1 className="md:text-right text-primary font-morganite mt-[3vw] sm:pt-[4vw] md:pt-0 md:mt-0 text-[25vw] md:text-[13vw] leading-[1] uppercase ">
-                  <span className="hidden md:block">Mar.28-Apr.01</span>
+                  <span className="hidden md:block">Mar.30-Apr.01</span>
                   <span className="md:hidden ml-10">@ASIET</span>
                 </h1>
               </Parallax>
@@ -90,7 +90,7 @@ export default function Hero() {
                     }}
                   >
                     <span className="hidden md:block">@ASIET</span>
-                    <span className="md:hidden mr-8">Mar.28-Apr.01</span>
+                    <span className="md:hidden mr-8">Mar.30-Apr.01</span>
                   </h1>
                 </Parallax>
                 <button className="flex w-full justify-center mr-14 md:mr-0 pointer-events-none">
