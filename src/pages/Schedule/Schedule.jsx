@@ -12,14 +12,14 @@ const Schedule = ({ rippleRef }) => {
 
   const sched1 = [
     {
-      id: 0,
+      id: -1,
       timing: "09:00 - 12:00",
       category: "Cultural",
       description: "Thyagaraj Program",
       personnel: "Main Stage",
     },
     {
-      id: 1,
+      id: 7,
       timing: "10:00 - 12:00",
       category: "Cultural",
       description: "Voice of Brahma - Preliminary",

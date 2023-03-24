@@ -1,8 +1,4 @@
 import React, { useRef } from "react";
-import P1 from "../assets/images/workshops/cnc.webp";
-import P2 from "../assets/images/workshops/3dprinting.webp";
-import P3 from "../assets/images/workshops/ieee.webp";
-import P4 from "../assets/images/workshops/iot.webp";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -21,35 +17,43 @@ const Workshop = ({ rippleRef }) => {
   const events = [
     {
       name: "CNC Workshop",
-      src: P1,
-      regFees: "",
-      organizer: "9:00AM",
+      src: "https://live.staticflickr.com/65535/52757689891_d9ffd91826_n.jpg",
+      regFees: "₹ 400",
+      organizer: "12 PM",
       place: "CNC Lab",
-      Date: "Wed, 29 Mar",
+      Date: "1<sup>st</sup> Apr",
     },
     {
       name: "3D Printing Workshop",
-      src: P2,
-      regFees: "",
-      organizer: "9:00AM",
+      src: "https://live.staticflickr.com/65535/52757938654_326170f1c8_n.jpg",
+      regFees: "₹ 400",
+      organizer: "12 PM",
       place: "CCF Lab",
-      Date: "Wed, 29 Mar ",
+      Date: "30<sup>th</sup> Mar",
     },
     {
-      name: "IEEE Workshop",
-      src: P3,
-      regFees: "",
+      name: "Arduino Workshop - IEEE",
+      src: "https://live.staticflickr.com/65535/52757191231_fec65491ce_c.jpg",
+      regFees: "₹ 150",
       organizer: "9:00AM",
-      place: "Simulation Lab (Lab 7)",
-      Date: "Wed, 29 Mar",
+      place: "Simulation Lab",
+      Date: "30<sup>th</sup> Mar",
     },
     {
       name: "IoT Workshop",
-      src: P4,
-      regFees: "",
-      organizer: "9:00AM",
-      place: "CCF Lab",
-      Date: "Wed, 29 Mar",
+      src: "https://live.staticflickr.com/65535/52757439059_7c348e4499_b.jpg",
+      regFees: "₹ 300",
+      organizer: "11 AM",
+      place: "NP Lab",
+      Date: "31<sup>th</sup> Mar",
+    },
+    {
+      name: "Web Design & Development Workshop - IEI",
+      src: "https://live.staticflickr.com/65535/52757438974_6f87b9e115_c.jpg",
+      regFees: "₹ 250",
+      organizer: "10 AM",
+      place: "Simulation Lab",
+      Date: "1<sup>st</sup> Apr",
     },
   ];
 
@@ -125,15 +129,15 @@ const Workshop = ({ rippleRef }) => {
                     <></>
                   ) : (
                     <>
-                      <div className="border-2 text-sm font-poppins w-12 md:h-6 pl-1 border-orange-500">
+                      <div className="border-2 text-sm font-poppins w-14 md:h-6 pl-1 ml-2 border-orange-500 rounded-md">
                         {image.regFees}
                       </div>
                     </>
                   )}
-                  <div className="show flex font-poppins gap-5 justify-between w-full px-3 ">
+                  <div className="show flex font-poppins gap-5 justify-between w-full px-5 ">
                     <p className="reverse">{image.organizer}</p>
                     <p className="reverse">{image.place}</p>
-                    <p className="reverse">{image.Date}</p>
+                    <p className="reverse" dangerouslySetInnerHTML={{ __html: image.Date }}></p>
                   </div>
                 </div>
               </div>
