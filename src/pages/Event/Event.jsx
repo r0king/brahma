@@ -20,22 +20,29 @@ export default function Event() {
   return (
     <div className="font-poppins">
       <div className="relative text-primary overflow-hidden">
-        <div className="md:absolute mt-20 md:top-0">
+
+        <div
+          className="max-w-full  mx-auto md:mx-0 w-full md:w-[460px] aspect-square object-cover md:my-5 rounded-xl
+          absolute z-20 md:right-[50%] md:left-[33.33%] md:top-0"
+        >
+          <img alt="poster" src={eventData.main_img} className="w-2/3 md:w-full mx-auto rounded-xl" />
+        </div>
+        <div className="md:absolute mt-20 md:top-0 ">
           <MarqueeScroll
             text={
               // if char count is more than 10, then use the event name else snd it twice
               eventData.name && eventData.name.length > 10
                 ? eventData.name
                 : eventData.name +
-                  " &nbsp; &nbsp;  &nbsp; &nbsp;" +
-                  eventData.name
+                " &nbsp; &nbsp;  &nbsp; &nbsp;" +
+                eventData.name
             }
           />
         </div>
-        <div className="md:h-[500px] md:flex md:mt-0 mt-[14vw]">
-          <h3 
+        <div className="md:h-[60vh] md:flex md:mt-0 mt-[14vw] ">
+          <h3
             className="text-primary self-end font-semibold font-poppins text-[52px] text-center md:text-left md:text-[3.14rem] pt-5 md:mt-auto 
-           w-full leading-[0.9]  p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto z-50"
+           w-full leading-[0.9]  p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] md:pt-10vw] pb-[5vw] md:ml-3 md:leading-none mr-auto z-50"
           >
             {eventData.name}
           </h3>
@@ -69,22 +76,16 @@ export default function Event() {
             <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between md:justify-between">
               <h4 className="text-xl font-semibold text-primary">Registration Fees :</h4>
               <div className="flex items-start md:items-end">
-              <span
-                className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0"
-                dangerouslySetInnerHTML={{ __html: eventData.price }}
-              ></span>
-              {eventData.team ? (
-                <span className="text-secondary font-normal">&nbsp; per Team</span>
-              ) : (
-                <span className="text-secondary font-normal">&nbsp; per Head</span>
-              )}</div>
+                <span
+                  className="text-secondary md:leading-none font-normal font-poppins text-xl md:text-lg ml-7 md:ml-0"
+                  dangerouslySetInnerHTML={{ __html: eventData.price }}
+                ></span>
+                {eventData.team ? (
+                  <span className="text-secondary text-xl font-normal">&nbsp;/Team</span>
+                ) : (
+                  <span className="text-secondary text-xl font-normal">&nbsp;/Head</span>
+                )}</div>
             </div>
-          </div>
-          <div
-            className="max-w-full md:absolute mx-auto md:mx-0 w-[75vw] md:w-[460px] aspect-square object-cover md:my-5 rounded-xl
-           relative md:right-[50%] md:left-[33.33%] -mt-[98vw] md:-mt-[100vw]  md:top-0 -top-10"
-          >
-            <img alt="poster" src={eventData.main_img} className="rounded-xl" />
           </div>
           <div className="flex md:flex-col md:pl-[15vw] justify-between mt-[100vw] md:mt-0">
             <button className="ml-auto px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
@@ -116,18 +117,11 @@ export default function Event() {
             >
               <h4 className="font-semibold pb-10 leading-[1.05]">
                 {eventData.speaker_tagline}
-               :</h4>
+                :</h4>
               <p
                 className="text-sm"
                 dangerouslySetInnerHTML={{ __html: eventData.speaker_content }}
               ></p>
-            </div>
-            <div className="">
-              <img
-                src={eventData.speaker_img}
-                alt=""
-                className="max-w-full w-[460px] rounded-xl aspect-square object-cover my-5"
-              />
             </div>
           </div>
         </>
@@ -147,11 +141,11 @@ export default function Event() {
         >
           <h4 className="font-semibold pb-10 text-xl md:text-2xl leading-[1.05] text-secondary">
             {eventData.event_tagline}
-           :</h4>
+            :</h4>
         </div>
         <div className="max-w-full  w-[460px] object-cover font-poppins">
           <p
-            className="text-lg"
+            className="text-lg "
             dangerouslySetInnerHTML={{ __html: eventData.event_content }}
           ></p>
         </div>

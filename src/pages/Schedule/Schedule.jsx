@@ -402,7 +402,7 @@ const Schedule = ({ rippleRef }) => {
       </div>
 
       <div className="schedule-menu">
-        <div className="filter-schedule hover:border-[2px] border-secondary h-min font-semibold flex justify-center w-[96%] md:w-1/3 rounded-[1vw] my-[1%] mx-auto md:ml-[16vw]">
+        <div className="filter-schedule hover:border-[2px] border-secondary h-min font-semibold flex justify-center w-full md:w-1/3 rounded-[1vw] my-[1%] mx-auto md:ml-[16vw]">
           <select
             value={category}
             onChange={categorySelect}

@@ -38,7 +38,7 @@ const SpotLight = ({ rippleRef }) => {
           />
         </div>
       </div>
-      <div className="flex flex-row-reverse pt-[1vw] justify-end rounded-xl align-bottom">
+      <div className="flex flex-row-reverse p-2 pt-[1vw] justify-end rounded-xl align-bottom">
         <h3 className="text-[11.75vw] leading-none font-semibold  md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
           5
         </h3>
