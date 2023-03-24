@@ -219,7 +219,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
           <div className="flex flex-row">
             <Parallax
-              translateY={isMobile ? [-50, 50] : [-55, -13]}
+              translateY={isMobile ? [-50, 50] : [-37, -0]}
               targetElement={!isMobile && targetCulturall}
             >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
@@ -361,7 +361,7 @@ export default function EventsHome({ rippleRef }) {
                     <div key={index} className="text-base">
                       <div className="flex flex-col">
                         <img
-                          className="aspect-auto mobile object-top px-1"
+                          className="aspect-auto mobile object-top mx-1 rounded-xl"
                           src={event.imgSrc}
                           alt={`Slide ${index + 1}`}
                         />
@@ -370,7 +370,12 @@ export default function EventsHome({ rippleRef }) {
                         </div>
                         <div className="flex flex-row mt-4 font-semibold ml- 2">
                           <div className="font-poppins ml-2">{event.venue}</div>
-                          <div className="font-poppins ml-6">{event.time}</div>
+                          <div
+                            className="font-poppins ml-6"
+                            dangerouslySetInnerHTML={{
+                              __html: event.time,
+                            }}
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -388,7 +393,7 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
         ) : (
-          <div className="text-primarysub py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+          <div className="text-primarycontent py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
             <div className="flex flex-col">
               <div className="flex flex-row mb-10 gap-5">
                 {events.slice(0, 2).map((event) => (

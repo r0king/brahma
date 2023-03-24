@@ -53,7 +53,7 @@ export default class CountDown extends Component {
       <div
         className="           
              h-min py-4 px-[9vw] md:pl-4 md:pr-4 md:pt-3 md:pb-5 rounded-md md:mr-0 md:ml-[5vw] mx-auto md:mx-0 w-fit
-             bg-secondary md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none text-primarysub
+             bg-secondary md:rounded-tl-md md:rounded-bl-md md:rounded-br-none  md:rounded-tr-none text-primarycontent
              grid grid-flow-col justify-center md:justify-start gap-5 auto-cols-max
              text-center text-xl group"
       >

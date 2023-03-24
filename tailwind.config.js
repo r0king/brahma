@@ -11,6 +11,7 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         primarysub: "var(--color-primary-sub)",
+        primarycontent: "var(--color-primary-content)",
         secondary: "var(--color-secondary)",
         accent: "var(--color-accent)",
       },

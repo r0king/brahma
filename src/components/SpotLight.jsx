@@ -38,12 +38,12 @@ const SpotLight = ({ rippleRef }) => {
           />
         </div>
       </div>
-      <div className="flex flex-row-reverse p-2 pt-[1vw] justify-end rounded-xl align-bottom">
+      <div className="flex flex-row-reverse pt-[1vw] justify-end rounded-xl align-bottom">
         <h3 className="text-[11.75vw] leading-none font-semibold  md:leading-[7vw] font-poppins text-secondary md:text-[8.5vw]">
           5
         </h3>
         <h1
-          className={`leading-[0.8] mb-[-2vw] text-[36vw] ml-4 font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
+          className={`leading-[0.8] mb-[-2vw] text-[36vw] font-medium tracking-normal font-morganite text-primary uppercase md:text-[22vw] md:leading-[0.75] ${
             isLinux && "pt-[2vw]"
           }`}
         >

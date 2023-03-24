@@ -22,8 +22,8 @@ export default function Event() {
       <div className="relative text-primary overflow-hidden">
 
         <div
-          className="max-w-full  mx-auto md:mx-0 w-full md:w-[460px] aspect-square object-cover md:my-5 rounded-xl
-          absolute z-20 md:right-[50%] md:left-[33.33%] md:top-0"
+          className="max-w-full max-h-[75%] mx-auto w-full md:w-[460px] aspect-square object-cover md:my-5 rounded-xl
+          absolute z-20 md:right-0 md:left-0 md:top-0"
         >
           <img alt="poster" src={eventData.main_img} className="w-2/3 md:w-full mx-auto rounded-xl" />
         </div>
