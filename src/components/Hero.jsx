@@ -93,9 +93,9 @@ export default function Hero() {
                     <span className="md:hidden mr-8">Mar.28-Apr.01</span>
                   </h1>
                 </Parallax>
-                <div className="flex w-full justify-center mr-14 md:mr-0">
+                <button className="flex w-full justify-center mr-14 md:mr-0 pointer-events-none">
                   <CountDown />
-                </div>
+                </button>
               </div>
             </div>
           </div>

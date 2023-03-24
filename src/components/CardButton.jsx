@@ -37,7 +37,7 @@ export default function CardButton({ onClick, href, text = {}, huge = false }) {
             ""
           ) : (
             <div className=" right-0 bottom-0 p-3 pl-0 self-end">
-              <div className="group-hover:fill-primary fill-accent">
+              <div className="group-hover:fill-primary fill-primarycontent">
                 <svg
                   className={`aspect-square ${huge ? "" : "h-5 w-5"}`}
                   width="88"

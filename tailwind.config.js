@@ -24,6 +24,10 @@ module.exports = {
           "0%": { transform: "translateY(0%)", opacity: "1" },
           "100%": { transform: "translateY(-100%)", opacity: "0.8" },
         },
+        moveUpSlow: {
+          "0%": { transform: "translateY(50%)",opacity: "0" },
+          "100%": { transform: "translateY(0%)",opacity: "1" },
+        },
         moveUpOpQ: {
           "0%": { transform: "translateY(0%)" },
           "100%": { transform: "translateY(-100%)" },
@@ -38,18 +42,23 @@ module.exports = {
         },
         selectedHeptics: {
           "0%": { transform: "scale(0.8)" },
-          "100%": { transform: "scale(1)"},
+          "100%": { transform: "scale(1)" },
         },
+        rotateForever: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        }
       },
       animation: {
         moveDown: "moveDown 0.5s ease-in-out",
         moveUp: "moveUp 0.5s ease-in-out",
+        moveUpSlow: "moveUpSlow 2s ease-in-out",
         moveUpFast: "moveUpOpQ 1s ease",
         rotateIn: "rotateIn 0.5s ease-in-out",
         rotateOut: "rotateOut 0.5s ease-in-out",
         selectedHeptics: "selectedHeptics 0.2s ease-in-out ",
+        rotateForever: "rotateForever 0.6s linear infinite",
       },
-      
     },
   },
   plugins: [require("daisyui")],

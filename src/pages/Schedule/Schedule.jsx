@@ -401,12 +401,12 @@ const Schedule = ({ rippleRef }) => {
         </div>
       </div>
 
-      <div className="schedule-menu">
+      <div className="schedule-menu animate-moveUpSlow">
         <div className="filter-schedule hover:border-[2px] border-secondary h-min font-semibold flex justify-center w-full md:w-1/3 rounded-[1vw] my-[1%] mx-auto md:ml-[16vw]">
           <select
             value={category}
             onChange={categorySelect}
-            className="border-r-[1vw]"
+            className="border-r-[1vw] appearance-none"
           >
             <option value="" selected>
               All
@@ -418,7 +418,7 @@ const Schedule = ({ rippleRef }) => {
         </div>
 
         <div
-          className="tabs relative md:mr-[16vw] w-[50%] md:w-1/3 font-semibold"
+          className="tabs relative md:mr-[16vw] w-[50%] md:w-1/3 font-semibold "
           // set css variable "curr_tab" as selected tab
           style={{ "--selectedtab": dayselect - 1 }}
         >
@@ -453,7 +453,7 @@ const Schedule = ({ rippleRef }) => {
         </div>
       </div>
 
-      <div className="schedule justify-center">
+      <div className="schedule justify-center animate-moveUpSlow">
         <div className="sched-table">
           {schedule.map((item) => {
             if (category === "")

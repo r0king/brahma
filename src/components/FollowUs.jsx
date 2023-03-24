@@ -20,15 +20,15 @@ export default function FollowUs() {
           >
             <SiGmail fill="var(--color-accent)" />
           </a>
-          <div className="hover:bg-secondary cursor-pointer border border-accent rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]">
-            <a
-              href="https://www.instagram.com/brahma_asiet/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <a
+            href="https://www.instagram.com/brahma_asiet/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="hover:bg-secondary cursor-pointer border border-accent rounded-full p-4 md:p-6 mr-2 md:mr-6 mt-8 text-[4vw] md:text-[1vw]">
               <FaInstagram fill="var(--color-accent)" />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>

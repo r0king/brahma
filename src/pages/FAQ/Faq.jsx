@@ -95,7 +95,7 @@ function Faq() {
         </p>
 
         {/* <div className="reach_team w-full justify-start "> */}
-          <div className="mx-auto md:ml-[25vw] md:mt-[2vw] mb-2 w-full md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
+          <div className="mx-auto pt-10 md:pt-0 md:ml-[25vw] md:mt-[2vw] mb-2 w-full md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
             <CardButton
               text={{ head: "Reach", tail: "Our Team", caption: "Contact Us" }}
               onClick={(e) => {

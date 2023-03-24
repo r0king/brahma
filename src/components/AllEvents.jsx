@@ -1,6 +1,7 @@
 import eventsData from "../assets/events.json";
 import { useState } from "react";
 import CardButton from "./CardButton";
+import { Parallax } from "react-scroll-parallax";
 const AllEvents = ({ rippleRef }) => {
   const [filter, setFilter] = useState("All");
   const [dayfilter, setDay] = useState("All");
@@ -31,10 +32,15 @@ const AllEvents = ({ rippleRef }) => {
       </div>
 
       <div className="justify-between md:flex">
-        <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[6%]">
-          <h1 className="leading-[0.75]">ALL</h1>
-          <h1 className="leading-[0.75]">EVENTS</h1>
-        </div>
+        <Parallax
+          translateY={[70, -20]}
+          easing="ease"
+          >
+          <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[6%]">
+            <h1 className="leading-[0.75]">ALL</h1>
+            <h1 className="leading-[0.75]">EVENTS</h1>
+          </div>
+        </Parallax>
         <div className=" hidden mb-[18vw] ml-[12vw]  mt-[5vw] md:flex">
           <p
             className="mb-[12.8vw]  text-secondary self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
@@ -79,9 +85,9 @@ const AllEvents = ({ rippleRef }) => {
           text={{ head: "Get", tail: "Slots", caption: "Registration" }}
         />
       </button>
-      <div className="flex justify-center flex-wrap gap-y-2 md:mb-4 mt-4 md:mt-0 space-x-2 md:space-x-4 md:mx-0">
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+      <div className="flex animate-moveUpSlow translate-y-0 justify-center flex-wrap gap-y-2 md:mb-4 mt-4 md:mt-0 space-x-2 md:space-x-4 md:mx-0">
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "All"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -92,9 +98,9 @@ const AllEvents = ({ rippleRef }) => {
           }}
         >
           All Events
-        </p>
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+        </button>
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Cultural"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -102,9 +108,9 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setFilter("Cultural")}
         >
           Cultural
-        </p>
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+        </button>
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "General"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -112,9 +118,9 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setFilter("General")}
         >
           General
-        </p>
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+        </button>
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             filter === "Workshop"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -122,19 +128,9 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setFilter("Workshop")}
         >
           Workshop
-        </p>
-        {/* <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
-            dayfilter === "All"
-              ? "bg-secondary text-accent animate-selectedHeptics"
-              : "bg-accent text-primary border"
-          }`}
-          onClick={() => setDay("All")}
-        >
-          All Days
-        </p> */}
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+        </button>
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "1"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -142,9 +138,9 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("1")}
         >
           Day 1
-        </p>
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+        </button>
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "2"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -152,9 +148,9 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("2")}
         >
           Day 2
-        </p>
-        <p
-          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer border-secondary  hover:bg-secondary hover:text-accent ${
+        </button>
+        <button
+          className={`px-4 py-2 rounded-md text-sm font-medium cursor-pointer nofade border-secondary  hover:bg-secondary hover:text-accent ${
             dayfilter === "3"
               ? "bg-secondary text-accent animate-selectedHeptics"
               : "bg-accent text-primary border"
@@ -162,7 +158,7 @@ const AllEvents = ({ rippleRef }) => {
           onClick={() => setDay("3")}
         >
           Day 3
-        </p>
+        </button>
       </div>
       <div className="mt-[5vw] grid max-w-screen-xl grid-cols-1 gap-4 mx-3 md:mx-auto my-5 md:gap-y-20 justify-items-center md:grid-cols-3 ">
         {eventsData.map((event, index) => {
@@ -171,7 +167,7 @@ const AllEvents = ({ rippleRef }) => {
             (dayfilter === "All" || event.day === dayfilter)
           ) {
             return (
-              <div key={index} className="max-w-sm mt-8 md:mt-0">
+              <div key={index} className="md:w-full mt-8 md:mt-0">
                 <div className="flex flex-col justify-center text-primary">
                   <a
                     href={`event\\${index}`}

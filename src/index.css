@@ -111,7 +111,7 @@ h1,
 p,
 img,
 h4,
-button,
+button:not(.nofade),
 .card {
   transform: translateY(30%);
   opacity: 0;
