@@ -11,6 +11,7 @@ import Workshop from "../components/Workshop";
 // import MarqueeScroll from "../components/MarqueeScroll";
 import CardButton from "../components/CardButton";
 import LoadingIcons from "react-loading-icons";
+// import Proshows from "../components/Proshows";
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -116,6 +117,7 @@ export default class HomePage extends Component {
         </div>
         <Hero />
         <AboutUs rippleRef={this.props.rippleRef} />
+        {/* <Proshows rippleRef={this.props.rippleRef} /> */}
         <EventsHome rippleRef={this.props.rippleRef} />
         <Workshop rippleRef={this.props.rippleRef} />
         <SpotLight rippleRef={this.props.rippleRef} />

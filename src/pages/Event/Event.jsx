@@ -18,7 +18,7 @@ export default function Event() {
   }
 
   return (
-    <div className="font-poppins">
+    <div className="font-poppins min-h-screen">
       <div className="relative text-primary overflow-hidden">
         <div
           className="max-w-full max-h-[75%] mx-auto w-full md:w-[460px] aspect-square object-cover md:my-5 rounded-xl

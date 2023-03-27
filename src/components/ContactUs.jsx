@@ -78,6 +78,10 @@ const ContactUs = () => {
                   Treesa Jomol k : +91 73564 74358
                   <br />
                   Anjanamol jose : +91 75929 80883
+                  <br />
+                  Sangeetha Prasad : +91 91884 32644
+                  <br />
+                  Ashwin S Nair : +91 75929 80883
                 </h5>
               </div>
             </div>

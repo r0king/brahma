@@ -169,8 +169,8 @@ const AllEvents = ({ rippleRef }) => {
             return (
               <div key={index} className="md:w-full mt-8 md:mt-0">
                 <div className="flex flex-col justify-center text-primary">
-                  <a
-                    href={`event\\${index}`}
+                  <div
+                    // href={`event\\${index}`}
                     alt={event.name}
                     onClick={(e) => {
                       e.preventDefault();
@@ -186,7 +186,7 @@ const AllEvents = ({ rippleRef }) => {
                       src={event.main_img}
                       alt={event.name}
                     />
-                  </a>
+                  </div>
                   <div className="pl-2 mt-4 text-lg font-bold flex w-full justify-between font-poppins text-primary">
                     <div className="w-[20vw]">{event.name}</div>
                     {event.day === "" ? (

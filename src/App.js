@@ -84,10 +84,10 @@ function App() {
   return (
     <>
       <div
-        className={`z-[90] fixed bottom-0 left-0 ${isLoading && "hidden"}`}
+        className={`z-[90] fixed animate-shrinkDown bg-accent border-primary border-[5px] rounded-full bottom-[-120%] left-[-50%]`}
         ref={rippleRef}
       ></div>
-      <div ref={rootRef} className="bg-accent">
+      <div ref={rootRef} className="bg-accent min-h-screen">
         <ParallaxProvider>
           <NavBar rippleRef={rippleRef} />
           <BrowserRouter basename={process.env.PUBLIC_URL}>

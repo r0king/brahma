@@ -49,7 +49,7 @@ const AboutUs = ({ rippleRef }) => {
           </div>
         {/* </Parallax> */}
       </div>
-      <p className="mx-3 md:mx-[9vw] font-poppins font-normal mt-8 md:-mt-[5vh] text-justify">
+      <p className="mx-3 md:mx-[9vw] font-poppins font-normal mt-8 md:-mt-[3vh] text-justify">
         Flagged off in 2003 as a technical festival of the students of Adi
         Shankara Institute of Engineering and Technology, our festival is a
         showcase of innovation, creativity and diversity bringing together

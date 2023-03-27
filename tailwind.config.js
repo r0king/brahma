@@ -25,8 +25,8 @@ module.exports = {
           "100%": { transform: "translateY(-100%)", opacity: "0.8" },
         },
         moveUpSlow: {
-          "0%": { transform: "translateY(50%)",opacity: "0" },
-          "100%": { transform: "translateY(0%)",opacity: "1" },
+          "0%": { transform: "translateY(50%)", opacity: "0" },
+          "100%": { transform: "translateY(0%)", opacity: "1" },
         },
         moveUpOpQ: {
           "0%": { transform: "translateY(0%)" },
@@ -47,10 +47,15 @@ module.exports = {
         rotateForever: {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
-        }
+        },
+        shrink: {
+          "0%": { height: "250em", width: "250em" },
+          "100%": { height: "3em", width: "3em" },
+        },
       },
       animation: {
         moveDown: "moveDown 0.5s ease-in-out",
+        shrinkDown: "shrink 2s ease-in-out 1s",
         moveUp: "moveUp 0.5s ease-in-out",
         moveUpSlow: "moveUpSlow 2s ease-in-out",
         moveUpFast: "moveUpOpQ 1s ease",
