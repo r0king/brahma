@@ -220,7 +220,7 @@ export default function EventsHome({ rippleRef }) {
           </div>
           <div className="flex flex-row">
             <Parallax
-              translateY={isMobile ? [-60, 40] : [-40, -0]}
+              translateY={isMobile ? [-50, 50] : [-40, -0]}
               targetElement={!isMobile && targetCulturall}
             >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
