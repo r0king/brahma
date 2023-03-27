@@ -29,7 +29,7 @@ const ContactUs = () => {
           {/* <img src={"Logo"} alt="Asiet Logo" className="   pl-0 md:pl-0    md:pt-0 pb-5" srcSet="" /> */}
           {/* ::Title Contact */}
           <h2
-            className="text-5xl leading-[0.75]  font-poppins font-semibold tracking-wide p-5 text-accent"
+            className="text-3xl leading-[0.75]  font-poppins font-semibold tracking-wide p-5 pb-4 text-accent"
             // style={{
             //   textOrientation: "mixed",
             //   writingMode: "vertical-rl",

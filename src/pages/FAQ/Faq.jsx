@@ -93,22 +93,21 @@ function Faq() {
             })}
           </div>
         </p>
-
-        {/* <div className="reach_team w-full justify-start "> */}
-          <div className="mx-auto pt-10 md:pt-0 md:ml-[25vw] md:mt-[2vw] mb-2 w-full md:w-[20vw] min-w-[16rem] self-end aspect-[7/3]">
-            <CardButton
-              text={{ head: "Reach", tail: "Our Team", caption: "Contact Us" }}
-              onClick={(e) => {
-                e.preventDefault();
-                window.open(
-                  "https://mail.google.com/mail/?view=cm&fs=1&to=brahma@adishankara.ac.in&su=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
-                );
-              }}
-              href="mailto:youremail@gmail.com?subject=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
-            />
-          </div>
-        {/* </div> */}
       </div>
+      {/* <div className="reach_team w-full justify-start "> */}
+      <div className="ml-auto mt-10 -mb-24 md:mb-0 px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.075rem)*3/14+1.875rem)]">
+        <CardButton
+          text={{ head: "Reach", tail: "Our Team", caption: "Contact Us" }}
+          onClick={(e) => {
+            e.preventDefault();
+            window.open(
+              "https://mail.google.com/mail/?view=cm&fs=1&to=brahma@adishankara.ac.in&su=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
+            );
+          }}
+          href="mailto:youremail@gmail.com?subject=Brahma%20Cultural%20Fest%20of%20ASIET&body=Hello%20Team,%0D%0A%0D%0AWe%20are%20reaching%20out%20to%20you..."
+        />
+      </div>
+      {/* </div> */}
     </>
   );
 }

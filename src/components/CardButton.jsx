@@ -20,12 +20,12 @@ export default function CardButton({ onClick, href, text = {}, huge = false }) {
           huge ? "hover:scale-[1.02]" : "hover:scale-[1.1]"
         } transition-all ease-in-out duration-150 hover:shadow-2xl shadow-primary h-full w-full flex flex-col justify-center`}
       >
-        <div className="text-left p-2 pb-0 mb-auto group-hover:text-primary font-poppins font-semibold text-white">
+        <div className="text-left p-2 pb-0 mb-auto text-base md:text-sm group-hover:text-primary font-poppins font-semibold text-white">
           {text.caption}
         </div>
         <div className="flex  justify-between mt-auto">
           <div
-            className={`bottom-0 left-0 text-left  pl-3 pb-1 pt-0 group-hover:text-primary font-poppins font-semibold text-white ${
+            className={`bottom-0 left-0 text-left  pl-2 pb-1 pt-0 group-hover:text-primary font-poppins font-semibold text-white ${
               huge ? "text-5xl md:text-7xl" : "text-base md:text-sm"
             }`}
           >

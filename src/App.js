@@ -84,7 +84,7 @@ function App() {
   return (
     <>
       <div
-        className={`z-[90] fixed animate-shrinkDown bg-accent border-primary border-[5px] rounded-full bottom-[-120%] left-[-50%]`}
+        className={`z-[90] fixed animate-shrinkDown bg-accent border-primary border-[5px] rounded-full bottom-[-120%] left-[-100%] md:left-[-50%] ${isLoading && "h-[250em] w-[250em]"}`}
         ref={rippleRef}
       ></div>
       <div ref={rootRef} className="bg-accent min-h-screen">
@@ -113,7 +113,7 @@ function App() {
                 path="*"
                 element={
                   <>
-                    <h1 className="text-center text-primary font-morganite leading-none py-[5vw] text-[10vw] uppercase">
+                    <h1 className="text-left text-primary font-morganite leading-[0.75] py-[5vw] text-[35vw] md:text-[10vw] px-5 uppercase pr-10">
                       Oops, looks like you stumbled upon a page that's as lost
                       as you are.
                     </h1>

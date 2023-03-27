@@ -103,7 +103,7 @@ export default function Event() {
               </p>
             </div>
           </div>
-          <div className="flex md:flex-col md:pl-[15vw] justify-between mt-[100vw] md:mt-0">
+          <div className="flex md:flex-col md:pl-[15vw] justify-between mt-[60vw] md:mt-0">
             <button className="ml-auto px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.375rem)*3/14+1.875rem)]">
               <CardButton
                 href={eventData.reg_link}

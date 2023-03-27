@@ -193,8 +193,8 @@ export default function EventsHome({ rippleRef }) {
                 Cultural
               </h2>
             </Parallax>
-            <div className="text-secondary  font-poppins font-semibold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mt-[-32vw] md:mt-[4vw] mr-2 md:mr-8">
-              <ul className="list-none relative">
+            <div className="text-secondary  font-poppins font-bold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mt-[-32vw] md:mt-[4vw] mr-2 md:mr-8">
+              <ul className="list-none relative ">
                 {culList.map((item, index) => {
                   if (index < culLen / 2 - 1) {
                     return (
