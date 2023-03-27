@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./schedule.css";
 // import blank from "../../assets/images/blankimg.webp";
 
@@ -372,6 +372,9 @@ const Schedule = ({ rippleRef }) => {
       window.location.pathname = `/${name}`;
     }, 1500);
   };
+  useEffect(() => {
+    console.log("schedule", schedule);
+  }, [schedule]);
   return (
     <>
       <div className="flex mt-[8vw] ml-[16vw] md:hidden">
@@ -427,7 +430,10 @@ const Schedule = ({ rippleRef }) => {
           <h3
             className={`button  ${dayselect === 1 ? "btn1" : ""}`}
             onClick={() => {
-              setSchedule(sched1);
+              setSchedule([]);
+              setTimeout(() => {
+                setSchedule(sched1);
+              }, 100);
               setdayselect(1);
             }}
           >
@@ -436,7 +442,10 @@ const Schedule = ({ rippleRef }) => {
           <h3
             className={`button ${dayselect === 2 ? "btn2" : ""}`}
             onClick={() => {
-              setSchedule(sched2);
+              setSchedule([]);
+              setTimeout(() => {
+                setSchedule(sched2);
+              }, 100);
               setdayselect(2);
             }}
           >
@@ -445,8 +454,11 @@ const Schedule = ({ rippleRef }) => {
           <h3
             className={`button ${dayselect === 3 ? "btn3" : ""}`}
             onClick={() => {
+              setSchedule([]);
+              setTimeout(() => {
+                setdayselect(3);
+              }, 100);
               setSchedule(sched3);
-              setdayselect(3);
             }}
           >
             Day 3
