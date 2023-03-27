@@ -15,8 +15,8 @@ const AllEvents = ({ rippleRef }) => {
           className=" text-secondary self-end font-semibold font-poppins text-lg 
            w-full leading-[0.9] tracking-tighter p-2  pb-[5vw]  mr-auto"
         >
-          <span className="font-morganite text-[19vw] md:text-[7vw] text-primary uppercase">
-            Total Prize Pool ₹6L{" "}
+          <span className="font-morganite text-[17vw] md:text-[7vw] text-primary uppercase">
+            Total Prize Pool - ₹6L{" "}
           </span>
           <span className="text-[6vw]">
             Choreonite ₹80k
@@ -31,11 +31,8 @@ const AllEvents = ({ rippleRef }) => {
         </p>
       </div>
 
-      <div className="justify-between md:flex">
-        <Parallax
-          translateY={[70, -20]}
-          easing="ease"
-          >
+      <div className="justify-between md:flex pt-5">
+        <Parallax translateY={[70, -20]} easing="ease">
           <div className=" font-morganite md:static text-primary text-[40vw] md:text-[26vw] pl-1 md:pt-[6%]">
             <h1 className="leading-[0.75]">ALL</h1>
             <h1 className="leading-[0.75]">EVENTS</h1>
@@ -46,9 +43,9 @@ const AllEvents = ({ rippleRef }) => {
             className="mb-[12.8vw]  text-secondary self-end font-semibold font-poppins text-2xl md:text-[2.14rem] 
            w-full leading-[0.9] tracking-tighter p-2 md:p-0 md:w-[calc((100vw-9.375rem)*4/14+2.5rem)] pb-[5vw] md:ml-3 md:leading-none mr-auto"
           >
-            <span className="font-morganite text-[7vw] text-primary uppercase">
-              Total Prize Pool ₹6L{" "}
-            </span>
+            <p className="font-morganite text-[6vw] text-primary uppercase">
+              Total Prize Pool - ₹6L
+            </p>
             <span className="text-[2vw]">
               Choreonite ₹80k
               <br />
@@ -75,7 +72,7 @@ const AllEvents = ({ rippleRef }) => {
           />
         </button>
       </div>
-      <button className="mt-[5vw] h-full w-full md:hidden">
+      <button className="ml-auto mt-5 mb-5 md:hidden px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.075rem)*3/14+1.875rem)]">
         <CardButton
           onClick={(e) => {
             e.preventDefault();

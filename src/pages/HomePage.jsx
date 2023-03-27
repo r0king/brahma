@@ -126,7 +126,7 @@ export default class HomePage extends Component {
             onClick={() => {
               handleClick("schedule");
             }}
-            text={{ head: "View", tail: "Schedule", caption: "Speakers" }}
+            text={{ head: "View", tail: "Schedule", caption: "Timings" }}
           />
         </div>
         {/* <MarqueeScroll text="Stay tuned"/> */}
