@@ -462,7 +462,7 @@ const Schedule = ({ rippleRef }) => {
                 <div
                   onClick={(e) => {
                     e.preventDefault();
-                    changePage(`event\\${item.id}`);
+                    if (item.id > 0) changePage(`event\\${item.id}`);
                   }}
                   key={item.id}
                   className="group hover:py-5 transition-all duration-500 ease-in-out "
