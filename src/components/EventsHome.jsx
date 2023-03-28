@@ -153,6 +153,7 @@ export default function EventsHome({ rippleRef }) {
 
   const culLen = culList.length;
   const genLen = genList.length;
+
   const [targetCulturall, setTarget] = useState();
   const targetCulturallRef = useRef();
   const targetGenerallRef = useRef();
@@ -219,14 +220,14 @@ export default function EventsHome({ rippleRef }) {
           </div>
           <div className="flex flex-row">
             <Parallax
-              translateY={isMobile ? [-70, 40] : [-37, -0]}
+              translateY={isMobile ? [-50, 50] : [-40, -0]}
               targetElement={!isMobile && targetCulturall}
             >
               <h2 className="uppercase font-morganite text-[30vw] md:text-[22vw] leading-[0.75] pl-3">
                 Events
               </h2>
             </Parallax>
-            <div className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mr-2 md:mr-8">
+            <div className="text-secondary font-poppins font-bold text-[4vw] md:text-[2.8vw] ml-2 md:ml-10 mr-2 md:mr-8">
               <ul className="list-none relative">
                 {culList.map((item, index) => {
                   if (index > culLen / 2 - 1) {
@@ -289,7 +290,7 @@ export default function EventsHome({ rippleRef }) {
               </h2>
             </Parallax>
             <div
-              className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.5vw] ml-2 md:ml-2 mr-4 md:mr-10 mt-[-57vw] md:mt-[1.5vw]"
+              className="text-secondary font-poppins font-bold text-[4vw] md:text-[2.5vw] ml-2 md:ml-2 mr-4 md:mr-10 mt-[-57vw] md:mt-[1.5vw]"
               dir="rtl"
             >
               <ul className="list-none relative ">
@@ -325,7 +326,7 @@ export default function EventsHome({ rippleRef }) {
               </h2>
             </Parallax>
             <div
-              className="text-secondary font-poppins font-semibold text-[4vw] md:text-[2.5vw] ml-2 md:ml-3 mr-4 md:mr-10"
+              className="text-secondary font-poppins font-bold text-[4vw] md:text-[2.5vw] ml-2 md:ml-3 mr-4 md:mr-10"
               dir="rtl"
             >
               <ul className="list-none relative">
@@ -368,7 +369,7 @@ export default function EventsHome({ rippleRef }) {
                         <div className="mt-4 font-poppins font-bold pl-2">
                           {event.name}
                         </div>
-                        <div className="flex flex-row mt-4 font-semibold ml- 2">
+                        <div className="flex flex-row mt-4 font-bold ml- 2">
                           <div className="font-poppins ml-2">{event.venue}</div>
                           <div
                             className="font-poppins ml-6"
@@ -393,7 +394,7 @@ export default function EventsHome({ rippleRef }) {
             </div>
           </div>
         ) : (
-          <div className="text-primarycontent py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-semibold">
+          <div className="text-primarycontent py-5 px-1 md:p-5 md:mt-20 mt-[3vw] font-poppins font-bold">
             <div className="flex flex-col">
               <div className="flex flex-row mb-10 gap-5">
                 {events.slice(0, 2).map((event) => (

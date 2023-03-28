@@ -41,7 +41,7 @@ export default function Hero() {
             <h1 className="text-secondary font-morganite text-[25vw] pt-[7vh] md:pt-[4vw] md:text-[13vw] leading-[0.5] uppercase ">
               Brahma '23
             </h1>
-            <h1 className="text-primary font-morganite font-semibold text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
+            <h1 className="text-primary font-morganite text-[25vw] md:text-[13vw] pt-3 md:pt-6 uppercase leading-[0.75]">
               Awaken the
               <br />
               Creator

@@ -61,7 +61,7 @@ const NavBar = ({ rippleRef }) => {
   };
 
   return (
-    <nav className="text-black w-full font-poppins font-bold sticky -top-1 bg-accent z-50">
+    <nav className="text-black w-full font-poppins font-bold sticky -top-1 bg-accent z-[999]">
       <div className="flex justify-end items-center w-full">
         <label
           id="logo"
