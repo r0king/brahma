@@ -9,3 +9,12 @@
 b{
     color: var(--color-secondary);
 }
+
+@media screen and (min-width:320px) and (max-width:640px){
+    .o1{order:1;}
+    .o2{order:2;}
+    .o3{order:3;}
+    .o4{order:4;}
+    .o5{order:5;}
+    .o6{order:6;}
+}
