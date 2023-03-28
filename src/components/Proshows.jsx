@@ -1,7 +1,7 @@
 import React from "react";
 // import Arrow from '../src/assets/svg/arrow-top-right.svg'
 // import Arrow from '../assets/svg/arrow-top-right.svg'
-import Pro from "../assets/videos/Brahma Final.mp4";
+import Pro from "../assets/videos/Brahma Final~2.webm";
 // import { useMediaQuery } from "react-responsive";
 import Sunburn from "../assets/images/proshow/sunburn.png"
 import Tribe from "../assets/images/proshow/tribe2.png"
