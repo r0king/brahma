@@ -2,7 +2,6 @@ import React from "react";
 // import Arrow from '../src/assets/svg/arrow-top-right.svg'
 // import Arrow from '../assets/svg/arrow-top-right.svg'
 import Pro from "../assets/videos/Brahma Final.mp4";
-import CardButton from "./CardButton";
 // import { useMediaQuery } from "react-responsive";
 import Sunburn from "../assets/images/proshow/sunburn.png"
 import Tribe from "../assets/images/proshow/tribe2.png"
@@ -15,14 +14,7 @@ import PragPos from "../assets/images/proshow/pragathipos.png"
 import "./../App.css"
 
 const Proshows = ({ rippleRef }) => {
-  const handleClick = (name) => {
-    // toggle circle ripple
-    rippleRef.current.classList.toggle("circle-ripple");
-    // after timeout of 1.5 sec
-    setTimeout(() => {
-      window.location.pathname = `/${name}`;
-    }, 1500);
-  };
+ 
   // const isMobile = useMediaQuery({ maxWidth: 640 });
 
   return (
