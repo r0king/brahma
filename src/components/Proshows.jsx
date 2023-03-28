@@ -8,9 +8,9 @@ import Tribe from "../assets/images/proshow/tribe2.png"
 import Romeo from "../assets/images/proshow/romeo.png"
 import Sixeight from "../assets/images/proshow/sixeight.png"
 import BassTide from "../assets/images/proshow/basstides.png"
-import Melam from "../assets/images/proshow/melam.jpg"
+import Melam from "../assets/images/proshow/Melam.webp"
 import Pragathi from "../assets/images/proshow/pragathi.png"
-import PragPos from "../assets/images/proshow/pragathipos.png"
+import PragPos from "../assets/images/proshow/Pragathi.webp"
 import "./../App.css"
 
 const Proshows = ({ rippleRef }) => {
