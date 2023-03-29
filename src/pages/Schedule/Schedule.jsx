@@ -406,7 +406,7 @@ const Schedule = ({ rippleRef }) => {
       </div>
 
       <div className="schedule-menu animate-moveUpSlow">
-        <div className="filter-schedule hover:border-[2px] border-secondary h-min font-semibold flex justify-center w-full md:w-1/3 rounded-[1vw] my-[1%] mx-auto md:ml-[16vw]">
+        <div className="filter-schedule border-[2px] border-secondary h-min font-semibold flex justify-center w-full md:w-1/3 rounded-[2vw] my-[1%] mx-auto md:ml-[16vw]">
           <select
             value={category}
             onChange={categorySelect}
@@ -426,7 +426,7 @@ const Schedule = ({ rippleRef }) => {
           // set css variable "curr_tab" as selected tab
           style={{ "--selectedtab": dayselect - 1 }}
         >
-          <div className="absolute bg-accent border-secondary border-2 h-full p-1 w-1/3 rounded-[1vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
+          <div className="absolute bg-accent border-secondary border-2 h-full p-1 w-1/3 rounded-[2vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
           <h3
             className={`button  ${dayselect === 1 ? "btn1" : ""}`}
             onClick={() => {
@@ -474,7 +474,7 @@ const Schedule = ({ rippleRef }) => {
                 <div
                   onClick={(e) => {
                     e.preventDefault();
-                    if (item.id > 0) changePage(`event\\${item.id}`);
+                    if (item.id > 0) changePage(`event/${item.id}`);
                   }}
                   key={item.id}
                   className="group hover:py-5 transition-all duration-500 ease-in-out "
@@ -495,7 +495,7 @@ const Schedule = ({ rippleRef }) => {
                   <div
                     onClick={(e) => {
                       e.preventDefault();
-                      changePage(`event\\${item.id}`);
+                      changePage(`event/${item.id}`);
                     }}
                     key={item.id}
                     className="group hover:py-5 transition-all duration-500 ease-in-out"

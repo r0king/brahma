@@ -75,9 +75,9 @@ const ContactUs = () => {
 
               <div className="mt-0 px-5 sm:mt-0 space-y-3 text-accent">
                 <h5 className="text-base font-poppins text-opacity-60 ">
-                  Treesa Jomol k : +91 73564 74358
+                  Treesa Jomol K : +91 73564 74358
                   <br />
-                  Anjanamol jose : +91 75929 80883
+                  Anjanamol Jose : +91 75929 80883
                   <br />
                   Sangeetha Prasad : +91 91884 32644
                   <br />
