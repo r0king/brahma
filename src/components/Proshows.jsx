@@ -13,9 +13,7 @@ import RomeoD from "../assets/images/proshow/romeo-dark.png"
 import Sixeight from "../assets/images/proshow/sixeight.png"
 import BassTideL from "../assets/images/proshow/basstides.png"
 import BassTideD from "../assets/images/proshow/basstides-dark.png"
-import MelamPos from "../assets/images/proshow/Melam.webp"
-import MelamL from "../assets/images/proshow/melam-text.png"
-import MelamD from "../assets/images/proshow/melam-text-dark.png"
+import Melam from "../assets/images/proshow/Melam.webp"
 import Pragathi from "../assets/images/proshow/pragathi.png"
 import PragPos from "../assets/images/proshow/Pragathi.webp"
 import "./../App.css"
@@ -26,7 +24,6 @@ const Proshows = ({ rippleRef }) => {
   const basstideRef = React.createRef();
   const romeoRef = React.createRef();
   const tribeRef = React.createRef();
-  const melamRef = React.createRef();
 
   const { theme } = useContext(ThemeContext);
 
@@ -87,7 +84,7 @@ const Proshows = ({ rippleRef }) => {
             Featuring
           </h1>
         </div>
-        <div className="md:basis-1/4 md:-mt-28 -mt-12 md:ml-12 ml-[26vw]">
+        <div className="md:basis-1/4 md:-mt-28 -mt-12 md:ml-12 ml-24">
           <div className="w-full"><img src={theme === "dark" ? RomeoL : RomeoD}
           ref={romeoRef} alt="" className="md:w-[20vw] w-[50vw]" /></div>
         </div>
@@ -120,12 +117,13 @@ const Proshows = ({ rippleRef }) => {
       <div className="flex flex-col-reverse md:flex-row">
         <div className="md:basis-1/2">
           <div className="md:order-1 mx-3 md:mr-10 overflow-hidden shadow-overlay-reverse relative rounded-md md:max-w-[50vw]">
-            <img src={MelamPos} className="hover:opacity-80 object-cover brightness-60 rounded-md md:max-w-[50vw] md:mt-4 mt-0 " alt="" />
+            <img src={Melam} className="hover:opacity-80 object-cover brightness-60 rounded-md md:max-w-[50vw] mt-4 " alt="" />
           </div>
         </div>
-        <div className="md:basis-1/2 md:mt-8 mt-4">
-        <img className="md:w-[45vw] w-[70vw] ml-14" src={theme === "dark" ? MelamL : MelamD}
-          ref={melamRef} alt="Melam" />
+        <div className="md:basis-1/2">
+          <h1 className="md:mr-5 order-3 uppercase mt-10 text-center md:text-center font-morganite text-[30vw] md:text-[22vw] leading-[1.05]">
+            Melam
+          </h1>
         </div>
       </div>
     </div>
