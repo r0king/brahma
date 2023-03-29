@@ -65,10 +65,10 @@ const Proshows = ({ rippleRef }) => {
         </div>
         {/* <Parallax translateY={isMobile ? [0, 0] : [10, -10]} easing="ease"> */}
         <div className="md:basis-1/2">
-          <div className="md:order-1 mx-3 md:mr-10 md:mb-[20%] -mt-12 overflow-hidden shadow-overlay-reverse relative rounded-md md:max-w-[50vw]">
+          <div className="md:order-1 mx-3 md:mr-10 md:mb-[20%] -mt-12 overflow-hidden shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
             <video
               width={"800"}
-              className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md md:max-w-[50vw]"
+              className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw]  md:max-w-[50vw]"
               src={Pro}
               autoPlay
               loop
