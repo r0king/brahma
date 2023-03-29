@@ -87,7 +87,7 @@ const Proshows = ({ rippleRef }) => {
             Featuring
           </h1>
         </div>
-        <div className="md:basis-1/4 md:-mt-28 -mt-12 md:ml-12 ml-24">
+        <div className="md:basis-1/4 md:-mt-28 -mt-12 md:ml-12 ml-[26vw]">
           <div className="w-full"><img src={theme === "dark" ? RomeoL : RomeoD}
           ref={romeoRef} alt="" className="md:w-[20vw] w-[50vw]" /></div>
         </div>
