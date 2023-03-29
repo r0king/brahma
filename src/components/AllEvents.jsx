@@ -174,7 +174,7 @@ const AllEvents = ({ rippleRef }) => {
                       rippleRef.current.classList.toggle("circle-ripple");
                       // after timeout of 1.5 sec
                       setTimeout(() => {
-                        window.location.pathname = `event\\${index}`;
+                        window.location.pathname = `event/${index}`;
                       }, 1500);
                     }}
                   >

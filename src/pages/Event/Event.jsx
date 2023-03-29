@@ -53,7 +53,7 @@ export default function Event() {
         <div className="flex flex-col md:flex-row relative md:static ">
           <div className="flex flex-col md:flex-row w-full justify-between absolute md:static gap-0 p-2 md:gap-10 md:pl-5 z-10">
             <div className="flex flex-row md:flex-col h-[6vh] md:h-[13vh] justify-between text-right md:justify-between">
-              <h4 className="text-xl font-semibold text-primary ">Type :</h4>
+              <h4 className="text-xl font-semibold text-primary text-left">Type :</h4>
               <p className="text-secondary md:leading-none font-semibold font-poppins text-xl md:text-lg ml-7 md:ml-0">
                 {eventData.type}
               </p>

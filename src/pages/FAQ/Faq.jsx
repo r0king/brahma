@@ -95,7 +95,7 @@ function Faq() {
         </p>
       </div>
       {/* <div className="reach_team w-full justify-start "> */}
-      <div className="ml-auto mt-10 -mb-24 md:mb-0 px-2 md:mr-2 aspect-[9/3] w-full md:w-[calc((100vw-9.075rem)*3/14+1.875rem)]">
+      <div className="ml-auto mt-10 -mb-24 md:mb-0 md:mt-0 px-2 md:mr-[53vw] aspect-[9/3] w-full md:w-[calc((100vw-9.075rem)*3/14+1.875rem)]">
         <CardButton
           text={{ head: "Reach", tail: "Our Team", caption: "Contact Us" }}
           onClick={(e) => {

@@ -35,7 +35,7 @@ const Workshop = ({ rippleRef }) => {
       name: "Arduino Workshop - IEEE",
       src: "https://live.staticflickr.com/65535/52757191231_fec65491ce_c.jpg",
       regFees: "₹ 150",
-      organizer: "9:00AM",
+      organizer: "9 AM",
       place: "Simulation Lab",
       Date: "30<sup>th</sup> Mar",
     },

@@ -181,7 +181,7 @@ export default function EventsHome({ rippleRef }) {
     <>
       <div
         ref={targetCulturallRef}
-        className="relative h-1 mt-[5vh] w-full"
+        className="relative h-1 -mt-[5vh] w-full"
       ></div>
       <div className="mt-48 md:mt-[20vh]">
         <div className="flex flex-col">
