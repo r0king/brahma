@@ -120,11 +120,11 @@ const Proshows = ({ rippleRef }) => {
       <div className="flex flex-col-reverse md:flex-row">
         <div className="md:basis-1/2">
           <div className="md:order-1 mx-3 md:mr-10 overflow-hidden shadow-overlay-reverse relative rounded-md md:max-w-[50vw]">
-            <img src={MelamPos} className="hover:opacity-80 object-cover brightness-60 rounded-md md:max-w-[50vw] mt-4 " alt="" />
+            <img src={MelamPos} className="hover:opacity-80 object-cover brightness-60 rounded-md md:max-w-[50vw] md:mt-4 mt-0 " alt="" />
           </div>
         </div>
-        <div className="md:basis-1/2 mt-8">
-        <img className="w-[45vw]" src={theme === "dark" ? MelamL : MelamD}
+        <div className="md:basis-1/2 md:mt-8 mt-4">
+        <img className="md:w-[45vw] w-[70vw] ml-14" src={theme === "dark" ? MelamL : MelamD}
           ref={melamRef} alt="Melam" />
         </div>
       </div>
