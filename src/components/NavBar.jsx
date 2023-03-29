@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import asietLogoDark from "../assets/images/asiet-logo-whitec.webp";
 import asietLogoWhite from "../assets/images/asiet-logo-darkc.webp";
 // import arrowSVG from "../assets/images/arrow.svg";
 import { Link } from "react-scroll";
+import { ThemeContext } from "./ThemeContext";
 
 const NavBar = ({ rippleRef }) => {
   const [fade, setFade] = useState(false);
   const [hidden, setHidden] = useState("invisible");
-  const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme")) || "dark"
-  );
+  const { theme, setTheme } = useContext(ThemeContext);
   const [showMenu, setShowMenu] = useState(false);
   const logoRef = React.createRef();
 

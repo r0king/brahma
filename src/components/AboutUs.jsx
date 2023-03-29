@@ -37,10 +37,10 @@ const AboutUs = ({ rippleRef }) => {
           {/* </Parallax> */}
         </div>
         {/* <Parallax translateY={isMobile ? [0, 0] : [10, -10]} easing="ease"> */}
-          <div className="order-1 mx-3 md:mr-10 mt-10 md:mt-0 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[3vw] md:max-w-[50vw]">
+          <div className="order-1 mx-3 md:mr-10 mt-10 md:mt-0 mb-[4vw] shadow-overlay-reverse relative rounded-md rounded-tr-[6vw] md:max-w-[50vw]">
             <video
               width={"800"}
-              className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[3vw] md:max-w-[50vw]"
+              className="aspect-video hover:opacity-80 object-cover brightness-60 rounded-md rounded-tr-[6vw] md:max-w-[50vw]"
               src={brahmaVideo}
               autoPlay
               loop
