@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { ThemeContext } from "./components/ThemeContext.jsx";
 
 import HomePage from "./pages/HomePage";
 import Faq from "./pages/FAQ/Faq";
@@ -12,6 +13,8 @@ import AllEvents from "./components/AllEvents";
 import NavBar from "./components/NavBar";
 // import Sponsors from "./components/Sponsors";
 import ContactUs from "./components/ContactUs";
+
+
 // import FollowUs from "./components/FollowUs";
 
 function App() {
@@ -24,6 +27,8 @@ function App() {
   const buttons = document.querySelectorAll("button");
   const cards = document.querySelectorAll("card");
   const images = document.querySelectorAll("img");
+
+  const [theme, setTheme] = useState("light");
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -89,6 +94,7 @@ function App() {
       ></div>
       <div ref={rootRef} className="bg-accent min-h-screen">
         <ParallaxProvider>
+        <ThemeContext.Provider value={{ theme, setTheme }}>
           <NavBar rippleRef={rippleRef} />
           <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Routes>
@@ -124,6 +130,7 @@ function App() {
           </BrowserRouter>
           {/* <Sponsors /> */}
           <ContactUs />
+          </ThemeContext.Provider>
         </ParallaxProvider>
       </div>
     </>

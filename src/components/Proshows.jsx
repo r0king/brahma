@@ -1,19 +1,46 @@
-import React from "react";
+import React, { useState, useEffect, useContext} from "react";
+import { ThemeContext } from "./ThemeContext";
 // import Arrow from '../src/assets/svg/arrow-top-right.svg'
 // import Arrow from '../assets/svg/arrow-top-right.svg'
 import Pro from "../assets/videos/Brahma Final~2.webm";
 // import { useMediaQuery } from "react-responsive";
-import Sunburn from "../assets/images/proshow/sunburn.png"
+import SunburnL from "../assets/images/proshow/sunburn.png"
+import SunburnD from '../assets/images/proshow/sunburn-dark.png'
 import Tribe from "../assets/images/proshow/tribe2.png"
-import Romeo from "../assets/images/proshow/romeo.png"
+import RomeoL from "../assets/images/proshow/romeo.png"
+import RomeoD from "../assets/images/proshow/romeo-dark.png"
 import Sixeight from "../assets/images/proshow/sixeight.png"
-import BassTide from "../assets/images/proshow/basstides.png"
+import BassTideL from "../assets/images/proshow/basstides.png"
+import BassTideD from "../assets/images/proshow/basstides-dark.png"
 import Melam from "../assets/images/proshow/Melam.webp"
 import Pragathi from "../assets/images/proshow/pragathi.png"
 import PragPos from "../assets/images/proshow/Pragathi.webp"
 import "./../App.css"
 
 const Proshows = ({ rippleRef }) => {
+
+  const sunburnRef = React.createRef();
+  const basstideRef = React.createRef();
+  const romeoRef = React.createRef();
+
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      sunburnRef.current.src = SunburnL;
+      // set data theme as dark
+      localStorage.setItem("theme", JSON.stringify("dark"));
+
+      document.documentElement.setAttribute("data-theme", "dark");
+    } else {
+      sunburnRef.current.src = SunburnD;
+      localStorage.setItem("theme", JSON.stringify("light"));
+      // set data theme as light
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  }, [theme, sunburnRef]);
+  
+
  
   // const isMobile = useMediaQuery({ maxWidth: 640 });
 
@@ -27,7 +54,8 @@ const Proshows = ({ rippleRef }) => {
               Pro Shows
             </h1>
             <div className="flex flex-row md:ml-10 ml-2 -mt-2">
-              <div className="md:basis-1/2 md:-mt-16 -mt-10"><img src={Sunburn} alt="" className="md:w-[30vw] min-w-[24vw] w-[60vw] " /></div>
+              <div className="md:basis-1/2 md:-mt-16 -mt-10"><img src={theme === "dark" ? SunburnL : SunburnD}
+          ref={sunburnRef} alt="" className="md:w-[30vw] min-w-[24vw] w-[60vw] " /></div>
               <div className="md:basis-1/2 md:mt-20 mt-12"><img src={Tribe} alt="" className="md:w-[10vw] min-w-[9vw] w-[20vw]" /></div>
             </div>
             {/* <div className="order-1 w-[50%] flex md:justify-end hidden">
@@ -65,7 +93,8 @@ const Proshows = ({ rippleRef }) => {
           </h1>
         </div>
         <div className="md:basis-1/4 md:-mt-28 -mt-12 md:ml-12 ml-24">
-          <div className="w-full"><img src={Romeo} alt="" className="md:w-[20vw] w-[50vw]" /></div>
+          <div className="w-full"><img src={theme === "dark" ? RomeoL : RomeoD}
+          ref={romeoRef} alt="" className="md:w-[20vw] w-[50vw]" /></div>
         </div>
         <div className="flex md:flex-col md:ml-9 -mt-3 md:-mt-20">
           <div className="basis-1/2 pl-3 mt-0.5 md:ml-6 font-poppins text-orange-500 font-bold tracking-wide text-[3.5vw] md:text-[2vw]"><div>Supporting Acts:</div></div>
@@ -75,7 +104,8 @@ const Proshows = ({ rippleRef }) => {
                 <div className="w-full"><img src={Sixeight} alt="" className="md:w-[15vw] w-[25vw]" /></div>
               </div>
               <div className="basis-1/2 ml-6 mt-0.5">
-                <div className="w-full "><img src={BassTide} alt="" className="md:w-[15vw] w-[30vw]" /></div>
+                <div className="w-full "><img src={theme === "dark" ? BassTideL : BassTideD}
+          ref={basstideRef} alt="" className="md:w-[15vw] w-[30vw]" /></div>
               </div>
             </div>
           </div>
