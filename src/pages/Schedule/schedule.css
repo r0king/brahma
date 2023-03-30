@@ -21,7 +21,6 @@
 .filter-schedule select {
     width: 100%;
     font-size: 20px;
-    border-radius: 2vw;
     padding: 2%;
     background-color: var(--color-secondary);
     color: var(--color-accent);
@@ -41,7 +40,6 @@
     color: var(--color-accent);
     font-size: 2em;
     /* width: 50%; */
-    border-radius: 2vw;
 }
 
 .tabs .button {
@@ -134,6 +132,7 @@ li.personnel {
     align-items: flex-start;
     width: 60%;
 }
+
 
 
 .personnel {

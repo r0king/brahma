@@ -406,11 +406,11 @@ const Schedule = ({ rippleRef }) => {
       </div>
 
       <div className="schedule-menu animate-moveUpSlow">
-        <div className="filter-schedule border-[2px] border-secondary h-min font-semibold flex justify-center w-full md:w-1/3 rounded-[2vw] my-[1%] mx-auto md:ml-[16vw]">
+        <div className="filter-schedule border-[2px] border-secondary h-min font-semibold flex justify-center w-full md:w-1/3 md:rounded-[1.1vw] rounded-[5vw] my-[1%] mx-auto md:ml-[16vw]">
           <select
             value={category}
             onChange={categorySelect}
-            className="border-r-[1vw] appearance-none"
+            className="border-r-[2.5vw] md:rounded-[1vw] rounded-[4.5vw] appearance-none"
           >
             <option value="" selected>
               All
@@ -422,11 +422,11 @@ const Schedule = ({ rippleRef }) => {
         </div>
 
         <div
-          className="tabs relative md:mr-[16vw] w-[50%] md:w-1/3 font-semibold "
+          className="tabs relative md:mr-[16vw] w-[50%] md:w-1/3 rounded-[5vw] md:rounded-[1vw] font-semibold "
           // set css variable "curr_tab" as selected tab
           style={{ "--selectedtab": dayselect - 1 }}
         >
-          <div className="absolute bg-accent border-secondary border-2 h-full p-1 w-1/3 rounded-[2vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
+          <div className="absolute bg-accent border-secondary border-2 h-full p-1 w-1/3 md:rounded-[1vw] rounded-[5vw] translate-x-[calc(var(--selectedtab)*100%)] duration-500 ease-in-out"></div>
           <h3
             className={`button  ${dayselect === 1 ? "btn1" : ""}`}
             onClick={() => {
