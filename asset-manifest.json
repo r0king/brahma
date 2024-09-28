@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/brahma/static/css/main.93a0a927.css",
-    "main.js": "/brahma/static/js/main.bd7b521e.js",
+    "main.js": "/brahma/static/js/main.ba64c6cc.js",
     "static/js/787.f837e90e.chunk.js": "/brahma/static/js/787.f837e90e.chunk.js",
     "static/media/brahmaVideo.webm": "/brahma/static/media/brahmaVideo.c05eb460f9c3f4ddc34a.webm",
     "static/media/brahmaLogoM.webp": "/brahma/static/media/brahmaLogoM.9dab49dd46dbfec1ca7d.webp",
@@ -25,11 +25,11 @@
     "static/media/left-arrow.svg": "/brahma/static/media/left-arrow.f437407d0c5696db48b4.svg",
     "static/media/right-arrow.svg": "/brahma/static/media/right-arrow.b7aea61a97723f7034a9.svg",
     "main.93a0a927.css.map": "/brahma/static/css/main.93a0a927.css.map",
-    "main.bd7b521e.js.map": "/brahma/static/js/main.bd7b521e.js.map",
+    "main.ba64c6cc.js.map": "/brahma/static/js/main.ba64c6cc.js.map",
     "787.f837e90e.chunk.js.map": "/brahma/static/js/787.f837e90e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.93a0a927.css",
-    "static/js/main.bd7b521e.js"
+    "static/js/main.ba64c6cc.js"
   ]
 }
